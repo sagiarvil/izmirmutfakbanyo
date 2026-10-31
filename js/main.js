@@ -208,9 +208,10 @@ function initMobileNav() {
    4. PORTFOLIO FILTERING (PROJELER SAYFASI)
    ========================================================================== */
 function initPortfolioFilter() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBar = document.querySelector('.portfolio-filter-bar:not(#modelFilterBar)');
   const items = document.querySelectorAll('.portfolio-item');
-  if (!filterBtns.length || !items.length) return;
+  if (!filterBar || !items.length) return;
+  const filterBtns = filterBar.querySelectorAll('.filter-btn');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {

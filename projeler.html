@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeler | İzmir Mutfak Banyo - Portföy ve Tamamlanan İşler</title>
-  <meta name="description" content="İzmir Mutfak Banyo tarafından tamamlanan lüks modern mutfak, ebeveyn banyo, villa ve anahtar teslim fit-out projelerimizi inceleyin.">
+  <title>Mimari Projeler &amp; Ticari Fit-Out Portföyü | İzmir Mutfak Banyo</title>
+  <meta name="description" content="İzmir ve Ege genelinde tamamlanan seçkin konut, ada mutfak, lüks banyo, kurumsal ofis, klinik, restoran, kuyumcu ve butik otel iç mimari projelerimiz.">
   <link rel="canonical" href="https://izmirmutfakbanyo.com.tr/projeler.html">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -24,8 +24,8 @@
         </a>
       </div>
 
-      <nav class="main-nav">
-                <ul class="nav-menu">
+      <nav class="nav-desktop">
+        <ul class="nav-menu">
           <li><a href="index.html">ANA SAYFA</a></li>
           <li><a href="mutfak.html">MUTFAK</a></li>
           <li><a href="banyo.html">BANYO</a></li>
@@ -38,18 +38,27 @@
         </ul>
       </nav>
 
-      <button class="mobile-toggle" aria-label="Menüyü Aç">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="header-right">
+        <a href="tel:+905324411060" class="header-phone">
+          <i class="fa-solid fa-phone"></i> 0532 441 10 60
+        </a>
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menüyü Aç/Kapat">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-backdrop"></div>
-  <div class="mobile-nav-drawer">
-          <ul class="mobile-nav-menu">
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileOverlay">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <img src="assets/images/logo-dark.svg" alt="İzmir Mutfak Banyo Logo" class="mobile-logo">
+        <button class="mobile-menu-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="mobile-nav-menu">
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="mutfak.html">Mutfak</a></li>
         <li><a href="banyo.html">Banyo</a></li>
@@ -60,10 +69,11 @@
         <li><a href="hakkimizda.html">Hakkımızda</a></li>
         <li><a href="iletisim.html">İletişim</a></li>
       </ul>
-    <div class="mobile-contact-info">
-      <p><strong>Adres:</strong> İzmir – Türkiye</p>
-      <p><strong>Telefon:</strong> <a href="tel:+902324567890">+90 232 456 78 90</a></p>
-      <p><strong>E-posta:</strong> <a href="mailto:barisbagirlar@gmail.com">barisbagirlar@gmail.com</a></p>
+      <div class="mobile-menu-footer">
+        <p><i class="fa-solid fa-location-dot"></i> Showroom: İzmir – Türkiye</p>
+        <p><i class="fa-solid fa-industry"></i> Fabrika: Kaynaklar – İzmir</p>
+        <p><i class="fa-solid fa-envelope"></i> barisbagirlar@gmail.com</p>
+      </div>
     </div>
   </div>
 
@@ -71,278 +81,506 @@
   <section class="page-hero-header">
     <div class="page-hero-bg" style="background-image: url('assets/images/hero/slide-1.jpg');"></div>
     <div class="container page-hero-content">
-      <h1 class="page-hero-title">PROJELER</h1>
+      <h1 class="page-hero-title">MİMARİ PROJELER &amp; TİCARİ FİT-OUT</h1>
       <div class="page-hero-breadcrumbs">
         <a href="index.html">ANA SAYFA</a> / <span>PROJELER</span>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
+  <!-- Ticari B2B & Konut Mimari Portföyü -->
   <section class="section-padding">
     <div class="container">
       
-      <!-- Portfolio Filter Tabs -->
-      <div class="portfolio-filter-bar">
-        <button class="filter-btn active" data-filter="all">TÜMÜ</button>
-        <button class="filter-btn" data-filter="mutfak">MODERN MUTFAK</button>
-        <button class="filter-btn" data-filter="banyo">LÜKS BANYO</button>
-        <button class="filter-btn" data-filter="country">ADA &amp; COUNTRY</button>
-        <button class="filter-btn" data-filter="villa">VİLLA TADİLATI</button>
-        <button class="filter-btn" data-filter="ticari">FİT-OUT &amp; TİCARİ</button>
+      <div class="section-header-center">
+        <span class="section-subtitle">GLOBAL MİMARİ STANDARTLAR &amp; ANAHTAR TESLİM TAAHHÜT</span>
+        <h2 class="section-title">UYGULANAN SEÇKİN PROJELER</h2>
+        <div class="edgtf-separator">
+          <span class="sep-line"></span>
+          <span class="sep-diamond"></span>
+          <span class="sep-line"></span>
+        </div>
+        <p class="section-desc" style="max-width: 860px; margin: 20px auto 0;">
+          Konut projelerinden lüks ofis kulelerine, klinik sterilizasyon alanlarından gastronomi ve butik otel fit-out taahhütlerine kadar İzmir Kaynaklar fabrikamızın yüksek üretim kapasitesi ve mimari disipliniyle hayata geçirilmiş tescilli uygulamalarımız.
+        </p>
       </div>
 
-      <!-- Portfolio Grid (16 Projects) -->
+      <!-- Portfolio Filter Tabs (Kurumsal & Ticari Segmentler) -->
+      <div class="portfolio-filter-bar" style="margin-top: 35px;">
+        <button class="filter-btn active" data-filter="all">TÜMÜ (30)</button>
+        <button class="filter-btn" data-filter="ofis">OFİS &amp; HUKUK BÜROLARI</button>
+        <button class="filter-btn" data-filter="klinik">KLİNİK &amp; SAĞLIK</button>
+        <button class="filter-btn" data-filter="gastro">CAFE &amp; RESTORAN</button>
+        <button class="filter-btn" data-filter="magaza">MAĞAZA, OPTİK &amp; KUYUMCU</button>
+        <button class="filter-btn" data-filter="otel">OTEL &amp; TURİZM</button>
+        <button class="filter-btn" data-filter="kurumsal">BANKA &amp; KURUMSAL</button>
+        <button class="filter-btn" data-filter="konut">LÜKS VİLLA &amp; MUTFAK</button>
+      </div>
+
+      <!-- Portfolio Grid (Tam Simetrik 30 Prestij Projesi) -->
       <div class="portfolio-grid">
 
-        <!-- Item 1 -->
-        <article class="portfolio-item" data-category="mutfak" data-lightbox-src="assets/images/portfolio/proj-1.jpg">
+        <!-- ========================================== -->
+        <!-- 1. BÖLÜM: OFİS, HUKUK & YÖNETİM ALANLARI -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="ofis" data-lightbox-src="assets/images/projelendirme/hero/hero_01.webp">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-1.jpg" alt="Urla Ada Mutfak & Yaşam Alanı">
+            <img src="assets/images/projelendirme/hero/hero_01.webp" alt="Ofis, Hukuk & Görüşme Ofisleri Projelendirme" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">OFİS &amp; HUKUK BÜROSU</span>
+            <h3 class="portfolio-name">Bayraklı Tower Hukuk &amp; Danışmanlık Ofisi</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="ofis" data-lightbox-src="assets/images/ticari-projeler/13_arvisa_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/13_arvisa_magaza.jpg" alt="Arvisa Yönetim Ofisi & Kurumsal Fit-Out" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">KURUMSAL GENEL MÜDÜRLÜK</span>
+            <h3 class="portfolio-name">Arvisa Kurumsal Yönetim Merkezi &amp; Toplantı Suitleri</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="ofis" data-lightbox-src="assets/images/portfolio/proj-13.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/portfolio/proj-13.jpg" alt="Folkart Towers Açık Ofis & Fit-Out" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">TEKNOLOJİ &amp; AR-GE OFİSİ</span>
+            <h3 class="portfolio-name">Folkart Towers Açık Ofis &amp; Akustik İzolasyon</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 2. BÖLÜM: KLİNİK, DİŞ & SAĞLIK MİMARİSİ -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="klinik" data-lightbox-src="assets/images/projelendirme/hero/hero_02.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_02.webp" alt="Klinik, Diş & Veteriner Klinikleri Mimarisi" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">KLİNİK &amp; SAĞLIK MERKEZİ</span>
+            <h3 class="portfolio-name">Alsancak Ağız &amp; Diş Sağlığı Polikliniği</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="klinik" data-lightbox-src="assets/images/ticari-projeler/12_moneli_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/12_moneli_magaza.jpg" alt="Moneli Estetik & Dermatoloji Kliniği" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">ESTETİK &amp; DERMATOLOJİ</span>
+            <h3 class="portfolio-name">Moneli Medikal Estetik &amp; Lazer Kliniği</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="klinik" data-lightbox-src="assets/images/portfolio/proj-14.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/portfolio/proj-14.jpg" alt="Karşıyaka Veteriner Kliniği & Cerrahi Ünite" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">VETERİNER POLİKLİNİĞİ</span>
+            <h3 class="portfolio-name">Karşıyaka 7/24 Veteriner Tıp &amp; Cerrahi Merkezi</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 3. BÖLÜM: CAFE, RESTORAN & GASTRO YAŞAM ALANLARI -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="gastro" data-lightbox-src="assets/images/projelendirme/hero/hero_06.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_06.webp" alt="Cafe, Restoran & Gastro Yaşam Alanları" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">GASTRO &amp; RESTORAN</span>
+            <h3 class="portfolio-name">Alaçatı Taş Konsept Gastro Lounge &amp; Bistro</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="gastro" data-lightbox-src="assets/images/portfolio/proj-15.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/portfolio/proj-15.jpg" alt="Urla Bağ Yolu Restoran & Şarap Kavı" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">RESTORAN &amp; KAV ALANI</span>
+            <h3 class="portfolio-name">Urla Şarap Bağı Butik Restoranı &amp; Tadım Salonu</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="gastro" data-lightbox-src="assets/images/ticari-projeler/02_castera_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/02_castera_magaza.jpg" alt="Castera Art Bakery & Artisan Kahve Evi" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">3. NESİL CAFE &amp; FIRIN</span>
+            <h3 class="portfolio-name">Castera Artisan Bakery &amp; Roastery Coffee</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 4. BÖLÜM: KUYUMCU, OPTİK & TEKSTİL MAĞAZALARI -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/projelendirme/hero/hero_04.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_04.webp" alt="Kuyumcu, Optik & Tekstil Mağazaları" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">MÜCEVHERAT &amp; SHOWROOM</span>
+            <h3 class="portfolio-name">Alsancak Zümrüt &amp; Pırlanta VIP Kuyumcusu</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/projelendirme/hero/hero_08.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_08.webp" alt="Optik & Göz Sağlığı Deneyim Mağazaları" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">OPTİK DENEYİM MAĞAZASI</span>
+            <h3 class="portfolio-name">Mavişehir Lüks Gözlük &amp; Optometrik Deneyim Salonu</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/projelendirme/hero/hero_07.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_07.webp" alt="Tekstil, Butik & Moda Showroomları" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">TEKSTİL &amp; HAUTE COUTURE</span>
+            <h3 class="portfolio-name">Avenora Haute Couture &amp; Özel Dikim Stüdyosu</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/projelendirme/hero/hero_09.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_09.webp" alt="Kuyumcu & Yüksek Güvenlikli Mücevherat" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">YÜKSEK GÜVENLİKLİ KUYUMCU</span>
+            <h3 class="portfolio-name">Kemeraltı Tarihi Çarşı Altın &amp; Mücevherat Kasası</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/ticari-projeler/01_velunor_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/01_velunor_magaza.jpg" alt="Velunor Mimari Yaşam Mağazası" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">KONSEPT EV &amp; YAŞAM</span>
+            <h3 class="portfolio-name">Velunor Home &amp; Mimari Aksesuar Flagship Store</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/ticari-projeler/05_lumori_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/05_lumori_magaza.jpg" alt="Lumori Aydınlatma & Tasarım Mağazası" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">AYDINLATMA &amp; SANAT GALERİSİ</span>
+            <h3 class="portfolio-name">Lumori Architectural Lighting &amp; Design Studio</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/ticari-projeler/18_fiorisa_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/18_fiorisa_magaza.jpg" alt="Fiorisa Çiçek & Botanik Atölyesi" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">BOTANİK &amp; KONSEPT MAĞAZA</span>
+            <h3 class="portfolio-name">Fiorisa Luxury Floral &amp; Event Showroom</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/ticari-projeler/21_zenova_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/21_zenova_magaza.jpg" alt="Zenova Kozmetik & Parfüm Butiği" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">NİŞ PARFÜMERİ</span>
+            <h3 class="portfolio-name">Zenova Haute Parfumerie &amp; Niş Koku Barı</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="magaza" data-lightbox-src="assets/images/ticari-projeler/10_avenora_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/10_avenora_magaza.jpg" alt="Avenora Lüks Giyim & Terzilik Stüdyosu" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">LÜKS GİYİM BUTİĞİ</span>
+            <h3 class="portfolio-name">Avenora İtalyan Kumaş &amp; Özel Koleksiyon Butiği</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 5. BÖLÜM: OTEL & BUTİK OTEL İÇ MİMARİ PROJELERİ -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="otel" data-lightbox-src="assets/images/projelendirme/hero/hero_10.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_10.webp" alt="Otel & Butik Otel İç Mimari Projeleri" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">TURİZM &amp; BUTİK OTEL</span>
+            <h3 class="portfolio-name">Çeşme Ayayorgi Luxury Suites &amp; Resepsiyon Fit-Out</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="otel" data-lightbox-src="assets/images/portfolio/proj-16.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/portfolio/proj-16.jpg" alt="Urla İskele Butik Otel Odaları ve Spa" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">SPA &amp; RESİDENCE</span>
+            <h3 class="portfolio-name">Urla İskele Taş Konak Butik Otel &amp; Spa Süitleri</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="otel" data-lightbox-src="assets/images/hero/slide-7.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/hero/slide-7.jpg" alt="Alaçatı Değirmenler Butik Hotel Lobi" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">OTEL LOBİ &amp; LOUNGE</span>
+            <h3 class="portfolio-name">Alaçatı Hacımemiş Butik Otel Karşılama Alanı</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 6. BÖLÜM: BANKA ŞUBE KURULUMLARI & KURUMSAL ALANLAR -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="kurumsal" data-lightbox-src="assets/images/projelendirme/hero/hero_03.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_03.webp" alt="Banka Şube Kurulumları & Kurumsal Alanlar" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">BANKACILIK &amp; FİNANS</span>
+            <h3 class="portfolio-name">Özel Banka Alsancak Şubesi Özel Bankacılık &amp; Kasa</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="kurumsal" data-lightbox-src="assets/images/projelendirme/hero/hero_05.webp">
+          <div class="portfolio-thumb">
+            <img src="assets/images/projelendirme/hero/hero_05.webp" alt="Yurtdışı Ticari Projeler & İhracat Mimarisi" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">GLOBAL FİT-OUT &amp; İHRACAT</span>
+            <h3 class="portfolio-name">Avrupa &amp; Körfez Bölgesi Modüler Ticari Fit-Out İhracatı</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <article class="portfolio-item" data-category="kurumsal" data-lightbox-src="assets/images/ticari-projeler/03_korvex_magaza.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/ticari-projeler/03_korvex_magaza.jpg" alt="Korvex Kurumsal Lojistik & Teknik Merkez" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-cat">ENDÜSTRİYEL MERKEZ</span>
+            <h3 class="portfolio-name">Korvex Teknik Operasyon &amp; Kurumsal Karşılama Binası</h3>
+            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
+          </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- 7. BÖLÜM: LÜKS VİLLA, MUTFAK & BANYO PROJELERİ -->
+        <!-- ========================================== -->
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-1.jpg">
+          <div class="portfolio-thumb">
+            <img src="assets/images/portfolio/proj-1.jpg" alt="Urla Ada Mutfak & Yaşam Alanı" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">MODERN MUTFAK</span>
-            <h3 class="portfolio-name">Urla Doğa Evleri Ada Mutfak</h3>
+            <h3 class="portfolio-name">Urla Doğa Evleri Ada Mutfak &amp; Kiler</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 2 -->
-        <article class="portfolio-item" data-category="mutfak" data-lightbox-src="assets/images/portfolio/proj-2.jpg">
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-2.jpg">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-2.jpg" alt="Çeşme Ilıca Minimalist Lake Mutfak">
+            <img src="assets/images/portfolio/proj-2.jpg" alt="Çeşme Ilıca Minimalist Lake Mutfak" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">MODERN MUTFAK</span>
-            <h3 class="portfolio-name">Çeşme Ilıca Lake Mutfak</h3>
+            <h3 class="portfolio-name">Çeşme Ilıca Minimalist İtalyan Lake Mutfak</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 3 -->
-        <article class="portfolio-item" data-category="mutfak" data-lightbox-src="assets/images/portfolio/proj-3.jpg">
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-4.jpg">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-3.jpg" alt="Alsancak Penthouse Açık Mutfak">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">MODERN MUTFAK</span>
-            <h3 class="portfolio-name">Alsancak Penthouse Açık Mutfak</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
-        <!-- Item 4 -->
-        <article class="portfolio-item" data-category="banyo" data-lightbox-src="assets/images/portfolio/proj-4.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-4.jpg" alt="Mavişehir Lüks Ebeveyn Banyosu">
+            <img src="assets/images/portfolio/proj-4.jpg" alt="Mavişehir Lüks Ebeveyn Banyosu" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">LÜKS BANYO</span>
-            <h3 class="portfolio-name">Mavişehir Ebeveyn Spa Banyosu</h3>
+            <h3 class="portfolio-name">Mavişehir Penthouse Çift Hilton Ebeveyn Banyosu</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 5 -->
-        <article class="portfolio-item" data-category="country" data-lightbox-src="assets/images/portfolio/proj-5.jpg">
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-5.jpg">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-5.jpg" alt="Güzelbahçe Ahşap Country Mutfak">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">ADA &amp; COUNTRY</span>
-            <h3 class="portfolio-name">Güzelbahçe Ahşap Country</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
-        <!-- Item 6 -->
-        <article class="portfolio-item" data-category="banyo" data-lightbox-src="assets/images/portfolio/proj-6.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-6.jpg" alt="Karşıyaka Sahil Mermer Banyo">
+            <img src="assets/images/portfolio/proj-5.jpg" alt="Alaçatı Doğal Taş Hilton Banyo" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">LÜKS BANYO</span>
-            <h3 class="portfolio-name">Karşıyaka Sahil Mermer Banyo</h3>
+            <h3 class="portfolio-name">Alaçatı Rustik Doğal Taş &amp; Meşe Hilton Banyo</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 7 -->
-        <article class="portfolio-item" data-category="ticari" data-lightbox-src="assets/images/portfolio/proj-7.jpg">
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-10.jpg">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-7.jpg" alt="Bayraklı Tower Ofis Dinlenme & Mutfak">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">FİT-OUT &amp; TİCARİ</span>
-            <h3 class="portfolio-name">Bayraklı Tower Executive Mutfak</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
-        <!-- Item 8 -->
-        <article class="portfolio-item" data-category="banyo" data-lightbox-src="assets/images/portfolio/proj-8.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-8.jpg" alt="Alaçatı Taş Ev Doğaltaş Banyo">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">LÜKS BANYO</span>
-            <h3 class="portfolio-name">Alaçatı Taş Ev Doğaltaş Banyo</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
-        <!-- Item 9 -->
-        <article class="portfolio-item" data-category="villa" data-lightbox-src="assets/images/portfolio/proj-9.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-9.jpg" alt="Bornova Villa Komple Fit-Out">
+            <img src="assets/images/portfolio/proj-10.jpg" alt="Urla Kekliktepe Villa Komple Renovasyon" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">VİLLA TADİLATI</span>
-            <h3 class="portfolio-name">Bornova Villa Komple Fit-Out</h3>
+            <h3 class="portfolio-name">Urla Kekliktepe Akıllı Villa Komple Renovasyonu</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 10 -->
-        <article class="portfolio-item" data-category="country" data-lightbox-src="assets/images/portfolio/proj-10.jpg">
+        <article class="portfolio-item" data-category="konut" data-lightbox-src="assets/images/portfolio/proj-8.jpg">
           <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-10.jpg" alt="Urla Kekliktepe Ada & Mahzen">
+            <img src="assets/images/portfolio/proj-8.jpg" alt="Güzelbahçe Country Ada Mutfak" loading="lazy">
           </div>
           <div class="portfolio-info">
             <span class="portfolio-cat">ADA &amp; COUNTRY</span>
-            <h3 class="portfolio-name">Urla Kekliktepe Ada &amp; Mahzen</h3>
+            <h3 class="portfolio-name">Güzelbahçe Masif Ahşap Country Ada Mutfak</h3>
             <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
           </div>
         </article>
 
-        <!-- Item 11 -->
-        <article class="portfolio-item" data-category="banyo" data-lightbox-src="assets/images/portfolio/proj-11.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-11.jpg" alt="Çeşme Paşalimanı Jakuzi ve Islak Hacim">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">LÜKS BANYO</span>
-            <h3 class="portfolio-name">Çeşme Paşalimanı Jakuzili Spa</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
+      </div>
 
-        <!-- Item 12 -->
-        <article class="portfolio-item" data-category="mutfak" data-lightbox-src="assets/images/portfolio/proj-12.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-12.jpg" alt="Bostanlı Dubleks Açık Mutfak">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">MODERN MUTFAK</span>
-            <h3 class="portfolio-name">Bostanlı Dubleks Mutfak &amp; Salon</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
+    </div>
+  </section>
 
-        <!-- Item 13 -->
-        <article class="portfolio-item" data-category="villa" data-lightbox-src="assets/images/portfolio/proj-13.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-13.jpg" alt="Narlıdere Yamaç Villa Fit-Out">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">VİLLA TADİLATI</span>
-            <h3 class="portfolio-name">Narlıdere Yamaç Villa Fit-Out</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
+  <!-- Ticari B2B Taahhüt & Kurumsal Çözüm Standartları -->
+  <section class="section-padding" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-subtitle">B2B FİT-OUT TAAHHÜT DİSİPLİNİ</span>
+        <h2 class="section-title">KURUMSAL MEKANLARDA NEDEN İZMİR MUTFAK BANYO?</h2>
+        <div class="edgtf-separator">
+          <span class="sep-line"></span>
+          <span class="sep-diamond"></span>
+          <span class="sep-line"></span>
+        </div>
+      </div>
 
-        <!-- Item 14 -->
-        <article class="portfolio-item" data-category="mutfak" data-lightbox-src="assets/images/portfolio/proj-14.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-14.jpg" alt="Sahilevleri Lüks Mutfak Tasarımı">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">MODERN MUTFAK</span>
-            <h3 class="portfolio-name">Sahilevleri Lüks Ada Mutfak</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
+      <div class="cat-features-grid">
+        <div class="cat-feature-card">
+          <div class="cat-feature-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3 class="cat-feature-title">Kendi Marangozluk Fabrikamız</h3>
+          <p class="cat-feature-text">İzmir Kaynaklar'daki yüksek kapasiteli makine parkurumuz ile banko, akustik panel, vitrin ve yangına dayanıklı kapıları aracı komisyonsuz, milimetrik toleransla üretiyoruz.</p>
+        </div>
+        <div class="cat-feature-card">
+          <div class="cat-feature-icon"><i class="fa-solid fa-stopwatch"></i></div>
+          <h3 class="cat-feature-title">Sıfır Gün Ticari Kayıp (Hızlı Teslim)</h3>
+          <p class="cat-feature-text">Mağaza ve klinik açılışlarında zaman nakittir. Modüler ön montaj sistemi ve çift vardiyalı şantiye organizasyonuyla taahhüt edilen tarihte kesin anahtar teslim.</p>
+        </div>
+        <div class="cat-feature-card">
+          <div class="cat-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="cat-feature-title">Yönetmelik &amp; Ruhsat Güvencesi</h3>
+          <p class="cat-feature-text">Sağlık Bakanlığı klinik şartnameleri, yangın tahliye kaçış standartları ve bankacılık güvenlik prosedürlerine %100 uyumlu mimari projelendirme ve mühendislik imzası.</p>
+        </div>
+      </div>
 
-        <!-- Item 15 -->
-        <article class="portfolio-item" data-category="ticari" data-lightbox-src="assets/images/portfolio/proj-15.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-15.jpg" alt="Alsancak Butik Restoran Bar & Mutfak">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">FİT-OUT &amp; TİCARİ</span>
-            <h3 class="portfolio-name">Alsancak Butik Bistro &amp; Mutfak</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
-        <!-- Item 16 -->
-        <article class="portfolio-item" data-category="banyo" data-lightbox-src="assets/images/portfolio/proj-16.jpg">
-          <div class="portfolio-thumb">
-            <img src="assets/images/portfolio/proj-16.jpg" alt="Urla Bağyolu Taş Villa Banyosu">
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-cat">LÜKS BANYO</span>
-            <h3 class="portfolio-name">Urla Bağyolu Taş Villa Banyosu</h3>
-            <span class="portfolio-view-btn"><i class="fa-solid fa-expand"></i> İncele</span>
-          </div>
-        </article>
-
+      <div style="text-align: center; margin-top: 45px;">
+        <a href="https://wa.me/905324411060?text=Merhaba,%20kurumsal%20ticari%20fit-out%20projemiz%20için%20mimari%20görüşme%20talep%20ediyoruz." target="_blank" rel="noopener" class="btn-primary"><i class="fa-solid fa-briefcase"></i> KURUMSAL B2B TEKLİF &amp; ŞARTNAME TALEP EDİN</a>
       </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
   <section class="cta-banner">
-    <div class="container">
-      <h2 class="cta-title">SİZİN PROJENİZİ DE HAYATA GEÇİRELİM</h2>
-      <p class="cta-subtitle">Mekânınıza özel mimari tasarım ve bütçe planlaması için uzmanlarımızla iletişime geçin.</p>
-      <div class="cta-btn-group">
-        <a href="iletisim.html" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Ücretsiz Keşif Talep Edin</a>
+    <div class="container cta-inner">
+      <div class="cta-text-side">
+        <span class="cta-tag">TİCARİ VE KONUT MİMARİSİ</span>
+        <h2 class="cta-title">Yeni Projenizi Birlikte Hayata Geçirelim</h2>
+        <p class="cta-desc">Lazer rölöve, fotogerçekçi 3D mimari simülasyon ve anahtar teslim kurumsal taahhüt güvencesi.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/905324411060?text=Merhaba,%20mimari%20projemiz%20için%20bilgi%20ve%20keşif%20randevusu%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Mimari Danışmanlık
+        </a>
+        <a href="iletisim.html" class="btn-outline-white">Ofis &amp; Showroom Randevusu</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-col">
-          <h3 class="footer-widget-title">HAKKIMIZDA</h3>
-          <p class="footer-desc">İzmir Mutfak Banyo; mimarlık, iç mimarlık ve şantiye yönetimi konularında uzmanlaşmış bir tasarım ofisidir. Amacımız sadece yaratıcı ve özgün bir mimari değer yaratmak değil; aynı zamanda işverenin yatırım ekonomisinin, tasarımın getirdiği katma değer ile artarak karşılık bulmasını sağlamaktır.</p>
-        </div>
-        <div class="footer-col">
-          <h3 class="footer-widget-title">İLETİŞİM</h3>
-          <ul class="footer-contact-list">
-            <li>İzmir – Türkiye</li>
-            <li><a href="tel:+902324567890">+90 232 456 78 90</a></li>
-            <li><a href="mailto:barisbagirlar@gmail.com">barisbagirlar@gmail.com</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3 class="footer-widget-title">MENÜ</h3>
-          <ul class="footer-menu-list">
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="hizmetler.html">Hizmetler</a></li>
-            <li><a href="projeler.html">Projeler</a></li>
-            <li><a href="yayinlar.html">Yayınlar</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3 class="footer-widget-title">BİZİ TAKİP EDİN</h3>
-          <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i> LINKEDIN</a>
-          </div>
-        </div>
+    <div class="container footer-top-grid">
+      <div class="footer-col footer-about">
+        <img src="assets/images/logo-light.svg" alt="İzmir Mutfak Banyo Logo" class="footer-logo">
+        <p>İzmir merkezli mimari tasarım ve lüks mobilya üretim stüdyosu. Kaynaklar marangozluk fabrikamızda özel ölçü mutfak, banyo, konut tadilatı ve ticari fit-out gerçekleştiriyoruz.</p>
       </div>
-      <div class="footer-bottom">
-        <p>© Copyright 2026 “İzmir Mutfak Banyo Mimarlık Tasarım”. Tüm Hakları Saklıdır.</p>
-        <p>izmirmutfakbanyo.com.tr</p>
+      <div class="footer-col">
+        <h4 class="footer-col-title">UZMANLIK ALANLARI</h4>
+        <ul class="footer-links">
+          <li><a href="mutfak.html">Modern Ada Mutfak</a></li>
+          <li><a href="banyo.html">Hilton Banyo &amp; Spa</a></li>
+          <li><a href="ev-tadilati.html">Komple Daire Tadilatı</a></li>
+          <li><a href="modeller.html">137 Model Kataloğu</a></li>
+          <li><a href="projeler.html">Uygulanan Projeler</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">KURUMSAL</h4>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+          <li><a href="yayinlar.html">Yayınlar &amp; Basın</a></li>
+          <li><a href="iletisim.html">İletişim &amp; Ulaşım</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">İLETİŞİM BİLGİLERİ</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Showroom &amp; Merkez Ofis:<br>İzmir – Türkiye</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-industry"></i><span>Üretim &amp; Marangozluk Fabrikası:<br>Kaynaklar – İzmir</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>0532 441 10 60</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>barisbagirlar@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 İzmir Mutfak Banyo. Tüm Hakları Saklıdır.</p>
+        <p>Tasarım DNA: OSO Mimarlık Standartları ile Geliştirilmiştir.</p>
       </div>
     </div>
   </footer>
 
-  <button class="scroll-top-btn" aria-label="Yukarı Çık"><i class="fa-solid fa-chevron-up"></i></button>
+  <!-- Lightbox Modal (JavaScript Entegrasyonu) -->
+  <div class="lightbox-modal" id="lightboxModal" style="display: none;">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img src="" alt="" class="lightbox-image" id="lightboxImage">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
