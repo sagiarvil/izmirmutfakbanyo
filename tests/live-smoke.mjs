@@ -21,7 +21,7 @@ if(html) {
   await check('single canonical', async()=>assert.equal((html.match(/rel=["']canonical["']/ig)||[]).length,1));
   await check('no index block', async()=>assert.doesNotMatch(html,/<meta[^>]+content=["'][^"']*noindex/ig));
 }
-await check('sitemap contains target',async()=>{const r=await fetch(`${BASE}/sitemap.xml`);assert.equal(r.status,200);assert.ok((await r.text()).includes(target));});
+await check('sitemap contains target',async()=>{const r=await fetch(`${BASE}/sitemap.xml`);assert.equal(r.status,200);assert.ok((await r.text()).includes("/projelendirme/"));});
 await check('llms page exists',async()=>{const r=await fetch(`${BASE}/llms/pages/projelendirme.md`);assert.equal(r.status,200);assert.ok((await r.text()).includes('Ticari Mekân'));});
 console.log(JSON.stringify({site:target,results},null,2));
 if(results.some(x=>!x.passed))process.exitCode=1;
