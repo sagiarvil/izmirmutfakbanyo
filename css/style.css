@@ -1034,8 +1034,12 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px 28px;
+  gap: 10px 24px;
   margin-bottom: 45px;
+}
+
+.portfolio-filter-bar .filter-btn {
+  white-space: nowrap !important;
 }
 
 .filter-btn {
