@@ -488,26 +488,25 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     role: 'service',
     indexDirective: 'index, follow',
     canonicalRoute: '/projelendirme/',
-    title: 'İç Mimarlık, Ticari Projelendirme & Fit-Out Uygulama | Yeşilay Mimarlık',
-    metaDescription: 'Ofis, mağaza, cafe-restoran ve lüks konutlar için mimari projelendirme, 3D görselleştirme ve anahtar teslim fit-out uygulama hizmetleri. 3D tasarım ile şantiye teslimi arasında sıfır sapma.',
-    h1: 'Ticari Mekânlarda 3D Tasarımdan Fit-Out Şantiye Teslimine Uçtan Uca Mimari Çözümler',
-    primaryIntent: 'ticari iç mimarlık ofis tasarımı mağaza kafe restoran fit-out projelendirme',
+    title: 'İzmir Ticari Mekân Projelendirme & Fit-Out | Yeşilay Mutfak',
+    metaDescription: "İzmir'de mağaza, ofis ve kafe-restoran için mimari projelendirme, 3D tasarım ve anahtar teslim fit-out çözümleri. Projeniz için görüşme talep edin.",
+    h1: 'İzmir Ticari Mekân Projelendirme ve Anahtar Teslim Fit-Out',
+    primaryIntent: 'İzmir ticari mekân projelendirme ve anahtar teslim fit-out',
     primaryEntity: {
       id: 'https://yesilaymutfak.com/projelendirme/#service',
-      name: 'Ticari Projelendirme ve Fit-Out Uygulama',
+      name: 'Ticari Mekân Mimari Projelendirme ve Fit-Out',
       type: 'Service',
       sameAs: ['https://yesilaymutfak.com/#organization']
     },
     semanticTriples: [
-      { subject: 'Ticari Projelendirme', predicate: 'serviceScope', object: 'Ofis, Mağaza, Cafe-Restoran ve Konut Fit-Out' },
-      { subject: 'Fit-Out İmalatı', predicate: 'workshopBacking', object: 'Doğrudan Kendi CNC ve Fırın Boyahane Atölyesi' }
+      { subject: 'Yeşilay Mutfak', predicate: 'providesService', object: 'Ticari Mekân Mimari Projelendirme ve Fit-Out' }
     ],
-    heroAnswerEngine: 'Yeşilay Mimarlık; ofis, mağaza, cafe-restoran ve lüks konut projelerinde 3D konsept tasarımdan kendi atölyesinde özel mobilya imalatı ve anahtar teslim fit-out şantiye yönetimine kadar eksiksiz kurumsal mimarlık hizmeti sunar.',
+    heroAnswerEngine: "İzmir'de mağaza, ofis ve kafe-restoran için mimari projelendirme, 3D tasarım ve anahtar teslim fit-out çözümleri. Projeniz için görüşme talep edin.",
     publishedAt: '2026-10-31T00:00:00+03:00',
     modifiedAt: '2026-10-31T00:00:00+03:00',
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Ticari Projelendirme', item: '/projelendirme/' }
+      { name: 'Projelendirme', item: '/projelendirme/' }
     ],
     mobile: defaultMobile,
     mobileCwvBudget: defaultCwv
