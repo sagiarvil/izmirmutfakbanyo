@@ -345,3 +345,164 @@ function initContactForm() {
     }, 1200);
   });
 }
+
+/* ==========================================================================
+   8. FAQ ACCORDION HANDLER
+   ========================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Close others
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initFaqAccordion();
+
+  // ============================================================
+  // 137 MODEL FILTRELEME, ARAMA & DETAY MODALI (modeller.html)
+  // ============================================================
+  const modelFilterBar = document.getElementById('modelFilterBar');
+  const modelSearchInput = document.getElementById('modelSearchInput');
+  const allModelsGrid = document.getElementById('allModelsGrid');
+  const noModelsFound = document.getElementById('noModelsFound');
+  const resetModelFilter = document.getElementById('resetModelFilter');
+  const modelDetailModal = document.getElementById('modelDetailModal');
+  const closeModelModal = document.getElementById('closeModelModal');
+
+  if (allModelsGrid) {
+    const modelCards = allModelsGrid.querySelectorAll('.model-card');
+    let currentCat = 'all';
+    let currentQuery = '';
+
+    function applyModelFilters() {
+      let visibleCount = 0;
+      const q = currentQuery.trim().toLowerCase();
+
+      modelCards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const title = (card.getAttribute('data-full-title') || '').toLowerCase();
+        const modelNo = (card.getAttribute('data-model') || '').toLowerCase();
+        const specs = (card.getAttribute('data-specs') || '').toLowerCase();
+        const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+
+        const catMatch = (currentCat === 'all' || cat === currentCat);
+        const queryMatch = (!q || title.includes(q) || modelNo.includes(q) || specs.includes(q) || desc.includes(q));
+
+        if (catMatch && queryMatch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (noModelsFound) {
+        noModelsFound.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    if (modelFilterBar) {
+      const filterBtns = modelFilterBar.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-cat') || 'all';
+          applyModelFilters();
+        });
+      });
+    }
+
+    if (modelSearchInput) {
+      modelSearchInput.addEventListener('input', (e) => {
+        currentQuery = e.target.value;
+        applyModelFilters();
+      });
+    }
+
+    if (resetModelFilter) {
+      resetModelFilter.addEventListener('click', () => {
+        currentCat = 'all';
+        currentQuery = '';
+        if (modelSearchInput) modelSearchInput.value = '';
+        if (modelFilterBar) {
+          const filterBtns = modelFilterBar.querySelectorAll('.filter-btn');
+          filterBtns.forEach(b => b.classList.remove('active'));
+          if (filterBtns[0]) filterBtns[0].classList.add('active');
+        }
+        applyModelFilters();
+      });
+    }
+
+    // Modal Açma / Kapatma
+    allModelsGrid.addEventListener('click', (e) => {
+      const btn = e.target.closest('.open-model-modal');
+      if (!btn) return;
+      const card = btn.closest('.model-card');
+      if (!card || !modelDetailModal) return;
+
+      const mid = card.getAttribute('data-model') || '';
+      const title = card.getAttribute('data-full-title') || '';
+      const img = card.getAttribute('data-img') || '';
+      const specs = card.getAttribute('data-specs') || '';
+      const desc = card.getAttribute('data-desc') || '';
+
+      const mImg = document.getElementById('modalImg');
+      const mBadge = document.getElementById('modalBadge');
+      const mTitle = document.getElementById('modalTitle');
+      const mSpecs = document.getElementById('modalSpecs');
+      const mDesc = document.getElementById('modalDesc');
+      const mWa = document.getElementById('modalWaBtn');
+
+      if (mImg) { mImg.src = img; mImg.alt = title; }
+      if (mBadge) mBadge.textContent = mid;
+      if (mTitle) mTitle.textContent = title;
+      if (mSpecs) mSpecs.textContent = specs;
+      if (mDesc) mDesc.textContent = desc;
+      if (mWa) {
+        mWa.href = 'https://wa.me/905324411060?text=' + encodeURIComponent('Merhaba, ' + mid + ' kodlu model (' + title + ') hakkında fiyat ve keşif bilgisi almak istiyorum.');
+      }
+
+      modelDetailModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    if (closeModelModal && modelDetailModal) {
+      closeModelModal.addEventListener('click', () => {
+        modelDetailModal.style.display = 'none';
+        document.body.style.overflow = '';
+      });
+
+      modelDetailModal.addEventListener('click', (e) => {
+        if (e.target === modelDetailModal) {
+          modelDetailModal.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // URL parametresi ile filtre tetikleme (?kategori=mutfak gibi)
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('kategori') || urlParams.get('cat');
+    if (catParam && modelFilterBar) {
+      const targetBtn = modelFilterBar.querySelector('[data-cat="' + catParam + '"]');
+      if (targetBtn) {
+        targetBtn.click();
+      }
+    }
+  }
+
+});
