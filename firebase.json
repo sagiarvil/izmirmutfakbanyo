@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "mutfak",
+    "site": "izmirmutfakbanyo-24b89",
     "public": ".",
     "ignore": [
       "firebase.json",
