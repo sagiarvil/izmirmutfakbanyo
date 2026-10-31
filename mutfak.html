@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- Site Header -->
+      <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo-wrapper">
@@ -24,45 +24,71 @@
         </a>
       </div>
 
+      <!-- Desktop Nav (Clean Architectural Hierarchy) -->
       <nav class="main-nav">
-                <ul class="nav-menu">
+        <ul class="nav-menu">
           <li><a href="index.html">ANA SAYFA</a></li>
-          <li class="current-menu-item"><a href="mutfak.html">MUTFAK</a></li>
-          <li><a href="banyo.html">BANYO</a></li>
-          <li><a href="ev-tadilati.html">EV TADİLATI</a></li>
-          <li><a href="modeller.html">MODELLER</a></li>
-          <li><a href="projeler.html">PROJELER</a></li>
+          
+          <!-- Konut Mimarisi Dropdown -->
+          <li class="nav-item-dropdown current-menu-item">
+            <a href="mutfak.html">KONUT MİMARİSİ <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="mutfak.html"><span>Modern Ada Mutfak</span> <span class="dropdown-badge">ÖZEL İMALAT</span></a></li>
+              <li><a href="banyo.html"><span>Lüks Hilton Banyo</span> <span class="dropdown-badge">MARİN GÖVDE</span></a></li>
+              <li><a href="ev-tadilati.html"><span>Komple Ev Tadilatı</span> <span class="dropdown-badge">ANAHTAR TESLİM</span></a></li>
+            </ul>
+          </li>
+
+          <!-- 137 Model Kataloğu -->
+          <li><a href="modeller.html">MODELLER <span class="dropdown-badge" style="margin-left: 4px;">137</span></a></li>
+
+          <!-- Projeler & Fit-Out -->
+          <li><a href="projeler.html">PROJELER &amp; FİT-OUT</a></li>
+
+          <!-- Hizmetler -->
           <li><a href="hizmetler.html">HİZMETLER</a></li>
+
+          <!-- Kurumsal -->
           <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+
+          <!-- İletişim -->
           <li><a href="iletisim.html">İLETİŞİM</a></li>
         </ul>
       </nav>
 
-      <button class="mobile-toggle" aria-label="Menüyü Aç">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <!-- Header Sağ CTA Buton & Mobil Hamburger -->
+      <div style="display: flex; align-items: center;">
+        <a href="https://wa.me/905324411060?text=Merhaba,%20mimari%20keşif%20ve%20proje%20teklifi%20almak%20istiyorum." target="_blank" rel="noopener" class="header-cta-btn">
+          <i class="fa-brands fa-whatsapp"></i> 3D KEŞİF AL
+        </a>
+        <button class="mobile-toggle" aria-label="Menüyü Aç">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Offcanvas Drawer -->
   <div class="mobile-nav-backdrop"></div>
   <div class="mobile-nav-drawer">
-          <ul class="mobile-nav-menu">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="mutfak.html" class="active">Mutfak</a></li>
-        <li><a href="banyo.html">Banyo</a></li>
-        <li><a href="ev-tadilati.html">Ev Tadilatı</a></li>
-        <li><a href="modeller.html">Modeller</a></li>
-        <li><a href="projeler.html">Projeler</a></li>
-        <li><a href="hizmetler.html">Hizmetler</a></li>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
-      </ul>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="mutfak.html" class="active">Modern Ada Mutfak</a></li>
+      <li><a href="banyo.html">Lüks Hilton Banyo</a></li>
+      <li><a href="ev-tadilati.html">Komple Ev Tadilatı</a></li>
+      <li><a href="modeller.html">137 Model Kataloğu</a></li>
+      <li><a href="projeler.html">Projeler &amp; Ticari Fit-Out</a></li>
+      <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+
     <div class="mobile-contact-info">
-      <p><strong>Adres:</strong> İzmir – Türkiye</p>
-      <p><strong>Telefon:</strong> <a href="tel:+902324567890">+90 232 456 78 90</a></p>
+      <p><strong>Showroom:</strong> İzmir – Türkiye</p>
+      <p><strong>Fabrika:</strong> Kaynaklar – İzmir</p>
+      <p><strong>Telefon:</strong> <a href="tel:+905324411060">0532 441 10 60</a></p>
       <p><strong>E-posta:</strong> <a href="mailto:barisbagirlar@gmail.com">barisbagirlar@gmail.com</a></p>
     </div>
   </div>
@@ -352,45 +378,43 @@
   </section>
 
   <!-- Footer -->
+    <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-col">
           <h3 class="footer-widget-title">HAKKIMIZDA</h3>
-          <p class="footer-desc">İzmir Mutfak Banyo; mimarlık, iç mimarlık ve şantiye yönetimi konularında uzmanlaşmış bir tasarım ofisidir. Amacımız sadece yaratıcı ve özgün bir mimari değer yaratmak değil; aynı zamanda işverenin yatırım ekonomisinin, tasarımın getirdiği katma değer ile artarak karşılık bulmasını sağlamaktır.</p>
+          <p class="footer-desc">İzmir Mutfak Banyo; mimari tasarım, anahtar teslim konut tadilatı, lüks ada mutfak, banyo ve kurumsal ticari fit-out taahhüt stüdyosudur. İzmir Kaynaklar fabrikamızda yüksek hassasiyetli makine parkurumuzla özel mobilya imalatı gerçekleştiriyoruz.</p>
         </div>
         <div class="footer-col">
-          <h3 class="footer-widget-title">İLETİŞİM</h3>
+          <h3 class="footer-widget-title">İLETİŞİM BİLGİLERİ</h3>
           <ul class="footer-contact-list">
-            <li>İzmir – Türkiye</li>
-            <li><a href="tel:+902324567890">+90 232 456 78 90</a></li>
-            <li><a href="mailto:barisbagirlar@gmail.com">barisbagirlar@gmail.com</a></li>
+            <li><strong>Showroom &amp; Merkez:</strong> İzmir – Türkiye</li>
+            <li><strong>Fabrika &amp; İmalat:</strong> Kaynaklar – İzmir</li>
+            <li><strong>Telefon:</strong> <a href="tel:+905324411060">0532 441 10 60</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:barisbagirlar@gmail.com">barisbagirlar@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-widget-title">MENÜ</h3>
+          <h3 class="footer-widget-title">UZMANLIK ALANLARI</h3>
           <ul class="footer-menu-list">
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="mutfak.html">Mutfak</a></li>
-            <li><a href="banyo.html">Banyo</a></li>
-            <li><a href="ev-tadilati.html">Ev Tadilatı</a></li>
-            <li><a href="projeler.html">Projeler</a></li>
-            <li><a href="hizmetler.html">Hizmetler</a></li>
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="mutfak.html">Modern Ada Mutfak</a></li>
+            <li><a href="banyo.html">Hilton Banyo &amp; Spa</a></li>
+            <li><a href="ev-tadilati.html">Komple Ev Tadilatı</a></li>
+            <li><a href="modeller.html">137 Model Kataloğu</a></li>
+            <li><a href="projeler.html">Ticari Fit-Out &amp; Projeler</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-widget-title">BİZİ TAKİP EDİN</h3>
+          <h3 class="footer-widget-title">PROFESYONEL AĞ</h3>
           <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i> LINKEDIN</a>
-            <a href="https://x.com" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-x-twitter"></i> X (TWITTER)</a>
+            <a href="https://www.linkedin.com/in/barisbagirlar/" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i> LINKEDIN</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© Copyright 2026 “İzmir Mutfak Banyo Mimarlık Tasarım”. Tüm Hakları Saklıdır.</p>
-        <p>izmirmutfakbanyo.com.tr</p>
+        <p>&copy; Copyright 2026 &ldquo;İzmir Mutfak Banyo Mimarlık Tasarım&rdquo;. Tüm Hakları Saklıdır.</p>
+        <p>Tasarım DNA: OSO Mimarlık Standartları ile Geliştirilmiştir.</p>
       </div>
     </div>
   </footer>
