@@ -8,6 +8,18 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/hizmetler",
+        "destination": "/mutfak",
+        "type": 301
+      },
+      {
+        "source": "/hizmetler.html",
+        "destination": "/mutfak",
+        "type": 301
+      }
+    ]
   }
 }

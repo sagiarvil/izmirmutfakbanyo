@@ -2115,3 +2115,78 @@ textarea.form-control {
     display: none;
   }
 }
+
+
+/* ==========================================================================
+   EDGTF SEPARATOR & LUXURY GOLD ACCENT ALIGNMENT
+   ========================================================================== */
+.edgtf-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 500px;
+  max-width: 80%;
+  margin: 14px auto 35px;
+  background-color: transparent !important;
+  height: auto !important;
+}
+
+.edgtf-separator .sep-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(197, 155, 39, 0.4);
+}
+
+.edgtf-separator .sep-diamond {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-gold);
+  transform: rotate(45deg);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Sayfa başında boş olan separatörler için tek çizgi fallback */
+.edgtf-separator:empty {
+  height: 2px !important;
+  background-color: var(--accent-gold) !important;
+  max-width: 80px;
+  margin: 14px auto 30px;
+}
+
+
+/* ==========================================================================
+   MODEL DETAIL MODAL RESPONSIVE FIX
+   ========================================================================== */
+#modelDetailModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#modelDetailModal .modal-body-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 800px) {
+  #modelDetailModal .modal-body-wrapper {
+    grid-template-columns: 1fr;
+  }
+  #modelDetailModal .lightbox-content {
+    max-height: 90vh;
+  }
+}
