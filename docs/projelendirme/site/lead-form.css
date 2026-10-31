@@ -1,0 +1,14 @@
+/* Scoped styles; designed to avoid changes to existing visual language. */
+.ym-lead { max-width: 920px; margin: 0 auto; padding: clamp(20px, 4vw, 48px); background: #faf9f6; color: #262626; border: 1px solid #dedbd4; border-radius: 16px; }
+.ym-lead h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; margin: 0 0 1rem; }
+.ym-lead form { display: grid; grid-template-columns: minmax(0,1fr); gap: 9px; margin-top: 24px; }
+.ym-lead form > label { font-size: 0.92rem; font-weight: 600; margin-top: 6px; }
+.ym-lead label:has(input[type="checkbox"]) { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; line-height: 1.45; }
+.ym-lead input:not([type="checkbox"]), .ym-lead textarea, .ym-lead select { box-sizing: border-box; width: 100%; min-height: 45px; background: white; color: #262626; border: 1px solid #9a968c; border-radius: 9px; padding: 11px; font: inherit; }
+.ym-lead input:focus-visible, .ym-lead textarea:focus-visible, .ym-lead select:focus-visible, .ym-lead button:focus-visible { outline: 3px solid #a13a2b; outline-offset: 2px; }
+.ym-lead input[type="checkbox"] { min-width: 20px; min-height: 20px; flex: 0 0 auto; }
+.ym-lead button { background: #8e3023; color: white; font: inherit; font-weight: 700; min-height: 52px; border: 0; padding: 14px 22px; border-radius: 9px; cursor: pointer; }
+.ym-lead button:disabled { opacity: .65; cursor: not-allowed; }
+.ym-lead a { color: #712318; text-decoration: underline; }
+.ym-lead #ym-form-message { min-height: 1.6em; font-weight: 600; }
+.ym-lead .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

@@ -11,6 +11,32 @@
       "trailingSlash": true,
       "headers": [
         {
+          "source": "**/projelendirme/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "CDN-Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "CDN-Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            }
+          ]
+        },
+        {
           "source": "/.well-known/**",
           "headers": [
             {
@@ -75,7 +101,7 @@
           "headers": [
             {
               "key": "Cache-Control",
-              "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"
+              "value": "public, max-age=0, must-revalidate"
             }
           ]
         },
@@ -262,6 +288,32 @@
       "trailingSlash": true,
       "headers": [
         {
+          "source": "**/projelendirme/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "CDN-Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "CDN-Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            }
+          ]
+        },
+        {
           "source": "**/favicon*.*",
           "headers": [
             {
@@ -292,7 +344,7 @@
           "headers": [
             {
               "key": "Cache-Control",
-              "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"
+              "value": "public, max-age=0, must-revalidate"
             }
           ]
         },

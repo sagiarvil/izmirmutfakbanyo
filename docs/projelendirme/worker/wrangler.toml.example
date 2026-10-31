@@ -1,0 +1,21 @@
+name = "yesilay-projelendirme-lead"
+main = "index.mjs"
+compatibility_date = "2026-10-01"
+
+# Existing route, not a new domain: require Cloudflare route control for yesilaymutfak.com.
+routes = [{ pattern = "yesilaymutfak.com/api/lead-projelendirme", zone_name = "yesilaymutfak.com" }]
+
+[vars]
+PUBLIC_ORIGIN = "https://yesilaymutfak.com"
+# RETENTION_DAYS = 180  # ONLY after legal/KVKK retention period decision
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yesilay-leads"
+database_id = "REPLACE_WITH_REAL_D1_DATABASE_UUID"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Secrets (never commit): TURNSTILE_SECRET, IP_HMAC_SECRET,
+# CRM_WEBHOOK_URL, CRM_WEBHOOK_SECRET. Optional webhook: if unset, lead remains safely saved in D1.

@@ -1,0 +1,37 @@
+<!-- Place once in /projelendirme/ body after content. Company privacy notice URL must be real. -->
+<section class="ym-lead" id="proje-gorusmesi" aria-labelledby="ym-lead-title">
+  <h2 id="ym-lead-title">Ticari Mekânınız İçin Proje Görüşmesi Talep Edin</h2>
+  <p>İşletme türünü, ilçe ve yaklaşık alanı paylaşın; projenizin görüşmeye uygunluğunu değerlendirelim. Form gönderimi fiyat veya termin taahhüdü oluşturmaz.</p>
+  <form id="ym-lead-form" action="/api/lead-projelendirme" method="post">
+    <label for="ym-name">Ad soyad *</label><input id="ym-name" name="name" autocomplete="name" required minlength="2" maxlength="90">
+    <label for="ym-company">İşletme / firma</label><input id="ym-company" name="company" autocomplete="organization" maxlength="120">
+    <label for="ym-phone">Telefon *</label><input id="ym-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="05xx xxx xx xx">
+    <label for="ym-email">E-posta (isteğe bağlı)</label><input id="ym-email" name="email" type="email" autocomplete="email" maxlength="140">
+    <label for="ym-sector">İşletme türü *</label><select id="ym-sector" name="sector" required>
+      <option value="">Seçin</option><option value="magaza">Mağaza / Showroom</option><option value="ofis">Ofis</option>
+      <option value="kafe_restoran">Kafe / Restoran</option><option value="klinik">Klinik</option>
+      <option value="otel">Otel</option><option value="kuyumcu">Kuyumcu</option>
+      <option value="optik">Optik</option><option value="zincir">Zincir mağaza</option><option value="diger">Diğer</option>
+    </select>
+    <label for="ym-district">İlçe / konum *</label><input id="ym-district" name="district" required maxlength="80" placeholder="Örn. İzmir, Bayraklı">
+    <label for="ym-area">Tahmini alan (m²)</label><input id="ym-area" name="area_m2" type="number" inputmode="decimal" min="1" max="1000000" step="any">
+    <label for="ym-timeline">Planlanan başlangıç *</label><select id="ym-timeline" name="timeline" required>
+      <option value="">Seçin</option><option value="hemen">En kısa sürede</option><option value="1-3-ay">1–3 ay</option>
+      <option value="3-6-ay">3–6 ay</option><option value="arastirma">Henüz araştırıyorum</option>
+    </select>
+    <label for="ym-notes">Proje özeti</label><textarea id="ym-notes" name="description" maxlength="1200" rows="3" placeholder="Yeni açılış mı, mevcut alan yenilemesi mi? Kısa anlatın."></textarea>
+    <div class="visually-hidden" aria-hidden="true"><label for="ym-website">Web sitesi</label><input id="ym-website" name="website" tabindex="-1" autocomplete="off"></div>
+    <!-- Replace with reviewed, published privacy notice. This checkbox is acknowledgement, not marketing consent. -->
+    <label><input type="checkbox" name="privacy_ack" required> <a href="/kvkk-aydinlatma-metni/" target="_blank" rel="noopener">Kişisel veri aydınlatma metnini</a> okudum. *</label>
+    <label><input type="checkbox" name="marketing_opt_in"> Kampanya ve duyurular hakkında ayrıca ileti almayı tercih ediyorum (isteğe bağlı).</label>
+    <!-- Replace REPLACE_TURNSTILE_SITEKEY with real Cloudflare Turnstile key and validate widget appearance in staging. -->
+    <div class="cf-turnstile" data-sitekey="REPLACE_TURNSTILE_SITEKEY" data-action="projelendirme_lead"></div>
+    <button type="submit">Proje görüşmesi talep et</button>
+    <p id="ym-form-message" role="status" aria-live="polite"></p>
+    <noscript>Form güvenli gönderim için JavaScript gerektirir. Alternatif: <a href="tel:+902324411060">telefonla iletişime geçin</a>.</noscript>
+  </form>
+  <p>Alternatif: <a href="https://wa.me/905324261788?text=Merhaba%2C%20ticari%20mekan%20projelendirmesi%20icin%20gorusmek%20istiyorum." rel="noopener noreferrer">WhatsApp ile görüşme başlat</a>.</p>
+</section>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/assets/lead-form.js" defer></script>
+<!-- Deploy site/lead-form.css as /assets/lead-form.css and add a stylesheet link in the page head. -->

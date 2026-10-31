@@ -1,0 +1,7 @@
+{
+  "name":"yesilay-fitout-lead-worker",
+  "private":true,
+  "type":"module",
+  "scripts":{"test":"node --test ../tests/lead.test.mjs","dev":"wrangler dev","deploy":"wrangler deploy","db:migrate":"wrangler d1 execute yesilay-leads --remote --file=../migrations/0001_leads.sql"},
+  "devDependencies":{"wrangler":"^4.0.0"}
+}

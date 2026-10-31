@@ -1,0 +1,12 @@
+intent,priority,primary_query_hypothesis,secondary_query_hypotheses,assigned_url,content_asset,status
+transactional,P0,izmir ticari mekan projelendirme,izmir fit out firma | izmir anahtar teslim ticari mekan,https://yesilaymutfak.com/projelendirme/,ana-hizmet-sayfasi,existing
+transactional,P1,izmir mağaza tasarımı,mağaza dekorasyon firması izmir | mağaza fit out | mağaza projelendirme,/projelendirme/magaza-tasarimi/,orijinal-magaza-vakasi,planned-conditional
+transactional,P1,izmir ofis tasarımı,ofis iç mimarlık izmir | hukuk bürosu dekorasyon | kurumsal ofis yenileme,/projelendirme/ofis-tasarimi/,ofis-vakasi,planned-conditional
+transactional,P1,izmir cafe restoran tasarımı,restoran iç mimarlık izmir | kafe projelendirme | cafe dekorasyon uygulama,/projelendirme/kafe-restoran-tasarimi/,is-akisi-ve-vaka,planned-conditional
+transactional,P2,izmir diş kliniği iç mimari,diş kliniği tasarımı | klinik fit out,/projelendirme/dis-klinigi-tasarimi/,mevzuat-dogrulama-vaka,planned-conditional
+transactional,P2,kuyumcu mağazası tasarımı,kuyumcu vitrini dekorasyonu | kuyumcu iç mimar,/projelendirme/kuyumcu-magazasi/,teknik-kapsam-vaka,planned-conditional
+transactional,P2,otel renovasyonu izmir,butik otel iç mimari | otel oda yenileme,/projelendirme/otel-renovasyonu/,otel-vakasi,planned-conditional
+transactional,P2,optik mağaza tasarımı,gözlük mağazası dekorasyon | optik teşhir,/projelendirme/optik-magaza/,optik-vakasi,planned-conditional
+commercial,P1,mağaza dekorasyonu maliyeti,mağaza tadilat fiyatı | iş yeri dekorasyonu bütçesi,/projelendirme/magaza-tasarimi/,olcumlu-maliyet-aciklama,planned-conditional
+commercial,P1,ofis tadilatı ne kadar sürer,ofis yenileme aşamaları | fit out süresi,/projelendirme/ofis-tasarimi/,kapsam-takvim-cercevesi,planned-conditional
+informational,P2,fit out nedir,fit out anahtar teslim ne demek | projelendirme ve uygulama farkı,/projelendirme/,hizmet-kapsam-sss,existing

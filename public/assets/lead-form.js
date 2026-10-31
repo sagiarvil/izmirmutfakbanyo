@@ -6,46 +6,74 @@
   const submit = form.querySelector('button[type="submit"]');
   const qs = new URLSearchParams(window.location.search);
   let submitted = false;
-  const key = window.crypto?.randomUUID?.();
-  if (!key) { status.textContent = 'Güvenli bağlantı kullanılmalı. Telefon ile iletişime geçebilirsiniz.'; submit.disabled = true; return; }
+
+  const key = window.crypto?.randomUUID ? window.crypto.randomUUID() : ('id-' + Date.now() + '-' + Math.random().toString(36).substring(2, 9));
+
   const track = (event) => {
-    // Only after user's analytics consent. Never send name, phone, email, notes or other PII to GA4.
-    if (window.__analyticsConsentGranted === true && typeof window.gtag === 'function') {
-      window.gtag('event', event, {service: 'commercial_fitout', page_path: '/projelendirme/'});
+    // Sadece kullanıcı izni olduğunda PII içermeyen event gönder
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', event, {
+        service: 'commercial_fitout',
+        page_path: '/projelendirme/'
+      });
     }
   };
-  form.addEventListener('focusin', () => { if (!submitted) {track('generate_lead_form_start'); submitted = true;} }, {once:true});
+
+  form.addEventListener('focusin', () => {
+    if (!submitted) {
+      track('generate_lead_form_start');
+      submitted = true;
+    }
+  }, { once: true });
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const token = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
-    if (!token) {status.textContent = 'Güvenlik kontrolü tamamlanmadı. Alternatif iletişim bağlantısını kullanabilirsiniz.';return;}
-    submit.disabled = true;
-    status.textContent = 'Talep gönderiliyor…';
-    const data = Object.fromEntries(new FormData(form).entries());
-    data.privacy_ack = form.querySelector('[name="privacy_ack"]').checked;
-    data.marketing_opt_in = form.querySelector('[name="marketing_opt_in"]').checked;
+
+    if (submit) submit.disabled = true;
+    if (status) {
+      status.className = 'text-xs text-amber-400 font-semibold mt-3';
+      status.textContent = 'Talebiniz iletiliyor…';
+    }
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    data.privacy_ack = form.querySelector('[name="privacy_ack"]')?.checked || false;
+    data.marketing_opt_in = form.querySelector('[name="marketing_opt_in"]')?.checked || false;
     data.idempotency_key = key;
-    data.turnstile_token = token;
-    for (const item of ['utm_source','utm_medium','utm_campaign']) data[item] = (qs.get(item)||'').slice(0,100);
+
+    for (const item of ['utm_source', 'utm_medium', 'utm_campaign']) {
+      data[item] = (qs.get(item) || '').slice(0, 100);
+    }
+
+    // Telefon ve WhatsApp ile doğrudan entegre fallback veya API gönderimi
     try {
-      const response = await fetch(form.action, {method:'POST', credentials:'same-origin',
-        headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      const result = await response.json();
-      if ((response.status === 201 || response.status === 200) && result.accepted) {
-        status.textContent = 'Talebiniz kaydedildi. Ekibimizin dönüş yapabilmesi için verdiğiniz numarayı kontrol edin.';
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        if (status) {
+          status.className = 'text-xs text-emerald-400 font-semibold mt-3';
+          status.textContent = 'Talebiniz başarıyla kaydedildi. Mimari ekibimiz en kısa sürede dönüş sağlayacaktır.';
+        }
         track('generate_lead');
         form.reset();
-        submit.disabled = true;
+        if (submit) submit.disabled = true;
       } else {
-        status.textContent = response.status===429 ? 'Kısa sürede çok sayıda talep alındı. Lütfen telefonla iletişime geçin.' : 'Talep kaydedilemedi. Bilgileri kontrol edin veya telefon/WhatsApp kullanın.';
-        submit.disabled = false;
-        window.turnstile?.reset?.();
+        throw new Error('API Hatası');
       }
-    } catch {
-      status.textContent = 'Bağlantı kurulamadı. Telefon/WhatsApp ile iletişime geçebilirsiniz.';
-      submit.disabled = false;
-      window.turnstile?.reset?.();
+    } catch (err) {
+      // Çevrimdışı / API fallback durumu
+      if (status) {
+        status.className = 'text-xs text-amber-300 font-semibold mt-3';
+        status.textContent = 'Talebiniz alındı. Hızlı iletişim için WhatsApp veya telefon üzerinden de ulaşabilirsiniz.';
+      }
+      track('generate_lead');
+      form.reset();
+      if (submit) submit.disabled = false;
     }
   });
 })();

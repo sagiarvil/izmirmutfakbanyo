@@ -1,0 +1,21 @@
+# robots.txt - öneri (mevcut dosyanın körlemesine üzerine yazmayın)
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /404/
+
+# ChatGPT arama görünürlüğü (model eğitimi politikası ayrı karar)
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot eğitime ilişkin bağımsız işletme kararı: mevcutta Allow açık; bu şablonda varsayılan davranış korunur.
+User-agent: GPTBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://yesilaymutfak.com/sitemap.xml

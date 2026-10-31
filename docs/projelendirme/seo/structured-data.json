@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://yesilaymutfak.com/#organization",
+      "name": "Yeşilay Mutfak",
+      "url": "https://yesilaymutfak.com/",
+      "logo": "https://yesilaymutfak.com/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yesilaymutfak.com/#website",
+      "url": "https://yesilaymutfak.com/",
+      "name": "Yeşilay Mutfak",
+      "publisher": {
+        "@id": "https://yesilaymutfak.com/#organization"
+      },
+      "inLanguage": "tr-TR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://yesilaymutfak.com/projelendirme/#webpage",
+      "url": "https://yesilaymutfak.com/projelendirme/",
+      "name": "İzmir Ticari Mekân Projelendirme ve Fit-Out | Yeşilay Mutfak",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://yesilaymutfak.com/#website"
+      },
+      "about": {
+        "@id": "https://yesilaymutfak.com/projelendirme/#service"
+      },
+      "publisher": {
+        "@id": "https://yesilaymutfak.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://yesilaymutfak.com/projelendirme/#breadcrumbs"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://yesilaymutfak.com/projelendirme/#service",
+      "name": "Ticari Mekân Mimari Projelendirme ve Fit-Out",
+      "serviceType": "Ticari mekân mimari projelendirme, 3D tasarım ve proje bazlı anahtar teslim uygulama",
+      "provider": {
+        "@id": "https://yesilaymutfak.com/#organization"
+      },
+      "url": "https://yesilaymutfak.com/projelendirme/",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "İzmir"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Mağaza, ofis ve ticari mekân yatırımcıları"
+      },
+      "description": "İzmir'de ticari mekânlar için ihtiyaç analizi, projelendirme, 3D görselleştirme, metraj ve kapsamı yazılı kararlaştırılan fit-out uygulamaları."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yesilaymutfak.com/projelendirme/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://yesilaymutfak.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projelendirme",
+          "item": "https://yesilaymutfak.com/projelendirme/"
+        }
+      ]
+    }
+  ]
+}
