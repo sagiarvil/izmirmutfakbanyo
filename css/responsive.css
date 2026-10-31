@@ -1,0 +1,158 @@
+/* ==========================================================================
+   İZMİR MUTFAK BANYO — RESPONSIVE STYLES
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1.2fr 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-nav,
+  .lang-selector {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .render-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .slide-title {
+    font-size: 2.4rem;
+  }
+
+  .section-padding {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-inner {
+    height: 80px;
+  }
+
+  .logo-wrapper .logo-light,
+  .logo-wrapper .logo-dark {
+    height: 38px;
+  }
+
+  .slide-content {
+    left: 6%;
+    bottom: 90px;
+    padding-right: 20px;
+  }
+
+  .slide-title {
+    font-size: 1.85rem;
+    letter-spacing: 2px;
+  }
+
+  .slider-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .slider-arrow.prev {
+    left: 15px;
+  }
+
+  .slider-arrow.next {
+    right: 15px;
+  }
+
+  .slider-dots {
+    display: none;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .solution-thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .contact-form-wrapper {
+    padding: 25px 20px;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .page-hero-title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .cta-title {
+    font-size: 1.65rem;
+  }
+}
