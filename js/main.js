@@ -1,7 +1,7 @@
 /**
  * İZMİR MUTFAK BANYO (izmirmutfakbanyo.com.tr)
  * Mimari İç Mekan Tasarımı, Özel İmalat & Fit-Out Uygulama Hizmetleri
- * Etkileşim ve Dinamik Davranış Motoru (1:1 OSO Mimarlık Davranışları)
+ * Etkileşim ve Dinamik Davranış Motoru (1:1 İzmir Mutfak Banyo Davranışları)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
