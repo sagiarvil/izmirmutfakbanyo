@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initHeroSlider();
+  initDropdownNav();
   initMobileNav();
   initPortfolioFilter();
   initLightbox();
@@ -507,3 +508,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* ==========================================================================
+   DROPDOWN NAVIGATION TOGGLE (CLICK & HOVER HYBRID)
+   ========================================================================== */
+function initDropdownNav() {
+  const dropdownToggles = document.querySelectorAll(".nav-item-dropdown > a");
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+      const parent = toggle.closest(".nav-item-dropdown");
+      if (parent) {
+        const isOpen = parent.classList.contains("is-open");
+        document.querySelectorAll(".nav-item-dropdown.is-open").forEach(p => p.classList.remove("is-open"));
+        if (!isOpen) {
+          e.preventDefault();
+          parent.classList.add("is-open");
+        }
+      }
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-item-dropdown")) {
+      document.querySelectorAll(".nav-item-dropdown.is-open").forEach(p => p.classList.remove("is-open"));
+    }
+  });
+}

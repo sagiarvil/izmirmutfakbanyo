@@ -570,7 +570,7 @@ ul {
 }
 
 /* ==========================================================================
-   SECTION COMMON STYLES (OSO SIGNATURE)
+   SECTION COMMON STYLES (MİMARİ İMZA)
    ========================================================================== */
 .section-padding {
   padding-top: 100px;
@@ -596,7 +596,7 @@ ul {
   margin-bottom: 12px;
 }
 
-/* Signature OSO Separator */
+/* Signature Mimari Separator */
 .edgtf-separator {
   width: 500px;
   max-width: 80%;
@@ -1310,7 +1310,7 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   FOOTER (1:1 OSO ARCHITECTURE)
+   FOOTER (KURUMSAL MİMARİ)
    ========================================================================== */
 .site-footer {
   background-color: var(--bg-footer);
@@ -1982,7 +1982,8 @@ textarea.form-control {
   transition: transform 0.3s ease;
 }
 
-.nav-item-dropdown:hover > a .dropdown-arrow {
+.nav-item-dropdown:hover > a .dropdown-arrow,
+.nav-item-dropdown.is-open > a .dropdown-arrow {
   transform: rotate(180deg);
 }
 
@@ -2013,7 +2014,8 @@ textarea.form-control {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.nav-item-dropdown:hover .dropdown-menu {
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown.is-open .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

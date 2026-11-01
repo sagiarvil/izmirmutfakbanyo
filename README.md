@@ -2,13 +2,13 @@
 
 **Mimarlık & İç Mimarlık Ofisi — Özel Mutfak, Lüks Banyo, Villa Tadilatı ve Fit-Out Uygulama Hizmetleri**
 
-Bu proje, **[osomimarlik.com](https://osomimarlik.com/)**'un prestijli mimari tasarım dili, katmanlı tipografi hiyerarşisi, 12 slaytlı hero slider motoru, 4 sütunlu interaktif haber kartları, 3D Render vs Fit-Out karşılaştırma vitrini ve dinamik filtreli portföy etkileşimleri 1:1 birebir modellenerek geliştirilmiştir.
+Bu proje, **[izmirmutfakbanyo.com.tr](https://izmirmutfakbanyo.com.tr/)**'un prestijli mimari tasarım dili, katmanlı tipografi hiyerarşisi, 12 slaytlı hero slider motoru, 4 sütunlu interaktif haber kartları, 3D Render vs Fit-Out karşılaştırma vitrini ve dinamik filtreli portföy etkileşimleri 1:1 birebir modellenerek geliştirilmiştir.
 
 ---
 
 ## 🏛️ Mimari Özellikler ve Tasarım Standartları
 
-- **1:1 OSO Mimarlık Tasarım & Tipografi DNA'sı:**
+- **Özgün Mimari Tasarım & Tipografi DNA'sı:**
   - `Montserrat` (300/400/500/600/700) ve `Roboto` (300/400/500) tipografi sistemi.
   - Özel mimari seperatör ayracı (`.edgtf-separator`).
   - Fotogerçekçi mimari görsel hiyerarşisi ve 3D gölgelendirme (`vc_box_shadow_3d`).
