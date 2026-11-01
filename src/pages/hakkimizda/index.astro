@@ -3,20 +3,22 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig } from "../../data/siteConfig";
 
 const seo = {
-  title: "Hakkımızda — Yeşilay Mutfak Mimarlık & Özel İmalat Atölyesi",
-  description: "1998'den bu yana İzmir Buca Adatepe'deki kendi imalat atölyemizde kişiye özel lüks mutfak dolapları, ıslak hacim renovasyonları ve anahtar teslim mimari taahhüt üretiyoruz. 28 yıllık tecrübe, 2.850+ tamamlanan proje ve 10 yıl sözleşmeli gövde garantisi.",
+  title: "Hakkımızda — 1998'den Bugüne İzmir Buca Atölye İmalatı & Mimarlık",
+  description: "İzmir Buca Gaziler Caddesi showroomumuz ve Adatepe imalat atölyemizde 1998'den bu yana aracısız, fason üretimsiz ve resmi sözleşmeyle özel mutfak dolapları ve anahtar teslim konut tadilatı gerçekleştiriyoruz.",
   canonical: `${siteConfig.siteUrl}/hakkimizda/`,
-  serviceName: "Yeşilay Mutfak & İç Mimari",
+  serviceName: "Yeşilay Mutfak & Mimarlık",
   breadcrumbs: [
+    { name: "Ana Sayfa", url: "/" },
     { name: "Hakkımızda", url: "/hakkimizda/" }
   ],
   keywords: [
     "yeşilay mutfak kimdir",
-    "yeşilay mutfak mimarlık hakkımızda",
-    "buca adatepe mutfak atölyesi",
-    "izmir özel mobilya imalatçısı",
-    "lüks mutfak dolabı üreticisi izmir",
-    "cem yeşilay mimarlık"
+    "yeşilay mutfak bakiye yeşilay cem yeşilay",
+    "buca adatepe mutfak imalat atölyesi",
+    "izmir mutfak dolabı üreticisi fabrika",
+    "sözleşmeli mutfak tadilatı izmir",
+    "gaziler mahallesi yeşilay mutfak",
+    "buca mutfak mağazası"
   ]
 };
 ---
@@ -24,235 +26,181 @@ const seo = {
 <Layout seo={seo} activeService="Hakkımızda">
 
   <!-- ===================================================================== -->
-  <!-- 1. HERO BÖLÜMÜ (ZARİF MİMARİ MİRAS & DEV WATERMARK)                 -->
+  <!-- 1. HERO BÖLÜMÜ: GERÇEK MEKAN, KÖKLÜ MİRAS & SIFIR SLOP                -->
   <!-- ===================================================================== -->
-  <section class="relative py-20 sm:py-28 bg-[#FAF9F6] border-b border-[#E5DFD5] overflow-hidden">
-    <!-- Dekoratif Arka Plan Işık Dalgası -->
-    <div class="absolute inset-0 pointer-events-none opacity-40">
-      <div class="absolute -top-32 right-1/4 w-96 h-96 bg-[#C5A880]/15 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-32 left-10 w-96 h-96 bg-[#006039]/10 rounded-full blur-3xl"></div>
-    </div>
+  <section class="relative py-16 sm:py-24 bg-[#0E2017] text-white overflow-hidden border-b border-[#0A1A12]">
+    <!-- Arka Plan Gerçek Showroom Dış Cephe Binası (Buca Gaziler Cd.) -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity scale-105" style="background-image: url('/media/real/yesilay-buca-showroom-dis-bina.webp');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0A1A12] via-[#0E2017]/90 to-[#0A1A12]/80"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 space-y-8">
       
-      <!-- Ghost Watermark Dinamik SVG Başlık (Kurumsal Standart: Üstte ve Asla Çakışmaz) -->
+      <!-- Ghost Watermark Dinamik SVG (Üstte, Asla Başlığa Basmaz) -->
       <div class="w-full max-w-4xl mx-auto flex items-center justify-center pointer-events-none select-none">
-        <svg viewBox="0 0 880 140" class="w-full h-auto max-h-[70px] sm:max-h-[95px] md:max-h-[120px]" preserveAspectRatio="xMidYMid meet">
-          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="120" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#EFECE6" letter-spacing="-0.02em">Miras & Güven.</text>
+        <svg viewBox="0 0 880 120" class="w-full h-auto max-h-[60px] sm:max-h-[85px] md:max-h-[105px]" preserveAspectRatio="xMidYMid meet">
+          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="110" font-weight="700" font-style="italic" font-family="'Playfair Display', Georgia, serif" fill="#1C3829" letter-spacing="-0.02em">1998'DEN BUGÜNE</text>
         </svg>
       </div>
 
       <!-- Rozet -->
       <div class="flex items-center justify-center">
-        <div class="inline-flex items-center gap-2.5 px-4 py-2 bg-white border border-[#E5DFD5] rounded-full shadow-[0_2px_8px_rgba(21,35,28,0.04)]">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#006039] animate-pulse"></span>
-          <span class="text-[#15231C] text-[11px] sm:text-[12px] font-bold tracking-[0.14em] uppercase font-sans">
-            1998'DEN BUGÜNE 28 YILLIK DOĞRUDAN ATÖLYE İMALATI
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 bg-emerald-950/80 border border-emerald-500/40 rounded-full shadow-lg">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-emerald-200 text-[11px] sm:text-[12px] font-bold tracking-[0.16em] uppercase">
+            28 YILLIK FİZİKİ ŞİRKET &bull; ARACISIZ BUCA ATÖLYE İMALATI
           </span>
         </div>
       </div>
 
       <!-- Ana Başlık & Açıklama -->
       <div class="text-center max-w-4xl mx-auto space-y-5">
-        <h1 class="text-[36px] sm:text-[52px] lg:text-[60px] font-extrabold text-[#15231C] leading-[1.1] tracking-[-0.03em]">
-          Aracısız Kendi Atölyesinde Üreten, <br class="hidden sm:inline" />
-          <span class="text-[#006039] font-serif italic font-normal">Sözleşmeli & Garantili</span> <br class="hidden sm:inline" />
-          Mimari Mutfak & Yaşam Alanı Uzmanı.
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
+          Masa Başı Aracı Değil; <br />
+          <span class="font-normal italic text-emerald-300">Kendi Atölyesinde Üreten,</span> <br />
+          28 Yıllık İzmirli İmalatçı ve Mimarlık Kuruluşu.
         </h1>
 
-        <p class="text-[16px] sm:text-[18.5px] text-[#55504A] font-normal leading-relaxed max-w-3xl mx-auto">
-          Yeşilay Mutfak; taşeron komisyonu veya fason üretim bantları yerine, <strong>İzmir Buca Adatepe'deki kendi modern tesisinde</strong> milimetrik lazer rölöve, fırın boyalı lake kabinleri ve Avusturya Blum mekanizmalarıyla kişiye özel yaşam alanları inşa eder.
+        <p class="text-base sm:text-lg text-stone-300 font-light leading-relaxed max-w-3xl mx-auto">
+          İzmir Buca Gaziler Caddesi köşesindeki 3 katlı mağazamız ve Adatepe’deki kendi mobilya imalat atölyemizle 1998 yılından bu yana hizmetinizdeyiz. Fason taşeron komisyonu ödemeden, kadrolu mimarlarımızın 3D projesi ve resmi sözleşme güvencesiyle evinizi yeniliyoruz.
         </p>
 
-        <!-- Hızlı Aksiyon Butonları -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-4">
+        <!-- Güven Göstergeleri Dock -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-3xl mx-auto text-left">
+          <div class="p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">1998</div>
+            <div class="text-xs text-stone-300 font-light mt-0.5">Buca Kuruluş Yılı</div>
+          </div>
+          <div class="p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">2.850+</div>
+            <div class="text-xs text-stone-300 font-light mt-0.5">Teslim Edilmiş Ev &amp; Villa</div>
+          </div>
+          <div class="p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">%100</div>
+            <div class="text-xs text-stone-300 font-light mt-0.5">Öz Sermayeli Atölye</div>
+          </div>
+          <div class="p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xs">
+            <div class="text-2xl sm:text-3xl font-bold text-emerald-400">10 Yıl</div>
+            <div class="text-xs text-stone-300 font-light mt-0.5">Yazılı Gövde Taahhüdü</div>
+          </div>
+        </div>
+
+        <!-- Butonlar -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <a 
-            href="https://wa.me/905324261788?text=Merhaba,%20Ye%C5%9Filay%20Mutfak%20hakk%C4%B1nda%20bilgi%20ve%20%C3%BCcretsiz%203D%20ke%C5%9Fif%20g%C3%B6r%C3%BC%C5%9Fmesi%20istiyorum." 
+            href="https://wa.me/905324261788?text=Merhaba,%20Yeşilay%20Mutfak%20showroomunuza%20gelmek%20ve%20ücretsiz%203D%20keşif%20görüşmesi%20almak%20istiyorum." 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#006039] hover:bg-[#00482B] text-white font-bold text-xs sm:text-[13px] tracking-wider uppercase rounded-xl border border-[#C5A880]/50 shadow-[0_6px_20px_rgba(0,96,57,0.25)] transition duration-200"
-            data-track="cta_click"
-            data-category="hakkimizda_hero"
-            data-label="whatsapp_kesif"
+            class="w-full sm:w-auto px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition"
           >
-            <span>Showroom Randevusu & 3D Keşif Al</span>
-            <span class="text-[#C5A880]">→</span>
+            <span>💬 Buca Showroom Randevusu Al</span>
           </a>
-
           <a 
-            href="/yapilan-isler/" 
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white hover:bg-[#F3EFEA] text-[#15231C] font-bold text-xs sm:text-[13px] tracking-wider uppercase rounded-xl border border-[#E5DFD5] shadow-xs transition duration-200"
-            data-track="nav_click"
-            data-category="hakkimizda_hero"
-            data-label="yapilan_isler"
+            href="tel:02324411060" 
+            class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white hover:text-stone-950 text-white border border-white/20 font-bold text-xs uppercase tracking-wider rounded-xl transition"
           >
-            <span>Gerçek Teslim Edilmiş İşler</span>
-            <span class="text-[#C5A880]">↗</span>
+            <span>📞 0232 441 10 60 — Atölyeyi Arayın</span>
           </a>
         </div>
+
       </div>
 
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 2. RAKAMLARLA KURUMSAL OTORİTE & GÜVEN METRİKLERİ                     -->
+  <!-- 2. BİZ KİMİZ? GERÇEK FİZİKİ KİMLİK, ADRES VE ŞİRKET HİKAYESİ         -->
   <!-- ===================================================================== -->
-  <section class="py-14 bg-white border-b border-[#E5DFD5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-        
-        <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-[#E5DFD5] space-y-1.5 transition hover:border-[#C5A880]">
-          <div class="text-[34px] sm:text-[42px] font-extrabold text-[#15231C] tracking-tight">28+ Yıl</div>
-          <div class="text-[13px] font-bold text-[#006039] uppercase tracking-wide">Kesintisiz İmalat Mirası</div>
-          <p class="text-[12px] text-[#6E675F] leading-snug">1998'den bu yana İzmir Buca'da kendi mülk ve makinelerimizle üretim gücü.</p>
-        </div>
-
-        <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-[#E5DFD5] space-y-1.5 transition hover:border-[#C5A880]">
-          <div class="text-[34px] sm:text-[42px] font-extrabold text-[#15231C] tracking-tight">2.850+</div>
-          <div class="text-[13px] font-bold text-[#006039] uppercase tracking-wide">Eksiksiz Teslim Edilmiş Proje</div>
-          <p class="text-[12px] text-[#6E675F] leading-snug">İzmir, Çeşme, Urla ve Güzelbahçe genelinde daire, villa ve ticari fit-out teslimi.</p>
-        </div>
-
-        <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-[#E5DFD5] space-y-1.5 transition hover:border-[#C5A880]">
-          <div class="text-[34px] sm:text-[42px] font-extrabold text-[#15231C] tracking-tight">137 Model</div>
-          <div class="text-[13px] font-bold text-[#006039] uppercase tracking-wide">Kişiye Özel Tasarım Arşivi</div>
-          <p class="text-[12px] text-[#6E675F] leading-snug">Mutfak, lüks banyo, ada üniteleri, giyinme odaları ve özel lake iç kapılar.</p>
-        </div>
-
-        <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-[#E5DFD5] space-y-1.5 transition hover:border-[#C5A880]">
-          <div class="text-[34px] sm:text-[42px] font-extrabold text-[#15231C] tracking-tight">10 Yıl</div>
-          <div class="text-[13px] font-bold text-[#006039] uppercase tracking-wide">Sözleşmeli Gövde Güvencesi</div>
-          <p class="text-[12px] text-[#6E675F] leading-snug">E1 sınıfı marin gövde ve Blum Avusturya mekanizma parçalarında hukuki taahhüt.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================================== -->
-  <!-- 3. CANLI SHOWROOM & GERÇEK İMALAT FOTOĞRAFLARI (SOMUT KANIT)          -->
-  <!-- ===================================================================== -->
-  <section class="py-20 bg-white border-b border-[#E5DFD5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+  <section class="py-20 sm:py-24 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
       
-      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER -->
-      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
-        <div class="w-full max-w-3xl sm:max-w-4xl px-4 flex items-center justify-center pointer-events-none select-none">
-          <svg viewBox="0 0 760 140" class="w-full h-auto max-h-[70px] sm:max-h-[95px] md:max-h-[110px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="130" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#EFECE6" letter-spacing="-0.02em">Somut Zanaat.</text>
-          </svg>
-        </div>
-        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
-          <span class="text-[12px] uppercase font-bold tracking-[0.16em] text-[#C5A880] block">CANLI SHOWROOM & İMALAT KANITLARI</span>
-          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#15231C] tracking-tight leading-tight">
-            Sözde Değil, Yerinde Görülen Gerçek Üretim Gücü
-          </h2>
-          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-2xl mx-auto leading-relaxed">
-            Buca Gaziler'deki amiral showroomumuz ve Adatepe'deki modern üretim tesisimiz; müşterilerimizin malzemeyi dokunarak seçtiği, şeffaf süreçlerin merkezidir.
-          </p>
-        </div>
-      </div>
-
-      <!-- RESİM MOZAİĞİ (GRID) -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Büyük Görsel: Showroom Gece Işıklı Cephe (8 Kolon) -->
-        <div class="md:col-span-8 group relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5DFD5] shadow-lg bg-[#15231C]">
-          <div class="aspect-[16/10] w-full overflow-hidden">
-            <img 
-              src="/media/real/yesilay-showroom-gece-cephe.webp" 
-              alt="Yeşilay Mutfak Buca Gaziler Lüks Showroom Dış Cephesi" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              loading="lazy" 
-              width="960"
-              height="600"
-            />
+        <!-- Sol: Detaylı Açıklama -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-lg text-xs font-bold text-emerald-800 uppercase tracking-wider">
+            <span>FİZİKİ KİMLİK &bull; TİCARİ GEÇMİŞİMİZ</span>
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white space-y-1.5">
-            <span class="px-3 py-1 bg-[#006039] text-white text-[11px] font-bold uppercase tracking-wider rounded-md inline-block">
-              AMİRAL MAĞAZA & SHOWROOM
-            </span>
-            <h3 class="text-xl sm:text-2xl font-bold">Cem Yeşilay Luxury • Buca Gaziler Showroom</h3>
-            <p class="text-xs sm:text-sm text-gray-200 font-light">En yeni mimari trendler, ada mutfaklar, lüks banyo dolapları ve giyinme odaları teşhiri.</p>
+
+          <h2 class="text-3xl sm:text-4xl font-light text-stone-950 leading-tight" style="font-family: 'Playfair Display', Georgia, serif;">
+            İnternet Vitrini Değil; <br />
+            <span class="font-normal italic text-emerald-800">Kapısını Çalıp Çayımızı İçebileceğiniz</span> <br />
+            Gerçek Bir İzmir Müessesesi.
+          </h2>
+
+          <div class="text-stone-700 text-sm sm:text-base leading-relaxed space-y-4 font-light">
+            <p>
+              Bugün internette gördüğünüz pek çok tadilat ve mutfak sitesi; ne bir tezgaha, ne bir marangoz tezgahına ne de bir makine parkına sahiptir. Çoğu, internetten topladıkları işleri komisyon karşılığı dışarıdaki ustalara dağıtan aracılardır. Bir sorun çıktığında telefonlara bakacak tek bir yetkili dahi bulamazsınız.
+            </p>
+            <p>
+              <strong>Yeşilay Mutfak &amp; Mimarlık olarak biz 1998 yılından bu yana aynı yerdeyiz.</strong> Bakiye Yeşilay ve Cem Yeşilay yönetiminde; İzmir Buca Gaziler Mahallesi'ndeki kendi teşhir mağazamız ve Adatepe’deki imalat tesisimizde üretim yapıyoruz. Ahşabın tozunu yutan kadrolu ustalarımız, CNC kesim ve tozsuz fırın lake kabinlerimizle her dolabın gövdesini milimetrik olarak kendimiz üretiyoruz.
+            </p>
+            <p>
+              Bizimle çalıştığınızda üçüncü şahıslarla, komisyoncularla veya fason atölyelerle muhatap olmazsınız. Rölöveyi alan iç mimarımız, çizimi yapan ekibimiz, atölyede imalatı gerçekleştiren ustamız ve evinize gelip montajı yapan ekibimiz tek bir çatının kadrolu personelleridir.
+            </p>
+          </div>
+
+          <!-- Kurumsal Bilgiler Kutusu -->
+          <div class="p-5 bg-stone-50 border border-stone-200 rounded-2xl grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <span class="text-stone-400 block font-medium uppercase text-[10px] tracking-wider">TİCARİ ÜNVAN &amp; MARKA</span>
+              <strong class="text-stone-900 text-sm">Yeşilay Mutfak &amp; Özel İmalat</strong>
+              <div class="text-stone-500 mt-0.5">Tescilli Tasarım ve Üretim Şirketi</div>
+            </div>
+            <div>
+              <span class="text-stone-400 block font-medium uppercase text-[10px] tracking-wider">SHOWROOM &amp; TEŞHİR MAĞAZASI</span>
+              <strong class="text-stone-900 text-sm">Gaziler Mh. 1084/2 Sk. No: 1/A Buca</strong>
+              <div class="text-stone-500 mt-0.5">Gazi Osman Paşa Cd. Köşesi (3 Katlı Mağaza)</div>
+            </div>
+            <div>
+              <span class="text-stone-400 block font-medium uppercase text-[10px] tracking-wider">İMALAT ATÖLYESİ</span>
+              <strong class="text-stone-900 text-sm">Adatepe Mahallesi Üretim Tesisleri</strong>
+              <div class="text-stone-500 mt-0.5">Öz Mal CNC, Ebatlama ve Fırın Lake Hattı</div>
+            </div>
+            <div>
+              <span class="text-stone-400 block font-medium uppercase text-[10px] tracking-wider">SABİT TELEFON &amp; İLETİŞİM</span>
+              <strong class="text-emerald-700 text-sm">0232 441 10 60 &bull; 0532 426 17 88</strong>
+              <div class="text-stone-500 mt-0.5">Haftanın 6 Günü 09:00 - 19:30 Kesintisiz</div>
+            </div>
           </div>
         </div>
 
-        <!-- Yan Görsel: Mimari Danışmanlık ve Müşteri Masası (4 Kolon) -->
-        <div class="md:col-span-4 group relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5DFD5] shadow-lg bg-[#15231C] flex flex-col justify-end">
-          <div class="aspect-[3/4] md:aspect-auto h-full w-full overflow-hidden">
-            <img 
-              src="/media/real/yesilay-mimari-danismanlik-toplanti.webp" 
-              alt="Yeşilay Mutfak Mimari Danışmanlık ve 3D Proje Sunumu Masası" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              loading="lazy" 
-              width="480"
-              height="640"
-            />
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-white space-y-1.5">
-            <span class="px-3 py-1 bg-[#C5A880] text-[#15231C] text-[11px] font-bold uppercase tracking-wider rounded-md inline-block">
-              MİMARİ DANIŞMANLIK
-            </span>
-            <h3 class="text-lg font-bold">Birebir Projelendirme</h3>
-            <p class="text-xs text-gray-200 font-light">Her detay müşterimizin beklentilerine ve bütçesine göre masada şeffafça şekillenir.</p>
-          </div>
-        </div>
-
-        <!-- Alt 3'lü Grid: İç Mekan, Giriş Lobisi ve Buca Bina Lokasyonu -->
-        <div class="md:col-span-4 group relative rounded-2xl overflow-hidden border border-[#E5DFD5] shadow-md bg-white">
-          <div class="aspect-[16/11] w-full overflow-hidden">
-            <img 
-              src="/media/real/yesilay-showroom-ic-mekan.webp" 
-              alt="Yeşilay Mutfak Showroom İç Mekan ve Teşhir Alanı" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-              loading="lazy" 
-              width="600"
-              height="412"
-            />
-          </div>
-          <div class="p-5 space-y-1.5">
-            <span class="text-[11px] font-bold text-[#006039] uppercase tracking-wider block">PANORAMİK SHOWROOM</span>
-            <h3 class="text-[15px] font-bold text-[#15231C]">Lüks Teşhir & Canlı Deneyim</h3>
-            <p class="text-[12px] text-[#6E675F] leading-snug">Mermer paneller, gizli profil LED aydınlatmalar ve akrilik lake dolap sistemleri.</p>
-          </div>
-        </div>
-
-        <div class="md:col-span-4 group relative rounded-2xl overflow-hidden border border-[#E5DFD5] shadow-md bg-white">
-          <div class="aspect-[16/11] w-full overflow-hidden">
-            <img 
-              src="/media/real/yesilay-showroom-karsilama-giris.webp" 
-              alt="Yeşilay Mutfak Showroom Giriş ve Karşılama Alanı" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-              loading="lazy" 
-              width="600"
-              height="412"
-            />
-          </div>
-          <div class="p-5 space-y-1.5">
-            <span class="text-[11px] font-bold text-[#C5A880] uppercase tracking-wider block">PRESTİJLİ GİRİŞ</span>
-            <h3 class="text-[15px] font-bold text-[#15231C]">Modern Karşılama Alanı</h3>
-            <p class="text-[12px] text-[#6E675F] leading-snug">Müşterilerimizi sıcak bir ortamda ağırlıyor, kahve eşliğinde projelerini dinliyoruz.</p>
-          </div>
-        </div>
-
-        <div class="md:col-span-4 group relative rounded-2xl overflow-hidden border border-[#E5DFD5] shadow-md bg-white">
-          <div class="aspect-[16/11] w-full overflow-hidden">
+        <!-- Sağ: Gerçek Mekan Fotoğrafları Kolajı -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="group rounded-2xl overflow-hidden border border-stone-200 shadow-md relative aspect-[4/3] bg-stone-100">
             <img 
               src="/media/real/yesilay-buca-showroom-dis-bina.webp" 
-              alt="Yeşilay Mutfak Buca Gaziler Köşe Bina ve Mağaza Konumu" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-              loading="lazy" 
-              width="600"
-              height="412"
+              alt="Yeşilay Mutfak Buca Mağazası Dış Görünüm" 
+              class="w-full h-full object-cover group-hover:scale-103 transition duration-500" 
+              loading="lazy"
             />
+            <div class="absolute bottom-3 left-3 right-3 p-3 bg-stone-950/80 backdrop-blur-xs text-white rounded-xl text-xs flex items-center justify-between">
+              <div>
+                <strong class="block text-white">Buca Showroom Mağazamız</strong>
+                <span class="text-stone-300 text-[11px]">Gaziler Mah. Gazi Osman Paşa Cd. Köşesi</span>
+              </div>
+              <span class="px-2 py-1 bg-emerald-600 text-[10px] font-bold rounded">CANLI ZİYARET</span>
+            </div>
           </div>
-          <div class="p-5 space-y-1.5">
-            <span class="text-[11px] font-bold text-[#006039] uppercase tracking-wider block">KOLAY ULAŞIM & PARK</span>
-            <h3 class="text-[15px] font-bold text-[#15231C]">Buca Gaziler Köşe Mağaza</h3>
-            <p class="text-[12px] text-[#6E675F] leading-snug">Gazi Osman Paşa Caddesi köşesinde, otopark imkânı ve ferah vitrin konumu.</p>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-xs aspect-square bg-stone-100 relative group">
+              <img 
+                src="/media/real/yesilay-showroom-ic-mekan.webp" 
+                alt="Yeşilay Mutfak Showroom İç Mekan Teşhir" 
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                loading="lazy"
+              />
+              <span class="absolute bottom-2 left-2 px-2 py-1 bg-stone-900/80 text-white text-[10px] font-medium rounded backdrop-blur-xs">İç Mekan Teşhir</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-xs aspect-square bg-stone-100 relative group">
+              <img 
+                src="/media/real/yesilay-mimari-danismanlik-toplanti.webp" 
+                alt="Mimari Danışmanlık ve Malzeme Seçimi Toplantısı" 
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                loading="lazy"
+              />
+              <span class="absolute bottom-2 left-2 px-2 py-1 bg-stone-900/80 text-white text-[10px] font-medium rounded backdrop-blur-xs">Birebir Mimari Proje</span>
+            </div>
           </div>
         </div>
 
@@ -262,164 +210,105 @@ const seo = {
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 4. PİYASADAKİ ARACILARDAN FARKIMIZ (MİMARİ YETKİNLİK MATRİSİ)          -->
+  <!-- 3. MÜŞTERİ NEDEN GÜVEN DUYMALI? 6 KATMANLI SÖZLEŞME VE İMALAT ZIRHI -->
   <!-- ===================================================================== -->
-  <section class="py-20 bg-[#FAF9F6] border-b border-[#E5DFD5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
-      
-      <div class="max-w-3xl mx-auto text-center space-y-3">
-        <span class="text-[12px] uppercase font-bold tracking-[0.16em] text-[#C5A880] block">ŞEFFAF KARŞILAŞTIRMA</span>
-        <h2 class="text-[30px] sm:text-[40px] font-extrabold text-[#15231C] tracking-tight">
-          Neden Yeşilay Mutfak? Farkımız Nerede?
-        </h2>
-        <p class="text-[15px] sm:text-[16px] text-[#55504A] leading-relaxed">
-          Tadilat ve mutfak sektöründe yaşanan mağduriyetleri biliyoruz. Bu yüzden tüm işleyişimizi şeffaf, ölçülebilir ve kanıtlanabilir kurallara bağladık.
-        </p>
-      </div>
-
-      <!-- Karşılaştırma Tablosu / Matrisi -->
-      <div class="overflow-x-auto bg-white rounded-2xl border border-[#E5DFD5] shadow-xs">
-        <table class="w-full text-left text-xs sm:text-[13px] border-collapse">
-          <thead>
-            <tr class="border-b border-[#E5DFD5] bg-[#F3EFEA]/70 text-[#15231C]">
-              <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-[11px]">Kriter / Aşama</th>
-              <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-[11px] text-[#006039] bg-[#E8F3EE]/60">Yeşilay Mutfak Standartı</th>
-              <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-[11px] text-[#86868B]">Piyasadaki Tipik Aracılar / Taşeronlar</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-[#E5DFD5] text-[#282421]">
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Üretim Modeli</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Buca Adatepe'deki kendi modern atölyemizde kadrolu ustalarımızla üretim.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Fason marangozlara iş paslama, komisyon ekleme, kontrolsüz taşeron zinciri.
-              </td>
-            </tr>
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Ölçü & Rölöve</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Lazer metre ile milimetrik rölöve, köşe açı taraması ve sıfır hata toleransı.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Klasik şerit metreyle kabataslak ölçü, montajda uymayan dolaplar ve kesimler.
-              </td>
-            </tr>
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Görselleştirme</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Evinize birebir fotogerçekçi 3D simülasyon ve renk onayı ile sürprize yer yok.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Elle karalanmış kağıt çizimler veya internetten kopyalanmış sahte kataloglar.
-              </td>
-            </tr>
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Gövde & Malzeme</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Sadece E1 sertifikalı nem dirençli marin yeşil MDF ve 1mm kalın PVC bant.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Neme dayanıksız suntalam gövdeler, zamanla kabaran ve koku yapan suntalar.
-              </td>
-            </tr>
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Donanım & Mekanizma</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Avusturya menşeili orijinal Blum & Häfele frenli menteşe ve tandem raylar.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Menşei belirsiz fason raylar, 6 ay sonra sarkan ve çarpan kapaklar.
-              </td>
-            </tr>
-            <tr class="hover:bg-[#FAF9F6] transition">
-              <td class="p-4 sm:p-5 font-bold text-[#15231C]">Sözleşme & Teslim</td>
-              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#E8F3EE]/30">
-                ✅ Noter geçerliliğinde resmi sözleşme, gecikme cezalı kesin teslim tarihi.
-              </td>
-              <td class="p-4 sm:p-5 text-[#6E675F]">
-                ❌ Sözlü taahhütler, haftalarca sarkan teslimatlar ve ulaşılamayan telefonlar.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===================================================================== -->
-  <!-- 5. 5 ADIMDA ŞEFFAF VE KUSURSUZ İŞ AKIŞI                              -->
-  <!-- ===================================================================== -->
-  <section class="py-20 bg-white border-b border-[#E5DFD5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+  <section class="py-20 sm:py-24 bg-stone-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
       
       <div class="text-center max-w-3xl mx-auto space-y-3">
-        <span class="text-[12px] uppercase font-bold tracking-[0.16em] text-[#C5A880] block">DİSİPLİNLİ SÜREÇ</span>
-        <h2 class="text-[30px] sm:text-[40px] font-extrabold text-[#15231C] tracking-tight">
-          Yeşilay Mutfak İle Projeniz Nasıl İlerler?
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">TÜKETİCİYİ KORUYAN ÇELİK GİBİ KURALLAR</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-stone-950 font-editorial">
+          İzmir'de Evinizi Yenilerken Sizi Risklerden Koruyan 6 İlke
         </h2>
-        <p class="text-[15px] sm:text-[16px] text-[#55504A] leading-relaxed">
-          İlk görüşmeden temiz anahtar teslimine kadar her aşama şeffafça kayıt altındadır.
+        <p class="text-stone-600 text-sm font-light leading-relaxed">
+          Sektörde en çok şikayet edilen konuları (sürpriz ek maliyetler, günlerce geciken teslimatlar, kalitesiz yan sanayi malzeme kullanımı) sistemimizden tamamen eledik.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Adım 1 -->
-        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] rounded-2xl space-y-3 relative group hover:border-[#006039] transition">
-          <div class="w-10 h-10 rounded-full bg-[#006039] text-white flex items-center justify-center font-bold text-sm">
+        <!-- Güven 1: Sabit Fiyat Sözleşmesi -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
             01
           </div>
-          <h3 class="text-base font-bold text-[#15231C]">Keşif & Lazer Ölçü</h3>
-          <p class="text-xs text-[#6E675F] leading-relaxed">
-            Mimarımız evinize gelir; lazer metreyle tesisat, priz, baca ve ışık açılarını milimetrik kaydeder.
+          <h3 class="text-lg font-bold text-stone-900">Tek Kuruş Sürpriz Masraf Yok</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            İşe başlamadan önce hazırlanan sözleşmede metretüller, kapak cinsi, tezgah markası ve armatür kodları açıkça yazılır. İş bittiğinde veya montaj esnasında asla "malzemeye zam geldi, ek masraf çıktı" denilmez.
           </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ Noter &amp; Hukuki Şartnameye Uygun</span>
+          </div>
         </div>
 
-        <!-- Adım 2 -->
-        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] rounded-2xl space-y-3 relative group hover:border-[#006039] transition">
-          <div class="w-10 h-10 rounded-full bg-[#C5A880] text-[#15231C] flex items-center justify-center font-bold text-sm">
+        <!-- Güven 2: Gecikme Cezası -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
             02
           </div>
-          <h3 class="text-base font-bold text-[#15231C]">3D Fotogerçekçi Çizim</h3>
-          <p class="text-xs text-[#6E675F] leading-relaxed">
-            Evinizin renk paletine uygun 3D modelleme hazırlanır; depolama ve ergonomi masada netleşir.
+          <h3 class="text-lg font-bold text-stone-900">Gecikme Cezalı Teslim Taahhüdü</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            Evinizin teslim tarihi sözleşmede gün ve ay olarak kesinleştirilir. Olası bir gecikme durumunda tarafımızdan işverene günlük cezai bedel ödenmesi taahhüt edilir. 28 yıldır işimizi gününden önce teslim etmekle övünüyoruz.
           </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ Zamanında Teslim Taahhüdü</span>
+          </div>
         </div>
 
-        <!-- Adım 3 -->
-        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] rounded-2xl space-y-3 relative group hover:border-[#006039] transition">
-          <div class="w-10 h-10 rounded-full bg-[#006039] text-white flex items-center justify-center font-bold text-sm">
+        <!-- Güven 3: Orijinal İthal Mekanizma -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
             03
           </div>
-          <h3 class="text-base font-bold text-[#15231C]">Malzeme Seçimi & Sözleşme</h3>
-          <p class="text-xs text-[#6E675F] leading-relaxed">
-            Showroomumuzda lake, akrilik, porselen ve Blum rayları dokunarak seçilir; teslim tarihi sözleşmeye bağlanır.
+          <h3 class="text-lg font-bold text-stone-900">Sertifikalı Orijinal Blum &amp; Häfele</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            Piyasada "frenli menteşe" adı altında satılan markasız yan sanayi ürünleri asla kullanmayız. Avusturya menşeili orijinal Blum ve Häfele menteşe, tandembox çekmece ve kalkar kapak amortisörleri monte edilir.
           </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ 200.000 Kez Açma-Kapama Garantili</span>
+          </div>
         </div>
 
-        <!-- Adım 4 -->
-        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] rounded-2xl space-y-3 relative group hover:border-[#006039] transition">
-          <div class="w-10 h-10 rounded-full bg-[#C5A880] text-[#15231C] flex items-center justify-center font-bold text-sm">
+        <!-- Güven 4: Fotogerçekçi 3D Çizim -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
             04
           </div>
-          <h3 class="text-base font-bold text-[#15231C]">Atölye İmalatı & Kalite</h3>
-          <p class="text-xs text-[#6E675F] leading-relaxed">
-            Adatepe tesisimizde CNC kesim, PUR tutkallı kenar bantlama ve fırın lake boya titizlikle uygulanır.
+          <h3 class="text-lg font-bold text-stone-900">Görmediğiniz Hiçbir İşi Onaylamazsınız</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            Lazer ölçüm cihazlarıyla milimetrik rölöve alınır. Kadrolu iç mimarlarımız odanızı birebir 3D simüle eder; dolap renklerini, tezgah uyumunu ve LED ışıklandırmaları üretimden önce ekranda canlı görürsünüz.
           </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ Birebir 3D Mimari Modelleme</span>
+          </div>
         </div>
 
-        <!-- Adım 5 -->
-        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] rounded-2xl space-y-3 relative group hover:border-[#006039] transition">
-          <div class="w-10 h-10 rounded-full bg-[#006039] text-white flex items-center justify-center font-bold text-sm">
+        <!-- Güven 5: Tek Muhatap Şantiye Şefliği -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
             05
           </div>
-          <h3 class="text-base font-bold text-[#15231C]">Tozsuz Montaj & Teslim</h3>
-          <p class="text-xs text-[#6E675F] leading-relaxed">
-            Kendi kadrolu montaj ekibimizce kurulur, temizlenir ve 10 yıl gövde garanti belgesiyle teslim edilir.
+          <h3 class="text-lg font-bold text-stone-900">Usta Aramak Yok: Tek Elden Yönetim</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            Tesisatçı ayrı, fayansçı ayrı, boyacı ayrı stresine son veriyoruz. Kırım ve moloz atımından elektrik kablolamasına, porselen tezgahtan dolap montajına kadar her aşama mimarımızın şefliğinde yürür.
           </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ Anahtar Teslim Sıfır Sürtünme</span>
+          </div>
+        </div>
+
+        <!-- Güven 6: 10 Yıl Gövde Garantisi -->
+        <div class="p-8 bg-white rounded-2xl border border-stone-200 shadow-xs space-y-4 hover:border-emerald-600 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl font-bold font-mono">
+            06
+          </div>
+          <h3 class="text-lg font-bold text-stone-900">10 Yıl Sözleşmeli İmalat Garantisi</h3>
+          <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+            Kullandığımız E1 standartlı, neme mukavim yoğun MDF gövdeler ve poliüretan PUR tutkallı kenar bantları sayesinde mutfaklarınız neme, buhara ve sarkmaya karşı 10 yıl boyunca Yeşilay garantisi altındadır.
+          </p>
+          <div class="text-[11px] font-semibold text-emerald-800 flex items-center gap-1.5 pt-2 border-t border-stone-100">
+            <span>✓ Satış Sonrası Doğrudan Servis</span>
+          </div>
         </div>
 
       </div>
@@ -428,44 +317,126 @@ const seo = {
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 6. ATÖLYE & MALZEME STANDARTLARI VİTRİNİ                             -->
+  <!-- 4. İŞİNİZE KİM DOKUNUYOR? YÖNETİM & MİMARİ KADRO                       -->
   <!-- ===================================================================== -->
-  <section class="py-20 bg-[#FAF9F6] border-b border-[#E5DFD5]">
+  <section class="py-20 sm:py-24 bg-white border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
       
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <span class="text-[12px] uppercase font-bold tracking-[0.16em] text-[#C5A880] block">SERTİFİKALI MATERYAL MİMARİSİ</span>
-        <h2 class="text-[30px] sm:text-[40px] font-extrabold text-[#15231C] tracking-tight">
-          Hangi Malzemelerle Çalışıyoruz?
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">KURUCU VE UZMAN KADROMUZ</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-stone-950 font-editorial">
+          Evinizi Emanet Ettiğiniz Ekibi Tanıyın
         </h2>
-        <p class="text-[15px] sm:text-[16px] text-[#55504A] leading-relaxed">
-          Evinizde yıllarca ilk günkü parlaklığını koruyacak, aşınmaya ve neme meydan okuyan 1. sınıf bileşenler.
+        <p class="text-stone-600 text-sm font-light leading-relaxed">
+          Gölge şirketler gibi arkasına saklanılan anonim yapılar yok. 1998'den bu yana imzasını attığı her işin arkasında duran bir aile ve profesyonel mimari kadro.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="p-7 bg-white border border-[#E5DFD5] rounded-2xl space-y-3 shadow-xs">
-          <div class="text-[#006039] text-2xl font-bold">01</div>
-          <h3 class="text-[18px] font-bold text-[#15231C] tracking-tight">İtalyan Fırın Lake Kapaklar</h3>
-          <p class="text-[13px] text-[#6E675F] leading-relaxed">
-            Özel tozsuz boya kabinlerimizde fırınlanan, UV sararma korumalı poliüretan ipek mat ve parlak lake yüzeyler. Zamanla sararmaz, parmak izi tutmaz, kenar bant ek izi barındırmaz.
+        <!-- Kişi 1: Bakiye Yeşilay -->
+        <div class="bg-stone-50 rounded-2xl p-6 border border-stone-200 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-900 text-emerald-200 flex items-center justify-center text-2xl font-serif font-bold">
+            BY
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-lg font-bold text-stone-900">Bakiye Yeşilay</h3>
+            <div class="text-xs font-semibold text-emerald-700 uppercase tracking-wider">Kurucu Ortak &bull; Müşteri Deneyimi &amp; Finans</div>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
+            1998'den bu yana şirketin mali disiplini, şeffaf sözleşme esasları ve müşteri memnuniyeti süreçlerini bizzat yönetir. Kadın girişimci vizyonuyla mutfaklarda estetik ve ergonominin kusursuz buluşmasını denetler.
+          </p>
+          <div class="text-[11px] text-stone-500 pt-2 border-t border-stone-200">
+            📍 Buca Showroom Yönetim Ofisi
+          </div>
+        </div>
+
+        <!-- Kişi 2: Cem Yeşilay -->
+        <div class="bg-stone-50 rounded-2xl p-6 border border-stone-200 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-stone-900 text-stone-200 flex items-center justify-center text-2xl font-serif font-bold">
+            CY
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-lg font-bold text-stone-900">Cem Yeşilay</h3>
+            <div class="text-xs font-semibold text-emerald-700 uppercase tracking-wider">Genel Koordinatör &bull; Üretim &amp; Şantiye Direktörü</div>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
+            28 yıllık sektör tecrübesiyle Adatepe imalat atölyemizin makine parkını, ahşap işçilik kalitesini ve anahtar teslim şantiyelerdeki milimetrik montaj disiplinini sevk ve idare eder.
+          </p>
+          <div class="text-[11px] text-stone-500 pt-2 border-t border-stone-200">
+            📍 Adatepe İmalat &amp; Şantiye Koordinasyonu
+          </div>
+        </div>
+
+        <!-- Ekip: Mimari ve İmalat Kadrosu -->
+        <div class="bg-stone-50 rounded-2xl p-6 border border-stone-200 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-700 text-white flex items-center justify-center text-2xl font-serif font-bold">
+            İT
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-lg font-bold text-stone-900">İç Mimari &amp; Kadrolu Atölye Ustaları</h3>
+            <div class="text-xs font-semibold text-emerald-700 uppercase tracking-wider">3D Tasarım &bull; CNC &bull; Boyahane &bull; Montaj Ekibi</div>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed font-light">
+            Üniversitelerin iç mimarlık bölümlerinden mezun kadrolu tasarımcılarımız ve çekirdekten yetişen marangoz ustalarımızla; projeniz fikir aşamasından son vidanın sıkılmasına kadar tek elden üretilir.
+          </p>
+          <div class="text-[11px] text-stone-500 pt-2 border-t border-stone-200">
+            📍 30 İzmir İlçesinde Yerinde Hizmet
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. 4 ADIMLI ŞEFFAF SÜREÇ (İLK TEMASTAN ANAHTAR TESLİME)             -->
+  <!-- ===================================================================== -->
+  <section class="py-20 sm:py-24 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">ŞEFFAF, AŞAMALI VE DENETLENEBİLİR</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-white font-editorial">
+          Bizimle Süreç Nasıl İşler?
+        </h2>
+        <p class="text-stone-300 text-xs sm:text-sm font-light leading-relaxed">
+          Evinizi yenilerken hiçbir belirsizliğe yer bırakmıyoruz. Adım adım, sözleşmeli ve her safhada onayınız alınarak ilerleyen profesyonel akış.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 bg-stone-800/80 rounded-2xl border border-stone-700/80 space-y-3">
+          <div class="text-emerald-400 font-mono text-sm font-bold">ADIM 01</div>
+          <h3 class="text-lg font-bold text-white">Ücretsiz Keşif &amp; Lazer Rölöve</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            İç mimarımız adresinize gelir. Mekanın milimetrik lazer ölçülerini alır, tesisat hatlarını inceler ve kullanım alışkanlıklarınızı dinler.
           </p>
         </div>
 
-        <div class="p-7 bg-white border border-[#E5DFD5] rounded-2xl space-y-3 shadow-xs">
-          <div class="text-[#C5A880] text-2xl font-bold">02</div>
-          <h3 class="text-[18px] font-bold text-[#15231C] tracking-tight">Çizilmez Çizgi Akrilik & Senkron</h3>
-          <p class="text-[13px] text-[#6E675F] leading-relaxed">
-            Ultra yüksek parlaklıkta ayna efekti veya doğal derin ahşap dokulu senkronize yüzeyler. Çizilmelere karşı güçlendirilmiş 1. sınıf antibakteriyel paneller.
+        <div class="p-6 bg-stone-800/80 rounded-2xl border border-stone-700/80 space-y-3">
+          <div class="text-emerald-400 font-mono text-sm font-bold">ADIM 02</div>
+          <h3 class="text-lg font-bold text-white">Showroom'da 3D Sunum &amp; Kartela</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Buca showroomumuzda kahvenizi içerken projenizi 3D ekranda incelersiniz. Gerçek malzeme kartelalarına, Blum aksamlara ve kapaklara dokunursunuz.
           </p>
         </div>
 
-        <div class="p-7 bg-white border border-[#E5DFD5] rounded-2xl space-y-3 shadow-xs">
-          <div class="text-[#006039] text-2xl font-bold">03</div>
-          <h3 class="text-[18px] font-bold text-[#15231C] tracking-tight">Laminam, Belenco & Dekton Tezgah</h3>
-          <p class="text-[13px] text-[#6E675F] leading-relaxed">
-            Isıya, kesilmeye, asit ve lekeye %100 dayanıklı porselen plaka tezgahlar ve kuvars yüzeyler. Lazer ölçülü derzsiz montaj ile kusursuz mimari bütünlük.
+        <div class="p-6 bg-stone-800/80 rounded-2xl border border-stone-700/80 space-y-3">
+          <div class="text-emerald-400 font-mono text-sm font-bold">ADIM 03</div>
+          <h3 class="text-lg font-bold text-white">Sözleşme &amp; Atölye İmalatı</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Teslim günü ve net bütçe yazılı sözleşmeye bağlanır. Adatepe atölyemizde CNC kesim, tozsuz fırın boyama ve gövde montajı titizlikle tamamlanır.
+          </p>
+        </div>
+
+        <div class="p-6 bg-stone-800/80 rounded-2xl border border-stone-700/80 space-y-3">
+          <div class="text-emerald-400 font-mono text-sm font-bold">ADIM 04</div>
+          <h3 class="text-lg font-bold text-white">Tozsuz Montaj &amp; 10 Yıl Garanti</h3>
+          <p class="text-xs text-stone-300 font-light leading-relaxed">
+            Kendi montaj ekibimiz belirlenen günde kurulumu yapar. Kaba temizlik tamamlanıp eksiksiz teslim tutanağı ve 10 yıllık garanti belgesi takdim edilir.
           </p>
         </div>
 
@@ -475,54 +446,66 @@ const seo = {
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 7. ATÖLYE & SHOWROOM DAVETİ VE DİREKT İLETİŞİM                      -->
+  <!-- 6. MAĞAZAMIZI ZİYARET EDİN VE DİREKT İLETİŞİM                        -->
   <!-- ===================================================================== -->
-  <section class="py-20 bg-white border-b border-[#E5DFD5]">
+  <section class="py-20 bg-stone-50 border-b border-stone-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center space-y-8">
       
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FAF9F6] border border-[#E5DFD5] rounded-full">
-        <span class="text-[#006039] font-bold">📍</span>
-        <span class="text-[#15231C] text-[11px] font-bold uppercase tracking-wider">
-          Buca Showroom & Adatepe İmalat Atölyesi
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border border-stone-200 rounded-full shadow-2xs">
+        <span class="text-emerald-700 font-bold">📍</span>
+        <span class="text-stone-900 text-xs font-bold uppercase tracking-wider">
+          Buca Teşhir Showroomu &bull; Canlı Malzeme Deneyimi
         </span>
       </div>
 
-      <h2 class="text-[32px] sm:text-[46px] font-extrabold text-[#15231C] tracking-tight leading-[1.15]">
-        Bizi Showroomumuzda Ziyaret Edin, <br />
-        <span class="text-[#006039] font-serif italic font-normal">Kahvenizi İçerken</span> Projenizi Çizelim.
+      <h2 class="text-3xl sm:text-4xl font-light text-stone-950 font-editorial leading-tight">
+        Sizi Showroomumuzda Ağırlamaktan <br />
+        <span class="font-normal italic text-emerald-800">Mutluluk Duyarız.</span>
       </h2>
 
-      <p class="text-[15px] sm:text-[17px] text-[#55504A] leading-relaxed max-w-2xl mx-auto">
-        Katalog ve bilgisayar ekranlarıyla sınırlı kalmayın. Malzeme kartelalarını elinizle hissedin, gövde kesitlerini ve Blum aksamları canlı showroomumuzda test edin.
+      <p class="text-sm sm:text-base text-stone-600 font-light leading-relaxed max-w-2xl mx-auto">
+        Katalog ve bilgisayar ekranlarıyla sınırlı kalmayın. Malzeme kartelalarını elinizle hissedin, gövde kesitlerini, lake kalitesini ve Blum mekanizmaları canlı showroomumuzda test edin.
       </p>
 
-      <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-[#E5DFD5] max-w-xl mx-auto text-left space-y-2 text-xs sm:text-[13px] text-[#282421]">
-        <div>🏢 <strong>Mağaza Adresi:</strong> Gaziler Mahallesi 1084/2 Sokak No: 1/A (Gazi Osman Paşa Cd. Köşesi) Buca / İzmir</div>
-        <div>🏭 <strong>İmalat Atölyesi:</strong> Adatepe Mahallesi Üretim Tesisi Buca / İzmir</div>
-        <div>⏰ <strong>Çalışma Saatleri:</strong> Pazartesi - Cumartesi: 09:00 - 19:30</div>
+      <div class="p-6 bg-white rounded-2xl border border-stone-200 max-w-2xl mx-auto text-left space-y-3 text-xs sm:text-sm text-stone-700 shadow-sm">
+        <div class="flex items-start gap-3">
+          <span class="text-lg">🏢</span>
+          <div>
+            <strong class="text-stone-900 block">Merkez Showroom:</strong>
+            <span>Gaziler Mahallesi 1084/2 Sokak No: 1/A (Gazi Osman Paşa Cd. Köşesi) Buca / İzmir</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">🏭</span>
+          <div>
+            <strong class="text-stone-900 block">İmalat Atölyesi:</strong>
+            <span>Adatepe Mahallesi Mobilya Üretim Tesisleri Buca / İzmir</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">⏰</span>
+          <div>
+            <strong class="text-stone-900 block">Ziyaret Saatleri:</strong>
+            <span>Pazartesi - Cumartesi: 09:00 - 19:30 (Pazar günleri randevuyla)</span>
+          </div>
+        </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
         <a 
-          href="https://wa.me/905324261788?text=Merhaba,%20Ye%C5%9Filay%20Mutfak%20showroomunuza%20gelmek%20ve%20randevu%20almak%20istiyorum." 
+          href="https://wa.me/905324261788?text=Merhaba,%20Yeşilay%20Mutfak%20showroomunuza%20gelmek%20ve%20randevu%20almak%20istiyorum." 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="w-full sm:w-auto px-9 py-4 bg-[#006039] hover:bg-[#00482B] text-white font-bold text-xs sm:text-[13px] tracking-wider uppercase rounded-xl shadow-[0_6px_20px_rgba(0,96,57,0.3)] transition"
-          data-track="contact_start"
-          data-category="hakkimizda_footer"
-          data-type="whatsapp_randevu"
+          class="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition cursor-pointer"
         >
-          WhatsApp ile Randevu Al →
+          <span>💬 WhatsApp ile Showroom Randevusu Al</span>
         </a>
 
         <a 
           href="tel:02324411060" 
-          class="w-full sm:w-auto px-9 py-4 bg-white text-[#15231C] border border-[#E5DFD5] hover:bg-[#F3EFEA] font-bold text-xs sm:text-[13px] tracking-wider uppercase rounded-xl shadow-xs transition"
-          data-track="contact_start"
-          data-category="hakkimizda_footer"
-          data-type="telefon_ara"
+          class="w-full sm:w-auto px-8 py-3.5 bg-white text-stone-900 border border-stone-300 hover:bg-stone-100 font-bold text-xs uppercase tracking-wider rounded-xl shadow-xs transition"
         >
-          📞 0232 441 10 60 — Hemen Arayın
+          <span>📞 0232 441 10 60 — Bizi Arayın</span>
         </a>
       </div>
 
