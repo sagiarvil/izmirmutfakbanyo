@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mSpecs) mSpecs.textContent = specs;
       if (mDesc) mDesc.textContent = desc;
       if (mWa) {
-        mWa.href = 'https://wa.me/905324411060?text=' + encodeURIComponent('Merhaba, ' + mid + ' kodlu model (' + title + ') hakkında fiyat ve keşif bilgisi almak istiyorum.');
+        mWa.href = 'https://wa.me/905393333303?text=' + encodeURIComponent('Merhaba, ' + mid + ' kodlu model (' + title + ') hakkında fiyat ve keşif bilgisi almak istiyorum.');
       }
 
       modelDetailModal.style.display = 'flex';
