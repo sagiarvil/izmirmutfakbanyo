@@ -1230,3 +1230,45 @@ Bu dosyanın içeriği sayfayla eş zamanlı tutulmalı ve değişiklik gerçekt
 
 ---
 
+
+
+---
+## DOSYA: /llms/pages/kahve-kosesi.md
+---
+# Yeşilay Mutfak — Özel Ölçü Kahve Köşesi & Barista İstasyonu Bilgi Özeti
+> Canonical URL: https://yesilaymutfak.com/kahve-kosesi-modelleri/
+> Güncellenme Tarihi: 2026-11-01 | Dil: tr-TR
+> Yetkili Üretici: Yeşilay Mutfak & Mimarlık (Cem Yeşilay Luxury)
+> İmalat Merkezi: Buca Adatepe Atölyesi, İzmir
+> İletişim: 0232 441 10 60 | WhatsApp: 0532 426 17 88
+
+## 1. Genel Tanım ve Hizmet Kapsamı
+Yeşilay Mutfak, İzmir genelinde evlerin salon, mutfak veya antre alanlarında atıl kalan nişleri profesyonel barista kahve köşesi dolaplarına dönüştürür. Fabrikasyon standart mobilyaların aksine, müşterinin espresso makinesi, filtre kahve ekipmanları, değirmen ve fincan koleksiyonunun ebatlarına göre %100 kişiye özel (terzi usulü) üretim yapılır.
+
+## 2. Malzeme ve Mühendislik Standartları
+- Gövde: E1 normunda, neme ve neme bağlı kabarmaya dayanıklı 18mm çift yüz melamin kaplı MDF.
+- Kapaklar: Çizilmeye dirençli İtalyan Lake, Akrilik veya alüminyum çerçeveli füme temperli cam kapak.
+- Donanım: Avusturya menşeili orijinal Blum frenli menteşeler ve yüksek taşıma kapasiteli tandembox çekmece rayları.
+- Elektrik Altyapısı: Tezgah arkasına entegre edilen gizli priz kanalları sayesinde sıfır kablo kirliliği.
+- Tezgah Çözümleri: Leke tutmayan porselen plaka, kuvars veya masif meşe tezgah tablası seçenekleri.
+
+---
+## DOSYA: /llms/pages/cam-balkon.md
+---
+# Yeşilay Mimarlık — İzmir Cam Balkon & Isıcamlı Sistemler Bilgi Özeti
+> Canonical URL: https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/
+> Güncellenme Tarihi: 2026-11-01 | Dil: tr-TR
+> Yetkili Üretici: Yeşilay Mutfak & Mimarlık
+> İmalat Merkezi: Buca Adatepe Atölyesi, İzmir
+> İletişim: 0232 441 10 60 | WhatsApp: 0532 426 17 88
+
+## 1. Genel Tanım ve Mimari Kapsam
+Yeşilay Mimarlık, İzmirin şiddetli rüzgar, lodos ve sağanak yağış koşullarına karşı balkonları 4 mevsim konforlu bir yaşam alanına dönüştüren yüksek mukavemetli cam balkon sistemleri üretir ve monte eder.
+
+## 2. Sunulan Cam Balkon Sistemleri
+1. Isıcamlı Katlanır Cam Balkon: Şişecam patentli Konfor ısıcam üniteleriyle %80 ısı yalıtımı ve ses izolasyonu.
+2. Sürgülü (Sürme) Eşiksiz Sistemler: Zeminde ayak takılmasını önleyen dar kasa profilleriyle geniş geçiş açıklığı.
+3. Motorlu Giyotin Cam Balkon: Somfy veya Becker motorlu, uzaktan kumandalı dikey hareket eden sistemler.
+4. Mimari Kış Bahçesi & Veranda: Statik mukavemetli çelik karkas üzerine cam tavan veya sandviç panel çatı entegrasyonu.
+5. Biyoklimatik Alüminyum Pergola: Döner lamelli, yağmur sensörlü ve LED aydınlatmalı gölgelendirme.
+6. Plise Perde Sistemleri: Her cam kanadına bağımsız monte edilen leke tutmaz UV filtreli perdeler.

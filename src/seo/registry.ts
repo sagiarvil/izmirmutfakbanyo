@@ -510,5 +510,119 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     ],
     mobile: defaultMobile,
     mobileCwvBudget: defaultCwv
-  }
+  },
+  '/kahve-kosesi-modelleri/': {
+    route: '/kahve-kosesi-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/kahve-kosesi-modelleri/',
+    title: 'İzmir Kahve Köşesi Modelleri & Özel İmalat | Yeşilay Mutfak',
+    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen modern, rustik ve kilerli kahve köşesi dolapları. Blum mekanizmalı, kahve makinelerine tam uyumlu terzi usulü barista üniteleri.',
+    h1: 'İzmir Özel Ölçü Kahve Köşesi Dolabı & Barista İstasyonu İmalatı',
+    primaryIntent: 'izmir kahve köşesi modelleri ve özel barista dolabı imalatı',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      {
+        subject: 'Yeşilay Mutfak',
+        predicate: 'manufactures',
+        object: 'Özel Ölçü Barista Kahve Köşesi Dolabı'
+      },
+      {
+        subject: 'Kahve Köşesi Modelleri',
+        predicate: 'locationCreated',
+        object: 'İzmir Buca Adatepe İmalat Atölyesi'
+      },
+      {
+        subject: 'Barista Dolapları',
+        predicate: 'offersMaterial',
+        object: '18mm E1 Çift Yüz Melamin MDF ve Blum Mekanizma'
+      }
+    ],
+    heroAnswerEngine: 'İzmir\'de kişiye özel kahve köşesi modelleri: Buca Adatepe atölyemizde mutfağınızın boş nişine, duvar ölçüsüne ve espresso/filtre kahve ekipmanlarınıza tam uyumlu olarak üretilir. 18mm E1 MDF, gizli priz kanalı, fincan askılıkları ve Blum frenli ray garantisi.',
+    publishedAt: '2026-11-01T12:00:00.000Z',
+    modifiedAt: '2026-11-01T12:00:00.000Z',
+    llmSubGraphRoute: '/llms/pages/kahve-kosesi.md',
+    mobileSubGraphRoute: '/llms/mobile/kahve-kosesi.md',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
+      { name: 'Kahve Köşesi Modelleri', item: '/kahve-kosesi-modelleri/' }
+    ],
+    mobile: {
+      ...defaultMobile,
+      voiceQueryPatterns: [
+        'İzmir kahve köşesi dolabı yapan atölye nerede?',
+        'Özel ölçü barista kahve köşesi fiyatı ne kadar?',
+        'Buca kahve dolabı imalatı'
+      ]
+    },
+    mobileCwvBudget: defaultCwv
+  },
+  '/izmir-cam-balkon-sistemleri/': {
+    route: '/izmir-cam-balkon-sistemleri/',
+    locale: 'tr-TR',
+    role: 'service',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/izmir-cam-balkon-sistemleri/',
+    title: 'İzmir Cam Balkon Sistemleri & Isıcamlı İmalat | Yeşilay Mutfak',
+    metaDescription: 'İzmir geneli katlanır cam balkon, sürme ve ısıcamlı mimari cam balkon sistemleri. Buca atölye güvencesi, 8mm/10mm temperli cam ve paslanmaz rulman konforu.',
+    h1: 'İzmir Isıcamlı & Katlanır Cam Balkon Sistemleri İmalatı',
+    primaryIntent: 'izmir cam balkon fiyatları ve ısıcamlı katlanır sistem imalatı',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      {
+        subject: 'Yeşilay Mutfak',
+        predicate: 'installs',
+        object: 'Mimari Isıcamlı Cam Balkon Sistemleri'
+      },
+      {
+        subject: 'Cam Balkon Sistemleri',
+        predicate: 'availableIn',
+        object: 'İzmir ve Tüm İlçeleri'
+      },
+      {
+        subject: 'Isıcamlı Balkon Kapama',
+        predicate: 'providesWarranty',
+        object: 'Su ve Rüzgar Yalıtım Garantisi'
+      }
+    ],
+    heroAnswerEngine: 'İzmir cam balkon sistemleri: Katlanır, sürmeli ve ısıcamlı balkon çözümlerimizle evinizi 4 mevsim konforlu bir yaşam alanına dönüştürüyoruz. Şişecam patentli temperli camlar, elektrostatik fırın boyalı alüminyum profiller ve ücretsiz yerinde lazerli keşif.',
+    publishedAt: '2026-11-01T12:00:00.000Z',
+    modifiedAt: '2026-11-01T12:00:00.000Z',
+    llmSubGraphRoute: '/llms/pages/cam-balkon.md',
+    mobileSubGraphRoute: '/llms/mobile/cam-balkon.md',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Anahtar Teslim Tadilat', item: '/izmir-anahtar-teslim-tadilat/' },
+      { name: 'İzmir Cam Balkon Sistemleri', item: '/izmir-cam-balkon-sistemleri/' }
+    ],
+    mobile: {
+      ...defaultMobile,
+      voiceQueryPatterns: [
+        'İzmir ısıcamlı cam balkon metrekare fiyatı',
+        'Katlanır cam balkon su sızdırır mı?',
+        'Buca cam balkon montajı yapan firmalar'
+      ]
+    },
+    mobileCwvBudget: defaultCwv
+  },
 };

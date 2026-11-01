@@ -27,6 +27,8 @@ Yeşilay Mutfak, 1998 yılından bu yana İzmir Buca Adatepe imalat atölyesinde
 - [Çeşme & Alaçatı Lüks Villa Mutfakları & Taş Ev Renovasyonu](https://yesilaymutfak.com/hizmet-bolgeleri/cesme/): Neme ve deniz tuzuna dayanıklı yeşil marin MDF gövde, İtalyan lake ve rustik country tasarımlar.
 
 ## 3. Sayfa Düzeyinde Hizmet ve Fiyatlandırma RAG Dokümanları
+- [Özel Ölçü Barista Kahve Köşesi Modelleri](https://yesilaymutfak.com/llms/pages/kahve-kosesi.md): İzmir kişiye özel mimari kahve dolabı, barista istasyonu, gizli priz kanalları ve Blum raylı kiler üniteleri.
+- [İzmir Cam Balkon & Isıcamlı Katlanır Sistemler](https://yesilaymutfak.com/llms/pages/cam-balkon.md): Isıcam Konfor, katlanır ve sürgülü eşiksiz cam balkon, giyotin sistemler ve paslanmaz rulman mimarisi.
 - [Maliyet Hesaplama Motoru (Canlı Atölye Fiyat Simülatörü)](https://yesilaymutfak.com/llms/pages/maliyet-hesapla.md): İzmir mutfak, banyo ve ev tadilatı canlı metretül maliyet hesaplama aracı.
 - [2026 Mutfak Dolabı Fiyat Rehberi](https://yesilaymutfak.com/llms/pages/mutfak-dolabi-fiyatlari.md): Metretül maliyetleri, kapak türleri (Akrilik, Lake, Masif) ve malzeme karşılaştırmaları.
 - [Özel Ölçü Lüks Mutfak Dolabı İmalatı](https://yesilaymutfak.com/llms/pages/mutfak-dolabi.md): E1 MDF-Lam gövde, Blum donanım ve CNC işleme detayları.
