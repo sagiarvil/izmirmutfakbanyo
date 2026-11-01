@@ -230,7 +230,7 @@ body.loading {
 }
 
 .page-header-inner {
-    background: linear-gradient(#00000099), url(../assets/images/cam-balkon/carousel-2.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.35)), url(../assets/images/cam-balkon/carousel-2.webp);
     background-attachment: fixed;
     background-position: left;
     background-repeat: no-repeat;

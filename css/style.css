@@ -432,7 +432,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(15, 15, 15, 0.45) 0%, rgba(15, 15, 15, 0.25) 50%, rgba(15, 15, 15, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0.28) 0%, rgba(15, 15, 15, 0.10) 45%, rgba(15, 15, 15, 0.45) 100%);
 }
 
 .slide-content {
@@ -465,12 +465,13 @@ ul {
 
 .slide-title {
   font-size: 3.2rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 4px;
   color: #ffffff;
   margin-bottom: 20px;
   line-height: 1.15;
   text-transform: uppercase;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.75);
 }
 
 .slide-btn {
@@ -979,8 +980,9 @@ ul {
    ========================================================================== */
 .page-hero-header {
   position: relative;
-  padding: 160px 0 80px;
-  background-color: var(--primary-dark);
+  padding: 170px 0 90px;
+  background-color: #1e1e1e;
+  background: linear-gradient(180deg, #181818 0%, #252525 100%);
   color: #ffffff;
   text-align: center;
   overflow: hidden;
@@ -994,7 +996,20 @@ ul {
   height: 100%;
   background-size: cover;
   background-position: center center;
-  opacity: 0.3;
+  opacity: 0.65;
+  filter: contrast(1.08) brightness(1.05);
+}
+
+.page-hero-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.35) 0%, rgba(18, 18, 18, 0.12) 50%, rgba(18, 18, 18, 0.40) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .page-hero-content {
@@ -1004,10 +1019,11 @@ ul {
 
 .page-hero-title {
   font-size: 2.8rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 6px;
   color: #ffffff;
   margin-bottom: 16px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .page-hero-breadcrumbs {
