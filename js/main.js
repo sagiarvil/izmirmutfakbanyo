@@ -389,16 +389,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCat = 'all';
     let currentQuery = '';
 
+    function normalizeTr(text) {
+      if (!text) return '';
+      return text.replace(/İ/g, 'i').replace(/I/g, 'ı').toLocaleLowerCase('tr-TR').trim();
+    }
+
     function applyModelFilters() {
       let visibleCount = 0;
-      const q = currentQuery.trim().toLowerCase();
+      const q = normalizeTr(currentQuery);
 
       modelCards.forEach(card => {
         const cat = card.getAttribute('data-category') || '';
-        const title = (card.getAttribute('data-full-title') || '').toLowerCase();
-        const modelNo = (card.getAttribute('data-model') || '').toLowerCase();
-        const specs = (card.getAttribute('data-specs') || '').toLowerCase();
-        const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+        const title = normalizeTr(card.getAttribute('data-full-title') || '');
+        const modelNo = normalizeTr(card.getAttribute('data-model') || '');
+        const specs = normalizeTr(card.getAttribute('data-specs') || '');
+        const desc = normalizeTr(card.getAttribute('data-desc') || '');
 
         const catMatch = (currentCat === 'all' || cat === currentCat);
         const queryMatch = (!q || title.includes(q) || modelNo.includes(q) || specs.includes(q) || desc.includes(q));

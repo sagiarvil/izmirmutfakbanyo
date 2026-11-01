@@ -559,7 +559,7 @@
       </div>
       <div class="plp-search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="kahveSearchInput" placeholder="Model veya özellik ara... (örn: camlı, ledli, ahşap)" onkeyup="filterKahveCards()">
+        <input type="text" id="kahveSearchInput" placeholder="Model veya özellik ara... (örn: camlı, ledli, ahşap)" oninput="filterKahveCards()" onkeyup="filterKahveCards()">
       </div>
     </div>
   </div>
@@ -2710,15 +2710,27 @@
       }
     }
 
+        // Türkçe Karakter Normalizasyonu (İ, I, ı, i, Ş, ş, Ğ, ğ, Ü, ü, Ö, ö, Ç, ç)
+    function normalizeTr(text) {
+      if (!text) return '';
+      return text
+        .replace(/İ/g, 'i')
+        .replace(/I/g, 'ı')
+        .toLocaleLowerCase('tr-TR')
+        .trim();
+    }
+
     // Arama ve Filtreleme
     function filterKahveCards() {
-      const query = document.getElementById('kahveSearchInput').value.toLowerCase().trim();
+      const input = document.getElementById('kahveSearchInput');
+      if (!input) return;
+      const query = normalizeTr(input.value);
       const cards = document.querySelectorAll('.kahve-card');
       let visibleCount = 0;
       
       cards.forEach(card => {
-        const title = card.getAttribute('data-title').toLowerCase();
-        if (title.includes(query)) {
+        const title = normalizeTr(card.getAttribute('data-title') || card.innerText || '');
+        if (!query || title.includes(query)) {
           card.style.display = 'flex';
           visibleCount++;
         } else {
@@ -2726,7 +2738,10 @@
         }
       });
       
-      document.getElementById('productCount').textContent = visibleCount;
+      const countEl = document.getElementById('productCount');
+      if (countEl) {
+        countEl.textContent = visibleCount;
+      }
     }
 
     // Modal İşlemleri
