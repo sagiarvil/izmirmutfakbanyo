@@ -48,9 +48,11 @@ const structuredData = {
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
+        price: '0',
         priceValidUntil: '2027-12-31',
         offerCount: '22',
-        availability: 'https://schema.org/InStock'
+        availability: 'https://schema.org/InStock',
+        description: 'Kişiye özel mekan ve ekipman ölçüsüne göre ücretsiz 3D mimari çizim ve atölye keşif teklifi sunulmaktadır.'
       }
     },
     {
@@ -188,13 +190,21 @@ const structuredData = {
   <!-- GALLERY & MODELS SECTION -->
   <section class="py-16 sm:py-24 bg-[#FAF9F6]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-          ATÖLYE KOLEKSİYONU
-        </span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-[#15231C] mt-3 mb-4">
-          22 Farklı Mimari Kahve Köşesi ve Barista Ünitesi
-        </h2>
+      <!-- GHOST WATERMARK TYPOGRAPHY HEADER (Soft Neutral & Controlled Dynamic Bounds) -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3 mb-12 sm:mb-16">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 680 140" class="w-full h-auto max-h-[75px] sm:max-h-[105px] md:max-h-[125px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="130" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#ECEAE5" letter-spacing="-0.02em">Barista.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+            ATÖLYE KOLEKSİYONU
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-[#15231C] tracking-tight leading-tight">
+            22 Farklı Mimari Kahve Köşesi ve Barista Ünitesi
+          </h2>
+        </div>
         <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
           İster modern füme cam kapaklı LED aydınlatmalı modeller, ister rustik masif tablalı kiler dolapları. Tüm modellerimiz evinizin genişliğine göre yeniden boyutlandırılır.
         </p>
