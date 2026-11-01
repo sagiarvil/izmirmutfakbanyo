@@ -56,6 +56,145 @@
       background: #FEA116 !important;
     }
   </style>
+
+<style id="custom-cam-balkon-form-styles">
+  /* Premium Cam Balkon Fiyat Teklifi Formu */
+  .premium-booking-wrapper {
+    margin-top: -50px;
+    position: relative;
+    z-index: 30;
+    margin-bottom: 50px;
+  }
+  .premium-booking-card {
+    background: #111827;
+    border: 1px solid rgba(217, 119, 6, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    padding: 32px 36px;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    .premium-booking-wrapper {
+      margin-top: -20px;
+    }
+    .premium-booking-card {
+      padding: 24px 20px;
+    }
+  }
+  .booking-header {
+    text-align: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 16px;
+  }
+  .booking-badge {
+    display: inline-block;
+    color: #d97706;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .booking-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .booking-input, .booking-select {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    font-size: 0.92rem !important;
+    transition: all 0.2s ease !important;
+    width: 100%;
+  }
+  .booking-input:focus, .booking-select:focus {
+    border-color: #d97706 !important;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2) !important;
+    outline: none !important;
+    background: #1e293b !important;
+  }
+  .booking-select option {
+    background: #111827;
+    color: #ffffff;
+  }
+  .booking-olcu-box {
+    background: #1e293b;
+    border: 1px solid rgba(217, 119, 6, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 18px;
+  }
+  .booking-olcu-title {
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .booking-cephe-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .booking-cephe-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .booking-textarea {
+    background: #111827 !important;
+    border: 1px solid #374151 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .booking-textarea:focus {
+    border-color: #d97706 !important;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2) !important;
+    outline: none !important;
+  }
+  .btn-booking-submit {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    padding: 14px 20px;
+    width: 100%;
+    height: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35);
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .btn-booking-submit:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(217, 119, 6, 0.45);
+  }
+</style>
+
 </head>
 <body >
 
@@ -136,80 +275,88 @@
     </div>
   </section>
 
-<div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-<div class="container">
-<form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-<div class="bg-primary shadow" style="padding: 35px;">
-<div class="row g-2">
-<p class="h3 bg-dark text-primary py-2 text-center">Ölçünüzü Girerek Hemen Fiyat Teklifi Alabilirsiniz!</p>
-<div class="col-md-10">
-<div class="row g-2">
-<div class="col-md-3">
-<input class="form-control bg-dark" id="name" placeholder="Adınız Soyadınız" style="border: 1px solid #777; color: #fff;" type="text"/>
-</div>
-<div class="col-md-3">
-<input class="form-control bg-dark" id="tel" placeholder="Telefon Numaranız" required="" style="border: 1px solid #777; color: #fff;" type="number"/>
-</div>
-<div class="col-md-3">
-<label class="visually-hidden" for="district">İlçe Seçin</label>
-<select class="form-select bg-dark" id="district" style="border: 1px solid #777; color: #fff;">
-<option disabled="" selected="" value="">İlçe Seçin</option>
-<option value="Aliağa">Aliağa</option>
-<option value="Balçova">Balçova</option>
-<option value="Bayındır">Bayındır</option>
-<option value="Bayraklı">Bayraklı</option>
-<option value="Bergama">Bergama</option>
-<option value="Beydağ">Beydağ</option>
-<option value="Bornova">Bornova</option>
-<option value="Buca">Buca</option>
-<option value="Çeşme">Çeşme</option>
-<option value="Çiğli">Çiğli</option>
-<option value="Dikili">Dikili</option>
-<option value="Foça">Foça</option>
-<option value="Gaziemir">Gaziemir</option>
-<option value="Güzelbahçe">Güzelbahçe</option>
-<option value="Karabağlar">Karabağlar</option>
-<option value="Karaburun">Karaburun</option>
-<option value="Karşıyaka">Karşıyaka</option>
-<option value="Kemalpaşa">Kemalpaşa</option>
-<option value="Kınık">Kınık</option>
-<option value="Kiraz">Kiraz</option>
-<option value="Konak">Konak</option>
-<option value="Menderes">Menderes</option>
-<option value="Menemen">Menemen</option>
-<option value="Narlıdere">Narlıdere</option>
-<option value="Ödemiş">Ödemiş</option>
-<option value="Seferihisar">Seferihisar</option>
-<option value="Selçuk">Selçuk</option>
-<option value="Tire">Tire</option>
-<option value="Torbalı">Torbalı</option>
-<option value="Urla">Urla</option>
-</select>
-</div>
-<div class="col-md-3">
-<label class="visually-hidden" for="balkonTipi">Balkon Tipi</label>
-<select class="form-select bg-dark" id="balkonTipi" onchange="olcuAlanlariniGoster()" style="border: 1px solid #777; color: #fff;">
-<option disabled="" selected="" value="">Balkon Tipi</option>
-<option value="Düz">Düz Balkon</option>
-<option value="L">L Balkon</option>
-<option value="U">U Balkon</option>
-</select>
-</div>
-<div class="mt-3 p-3" id="olcuGrubu" style="display:none; background: #222; border: 1px dashed #fff; border-radius: 5px;">
-<p class="mb-3" style="color: #E67E22;">Lütfen Ölçüleri Giriniz (cm)</p>
-<div class="row g-3" id="alanlar"></div>
-<textarea class="form-control bg-primary my-3" cols="30" id="message" placeholder="Ek Notlar..." rows="4" style="border: 1px solid #777; color: #fff;"></textarea>
-</div>
-</div>
-</div>
-<div class="col-md-2">
-<button class="btn btn-dark text-primary w-100 h-100" type="submit">Teklif Al</button>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
+  <!-- Premium Cam Balkon Fiyat Teklifi Alanı -->
+  <div class="premium-booking-wrapper wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+        <div class="premium-booking-card">
+          <div class="booking-header">
+            <span class="booking-badge"><i class="fa-solid fa-calculator"></i> Hızlı Fiyat Hesaplama</span>
+            <h2 class="booking-title">Ölçünüzü Girerek Hemen Anlık Fiyat Teklifi Alabilirsiniz</h2>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-lg-3 col-md-6">
+              <input class="booking-input" id="name" placeholder="Adınız Soyadınız" type="text" required/>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <input class="booking-input" id="tel" placeholder="Telefon Numaranız" required type="tel"/>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <label class="visually-hidden" for="district">İlçe Seçin</label>
+              <select class="booking-select" id="district">
+                <option disabled="" selected="" value="">İlçe Seçin</option>
+                <option value="Aliağa">Aliağa</option>
+                <option value="Balçova">Balçova</option>
+                <option value="Bayındır">Bayındır</option>
+                <option value="Bayraklı">Bayraklı</option>
+                <option value="Bergama">Bergama</option>
+                <option value="Beydağ">Beydağ</option>
+                <option value="Bornova">Bornova</option>
+                <option value="Buca">Buca</option>
+                <option value="Çeşme">Çeşme</option>
+                <option value="Çiğli">Çiğli</option>
+                <option value="Dikili">Dikili</option>
+                <option value="Foça">Foça</option>
+                <option value="Gaziemir">Gaziemir</option>
+                <option value="Güzelbahçe">Güzelbahçe</option>
+                <option value="Karabağlar">Karabağlar</option>
+                <option value="Karaburun">Karaburun</option>
+                <option value="Karşıyaka">Karşıyaka</option>
+                <option value="Kemalpaşa">Kemalpaşa</option>
+                <option value="Kınık">Kınık</option>
+                <option value="Kiraz">Kiraz</option>
+                <option value="Konak">Konak</option>
+                <option value="Menderes">Menderes</option>
+                <option value="Menemen">Menemen</option>
+                <option value="Narlıdere">Narlıdere</option>
+                <option value="Ödemiş">Ödemiş</option>
+                <option value="Seferihisar">Seferihisar</option>
+                <option value="Selçuk">Selçuk</option>
+                <option value="Tire">Tire</option>
+                <option value="Torbalı">Torbalı</option>
+                <option value="Urla">Urla</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <label class="visually-hidden" for="balkonTipi">Balkon Tipi</label>
+              <select class="booking-select" id="balkonTipi" onchange="olcuAlanlariniGoster()">
+                <option disabled="" selected="" value="">Balkon Tipi</option>
+                <option value="Düz">Düz Balkon</option>
+                <option value="L">L Balkon</option>
+                <option value="U">U Balkon</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-12">
+              <button class="btn-booking-submit" type="submit">
+                <i class="fa-brands fa-whatsapp"></i> Teklif Al
+              </button>
+            </div>
+
+            <!-- Dinamik Ölçü Giriş Alanı -->
+            <div class="col-12" id="olcuGrubu" style="display:none;">
+              <div class="booking-olcu-box">
+                <div class="booking-olcu-title">
+                  <i class="fa-solid fa-ruler-combined"></i> Lütfen Balkon Ölçülerinizi Giriniz (cm)
+                </div>
+                <div class="row g-3" id="alanlar"></div>
+                <textarea class="booking-textarea" cols="30" id="message" placeholder="Varsa ek istekleriniz, cam rengi veya özel notlarınız..." rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 <main>
 <!-- About Start -->
 <div class="container-xxl py-5">
@@ -1223,12 +1370,12 @@
       let cepheSayisi = (tip === "Düz") ? 1 : (tip === "L" ? 2 : 3);
       for (let i = 1; i <= cepheSayisi; i++) {
         alanlar.innerHTML += `
-          <div class="col-md-12">
-            <div class="p-2 rounded bg-primary">
-              <label class="small fw-bold mb-1 d-block text-dark">${i}. Cephe</label>
-              <div class="d-flex gap-1">
-                <input type="number" id="en${i}" class="form-control p-2 bg-dark text-white border-0" placeholder="En (cm)">
-                <input type="number" id="boy${i}" class="form-control p-2 bg-dark text-white border-0" placeholder="Yükseklik (cm)">
+          <div class="col-md-4 col-sm-12">
+            <div class="booking-cephe-card">
+              <label class="booking-cephe-label"><i class="fa-solid fa-arrows-left-right"></i> ${i}. Cephe Ölçüsü</label>
+              <div class="d-flex gap-2">
+                <input type="number" id="en${i}" class="booking-input p-2" placeholder="En (cm)" style="font-size:0.85rem;">
+                <input type="number" id="boy${i}" class="booking-input p-2" placeholder="Yükseklik (cm)" style="font-size:0.85rem;">
               </div>
             </div>
           </div>`;
