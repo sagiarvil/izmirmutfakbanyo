@@ -166,27 +166,32 @@
           <p style="font-size: 0.95rem; margin-bottom: 25px;">Hayalinizdeki mutfak, banyo veya villa projesi için aşağıdaki formu doldurun; uzman mimarlarımız 24 saat içinde sizinle iletişime geçsin.</p>
 
           <form id="contactForm">
+            <input type="hidden" name="_subject" value="Yeni İletişim & Teklif Formu - İzmir Mutfak Banyo">
+            <input type="hidden" name="sayfa" value="iletisim.html">
+
             <div class="form-group">
               <label class="form-label" for="fullName">Adınız ve Soyadınız *</label>
-              <input type="text" id="fullName" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
+              <input type="text" id="fullName" name="ad_soyad" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="email">E-posta Adresiniz *</label>
-              <input type="email" id="email" class="form-control" placeholder="ornek@alanadi.com" required>
+              <input type="email" id="email" name="eposta" class="form-control" placeholder="ornek@alanadi.com" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="phone">Telefon Numaranız *</label>
-              <input type="tel" id="phone" class="form-control" placeholder="05XX XXX XX XX" required>
+              <input type="tel" id="phone" name="telefon" class="form-control" placeholder="05XX XXX XX XX" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="projectType">Proje Türü *</label>
-              <select id="projectType" class="form-control" required>
+              <select id="projectType" name="proje_turu" class="form-control" required>
                 <option value="" disabled selected>Lütfen Proje Tipini Seçiniz</option>
                 <option value="mutfak">Özel Mutfak Tasarımı &amp; İmalatı</option>
                 <option value="banyo">Lüks Banyo Yenileme &amp; Spa</option>
+                <option value="kahve_kosesi">Kahve Köşesi &amp; Barista Ünitesi</option>
+                <option value="cam_balkon">Cam Balkon Sistemleri</option>
                 <option value="villa">Komple Villa &amp; Konut Tadilatı</option>
                 <option value="ticari">Ticari Mekan / Ofis / Showroom</option>
                 <option value="diger">Diğer Mimari Danışmanlık</option>
@@ -195,7 +200,7 @@
 
             <div class="form-group">
               <label class="form-label" for="message">Proje Detayları ve Notlarınız *</label>
-              <textarea id="message" class="form-control" placeholder="Mekânın yaklaşık metrekaresi, konumu (Urla, Çeşme vb.) ve isteklerinizi belirtiniz..." required></textarea>
+              <textarea id="message" name="mesaj" class="form-control" placeholder="Mekânın yaklaşık metrekaresi, konumu (Urla, Çeşme vb.) ve isteklerinizi belirtiniz..." required></textarea>
             </div>
 
             <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
@@ -264,6 +269,6 @@
   </footer>
 
   <button class="scroll-top-btn" aria-label="Yukarı Çık"><i class="fa-solid fa-chevron-up"></i></button>
-  <script src="js/main.js?v=1793490111"></script>
+  <script src="js/main.js?v=1793528648"></script>
 </body>
 </html>

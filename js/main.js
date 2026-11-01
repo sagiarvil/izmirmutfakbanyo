@@ -325,28 +325,78 @@ function initScrollTop() {
 }
 
 /* ==========================================================================
-   7. CONTACT FORM SUBMISSION
+   7. CONTACT FORM SUBMISSION (FORMSUBMIT.CO REST API -> barisbagirlar@gmail.com)
    ========================================================================== */
 function initContactForm() {
-  const form = document.querySelector('#contactForm');
-  if (!form) return;
+  const forms = document.querySelectorAll('#contactForm, #kahveContactForm');
+  if (!forms.length) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const submitBtn = form.querySelector('button[type=\"submit\"]');
-    const originalText = submitBtn.textContent;
+  forms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalHTML = submitBtn.innerHTML;
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'GÖNDERİLİYOR...';
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> İLETİLİYOR...';
 
-    setTimeout(() => {
-      alert('Mesajınız başarıyla iletildi. Mimari ekibimiz en kısa sürede sizinle iletişime geçecektir.');
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-    }, 1200);
+      let feedback = form.querySelector('.form-feedback');
+      if (!feedback) {
+        feedback = document.createElement('div');
+        feedback.className = 'form-feedback';
+        feedback.style.marginTop = '15px';
+        feedback.style.padding = '12px 16px';
+        feedback.style.borderRadius = '4px';
+        feedback.style.fontSize = '0.95rem';
+        feedback.style.textAlign = 'center';
+        form.appendChild(feedback);
+      }
+      feedback.style.display = 'none';
+
+      try {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        if (!data._subject) {
+          data._subject = 'Yeni Teklif Talebi - İzmir Mutfak Banyo';
+        }
+        data._template = 'table';
+        data._captcha = 'false';
+
+        const response = await fetch('https://formsubmit.co/ajax/barisbagirlar@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          feedback.style.display = 'block';
+          feedback.style.backgroundColor = '#dcfce7';
+          feedback.style.color = '#15803d';
+          feedback.style.border = '1px solid #86efac';
+          feedback.innerHTML = '<i class="fa-solid fa-check-circle"></i> <strong>Talebiniz başarıyla iletildi!</strong> Mimari ekibimiz en kısa sürede sizinle iletişime geçecektir.';
+          form.reset();
+        } else {
+          throw new Error('Gönderim başarısız oldu.');
+        }
+      } catch (err) {
+        console.error('Form gönderim hatası:', err);
+        feedback.style.display = 'block';
+        feedback.style.backgroundColor = '#fee2e2';
+        feedback.style.color = '#b91c1c';
+        feedback.style.border = '1px solid #fca5a5';
+        feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> İletim sırasında bir sorun oluştu. Lütfen doğrudan <a href="https://wa.me/905393333303" target="_blank" style="color:#b91c1c;text-decoration:underline;font-weight:700;">WhatsApp hattımızdan</a> bize ulaşın.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHTML;
+      }
+    });
   });
 }
+
 
 /* ==========================================================================
    8. FAQ ACCORDION HANDLER
