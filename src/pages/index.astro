@@ -61,23 +61,146 @@ const seo = {
   <!-- ===================================================================== -->
   <section class="relative w-full overflow-hidden bg-[#FAF9F6] border-b border-[#E5DFD5] min-h-[calc(100svh-72px)] sm:min-h-[calc(100svh-80px)] lg:h-[calc(100svh-80px)] lg:max-h-[900px] flex flex-col justify-between">
     
-    <!-- Referans Video Arka Planı (Haresiz, Saf %100 Hollywood Sinematik Netliği) -->
-    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-      <video
-        id="heroBgVideo"
-        autoplay
-        muted
-        loop
-        playsinline
-        webkit-playsinline
-        preload="auto"
-        poster="/media/cinematic/home_video_photo.webp"
-        class="w-full h-full object-cover opacity-100 scale-100"
+    <!-- ===================================================================== -->
+    <!-- PREMİUM HERO GÖRSEL SLIDER (SIFIR TAŞMA, TAM BOY EKRAN, SİNEMATİK GEÇİŞ) -->
+    <!-- ===================================================================== -->
+    <div 
+      class="absolute inset-0 w-full h-full overflow-hidden select-none"
+      x-data="{ 
+        current: 0,
+        total: 4,
+        timer: null,
+        start() {
+          this.timer = setInterval(() => { this.next() }, 5500);
+        },
+        stop() {
+          if (this.timer) clearInterval(this.timer);
+        },
+        next() {
+          this.current = (this.current + 1) % this.total;
+        },
+        prev() {
+          this.current = (this.current - 1 + this.total) % this.total;
+        }
+      }"
+      x-init="start()"
+      @mouseenter="stop()"
+      @mouseleave="start()"
+    >
+      <!-- Slide 1: Modern Lüks Mimari Yaşam Alanı -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
       >
-        <source src="/media/cinematic/home_video.mp4" type="video/mp4" />
-      </video>
-      <!-- Sol metin alanını pürüzsüzce kucaklayan dikey yumuşak ışık gradyanı -->
-      <div class="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[52%] bg-gradient-to-r from-[#FAF9F6]/95 via-[#FAF9F6]/75 to-transparent pointer-events-none"></div>
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-1.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-1.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-1.webp" 
+            alt="Yeşilay Mutfak Lüks İç Mimarlık ve Özel İmalat Yaşam Alanı" 
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+            decoding="sync"
+            fetchpriority="high"
+            width="1920"
+            height="977"
+          />
+        </picture>
+      </div>
+
+      <!-- Slide 2: Kişiye Özel Mimari Mutfak & Salon Tasarımı -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 1 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
+      >
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-2.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-2.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-2.webp" 
+            alt="Yeşilay Mutfak Kişiye Özel Mimari Mutfak ve Salon Tasarımı" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="977"
+          />
+        </picture>
+      </div>
+
+      <!-- Slide 3: Modern Gömme Dolap & Gardırop Sistemleri -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 2 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
+      >
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-3.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-3.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-3.webp" 
+            alt="Yeşilay Mutfak Modern Gömme Dolap ve Gardırop Sistemleri" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="977"
+          />
+        </picture>
+      </div>
+
+      <!-- Slide 4: Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 3 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
+      >
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-4.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-4.webp" 
+            alt="Yeşilay Mutfak Özel Ölçü Lake Duvar Ünitesi ve Aydınlatmalı Niş Tasarımı" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1024"
+            height="642"
+          />
+        </picture>
+      </div>
+
+      <!-- Sol metin alanını pürüzsüzce kucaklayan dikey yumuşak ışık gradyanı (Sıfır Metin Çakışması) -->
+      <div class="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[54%] bg-gradient-to-r from-[#FAF9F6]/95 via-[#FAF9F6]/80 sm:via-[#FAF9F6]/65 to-transparent pointer-events-none z-10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FAF9F6] to-transparent pointer-events-none z-10"></div>
+
+      <!-- Slide Kontrol Noktaları (Kompakt, Zarif & Ergonomik) -->
+      <div class="absolute bottom-5 right-5 sm:bottom-6 sm:right-8 z-20 hidden sm:flex items-center gap-2 bg-[#FAF9F6]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#E5DFD5] shadow-xs">
+        <button 
+          type="button" 
+          @click="prev()" 
+          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
+          aria-label="Önceki Görsel"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="flex items-center gap-1.5 px-1">
+          <template x-for="i in total" :key="i">
+            <button 
+              type="button" 
+              @click="current = i - 1" 
+              class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
+              :class="current === (i - 1) ? 'w-5 bg-[#006039]' : 'w-1.5 bg-[#C5A880]/50 hover:bg-[#C5A880]'"
+              aria-label="Slayt Değiştir"
+            ></button>
+          </template>
+        </div>
+        <button 
+          type="button" 
+          @click="next()" 
+          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
+          aria-label="Sonraki Görsel"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
 
     <!-- Hero İçerik Container (Dinamik Dikey Akış & Ekrana %100 Uyum) -->
@@ -121,7 +244,7 @@ const seo = {
             href="/tasarimlar/" 
             class="px-6 sm:px-7 py-3 bg-white hover:bg-[#F5F5F7] text-[#006039] border border-[#006039]/30 hover:border-[#006039] text-[12.5px] sm:text-[13px] font-semibold tracking-[-0.01em] rounded-full shadow-2xs transition duration-200 flex items-center justify-center gap-2"
           >
-            <span>137 Tasarım Modelini İncele</span>
+            <span>450 Tasarım Modelini İncele</span>
           </a>
         </div>
 
@@ -964,24 +1087,7 @@ const seo = {
 
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
-      // Hero video otonom ve kesintisiz oynatma garantisi (iOS / Safari / Chrome Low-Power Safe)
-      const heroVid = document.getElementById("heroBgVideo");
-      if (heroVid) {
-        heroVid.muted = true;
-        heroVid.defaultMuted = true;
-        const tryPlay = () => {
-          heroVid.play().catch(() => {
-            // Autoplay kısıtlaması durumunda ilk dokunuşta başlat
-            document.body.addEventListener("touchstart", () => heroVid.play(), { once: true });
-            document.body.addEventListener("click", () => heroVid.play(), { once: true });
-          });
-        };
-        if (heroVid.readyState >= 2) {
-          tryPlay();
-        } else {
-          heroVid.addEventListener("loadeddata", tryPlay, { once: true });
-        }
-      }
+      // Hero video kaldırıldı, yerine yüksek performanslı CSS/Alpine slider entegre edildi.
 
       const counters = document.querySelectorAll(".stat-counter");
       if (!counters.length) return;
