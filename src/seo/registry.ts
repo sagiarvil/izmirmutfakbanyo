@@ -625,4 +625,184 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     },
     mobileCwvBudget: defaultCwv
   },
+  '/yatak-odasi-modelleri/': {
+    route: '/yatak-odasi-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/yatak-odasi-modelleri/',
+    title: 'İzmir Yatak Odası Modelleri & Özel İmalat Gardırop | 99 Model Kataloğu',
+    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 99 lüks yatak odası modeli. İtalyan lake gardıroplar, füme cam kapaklı giyinme odaları, Blum mekanizmalı karyola ve şifonyerler.',
+    h1: 'İzmir Özel İmalat Yatak Odası & Gardırop Modelleri',
+    primaryIntent: 'izmir özel imalat yatak odası modelleri ve giyinme odası',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Lüks Gardırop ve Giyinme Odası' },
+      { subject: 'Yatak Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
+      { subject: 'Yatak Odası Mobilyaları', predicate: 'offersMaterial', object: 'E1 Marin MDF Gövde, İtalyan Lake ve Blum Mekanizma' }
+    ],
+    heroAnswerEngine: 'Yeşilay Mutfak İzmir Buca Adatepe atölyesinde üretilen 99 özgün yatak odası ve gardırop modeli. Walk-in closet giyinme odaları, sürgülü ve akordeon lake dolaplar, E1 marin gövde ve 10 yıl bütünleşik atölye garantisi.',
+    publishedAt: '2026-11-04T00:00:00.000Z',
+    modifiedAt: '2026-11-04T00:00:00.000Z',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Yatak Odası Modelleri', item: '/yatak-odasi-modelleri/' }
+    ],
+    mobile: defaultMobile,
+    mobileCwvBudget: defaultCwv
+  },
+  '/salon-modelleri/': {
+    route: '/salon-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/salon-modelleri/',
+    title: 'İzmir Modern Salon & TV Ünitesi Modelleri | 68 Özel İmalat Tasarım',
+    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 68 salon ve TV ünitesi modeli. Akustik ahşap çıtalı yaşam duvarları, asma konsollar, şömineli üniteler ve kütüphaneler.',
+    h1: 'İzmir Özel İmalat Salon & TV Ünitesi Modelleri',
+    primaryIntent: 'izmir özel imalat salon mobilyası ve tv ünitesi',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Salon ve TV Ünitesi Mobilyaları' },
+      { subject: 'Salon Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
+      { subject: 'TV Üniteleri', predicate: 'offersMaterial', object: 'Gizli Kablo Tünelleri, Akustik Ahşap Çıta ve İtalyan Lake' }
+    ],
+    heroAnswerEngine: 'Yeşilay Mutfak İzmir Buca atölyesinde üretilen 68 özgün salon mobilyası ve TV ünitesi modeli. Yüzen konsollar, entegre LED aydınlatmalı kütüphane duvarları, gizli kablo kanalları ve 10 yıl atölye garantisi.',
+    publishedAt: '2026-11-04T00:00:00.000Z',
+    modifiedAt: '2026-11-04T00:00:00.000Z',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Salon Modelleri', item: '/salon-modelleri/' }
+    ],
+    mobile: defaultMobile,
+    mobileCwvBudget: defaultCwv
+  },
+  '/genc-odasi-modelleri/': {
+    route: '/genc-odasi-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/genc-odasi-modelleri/',
+    title: 'İzmir Genç Odası Modelleri & Özel İmalat | 92 Model Kataloğu',
+    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 92 genç odası modeli. Entegre çalışma masalı, ranzalı, kitaplıklı ve geniş depolamalı ergonomik tasarımlar.',
+    h1: 'İzmir Özel İmalat Genç Odası & Çalışma İstasyonu Modelleri',
+    primaryIntent: 'izmir özel imalat genç odası mobilyaları',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Genç Odası ve Çalışma Masaları' },
+      { subject: 'Genç Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
+      { subject: 'Genç Odası Mobilyaları', predicate: 'offersMaterial', object: 'E1 Sertifikalı Sağlıklı Gövde ve Blum Yavaşlatıcılar' }
+    ],
+    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 92 özgün genç odası modeli. Entegre çalışma masaları, merdiven altı depolamalı ranzalar, modüler dolap sistemleri ve 10 yıl atölye garantisi.',
+    publishedAt: '2026-11-04T00:00:00.000Z',
+    modifiedAt: '2026-11-04T00:00:00.000Z',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Genç Odası Modelleri', item: '/genc-odasi-modelleri/' }
+    ],
+    mobile: defaultMobile,
+    mobileCwvBudget: defaultCwv
+  },
+  '/cocuk-odasi-modelleri/': {
+    route: '/cocuk-odasi-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/cocuk-odasi-modelleri/',
+    title: 'İzmir Çocuk Odası Modelleri & Özel İmalat | 45 Güvenli Model',
+    metaDescription: 'İzmir Buca atölyemizde miniklerin sağlığı ve güvenliği için üretilen 45 çocuk odası modeli. Montessori uyumlu alçak karyolalar, yuvarlatılmış köşeler, anti-alerjik lake mobilyalar.',
+    h1: 'İzmir Özel İmalat Çocuk Odası Modelleri',
+    primaryIntent: 'izmir özel imalat çocuk odası mobilyaları',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Güvenli Çocuk Odası Mobilyaları' },
+      { subject: 'Çocuk Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
+      { subject: 'Çocuk Mobilyaları', predicate: 'offersMaterial', object: 'Yuvarlatılmış Kenarlar, EN 71-3 Güvenli Boya ve Montessori Tasarım' }
+    ],
+    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 45 güvenli ve ergonomik çocuk odası modeli. Montessori alçak yataklar, anti-alerjik su bazlı boyalar, parmak sıkışmayan Blum menteşeler ve 10 yıl garanti.',
+    publishedAt: '2026-11-04T00:00:00.000Z',
+    modifiedAt: '2026-11-04T00:00:00.000Z',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Çocuk Odası Modelleri', item: '/cocuk-odasi-modelleri/' }
+    ],
+    mobile: defaultMobile,
+    mobileCwvBudget: defaultCwv
+  },
+  '/camasir-odasi-modelleri/': {
+    route: '/camasir-odasi-modelleri/',
+    locale: 'tr-TR',
+    role: 'product',
+    indexDirective: 'index, follow',
+    canonicalRoute: '/camasir-odasi-modelleri/',
+    title: 'İzmir Çamaşır Odası & Kiler Dolabı Modelleri | 9 Özel İmalat Çözüm',
+    metaDescription: 'İzmir Buca atölyemizde üretilen özel ölçü çamaşır ve kurutma makinesi dolapları, gizli ütü masalı kiler üniteleri ve suya dayanıklı marin banyo dolapları.',
+    h1: 'İzmir Özel İmalat Çamaşır Odası & Kiler Dolabı Modelleri',
+    primaryIntent: 'izmir çamaşır odası ve kiler dolabı imalatı',
+    primaryEntity: {
+      id: 'https://yesilaymutfak.com/#organization',
+      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
+      type: 'HomeAndConstructionBusiness',
+      sameAs: [
+        'https://www.instagram.com/yesilaymutfak',
+        'https://wa.me/905324261788'
+      ],
+      wikidataQid: 'Q11589432'
+    },
+    semanticTriples: [
+      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Çamaşır ve Kurutma Makinesi Dolapları' },
+      { subject: 'Çamaşır Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
+      { subject: 'Kiler Dolapları', predicate: 'offersMaterial', object: 'Suya Dayanıklı Marin Yeşil MDF ve Teleskopik Çamaşır Sepetleri' }
+    ],
+    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 9 özel çamaşır odası ve kiler dolabı çözümü. Çamaşır-kurutma kuleleri, gizli ütü masaları, suya dayanıklı marin gövde ve 10 yıl garanti.',
+    publishedAt: '2026-11-04T00:00:00.000Z',
+    modifiedAt: '2026-11-04T00:00:00.000Z',
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Çamaşır Odası Modelleri', item: '/camasir-odasi-modelleri/' }
+    ],
+    mobile: defaultMobile,
+    mobileCwvBudget: defaultCwv
+  },
 };
