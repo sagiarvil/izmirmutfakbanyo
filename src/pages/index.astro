@@ -16,24 +16,10 @@ const seo = {
     "buca mutfak atölyesi",
     "alsancak mutfak showroom",
     "mimari mutfak projelendirme"
-  ],
-  faqList: [
-    {
-      question: "Mutfak ve mobilya tasarım süreciniz nasıl ilerliyor?",
-      answer: "İlk aşamada mekanınızın ölçülerini lazer rölöve ile alıyor ve ihtiyaçlarınızı belirliyoruz. Ardından 3D fotogerçekçi mimari projelendirme hazırlıyor, malzeme ve tezgah uyumunu netleştirerek üretime geçiyoruz."
-    },
-    {
-      question: "Mutfak modellerinizde hangi mekanizma ve malzemeleri kullanıyorsunuz?",
-      answer: "Koleksiyonlarımızda uluslararası standartlarda neme dayanıklı gövdeler, nanoteknolojik mat ve parlak yüzeyler ile Avusturya Blum entegre sessiz fren sistemleri kullanılmaktadır."
-    },
-    {
-      question: "Teslimat ve montaj süreci nasıl yönetiliyor?",
-      answer: "Tüm üretim kendi atölyemizde CNC hassasiyetiyle tamamlanır, kendi uzman montaj ekibimiz tarafından anahtar teslim monte edilir ve kullanım garantisiyle teslim edilir."
-    }
   ]
 };
 
-// Modeller Verisi
+// Modeller Verisi (Locus 2 Col Modeller Birebir)
 const kitchenModels = [
   {
     id: "iconica",
@@ -63,13 +49,13 @@ const kitchenModels = [
     id: "pavese",
     title: "Pavese",
     desc1: "Geçmişin tatlarına dönüş. Pavese, deneyim, zanaatkarlık ve ustalık değerlerini yaşatan bir işleme sürecinin sonucudur.",
-    desc2: "45° kesimli çerçeve ve özel tasarım kulpuyla öne çıkan kapak, geleneksel dünyayı yeniden yorumlayarak, benzersiz tatlarla dolu sıcak bir mutfak atmosferi sunuyor.",
+    desc2: "45° kesimli çerçeve ve özel tasarım kulpuyla öne çıkan kapak, geleneksel dünyayı yeniden yorumlayarak benzersiz tatlarla dolu bir mutfak atmosferi sunuyor.",
     image: "/images/locus/model-pavese.jpg",
     link: "/tasarimlar/"
   }
 ];
 
-// Mobilya ve Yaşam Alanları
+// Mobilya ve Yaşam Alanları (Locus Colombini Slider Birebir)
 const furnitureCategories = [
   { name: "Salon", image: "/images/locus/mob-salon.webp", link: "/salon-modelleri/" },
   { name: "Kitaplık", image: "/images/locus/mob-kitaplik.jpg", link: "/tasarimlar/" },
@@ -79,7 +65,7 @@ const furnitureCategories = [
   { name: "Çamaşır Odası", image: "/images/locus/mob-camasir.jpg", link: "/camasir-odasi-modelleri/" }
 ];
 
-// Sandalye & Masa Galeri Görselleri
+// Sandalye & Masa Galeri Görselleri (Et al. Birebir)
 const chairImages = [
   "/images/locus/sandalye-1.jpg",
   "/images/locus/sandalye-2.jpg",
@@ -99,188 +85,177 @@ const chairImages = [
 <Layout seo={seo} activeService="Ana Sayfa">
 
   <!-- ===================================================================== -->
-  <!-- 1. HERO SLIDER ALANI (LOCUS LIGHTWEIGHT HERO SLIDER BİREBİR KLON)     -->
-  <!-- Ölçü: Full viewport (100vh - 80px), Min-Height: 650px, Roboto Font    -->
+  <!-- 1. HERO SLIDER ALANI (LOCUS LIGHTWEIGHT HERO SLIDER BİREBİR)          -->
+  <!-- Ölçü: max-w-[1200px], aspect-ratio: 2.4 (1200x500/600), Roboto Font   -->
+  <!-- Oklar: Sol ve sağda 37px dairesel yarı saydam ‹ ve › butonları         -->
   <!-- ===================================================================== -->
-  <section 
-    class="relative w-full h-[calc(100svh-70px)] lg:h-[calc(100vh-80px)] min-h-[620px] max-h-[1080px] bg-[#111111] overflow-hidden select-none font-roboto"
-    x-data="{
-      slides: [
-        {
-          title: 'Sakura',
-          subtitle: 'El becerisi, yaratıcılık ve deneyim.',
-          image: '/images/locus/hero-sakura.jpg',
-          link: '/tasarimlar/'
+  <section class="w-full bg-white font-roboto overflow-hidden">
+    <div 
+      class="w-full max-w-[1200px] mx-auto relative overflow-hidden aspect-[0.975] max-h-[500px] sm:aspect-[2.4] sm:max-h-[600px] select-none"
+      x-data="{
+        slides: [
+          {
+            title: 'Sakura',
+            subtitle: 'El becerisi, yaratıcılık ve deneyim.',
+            image: '/images/locus/hero-sakura.jpg',
+            link: '/tasarimlar/'
+          },
+          {
+            title: 'Iconica',
+            subtitle: 'Geleneksel anlayışları aşan üst golasız estetik.',
+            image: '/images/locus/model-iconica.jpg',
+            link: '/tasarimlar/'
+          },
+          {
+            title: 'Milano',
+            subtitle: 'Büyük mimarlık anlayışına dayanan asil bir stil.',
+            image: '/images/locus/model-milano.jpg',
+            link: '/tasarimlar/'
+          }
+        ],
+        current: 0,
+        total: 3,
+        timer: null,
+        init() {
+          this.start();
         },
-        {
-          title: 'Iconica',
-          subtitle: 'Üst gola profilini ortadan kaldıran mimari estetik.',
-          image: '/images/locus/model-iconica.jpg',
-          link: '/tasarimlar/'
+        start() {
+          this.timer = setInterval(() => { this.next(); }, 6000);
         },
-        {
-          title: 'Milano',
-          subtitle: 'İtalyan zarafeti ve büyük mimarlık anlayışı.',
-          image: '/images/locus/model-milano.jpg',
-          link: '/tasarimlar/'
+        stop() {
+          if (this.timer) clearInterval(this.timer);
+        },
+        next() {
+          this.current = (this.current + 1) % this.total;
+        },
+        prev() {
+          this.current = (this.current - 1 + this.total) % this.total;
         }
-      ],
-      current: 0,
-      total: 3,
-      timer: null,
-      init() {
-        this.start();
-      },
-      start() {
-        this.timer = setInterval(() => { this.next(); }, 6000);
-      },
-      stop() {
-        if (this.timer) clearInterval(this.timer);
-      },
-      next() {
-        this.current = (this.current + 1) % this.total;
-      },
-      prev() {
-        this.current = (this.current - 1 + this.total) % this.total;
-      }
-    }"
-    @mouseenter="stop()"
-    @mouseleave="start()"
-  >
-    <!-- Background Image 1 (Server-Rendered for Instant LCP) -->
-    <div 
-      class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
-      :class="current === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
+      }"
+      @mouseenter="stop()"
+      @mouseleave="start()"
     >
-      <img 
-        src="/images/locus/hero-sakura.jpg" 
-        alt="Yeşilay Mutfak Sakura Koleksiyonu" 
-        class="w-full h-full object-cover object-center"
-        loading="eager"
-        fetchpriority="high"
-        width="1920"
-        height="977"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
-    </div>
+      <!-- Görsel Katmanları (Stable Hero Background + Slides) -->
+      <template x-for="(slide, idx) in slides" :key="idx">
+        <div 
+          class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
+          :class="current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
+        >
+          <img 
+            :src="slide.image" 
+            :alt="slide.title" 
+            class="w-full h-full object-cover object-center block"
+            loading="eager"
+            fetchpriority="high"
+            width="1200"
+            height="600"
+          />
+        </div>
+      </template>
 
-    <!-- Background Image 2 -->
-    <div 
-      class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
-      :class="current === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
-    >
-      <img 
-        src="/images/locus/model-iconica.jpg" 
-        alt="Yeşilay Mutfak Iconica Modeli" 
-        class="w-full h-full object-cover object-center"
-        loading="lazy"
-        width="1920"
-        height="977"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
-    </div>
-
-    <!-- Background Image 3 -->
-    <div 
-      class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
-      :class="current === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
-    >
-      <img 
-        src="/images/locus/model-milano.jpg" 
-        alt="Yeşilay Mutfak Milano Modeli" 
-        class="w-full h-full object-cover object-center"
-        loading="lazy"
-        width="1920"
-        height="977"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
-    </div>
-
-    <!-- Sol Alt İçerik Bloğu (Locus Birebir Layout) -->
-    <div class="absolute bottom-8 sm:bottom-12 lg:bottom-16 left-6 sm:left-12 lg:left-20 z-20 max-w-[650px] text-white">
-      
-      <!-- Model İsmi ve Slogan -->
-      <a 
-        :href="slides[current].link" 
-        class="group block transition-all"
+      <!-- Server-rendered İlk Görsel (Zero CLS & Anında LCP) -->
+      <div 
+        class="absolute inset-0 w-full h-full"
+        :class="current === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
       >
-        <h2 
-          x-text="slides[current].title" 
-          class="text-[32px] sm:text-[42px] lg:text-[48px] font-medium tracking-[-0.04em] text-white leading-none mb-3 drop-shadow-sm"
-        >
-          Sakura
-        </h2>
-        <p 
-          x-text="slides[current].subtitle" 
-          class="text-[15px] sm:text-[17px] text-white/90 font-normal tracking-normal leading-relaxed drop-shadow-sm mb-6"
-        >
-          El becerisi, yaratıcılık ve deneyim.
-        </p>
-      </a>
+        <img 
+          src="/images/locus/hero-sakura.jpg" 
+          alt="Yeşilay Mutfak Sakura Koleksiyonu" 
+          class="w-full h-full object-cover object-center block"
+          loading="eager"
+          fetchpriority="high"
+          width="1200"
+          height="600"
+        />
+      </div>
 
-      <!-- Kalite Sertifikası / Rozet & Navigasyon Okları -->
-      <div class="flex items-center gap-6 sm:gap-8 pt-2">
-        <!-- Sertifika / Nişane -->
-        <div class="flex items-center gap-3">
+      <!-- Hero Gradient Overlay (Locus framer-gnukv0 Birebir CSS) -->
+      <div 
+        class="absolute inset-0 z-20 flex flex-col justify-end items-start p-5 sm:p-7 lg:p-[30px] gap-3 sm:gap-4 lg:gap-[17px]"
+        style="background: linear-gradient(180deg, rgba(84, 84, 84, 0) 59.95%, rgba(59, 59, 59, 0.3) 74.63%, rgba(5, 5, 5, 0.38) 94.23%);"
+      >
+        <!-- Tıklanabilir Model Başlığı ve Açıklaması -->
+        <a 
+          :href="slides[current].link" 
+          class="block group text-left text-white"
+        >
+          <h2 
+            x-text="slides[current].title" 
+            class="text-[34px] sm:text-[42px] lg:text-[48px] font-bold text-white tracking-[-0.04em] leading-[1.2] sm:leading-[1.4] m-0"
+            style="font-family: 'Roboto', sans-serif;"
+          >
+            Sakura
+          </h2>
+          <p 
+            x-text="slides[current].subtitle" 
+            class="text-[15px] sm:text-[17px] lg:text-[18px] font-normal text-white tracking-[-0.04em] leading-[1.3] sm:leading-[1.4] mt-1 sm:mt-1.5 opacity-95"
+            style="font-family: 'Roboto', sans-serif;"
+          >
+            El becerisi, yaratıcılık ve deneyim.
+          </p>
+        </a>
+
+        <!-- Sertifika / Logo Nişanesi (Locus Venetalogo3 Birebir Boyutu: 219px x 28px) -->
+        <div class="w-[137px] sm:w-[180px] lg:w-[219px] aspect-[7.856] flex items-center pt-1">
           <img 
             src="/images/locus/cert-badge.png" 
-            alt="Yeşilay Mutfak Mimari Üretim Sertifikası" 
-            class="h-9 sm:h-11 w-auto object-contain opacity-95 invert brightness-0"
-            width="120"
-            height="93"
+            alt="Yeşilay Mutfak Sertifikası" 
+            class="h-6 sm:h-7 lg:h-8 w-auto object-contain brightness-0 invert opacity-90"
+            width="219"
+            height="28"
           />
-          <div class="hidden sm:block text-[11px] leading-tight text-white/80 font-normal tracking-wide">
-            <div>Tescilli Mimari Tasarım</div>
-            <div>& Özel Üretim Güvencesi</div>
-          </div>
-        </div>
-
-        <span class="w-[1px] h-6 bg-white/30 hidden sm:block"></span>
-
-        <!-- Oklar (‹ ve ›) -->
-        <div class="flex items-center gap-3">
-          <button 
-            type="button"
-            @click="prev()"
-            class="w-10 h-10 border border-white/40 hover:border-white hover:bg-white/10 rounded-full flex items-center justify-center text-white text-lg transition-all cursor-pointer"
-            aria-label="Önceki Model"
-          >
-            ‹
-          </button>
-          <button 
-            type="button"
-            @click="next()"
-            class="w-10 h-10 border border-white/40 hover:border-white hover:bg-white/10 rounded-full flex items-center justify-center text-white text-lg transition-all cursor-pointer"
-            aria-label="Sonraki Model"
-          >
-            ›
-          </button>
         </div>
       </div>
 
-    </div>
+      <!-- Slider Navigasyon Okları (Locus Birebir: 37x37px, radius 50%, top 50%, translate-y-50%) -->
+      <button 
+        type="button"
+        @click="prev()"
+        aria-label="Previous"
+        class="absolute left-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors"
+      >
+        ‹
+      </button>
+      <button 
+        type="button"
+        @click="next()"
+        aria-label="Next"
+        class="absolute right-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors"
+      >
+        ›
+      </button>
 
+    </div>
   </section>
 
   <!-- ===================================================================== -->
   <!-- 2. BİZ KİMİZ? (LOCUS FEATURES / CONTENT BLOĞU BİREBİR)                -->
   <!-- Max-Width: 1200px | Roboto Font | Eyebrow + H1 + 2 Paragraf + Buton  -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white py-20 lg:py-28 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]">
-    <div class="max-w-[1200px] mx-auto">
+  <section class="w-full bg-white font-roboto">
+    <div class="max-w-[1200px] mx-auto py-16 sm:py-20 lg:py-[70px] px-6 sm:px-10 lg:px-0">
       
-      <!-- Eyebrow -->
-      <span class="text-[12px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-4">
+      <!-- Eyebrow: BİZ KİMİZ? -->
+      <span 
+        class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-4"
+        style="color: #575757; font-family: 'Roboto', sans-serif;"
+      >
         BİZ KİMİZ?
       </span>
 
-      <!-- H1 Başlık (Locus: 31px-37px, Roboto 500, letter-spacing: -0.04em) -->
-      <h1 class="text-[28px] sm:text-[34px] lg:text-[38px] font-medium text-[#111111] tracking-[-0.04em] leading-[1.18] mb-8 max-w-[900px]">
+      <!-- H1 Başlık (Locus: 31px - 37px, font-weight: 500, letter-spacing: -0.04em, line-height: 1.1em, color: #575757) -->
+      <h1 
+        class="text-[26px] sm:text-[31px] lg:text-[37px] font-medium tracking-[-0.04em] leading-[1.1] mb-8 max-w-[850px]"
+        style="color: #575757; font-family: 'Roboto', sans-serif;"
+      >
         Mutfak ve Mobilyayı Bir Bütün Olarak Planlıyoruz
       </h1>
 
-      <!-- Paragraflar (Locus font-size 16px-18px, text-color #575757, line-height 1.6) -->
-      <div class="space-y-6 text-[16px] sm:text-[17px] text-[#575757] font-normal leading-[1.65] max-w-[980px] mb-10">
+      <!-- Paragraflar (Locus: font-size 16px - 20px, line-height 1.3em, color #575757) -->
+      <div 
+        class="space-y-6 text-[15px] sm:text-[18px] lg:text-[20px] font-normal leading-[1.3] max-w-[950px] mb-10"
+        style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+      >
         <p>
           Yeşilay Mutfak, 1992’den bu yana İzmir merkezli olarak mutfak ve mobilya projelendirmesi ile kişiye özel imalat hizmeti sunar. Modern İtalyan çizgisine sahip özgün mutfak koleksiyonlarını ve yaşam alanı mobilyalarını; mekanınıza, ihtiyaçlarınıza ve yaşam alışkanlıklarınıza göre planlıyoruz.
         </p>
@@ -289,11 +264,12 @@ const chairImages = [
         </p>
       </div>
 
-      <!-- Buton (Locus: 204px x 45px, border, font 12px Roboto letter-spacing 0.08em) -->
+      <!-- Buton (Locus Birebir: 204px x 45px, border: 1px solid #d5d5d5, font 12px, tracking 0.08em) -->
       <div>
         <a 
           href="/hakkimizda/" 
-          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[#575757] text-[12px] font-medium tracking-[0.08em] uppercase transition-all duration-200"
+          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
+          style="font-family: 'Roboto', sans-serif;"
         >
           YEŞİLAY MUTFAK’I TANIYIN
         </a>
@@ -304,50 +280,74 @@ const chairImages = [
 
   <!-- ===================================================================== -->
   <!-- 3. TASARIM VE UYGULAMA SÜRECİ (LOCUS PROCESS BLOĞU BİREBİR)          -->
-  <!-- 3 Kolon: Mekan ve Yerleşim | Mutfak, Tezgah | Teslimat ve Destek      -->
+  <!-- Padding: 0 70px 70px | 3 Kolon: Mekan ve yerleşim | Mutfak | Teslimat -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white py-16 lg:py-24 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]">
-    <div class="max-w-[1200px] mx-auto">
+  <section class="w-full bg-white font-roboto">
+    <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-0 pb-16 lg:pb-[70px]">
       
-      <!-- Üst Başlıklar -->
+      <!-- Üst Başlık Grubu -->
       <div class="mb-12 lg:mb-16">
-        <span class="text-[12px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-3">
+        <span 
+          class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-3"
+          style="color: #575757; font-family: 'Roboto', sans-serif;"
+        >
           TASARIM VE UYGULAMA SÜRECİ
         </span>
-        <h2 class="text-[26px] sm:text-[32px] font-medium text-[#111111] tracking-[-0.04em] leading-[1.2]">
+        <h2 
+          class="text-[26px] sm:text-[31px] lg:text-[37px] font-medium tracking-[-0.04em] leading-[1.1]"
+          style="color: #575757; font-family: 'Roboto', sans-serif;"
+        >
           Mutfağınızdan yaşam alanınıza
         </h2>
       </div>
 
-      <!-- 3 Kolonlu Süreç Kartları (Locus Birebir) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 pt-8 border-t border-[#ede9e6]">
+      <!-- 3 Kolonlu Süreç Konuları (Locus: border-top: 1px solid #bdbdbd, gap: 70px) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-[70px] pt-8 lg:pt-[70px] border-t border-[#bdbdbd]">
         
         <!-- 1. Konu -->
         <div class="space-y-3">
-          <h3 class="text-[20px] lg:text-[22px] font-medium text-[#111111] tracking-[-0.04em]">
+          <h3 
+            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
+            style="color: #222222; font-family: 'Roboto', sans-serif;"
+          >
             Mekan ve yerleşim
           </h3>
-          <p class="text-[15px] sm:text-[15.5px] text-[#575757] font-normal leading-[1.6]">
+          <p 
+            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
+            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+          >
             Ölçüleri ve günlük kullanım ihtiyaçlarınızı değerlendiriyor, mutfak ve mobilya yerleşimini birlikte netleştiriyoruz.
           </p>
         </div>
 
         <!-- 2. Konu -->
         <div class="space-y-3">
-          <h3 class="text-[20px] lg:text-[22px] font-medium text-[#111111] tracking-[-0.04em]">
+          <h3 
+            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
+            style="color: #222222; font-family: 'Roboto', sans-serif;"
+          >
             Mutfak, tezgah ve tamamlayıcı ürünler
           </h3>
-          <p class="text-[15px] sm:text-[15.5px] text-[#575757] font-normal leading-[1.6]">
+          <p 
+            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
+            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+          >
             Mutfağı tezgah ve ankastre cihazlarla birlikte ele alıyoruz. Mobilya, masa ve sandalye seçimlerinde de ölçü, malzeme ve kullanım uyumunu gözetiyoruz.
           </p>
         </div>
 
         <!-- 3. Konu -->
         <div class="space-y-3">
-          <h3 class="text-[20px] lg:text-[22px] font-medium text-[#111111] tracking-[-0.04em]">
+          <h3 
+            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
+            style="color: #222222; font-family: 'Roboto', sans-serif;"
+          >
             Teslimat, montaj ve destek
           </h3>
-          <p class="text-[15px] sm:text-[15.5px] text-[#575757] font-normal leading-[1.6]">
+          <p 
+            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
+            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+          >
             Teslimat ve montajı üstleniyor, satış sonrası desteğimizle kullanım sürecinde de yanınızda oluyoruz.
           </p>
         </div>
@@ -359,47 +359,64 @@ const chairImages = [
 
   <!-- ===================================================================== -->
   <!-- 4. ÖNE ÇIKAN MUTFAK MODELLERİ (LOCUS 2 COL MODELLER BİREBİR)        -->
-  <!-- Iconica | Lounge | Milano | Pavese + TÜM MODELLER Butonu              -->
+  <!-- Üst Bant: bg #e6e0d7, border-top 1px solid #222, padding 35px 70px   -->
+  <!-- Modeller: bg #ede9e6a1, 2 Kolon, 460px görsel                        -->
+  <!-- Alt Bant: bg #e6e0d7, border-bottom 1px solid #222                   -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-[#fbf9f6] py-20 lg:py-28 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]">
-    <div class="max-w-[1300px] mx-auto">
-      
-      <!-- Bölüm Başlığı -->
-      <div class="mb-16 lg:mb-24 text-center">
-        <span class="text-[12px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-3">
-          Mutfak
-        </span>
-        <h2 class="text-[28px] sm:text-[36px] font-medium text-[#111111] tracking-[-0.04em]">
-          Öne Çıkan Mutfak Modelleri
-        </h2>
-      </div>
+  <section class="w-full font-roboto">
+    
+    <!-- Üst Başlık Bandı (Locus framer-1p36md6 Birebir) -->
+    <div 
+      class="w-full py-8 lg:py-[35px] px-6 sm:px-10 lg:px-[70px] text-center"
+      style="background-color: #e6e0d7; border-top: 1px solid #222;"
+    >
+      <span 
+        class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-1"
+        style="color: #575757; font-family: 'Roboto', sans-serif;"
+      >
+        Mutfak
+      </span>
+      <h2 
+        class="text-[24px] sm:text-[28px] lg:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
+        style="color: #575757; font-family: 'Roboto', sans-serif;"
+      >
+        Öne Çıkan Mutfak Modelleri
+      </h2>
+    </div>
 
-      <!-- Modeller Listesi (Alternatif 2 Kolon Grid Düzeni) -->
-      <div class="space-y-20 lg:space-y-28">
-        {kitchenModels.map((m, idx) => (
-          <div class={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center`}>
+    <!-- 4 Model Bloğu (Locus 2 Col Modeller Birebir) -->
+    <div style="background-color: #ede9e6a1;">
+      {kitchenModels.map((m, idx) => (
+        <div class="w-full max-w-[2018px] mx-auto border-b border-[#d5d5d5]/50 last:border-b-0">
+          <div class={`grid grid-cols-1 lg:grid-cols-2 items-center min-h-[460px] ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
             
-            <!-- Görsel Alanı (7 Sütun) -->
-            <div class={`lg:col-span-7 ${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-              <a href={m.link} class="block overflow-hidden group">
+            <!-- Görsel Kolonu (Locus: height 460px) -->
+            <div class={`w-full h-[320px] sm:h-[400px] lg:h-[460px] overflow-hidden ${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+              <a href={m.link} class="block w-full h-full group overflow-hidden">
                 <img 
                   src={m.image} 
                   alt={m.title} 
-                  class="w-full h-[320px] sm:h-[440px] lg:h-[500px] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
-                  width="1920"
-                  height="977"
+                  width="960"
+                  height="460"
                 />
               </a>
             </div>
 
-            <!-- Metin Alanı (5 Sütun) -->
-            <div class={`lg:col-span-5 space-y-6 ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
-              <h3 class="text-[28px] sm:text-[34px] font-medium text-[#111111] tracking-[-0.04em] leading-tight">
+            <!-- Metin Kolonu (Locus: padding 70px) -->
+            <div class={`p-8 sm:p-12 lg:p-[70px] space-y-6 ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+              <h3 
+                class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
+                style="color: #575757; font-family: 'Roboto', sans-serif;"
+              >
                 {m.title}
               </h3>
               
-              <div class="space-y-4 text-[15px] sm:text-[16px] text-[#575757] font-normal leading-[1.65]">
+              <div 
+                class="space-y-4 text-[15px] sm:text-[16px] font-normal leading-[1.4]"
+                style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+              >
                 <p>{m.desc1}</p>
                 {m.desc2 && <p>{m.desc2}</p>}
               </div>
@@ -407,7 +424,8 @@ const chairImages = [
               <div class="pt-2">
                 <a 
                   href={m.link} 
-                  class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[#575757] text-[12px] font-medium tracking-[0.08em] uppercase transition-all duration-200"
+                  class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
+                  style="font-family: 'Roboto', sans-serif;"
                 >
                   KOLEKSİYONU KEŞFEDİN
                 </a>
@@ -415,54 +433,68 @@ const chairImages = [
             </div>
 
           </div>
-        ))}
-      </div>
-
-      <!-- TÜM MODELLER Butonu (Locus: Sayfa ortasında geniş buton) -->
-      <div class="mt-20 lg:mt-24 text-center">
-        <a 
-          href="/tasarimlar/" 
-          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#111111] bg-[#111111] text-white hover:bg-transparent hover:text-[#111111] text-[12px] font-medium tracking-[0.08em] uppercase transition-all duration-200"
-        >
-          TÜM MODELLER
-        </a>
-      </div>
-
+        </div>
+      ))}
     </div>
+
+    <!-- Alt Buton Bandı (Locus framer-46r3lr Birebir) -->
+    <div 
+      class="w-full py-8 lg:py-[35px] px-6 sm:px-10 lg:px-[70px] flex items-center justify-center"
+      style="background-color: #e6e0d7; border-bottom: 1px solid #222;"
+    >
+      <a 
+        href="/tasarimlar/" 
+        class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#222] bg-[#222] text-white hover:bg-transparent hover:text-[#222] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
+        style="font-family: 'Roboto', sans-serif;"
+      >
+        TÜM MODELLER
+      </a>
+    </div>
+
   </section>
 
   <!-- ===================================================================== -->
   <!-- 5. TAMAMLAYICI ÜRÜNLER (SANDALYE VE MASA / ET AL. BLOĞU BİREBİR)     -->
-  <!-- Başlık + Açıklama + Buton + 12'li Sandalye/Masa Görsel Galerisi        -->
+  <!-- Border-Top: 1px solid #222 | Padding: 35px 70px | Görsel Izgarası     -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white py-20 lg:py-28 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]">
-    <div class="max-w-[1300px] mx-auto">
+  <section class="w-full bg-white font-roboto" style="border-top: 1px solid #222;">
+    <div class="w-full max-w-[1400px] mx-auto py-12 lg:py-[70px] px-6 sm:px-10 lg:px-[70px]">
       
-      <!-- Başlık ve Giriş Metni -->
-      <div class="max-w-[760px] mx-auto text-center mb-12">
-        <span class="text-[12px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-3">
+      <!-- Başlık ve Giriş -->
+      <div class="max-w-[700px] mx-auto text-center mb-10">
+        <span 
+          class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-2"
+          style="color: #575757; font-family: 'Roboto', sans-serif;"
+        >
           Tamamlayıcı Ürünler
         </span>
-        <h3 class="text-[28px] sm:text-[34px] font-medium text-[#111111] tracking-[-0.04em] mb-4">
+        <h3 
+          class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1] mb-4"
+          style="color: #575757; font-family: 'Roboto', sans-serif;"
+        >
           Sandalye ve Masa
         </h3>
-        <p class="text-[15.5px] sm:text-[16.5px] text-[#575757] leading-relaxed mb-8">
+        <p 
+          class="text-[15px] sm:text-[16px] leading-[1.5] mb-6"
+          style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+        >
           Modern yaşamın ihtiyaçlarına uygun, sürdürülebilir ve şık masa ve sandalye koleksiyonlarıyla fark yaratır. Hem iç mekanlarda hem de dış mekanlarda kullanıma uygun estetik çözümler sunar.
         </p>
         <div>
           <a 
             href="/tasarimlar/" 
-            class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[#575757] text-[12px] font-medium tracking-[0.08em] uppercase transition-all duration-200"
+            class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
+            style="font-family: 'Roboto', sans-serif;"
           >
             KOLEKSİYONU KEŞFEDİN
           </a>
         </div>
       </div>
 
-      <!-- 12 Görselli Mozaik / Izgara (Locus Birebir Galeri) -->
+      <!-- Sandalye ve Masa Izgarası (Locus aspect-ratio: 1.93878 Birebir) -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
         {chairImages.map((img, i) => (
-          <div class="overflow-hidden bg-[#fbf9f6] aspect-square group">
+          <div class="overflow-hidden bg-[#fbf9f6] aspect-square group border border-[#ede9e6]">
             <img 
               src={img} 
               alt={`Tasarım Sandalye ve Masa Koleksiyonu ${i + 1}`} 
@@ -479,33 +511,42 @@ const chairImages = [
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 6. MOBİLYA VE YAŞAM ALANLARI (COLOMBINI CASA BİREBİR KLON)            -->
+  <!-- 6. MOBİLYA VE YAŞAM ALANLARI (COLOMBINI CASA BİREBİR)                 -->
   <!-- Salon, Kitaplık, Yatak Odası, Genç Odası, Çocuk Odası, Çamaşır Odası   -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-[#fbf9f6] py-20 lg:py-28 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]">
-    <div class="max-w-[1300px] mx-auto">
+  <section class="w-full bg-[#fbf9f6] font-roboto border-t border-[#ede9e6]">
+    <div class="w-full max-w-[1300px] mx-auto py-16 lg:py-[70px] px-6 sm:px-10">
       
-      <!-- Marka / Başlık -->
+      <!-- Başlık Grubu -->
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
         <div>
-          <span class="text-[12px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-2">
+          <span 
+            class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-2"
+            style="color: #575757; font-family: 'Roboto', sans-serif;"
+          >
             MOBİLYA & YAŞAM ALANLARI
           </span>
-          <h2 class="text-[28px] sm:text-[36px] font-medium text-[#111111] tracking-[-0.04em]">
+          <h2 
+            class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
+            style="color: #222222; font-family: 'Roboto', sans-serif;"
+          >
             Yeşilay Casa Koleksiyonu
           </h2>
         </div>
-        <div class="text-[13px] text-[#575757] max-w-[420px]">
+        <div 
+          class="text-[14px] max-w-[420px]"
+          style="color: #575757; font-family: 'Roboto', sans-serif;"
+        >
           Mutfaktan salona, giyinme odalarından genç ve çocuk odalarına kadar evinizin her köşesinde mimari uyum.
         </div>
       </div>
 
-      <!-- 6 Kategori Izgarası (Locus Kart Yapısı) -->
+      <!-- 6 Kategori Kartı (Locus Birebir Kart Yapısı) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {furnitureCategories.map((c) => (
           <a 
             href={c.link} 
-            class="group block bg-white border border-[#ede9e6] overflow-hidden transition-all duration-300 hover:shadow-lg"
+            class="group block bg-white border border-[#ede9e6] overflow-hidden transition-all duration-300 hover:shadow-md"
           >
             <div class="aspect-[16/10] overflow-hidden bg-[#f2efe9]">
               <img 
@@ -518,7 +559,10 @@ const chairImages = [
               />
             </div>
             <div class="p-6 flex items-center justify-between">
-              <h3 class="text-[18px] sm:text-[20px] font-medium text-[#111111] tracking-[-0.03em] group-hover:text-[#575757] transition-colors">
+              <h3 
+                class="text-[18px] sm:text-[20px] font-medium tracking-[-0.03em] group-hover:text-[#575757] transition-colors"
+                style="color: #111111; font-family: 'Roboto', sans-serif;"
+              >
                 {c.name}
               </h3>
               <span class="text-[18px] text-[#111111] transform transition-transform group-hover:translate-x-1">
@@ -530,10 +574,11 @@ const chairImages = [
       </div>
 
       <!-- Keşfet Butonu -->
-      <div class="mt-14 text-center">
+      <div class="mt-12 text-center">
         <a 
           href="/salon-modelleri/" 
-          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[#575757] text-[12px] font-medium tracking-[0.08em] uppercase transition-all duration-200"
+          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
+          style="font-family: 'Roboto', sans-serif;"
         >
           KOLEKSİYONU KEŞFEDİN
         </a>
@@ -544,14 +589,14 @@ const chairImages = [
 
   <!-- ===================================================================== -->
   <!-- 7. MULTI-STEP İLETİŞİM & TEKLİF FORMU (LOCUS MULTI-STEP FORM BİREBİR) -->
-  <!-- Adım 1: İletişim Bilgileri | Adım 2: Mesaj & Dosya Yükleme            -->
+  <!-- Max-width: 800px | Padding: 35px 20px | Adım 1 / 2 & Adım 2 / 2      -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white py-20 lg:py-28 px-6 sm:px-10 font-roboto border-b border-[#ede9e6]" id="iletisim-formu">
-    <div class="max-w-[800px] mx-auto">
+  <section class="w-full bg-white font-roboto border-t border-[#ede9e6]" id="iletisim-formu">
+    <div class="max-w-[800px] mx-auto py-16 lg:py-[70px] px-6 sm:px-10">
       
       <!-- Form Kartı -->
       <div 
-        class="bg-white border border-[#ede9e6] p-8 sm:p-12 lg:p-14 shadow-[0_4px_24px_rgba(0,0,0,0.03)]"
+        class="bg-white border border-[#ede9e6] p-6 sm:p-10 shadow-[0_2px_16px_rgba(0,0,0,0.03)]"
         x-data="{
           step: 1,
           name: '',
@@ -583,16 +628,22 @@ const chairImages = [
         }"
       >
         <!-- Başlık ve Adım Bilgisi -->
-        <div class="flex items-center justify-between border-b border-[#ede9e6] pb-6 mb-8">
+        <div class="flex items-center justify-between border-b border-[#ede9e6] pb-5 mb-7">
           <div>
-            <span class="text-[11px] font-medium tracking-[0.1em] text-[#888888] uppercase block mb-1">
+            <span 
+              class="block text-[11px] font-normal tracking-[0.08em] uppercase mb-1"
+              style="color: #888888; font-family: 'Roboto', sans-serif;"
+            >
               MİMARİ DANIŞMANLIK & TEKLİF
             </span>
-            <h2 class="text-[24px] sm:text-[28px] font-medium text-[#111111] tracking-[-0.04em]">
+            <h2 
+              class="text-[22px] sm:text-[26px] font-medium tracking-[-0.04em]"
+              style="color: #111111; font-family: 'Roboto', sans-serif;"
+            >
               Daha Fazla Bilgi Alın
             </h2>
           </div>
-          <div class="text-[12px] font-medium text-[#888888] tracking-wider uppercase">
+          <div class="text-[12px] font-normal text-[#888888] tracking-wider uppercase">
             <span x-text="'Adım ' + step + ' / 2'">Adım 1 / 2</span>
           </div>
         </div>
@@ -617,7 +668,7 @@ const chairImages = [
         <div x-show="!submitted">
           
           <!-- ADIM 1: İLETİŞİM ALANLARI -->
-          <div x-show="step === 1" class="space-y-6">
+          <div x-show="step === 1" class="space-y-5">
             <div>
               <label class="block text-[13px] font-medium text-[#111111] mb-2">
                 Ad Soyad <span class="text-red-500">*</span>
@@ -626,7 +677,7 @@ const chairImages = [
                 type="text" 
                 x-model="name" 
                 placeholder="Adınız ve soyadınız" 
-                class="w-full h-[48px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
+                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
                 required
               />
             </div>
@@ -639,7 +690,7 @@ const chairImages = [
                 type="email" 
                 x-model="email" 
                 placeholder="ornek@email.com" 
-                class="w-full h-[48px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
+                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
                 required
               />
             </div>
@@ -652,7 +703,7 @@ const chairImages = [
                 type="tel" 
                 x-model="phone" 
                 placeholder="0 (5XX) XXX XX XX" 
-                class="w-full h-[48px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
+                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
                 required
               />
             </div>
@@ -669,7 +720,7 @@ const chairImages = [
           </div>
 
           <!-- ADIM 2: MESAJ & DOSYA YÜKLEME -->
-          <div x-show="step === 2" class="space-y-6" style="display: none;">
+          <div x-show="step === 2" class="space-y-5" style="display: none;">
             <div>
               <label class="block text-[13px] font-medium text-[#111111] mb-2">
                 Mesajınız
@@ -687,8 +738,8 @@ const chairImages = [
               <label class="block text-[13px] font-medium text-[#111111] mb-2">
                 Ölçü ve Fotoğraf Yükleyin
               </label>
-              <div class="border-2 border-dashed border-[#d5d5d5] hover:border-[#111111] p-8 text-center cursor-pointer transition-colors bg-[#faf9f7]">
-                <div class="text-2xl mb-2 text-[#888888]">📎</div>
+              <div class="border-2 border-dashed border-[#d5d5d5] hover:border-[#111111] p-6 text-center cursor-pointer transition-colors bg-[#faf9f7]">
+                <div class="text-2xl mb-1 text-[#888888]">📎</div>
                 <p class="text-[13px] text-[#575757] font-medium">
                   Dosya yüklemek için tıklayın veya dosyayı buraya sürükleyin.
                 </p>

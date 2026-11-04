@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from "../data/siteConfig";
+import { siteConfig } from '../data/siteConfig';
 
 export interface Props {
   activeService?: string;
@@ -9,85 +9,156 @@ const { activeService } = Astro.props;
 ---
 
 <!-- ===================================================================== -->
-<!-- LOCUS TARZI MİMARİ MİNİMALİST HEADER (80px Masaüstü / 70px Mobil)     -->
-<!-- Renk: #111111 | Harf Aralığı: 0.08em | Font: Roboto & Inter           -->
+<!-- LOCUS BİREBİR HEADER (Masaüstü: 80px, Mobil: 70px, Fixed, 1200px Max) -->
+<!-- Renkler: rgb(116, 113, 108) linkler, rgb(36, 36, 36) İletişim bold   -->
+<!-- Kenarlık: 0.5px solid rgb(133, 133, 133)                              -->
 <!-- ===================================================================== -->
 <header 
-  class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-[#ede9e6] transition-all duration-200"
+  class="fixed top-0 left-0 right-0 z-50 w-full bg-white transition-all duration-200"
+  style="border-bottom: 0.5px solid rgb(133, 133, 133);"
   id="siteHeader"
   x-data="{ mobileOpen: false }"
   @keydown.escape="mobileOpen = false"
 >
-  <div class="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 h-[70px] lg:h-[80px] flex items-center justify-between">
+  <div class="w-full max-w-[1200px] h-[70px] lg:h-[80px] mx-auto px-5 lg:px-[30px] flex items-center justify-between lg:justify-start gap-2.5 relative">
     
-    <!-- SOL: LOGO (MİNİMALİST İTALYAN MİMARLIK TİPOGRAFİSİ) -->
+    <!-- SOL: LOGO (LOCUS BİREBİR BOYUT: 100x60px, Mobilde: 82px) -->
     <a 
       href="/" 
-      class="flex items-center gap-2 text-[#111111] hover:text-[#575757] transition-colors select-none"
+      class="flex flex-col justify-center select-none group w-[82px] lg:w-[100px] h-[60px] flex-none"
       aria-label="Yeşilay Mutfak Ana Sayfa"
     >
-      <span class="font-roboto font-medium text-[16px] sm:text-[18px] tracking-[0.16em] uppercase text-[#111111]">
+      <span 
+        class="font-roboto text-[16px] lg:text-[18px] tracking-[0.16em] uppercase text-[#111111] font-bold leading-none"
+      >
         YEŞİLAY
       </span>
-      <span class="w-[1px] h-3.5 bg-[#d5d5d5]"></span>
-      <span class="font-roboto font-normal text-[11px] sm:text-[12px] tracking-[0.12em] uppercase text-[#777777]">
+      <span 
+        class="font-roboto text-[10px] lg:text-[11px] tracking-[0.24em] uppercase text-[rgb(116,113,108)] font-normal leading-none mt-1"
+      >
         MUTFAK
       </span>
     </a>
 
-    <!-- ORTA / SAĞ: MENÜ LİNKLERİ (LOCUS BİREBİR STRÜKTÜRÜ) -->
+    <!-- ORTA / SAĞ: ANA MENÜ (LOCUS BİREBİR FONT, ÖLÇÜ VE RENKLER) -->
     <nav 
-      class="hidden md:flex items-center gap-8 lg:gap-11 text-[12.5px] lg:text-[13px] font-roboto font-medium tracking-[0.08em] uppercase text-[#111111]"
-      aria-label="Masaüstü Menü"
+      class="hidden md:flex items-center gap-[28px] lg:gap-[38px] pl-[20px] lg:pl-[30px] flex-1 font-roboto"
+      aria-label="Ana menü"
     >
-      <a href="/tasarimlar/" class="hover:text-[#777777] transition-colors py-2">
+      <a 
+        href="/tasarimlar/" 
+        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
+        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
+        onmouseover="this.style.color='rgb(36, 36, 36)'"
+        onmouseout="this.style.color='rgb(116, 113, 108)'"
+      >
         MUTFAK
       </a>
-      <a href="/salon-modelleri/" class="hover:text-[#777777] transition-colors py-2">
+      <a 
+        href="/salon-modelleri/" 
+        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
+        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
+        onmouseover="this.style.color='rgb(36, 36, 36)'"
+        onmouseout="this.style.color='rgb(116, 113, 108)'"
+      >
         MOBİLYA
       </a>
-      <a href="/hazir-mutfak/" class="hover:text-[#777777] transition-colors py-2">
+      <a 
+        href="/hazir-mutfak/" 
+        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
+        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
+        onmouseover="this.style.color='rgb(36, 36, 36)'"
+        onmouseout="this.style.color='rgb(116, 113, 108)'"
+      >
         TAMAMLAYICI ÜRÜNLER
       </a>
-      <a href="/izmir-komple-mutfak-tadilati/" class="hover:text-[#777777] transition-colors py-2">
+      <a 
+        href="/izmir-komple-mutfak-tadilati/" 
+        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
+        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
+        onmouseover="this.style.color='rgb(36, 36, 36)'"
+        onmouseout="this.style.color='rgb(116, 113, 108)'"
+      >
         CİHAZ
       </a>
-      <a href="/hakkimizda/" class="hover:text-[#777777] transition-colors py-2">
+      <a 
+        href="/hakkimizda/" 
+        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
+        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
+        onmouseover="this.style.color='rgb(36, 36, 36)'"
+        onmouseout="this.style.color='rgb(116, 113, 108)'"
+      >
         KURUMSAL
       </a>
-      <a href="/iletisim/" class="hover:text-[#777777] transition-colors py-2">
-        İLETİŞİM
-      </a>
+
+      <!-- SAĞ GRUP (İLETİŞİM BOLD + 4 İKON - LOCUS framer-18odg87 BİREBİR) -->
+      <div class="ml-auto flex items-center gap-[10px]">
+        <a 
+          href="/iletisim/" 
+          class="text-[13px] font-bold leading-none uppercase tracking-normal text-[rgb(36,36,36)] hover:text-black transition-colors mr-3"
+          style="font-family: 'Roboto', sans-serif;"
+        >
+          İLETİŞİM
+        </a>
+
+        <!-- Harita İkonu (framer-1ma8swo: 21x24px) -->
+        <a 
+          href="/iletisim/" 
+          class="w-[21px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
+          aria-label="Konum ve Harita"
+        >
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,204.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path>
+          </svg>
+        </a>
+
+        <!-- E-posta İkonu (framer-19f35xi: 27x24px) -->
+        <a 
+          href="mailto:bilgi@yesilaymutfak.com" 
+          class="w-[27px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
+          aria-label="E-posta Gönder"
+        >
+          <svg width="22" height="20" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM208,192H48V64H208V192Zm-80-50.69L68.8,92.53a8,8,0,0,1,10.4-12.16L128,119.53l48.8-39.16a8,8,0,0,1,10.4,12.16Z"></path>
+          </svg>
+        </a>
+
+        <!-- Katalog İkonu (framer-rhul9e: 31x24px) -->
+        <a 
+          href="/kataloglar/" 
+          class="w-[31px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
+          aria-label="Kataloglar"
+        >
+          <svg width="22" height="20" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M216,40H72A40,40,0,0,0,32,80V200a40,40,0,0,0,40,40H216a8,8,0,0,0,8-8V48A8,8,0,0,0,216,40ZM72,56H208V184H72a23.86,23.86,0,0,1-13.84,4.41A23.82,23.82,0,0,1,48,185.09V80A24,24,0,0,1,72,56Zm136,168H72a24.11,24.11,0,0,0-20.73,11.83A39.69,39.69,0,0,0,72,224H208Z"></path>
+          </svg>
+        </a>
+
+        <!-- Arama İkonu (framer-359z46: 24x24px) -->
+        <a 
+          href="/tasarimlar/" 
+          class="w-[24px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
+          aria-label="Arama"
+        >
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
+            <path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"></path>
+          </svg>
+        </a>
+      </div>
+
     </nav>
 
-    <!-- SAĞ: HIZLI TELEFON / MAĞAZA (MİNİMAL BUTON) -->
-    <div class="hidden lg:flex items-center gap-6">
-      <a 
-        href="tel:+902324411060" 
-        class="text-[12px] font-roboto font-medium tracking-[0.06em] text-[#575757] hover:text-[#111111] transition-colors"
-      >
-        0 (232) 441 10 60
-      </a>
-      <a 
-        href="/iletisim/" 
-        class="h-[38px] px-5 border border-[#111111] text-[11px] font-roboto font-medium tracking-[0.1em] uppercase text-[#111111] hover:bg-[#111111] hover:text-white transition-all flex items-center justify-center"
-      >
-        RANDEVU AL
-      </a>
-    </div>
-
-    <!-- MOBİL HAMBURGER BUTONU -->
+    <!-- MOBİL HAMBURGER BUTONU (Locus framer-1qqtfod BİREBİR) -->
     <button 
       type="button"
-      class="md:hidden p-2 text-[#111111] hover:text-[#575757] focus:outline-none"
+      class="md:hidden w-[44px] h-[44px] flex flex-col justify-center items-center gap-[5px] text-[rgb(97,97,97)] focus:outline-none"
       @click="mobileOpen = !mobileOpen"
       aria-label="Menüyü Aç/Kapat"
       :aria-expanded="mobileOpen"
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"/>
-        <path x-show="mobileOpen" style="display: none;" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
+      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-transform duration-200" :class="mobileOpen ? 'rotate-45 translate-y-[6.5px]' : ''"></span>
+      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-opacity duration-200" :class="mobileOpen ? 'opacity-0' : ''"></span>
+      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-transform duration-200" :class="mobileOpen ? '-rotate-45 -translate-y-[6.5px]' : ''"></span>
     </button>
 
   </div>
@@ -101,42 +172,39 @@ const { activeService } = Astro.props;
     x-transition:leave="transition ease-in duration-150"
     x-transition:leave-start="opacity-100 translate-y-0"
     x-transition:leave-end="opacity-0 -translate-y-2"
-    class="md:hidden bg-white border-b border-[#ede9e6] px-6 py-8 shadow-xl"
+    class="md:hidden bg-white border-b border-[rgb(133,133,133)] px-6 py-8 shadow-xl"
     style="display: none;"
   >
-    <nav class="flex flex-col space-y-6 text-[14px] font-roboto font-medium tracking-[0.1em] uppercase text-[#111111]">
-      <a href="/tasarimlar/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+    <nav class="flex flex-col space-y-5 font-roboto text-[13px] tracking-normal uppercase">
+      <a href="/tasarimlar/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
         MUTFAK
       </a>
-      <a href="/salon-modelleri/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+      <a href="/salon-modelleri/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
         MOBİLYA
       </a>
-      <a href="/hazir-mutfak/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+      <a href="/hazir-mutfak/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
         TAMAMLAYICI ÜRÜNLER
       </a>
-      <a href="/izmir-komple-mutfak-tadilati/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+      <a href="/izmir-komple-mutfak-tadilati/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
         CİHAZ
       </a>
-      <a href="/hakkimizda/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+      <a href="/hakkimizda/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
         KURUMSAL
       </a>
-      <a href="/iletisim/" class="hover:text-[#575757] transition-colors pb-2 border-b border-[#f3efe8]">
+      <a href="/iletisim/" class="text-[rgb(36,36,36)] font-bold pb-2 border-b border-[#f3efe8]">
         İLETİŞİM
       </a>
     </nav>
-    <div class="mt-8 pt-6 border-t border-[#ede9e6] flex flex-col gap-4">
+    <div class="mt-6 pt-4 border-t border-[#ede9e6] flex flex-col gap-3">
       <a 
         href="tel:+902324411060" 
-        class="text-[13px] font-roboto font-medium text-[#575757] flex items-center justify-center gap-2"
+        class="text-[13px] font-roboto font-medium text-[rgb(36,36,36)] flex items-center justify-center gap-2"
       >
         <span>📞</span> 0 (232) 441 10 60
-      </a>
-      <a 
-        href="/iletisim/" 
-        class="w-full h-[45px] border border-[#111111] text-[12px] font-roboto font-medium tracking-[0.1em] uppercase text-[#111111] flex items-center justify-center hover:bg-[#111111] hover:text-white transition-all"
-      >
-        RANDEVU AL
       </a>
     </div>
   </div>
 </header>
+
+<!-- NAV_SPACE: Fixed Header Arkasında Kalan 80px / 70px Boşluk (Locus framer-16rri12 Birebir) -->
+<div class="w-full h-[70px] lg:h-[80px] flex-none" aria-hidden="true"></div>

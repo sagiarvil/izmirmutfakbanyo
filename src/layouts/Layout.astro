@@ -14,7 +14,7 @@ const { seo, activeService } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="tr" class="scroll-smooth overflow-x-hidden bg-[#FAF9F6] text-[#1D1D1F]">
+<html lang="tr" class="scroll-smooth overflow-x-hidden bg-white text-[#222222]">
   <head>
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET"></script>
@@ -117,7 +117,7 @@ const { seo, activeService } = Astro.props;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Yeşilay Mutfak" />
     <meta name="format-detection" content="telephone=yes" />
-    <meta name="theme-color" content="#FAF9F6" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Syndication & Feed Katmanı ($10M Mandate v9.1) -->
     <link rel="alternate" type="application/rss+xml" title="Yeşilay Mutfak RSS" href="/feed.xml" />
@@ -135,7 +135,7 @@ const { seo, activeService } = Astro.props;
       <!-- Alpine.js 3.x (Declarative Reactive UI Engine) -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   </head>
-  <body class="min-h-screen flex flex-col font-sans architect-grid-bg text-[#1D1D1F] overflow-x-hidden antialiased selection:bg-[#006039] selection:text-white">
+  <body class="min-h-screen flex flex-col font-roboto bg-white text-[#222222] overflow-x-hidden antialiased selection:bg-[#111111] selection:text-white">
     <Header activeService={activeService} />
     <main id="main-content" class="flex-1 w-full overflow-hidden">
       <slot />
