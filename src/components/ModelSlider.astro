@@ -19,18 +19,18 @@ const { name, desc, images } = Astro.props;
     </p>
   </div>
 
-  <!-- Locus Birebir Yatay Kaydırılabilir Slider Mimarisi (1200px x 600px Masaüstü, 555px Tablet, 250px Mobil) -->
+  <!-- Locus Birebir Yatay Kaydırılabilir Slider Mimarisi -->
   <div 
     class="relative w-full group/slider"
     x-data="{
       scroll(direction) {
         const el = this.$refs.sliderList;
-        const scrollAmount = el.clientWidth * 0.8;
+        const scrollAmount = el.clientWidth * 0.75;
         el.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
       }
     }"
   >
-    <!-- Sol Ok Butonu (Locus Tarzı Minimalist Daire Buton) -->
+    <!-- Sol Ok Butonu -->
     <button 
       type="button"
       @click="scroll(-1)" 
@@ -42,7 +42,7 @@ const { name, desc, images } = Astro.props;
       </svg>
     </button>
 
-    <!-- Slider Scroll Container (Locus gap: 17px - 24px) -->
+    <!-- Slider Scroll Container -->
     <div 
       x-ref="sliderList"
       class="flex flex-row items-center gap-4 sm:gap-6 overflow-x-auto scroll-smooth py-1 select-none"
@@ -50,14 +50,16 @@ const { name, desc, images } = Astro.props;
     >
       {images.map((imgSrc, idx) => (
         <div 
-          class="shrink-0 h-[260px] sm:h-[420px] lg:h-[580px] w-auto bg-[#ECEAE5] overflow-hidden shadow-2xs"
+          class="shrink-0 w-[300px] sm:w-[520px] lg:w-[780px] h-[220px] sm:h-[380px] lg:h-[540px] bg-[#ECEAE5] overflow-hidden shadow-2xs"
           style="scroll-snap-align: start;"
         >
           <img 
             src={imgSrc} 
             alt={`${name} Görsel ${idx + 1}`}
-            class="h-full w-auto max-w-[85vw] sm:max-w-[75vw] lg:max-w-[980px] object-contain sm:object-cover brightness-100 contrast-100"
+            class="w-full h-full object-cover brightness-100 contrast-100"
             loading="lazy"
+            width="820"
+            height="540"
           />
         </div>
       ))}
