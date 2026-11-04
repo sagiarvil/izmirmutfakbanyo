@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
   title: "Salon Modelleri | Özel İmalat Yaşam Alanı & TV Üniteleri",
@@ -13,27 +14,6 @@ const seo = {
   ]
 };
 
-const collections = [
-  {
-    name: "Golf",
-    title: "Golf Yaşam Koleksiyonu",
-    desc: "Yeşilay Mutfak'ın ikonik Golf serisi, modern yaşam alanlarına zarafet, düzen ve işlev kazandırır. Modüler yapısı sayesinde esnek çözümler sunarken, rafine malzeme seçenekleri ve sade çizgileriyle zamansız bir estetik yaratır.",
-    image: "/images/models/koleksiyonlar/salon-golf.webp"
-  },
-  {
-    name: "Volo",
-    title: "Volo Modüler Koleksiyonu",
-    desc: "Her yaşam alanı, kişisel bir dokunuşu hak eder. Volo, sadece mobilya değil, yaşam tarzınızı yansıtan bir kompozisyon sunar. Her detayında estetik, işlevsellik ve mimari zarafet barındıran Volo koleksiyonu; ister küçük bir köşe, ister geniş bir salon olsun, bulunduğu her mekanı dönüştürme gücüne sahiptir.",
-    image: "/images/models/koleksiyonlar/salon-volo.png"
-  },
-  {
-    name: "Arcadia",
-    title: "Arcadia Klasik Yaşam Koleksiyonu",
-    desc: "Modern çizgiler, rafine bir zevk ve zarif bir yaşam alanı… Arcadia, salonunuzda estetikle konforu kusursuz bir dengede buluşturur. Göz alıcı sadeliği ve detaylara verilen özen ile her mekanda sofistike bir atmosfer yaratır.",
-    image: "/images/models/koleksiyonlar/salon-arcadia.webp"
-  }
-];
-
 const otherCollections = [
   { name: "Mutfak", href: "/izmir-mutfak-dolabi-imalati/" },
   { name: "Yatak Odası", href: "/yatak-odasi-modelleri/" },
@@ -41,51 +21,52 @@ const otherCollections = [
   { name: "Çocuk Odası", href: "/cocuk-odasi-modelleri/" },
   { name: "Çamaşır", href: "/camasir-odasi-modelleri/" }
 ];
+
+const golfImages = ["/public/images/models/salon/golf/01.webp", "/public/images/models/salon/golf/02.webp", "/public/images/models/salon/golf/03.webp", "/public/images/models/salon/golf/04.webp", "/public/images/models/salon/golf/05.webp", "/public/images/models/salon/golf/06.webp", "/public/images/models/salon/golf/07.webp", "/public/images/models/salon/golf/08.webp", "/public/images/models/salon/golf/09.webp", "/public/images/models/salon/golf/10.webp", "/public/images/models/salon/golf/11.webp", "/public/images/models/salon/golf/12.webp", "/public/images/models/salon/golf/13.webp", "/public/images/models/salon/golf/14.webp", "/public/images/models/salon/golf/15.webp", "/public/images/models/salon/golf/16.webp", "/public/images/models/salon/golf/17.webp", "/public/images/models/salon/golf/18.webp", "/public/images/models/salon/golf/19.webp", "/public/images/models/salon/golf/20.webp", "/public/images/models/salon/golf/21.webp", "/public/images/models/salon/golf/22.webp", "/public/images/models/salon/golf/23.webp", "/public/images/models/salon/golf/24.webp", "/public/images/models/salon/golf/25.webp", "/public/images/models/salon/golf/26.webp", "/public/images/models/salon/golf/27.webp", "/public/images/models/salon/golf/28.webp"];
+const voloImages = ["/public/images/models/salon/volo/01.webp", "/public/images/models/salon/volo/02.webp", "/public/images/models/salon/volo/03.webp", "/public/images/models/salon/volo/04.webp", "/public/images/models/salon/volo/05.webp", "/public/images/models/salon/volo/06.webp", "/public/images/models/salon/volo/07.webp", "/public/images/models/salon/volo/08.webp", "/public/images/models/salon/volo/09.webp", "/public/images/models/salon/volo/10.webp", "/public/images/models/salon/volo/11.webp", "/public/images/models/salon/volo/12.webp", "/public/images/models/salon/volo/13.webp", "/public/images/models/salon/volo/14.webp", "/public/images/models/salon/volo/15.webp", "/public/images/models/salon/volo/16.webp", "/public/images/models/salon/volo/17.webp", "/public/images/models/salon/volo/18.webp"];
+const arcadiaImages = ["/public/images/models/salon/arcadia/01.webp", "/public/images/models/salon/arcadia/02.webp", "/public/images/models/salon/arcadia/03.webp", "/public/images/models/salon/arcadia/04.webp", "/public/images/models/salon/arcadia/05.webp", "/public/images/models/salon/arcadia/06.webp", "/public/images/models/salon/arcadia/07.webp", "/public/images/models/salon/arcadia/08.webp", "/public/images/models/salon/arcadia/09.webp", "/public/images/models/salon/arcadia/10.webp", "/public/images/models/salon/arcadia/11.webp", "/public/images/models/salon/arcadia/12.webp", "/public/images/models/salon/arcadia/13.webp", "/public/images/models/salon/arcadia/14.webp", "/public/images/models/salon/arcadia/15.webp", "/public/images/models/salon/arcadia/16.webp", "/public/images/models/salon/arcadia/17.webp", "/public/images/models/salon/arcadia/18.webp", "/public/images/models/salon/arcadia/19.webp", "/public/images/models/salon/arcadia/20.webp"];
 ---
 
 <Layout seo={seo} activeService="salon">
   <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
       
-      <!-- BREADCRUMB -->
+      <!-- BREADCRUMB (Locus Birebir) -->
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
         <span class="text-[#15231C] font-semibold">Salon</span>
       </nav>
 
-      <!-- H1 BAŞLIK -->
+      <!-- H1 BAŞLIK (Locus Birebir: Roboto, 48px/36px, Bold) -->
       <div class="pt-2">
         <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
           Salon
         </h1>
       </div>
 
-      <!-- KOLEKSİYONLAR BÖLÜMÜ (Locus Birebir Yerleşim: H2, P, Büyük Görsel) -->
+      <!-- KOLEKSİYON SLIDERLARI (Locus Birebir: 28 Görsel Golf, 18 Görsel Volo, 20 Görsel Arcadia) -->
       <div class="space-y-16 sm:space-y-24">
-        {collections.map((item) => (
-          <section class="space-y-4 sm:space-y-6">
-            <div class="max-w-3xl space-y-3">
-              <h2 class="text-2xl sm:text-3xl font-bold text-[#15231C] tracking-tight" style="font-family: 'Roboto', sans-serif;">
-                {item.name}
-              </h2>
-              <p class="text-xs sm:text-sm text-[#4A443D] font-normal leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-            <div class="w-full overflow-hidden bg-[#ECEAE5]">
-              <img 
-                src={item.image} 
-                alt={`${item.name} Salon Modeli`}
-                class="w-full h-auto object-cover max-h-[720px] brightness-100 contrast-100"
-                loading="lazy"
-              />
-            </div>
-          </section>
-        ))}
+        <ModelSlider 
+          name="Golf"
+          desc="Yeşilay Mutfak'ın ikonik Golf serisi, modern yaşam alanlarına zarafet, düzen ve işlev kazandırır. Modüler yapısı sayesinde esnek çözümler sunarken, rafine malzeme seçenekleri ve sade çizgileriyle zamansız bir estetik yaratır."
+          images={golfImages}
+        />
+
+        <ModelSlider 
+          name="Volo"
+          desc="Her yaşam alanı, kişisel bir dokunuşu hak eder. Volo, sadece mobilya değil, yaşam tarzınızı yansıtan bir kompozisyon sunar. Her detayında estetik, işlevsellik ve mimari zarafet barındıran Volo koleksiyonu; ister küçük bir köşe, ister geniş bir salon olsun, bulunduğu her mekanı dönüştürme gücüne sahiptir."
+          images={voloImages}
+        />
+
+        <ModelSlider 
+          name="Arcadia"
+          desc="Modern çizgiler, rafine bir zevk ve zarif bir yaşam alanı… Arcadia, salonunuzda estetikle konforu kusursuz bir dengede buluşturur. Göz alıcı sadeliği ve detaylara verilen özen ile her mekanda sofistike bir atmosfer yaratır."
+          images={arcadiaImages}
+        />
       </div>
 
-      <!-- DİĞER KOLEKSİYONLAR -->
+      <!-- DİĞER KOLEKSİYONLAR (Locus Birebir) -->
       <div class="pt-12 sm:pt-16 border-t border-[#E5E2DA]">
         <h2 class="text-xl sm:text-2xl font-bold text-[#15231C] tracking-tight mb-6" style="font-family: 'Roboto', sans-serif;">
           Diğer Koleksiyonlar
@@ -102,7 +83,7 @@ const otherCollections = [
         </div>
       </div>
 
-      <!-- DAHA FAZLA BİLGİ ALIN -->
+      <!-- DAHA FAZLA BİLGİ ALIN (Locus Birebir Form) -->
       <div class="pt-10 sm:pt-14 pb-8 border-t border-[#E5E2DA]" id="bilgi-al">
         <div class="max-w-2xl">
           <h2 class="text-2xl sm:text-3xl font-bold text-[#15231C] tracking-tight mb-2" style="font-family: 'Roboto', sans-serif;">
@@ -112,65 +93,27 @@ const otherCollections = [
             Salonunuzun ölçüleri veya ilgilendiğiniz koleksiyon hakkında mimari ekibimizden detaylı bilgi ve 3D tasarım teklifi alın.
           </p>
 
-          <form 
-            action="https://wa.me/905324261788" 
-            method="GET" 
-            target="_blank"
-            class="space-y-4"
-          >
+          <form action="https://wa.me/905324261788" method="GET" target="_blank" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="adsoyad" class="block text-xs font-semibold text-[#15231C] mb-1.5">Ad Soyad*</label>
-                <input 
-                  type="text" 
-                  id="adsoyad" 
-                  name="adsoyad" 
-                  required 
-                  placeholder="Adınız ve Soyadınız" 
-                  class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] placeholder-[#9E9689] focus:outline-none focus:border-[#15231C] transition"
-                />
+                <input type="text" id="adsoyad" name="adsoyad" required placeholder="Adınız ve Soyadınız" class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] focus:outline-none focus:border-[#15231C] transition" />
               </div>
               <div>
                 <label for="telefon" class="block text-xs font-semibold text-[#15231C] mb-1.5">Telefon*</label>
-                <input 
-                  type="tel" 
-                  id="telefon" 
-                  name="telefon" 
-                  required 
-                  placeholder="05XX XXX XX XX" 
-                  class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] placeholder-[#9E9689] focus:outline-none focus:border-[#15231C] transition"
-                />
+                <input type="tel" id="telefon" name="telefon" required placeholder="05XX XXX XX XX" class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] focus:outline-none focus:border-[#15231C] transition" />
               </div>
             </div>
-
             <div>
               <label for="email" class="block text-xs font-semibold text-[#15231C] mb-1.5">E-posta*</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                placeholder="ornek@email.com" 
-                class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] placeholder-[#9E9689] focus:outline-none focus:border-[#15231C] transition"
-              />
+              <input type="email" id="email" name="email" required placeholder="ornek@email.com" class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] focus:outline-none focus:border-[#15231C] transition" />
             </div>
-
             <div>
               <label for="mesaj" class="block text-xs font-semibold text-[#15231C] mb-1.5">Mesajınız</label>
-              <textarea 
-                id="mesaj" 
-                name="mesaj" 
-                rows="3" 
-                placeholder="İlgilendiğiniz salon koleksiyonu veya özel istekleriniz..." 
-                class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] placeholder-[#9E9689] focus:outline-none focus:border-[#15231C] transition"
-              ></textarea>
+              <textarea id="mesaj" name="mesaj" rows="3" placeholder="İlgilendiğiniz salon koleksiyonu veya özel istekleriniz..." class="w-full px-3.5 py-2.5 bg-white border border-[#D0CAC0] rounded-none text-xs text-[#15231C] focus:outline-none focus:border-[#15231C] transition"></textarea>
             </div>
-
             <div class="pt-2">
-              <button 
-                type="submit" 
-                class="w-full sm:w-auto px-8 py-3 bg-[#15231C] hover:bg-[#006039] text-white text-xs font-bold uppercase tracking-wider transition-colors duration-200 select-none"
-              >
+              <button type="submit" class="w-full sm:w-auto px-8 py-3 bg-[#15231C] hover:bg-[#006039] text-white text-xs font-bold uppercase tracking-wider transition-colors duration-200 select-none">
                 Gönder
               </button>
             </div>

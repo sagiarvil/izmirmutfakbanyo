@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
   title: "Çamaşır Odası & Kiler Modelleri | Fonksiyonel Dolap Çözümleri",
@@ -13,15 +14,6 @@ const seo = {
   ]
 };
 
-const collections = [
-  {
-    name: "Fonksiyonellik ve Estetik Bir Arada: Özel Çamaşır Odası Çözümleri",
-    title: "Çamaşır Odası Çözümleri",
-    desc: "Çamaşır makinesi, kurutucu, deterjan ve temizlik malzemeleri için özel bölmeler; yerden tasarruf sağlayan dolap sistemleri ve kişiye özel düzenleme seçenekleriyle, hem küçük hem büyük alanlarda maksimum verimlilik elde edebilirsiniz.",
-    image: "/images/models/koleksiyonlar/camasir-ana.webp"
-  }
-];
-
 const otherCollections = [
   { name: "Mutfak", href: "/izmir-mutfak-dolabi-imalati/" },
   { name: "Salon", href: "/salon-modelleri/" },
@@ -29,11 +21,13 @@ const otherCollections = [
   { name: "Genç Odası", href: "/genc-odasi-modelleri/" },
   { name: "Çocuk Odası", href: "/cocuk-odasi-modelleri/" }
 ];
+
+const camasirImages = ["/public/images/models/camasir/ana/01.webp", "/public/images/models/camasir/ana/02.webp", "/public/images/models/camasir/ana/03.webp", "/public/images/models/camasir/ana/04.webp", "/public/images/models/camasir/ana/05.webp", "/public/images/models/camasir/ana/06.webp", "/public/images/models/camasir/ana/07.webp", "/public/images/models/camasir/ana/08.webp"];
 ---
 
 <Layout seo={seo} activeService="camasir">
   <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
       
       <!-- BREADCRUMB -->
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
@@ -49,28 +43,13 @@ const otherCollections = [
         </h1>
       </div>
 
-      <!-- KOLEKSİYONLAR -->
+      <!-- KOLEKSİYON SLIDERI (Locus Birebir: 8 Görsel Çamaşır Odası Çözümleri) -->
       <div class="space-y-16 sm:space-y-24">
-        {collections.map((item) => (
-          <section class="space-y-4 sm:space-y-6">
-            <div class="max-w-3xl space-y-3">
-              <h2 class="text-2xl sm:text-3xl font-bold text-[#15231C] tracking-tight" style="font-family: 'Roboto', sans-serif;">
-                {item.name}
-              </h2>
-              <p class="text-xs sm:text-sm text-[#4A443D] font-normal leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-            <div class="w-full overflow-hidden bg-[#ECEAE5]">
-              <img 
-                src={item.image} 
-                alt={`${item.name} Çamaşır Odası Modeli`}
-                class="w-full h-auto object-cover max-h-[720px] brightness-100 contrast-100"
-                loading="lazy"
-              />
-            </div>
-          </section>
-        ))}
+        <ModelSlider 
+          name="Fonksiyonellik ve Estetik Bir Arada: Özel Çamaşır Odası Çözümleri"
+          desc="Çamaşır makinesi, kurutucu, deterjan ve temizlik malzemeleri için özel bölmeler; yerden tasarruf sağlayan dolap sistemleri ve kişiye özel düzenleme seçenekleriyle, hem küçük hem büyük alanlarda maksimum verimlilik elde edebilirsiniz."
+          images={camasirImages}
+        />
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

@@ -1,0 +1,78 @@
+---
+export interface Props {
+  name: string;
+  desc: string;
+  images: string[];
+}
+
+const { name, desc, images } = Astro.props;
+---
+
+<section class="space-y-4 sm:space-y-6">
+  <!-- Başlık ve Açıklama (Locus Birebir: Roboto, 24-36px, Bold) -->
+  <div class="max-w-3xl space-y-2.5">
+    <h2 class="text-2xl sm:text-3xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+      {name}
+    </h2>
+    <p class="text-xs sm:text-sm text-[#4A443D] font-normal leading-relaxed">
+      {desc}
+    </p>
+  </div>
+
+  <!-- Locus Birebir Yatay Kaydırılabilir Slider Mimarisi (1200px x 600px Masaüstü, 555px Tablet, 250px Mobil) -->
+  <div 
+    class="relative w-full group/slider"
+    x-data="{
+      scroll(direction) {
+        const el = this.$refs.sliderList;
+        const scrollAmount = el.clientWidth * 0.8;
+        el.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    }"
+  >
+    <!-- Sol Ok Butonu (Locus Tarzı Minimalist Daire Buton) -->
+    <button 
+      type="button"
+      @click="scroll(-1)" 
+      class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#15231C] shadow-[0_4px_16px_rgba(0,0,0,0.18)] flex items-center justify-center transition-all opacity-0 group-hover/slider:opacity-100 focus:opacity-100 select-none border border-[#E5E2DA]"
+      aria-label="Önceki Görseller"
+    >
+      <svg class="w-5 h-5 text-[#15231C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+
+    <!-- Slider Scroll Container (Locus gap: 17px - 24px) -->
+    <div 
+      x-ref="sliderList"
+      class="flex flex-row items-center gap-4 sm:gap-6 overflow-x-auto scroll-smooth py-1 select-none"
+      style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;"
+    >
+      {images.map((imgSrc, idx) => (
+        <div 
+          class="shrink-0 h-[260px] sm:h-[420px] lg:h-[580px] w-auto bg-[#ECEAE5] overflow-hidden shadow-2xs"
+          style="scroll-snap-align: start;"
+        >
+          <img 
+            src={imgSrc} 
+            alt={`${name} Görsel ${idx + 1}`}
+            class="h-full w-auto max-w-[85vw] sm:max-w-[75vw] lg:max-w-[980px] object-contain sm:object-cover brightness-100 contrast-100"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+
+    <!-- Sağ Ok Butonu -->
+    <button 
+      type="button"
+      @click="scroll(1)" 
+      class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#15231C] shadow-[0_4px_16px_rgba(0,0,0,0.18)] flex items-center justify-center transition-all opacity-0 group-hover/slider:opacity-100 focus:opacity-100 select-none border border-[#E5E2DA]"
+      aria-label="Sonraki Görseller"
+    >
+      <svg class="w-5 h-5 text-[#15231C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+</section>

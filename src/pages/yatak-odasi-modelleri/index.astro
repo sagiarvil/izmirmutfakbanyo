@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
   title: "Yatak Odası Modelleri | Özel İmalat Gardırop & Giyinme Odası",
@@ -13,27 +14,6 @@ const seo = {
   ]
 };
 
-const collections = [
-  {
-    name: "Golf",
-    title: "Golf Gardırop & Giyinme Odası",
-    desc: "Golf gardırop ve giyinme odası çözümleri, zarafetle tasarlanmış iç mekanlarda hem estetik hem de fonksiyonel beklentilere eksiksiz yanıt verir.",
-    image: "/images/models/koleksiyonlar/yatak-golf.webp"
-  },
-  {
-    name: "Volo",
-    title: "Volo Yatak Odası Koleksiyonu",
-    desc: "Volo yatak odası koleksiyonu, yalın çizgileri ve akıllı tasarım detaylarıyla çağdaş yaşam alanları için benzersiz bir konfor sunar. Sade ama güçlü estetik anlayışı, mekanlara ferahlık kazandırırken, kişiselleştirilebilir kombinasyonları sayesinde her zevke hitap eden çözümler üretir.",
-    image: "/images/models/koleksiyonlar/yatak-volo.webp"
-  },
-  {
-    name: "Arcadia",
-    title: "Arcadia Klasik Yatak Odası",
-    desc: "Zarif gelenek, romantik dokunuşlarla yeniden yorumlandı. Arcadia koleksiyonu, sıcak ahşap detayları ve asil lake yüzeyleriyle yatak odanızı huzur dolu bir sığınağa dönüştürür.",
-    image: "/images/models/koleksiyonlar/yatak-arcadia.webp"
-  }
-];
-
 const otherCollections = [
   { name: "Mutfak", href: "/izmir-mutfak-dolabi-imalati/" },
   { name: "Salon", href: "/salon-modelleri/" },
@@ -41,11 +21,15 @@ const otherCollections = [
   { name: "Çocuk Odası", href: "/cocuk-odasi-modelleri/" },
   { name: "Çamaşır", href: "/camasir-odasi-modelleri/" }
 ];
+
+const golfImages = ["/public/images/models/yatak-odasi/golf/01.webp", "/public/images/models/yatak-odasi/golf/02.webp", "/public/images/models/yatak-odasi/golf/03.webp", "/public/images/models/yatak-odasi/golf/04.webp", "/public/images/models/yatak-odasi/golf/05.webp", "/public/images/models/yatak-odasi/golf/06.webp", "/public/images/models/yatak-odasi/golf/07.webp", "/public/images/models/yatak-odasi/golf/08.webp", "/public/images/models/yatak-odasi/golf/09.webp", "/public/images/models/yatak-odasi/golf/10.webp", "/public/images/models/yatak-odasi/golf/11.webp", "/public/images/models/yatak-odasi/golf/12.webp", "/public/images/models/yatak-odasi/golf/13.webp", "/public/images/models/yatak-odasi/golf/14.webp", "/public/images/models/yatak-odasi/golf/15.webp", "/public/images/models/yatak-odasi/golf/16.webp", "/public/images/models/yatak-odasi/golf/17.webp", "/public/images/models/yatak-odasi/golf/18.webp", "/public/images/models/yatak-odasi/golf/19.webp", "/public/images/models/yatak-odasi/golf/20.webp", "/public/images/models/yatak-odasi/golf/21.webp", "/public/images/models/yatak-odasi/golf/22.webp", "/public/images/models/yatak-odasi/golf/23.webp", "/public/images/models/yatak-odasi/golf/24.webp", "/public/images/models/yatak-odasi/golf/25.webp", "/public/images/models/yatak-odasi/golf/26.webp", "/public/images/models/yatak-odasi/golf/27.webp", "/public/images/models/yatak-odasi/golf/28.webp", "/public/images/models/yatak-odasi/golf/29.webp", "/public/images/models/yatak-odasi/golf/30.webp", "/public/images/models/yatak-odasi/golf/31.webp", "/public/images/models/yatak-odasi/golf/32.webp", "/public/images/models/yatak-odasi/golf/33.webp", "/public/images/models/yatak-odasi/golf/34.webp", "/public/images/models/yatak-odasi/golf/35.webp", "/public/images/models/yatak-odasi/golf/36.webp", "/public/images/models/yatak-odasi/golf/37.webp", "/public/images/models/yatak-odasi/golf/38.webp", "/public/images/models/yatak-odasi/golf/39.webp", "/public/images/models/yatak-odasi/golf/40.webp", "/public/images/models/yatak-odasi/golf/41.webp", "/public/images/models/yatak-odasi/golf/42.webp", "/public/images/models/yatak-odasi/golf/43.webp", "/public/images/models/yatak-odasi/golf/44.webp", "/public/images/models/yatak-odasi/golf/45.webp", "/public/images/models/yatak-odasi/golf/46.webp", "/public/images/models/yatak-odasi/golf/47.webp", "/public/images/models/yatak-odasi/golf/48.webp", "/public/images/models/yatak-odasi/golf/49.webp", "/public/images/models/yatak-odasi/golf/50.webp", "/public/images/models/yatak-odasi/golf/51.webp", "/public/images/models/yatak-odasi/golf/52.webp", "/public/images/models/yatak-odasi/golf/53.webp", "/public/images/models/yatak-odasi/golf/54.webp", "/public/images/models/yatak-odasi/golf/55.webp"];
+const voloImages = ["/public/images/models/yatak-odasi/volo/01.webp", "/public/images/models/yatak-odasi/volo/02.webp", "/public/images/models/yatak-odasi/volo/03.webp", "/public/images/models/yatak-odasi/volo/04.webp", "/public/images/models/yatak-odasi/volo/05.webp", "/public/images/models/yatak-odasi/volo/06.webp", "/public/images/models/yatak-odasi/volo/07.webp", "/public/images/models/yatak-odasi/volo/08.webp", "/public/images/models/yatak-odasi/volo/09.webp", "/public/images/models/yatak-odasi/volo/10.webp", "/public/images/models/yatak-odasi/volo/11.webp", "/public/images/models/yatak-odasi/volo/12.webp", "/public/images/models/yatak-odasi/volo/13.webp", "/public/images/models/yatak-odasi/volo/14.webp", "/public/images/models/yatak-odasi/volo/15.webp", "/public/images/models/yatak-odasi/volo/16.webp", "/public/images/models/yatak-odasi/volo/17.webp", "/public/images/models/yatak-odasi/volo/18.webp", "/public/images/models/yatak-odasi/volo/19.webp"];
+const arcadiaImages = ["/public/images/models/yatak-odasi/arcadia/01.webp", "/public/images/models/yatak-odasi/arcadia/02.webp", "/public/images/models/yatak-odasi/arcadia/03.webp", "/public/images/models/yatak-odasi/arcadia/04.webp", "/public/images/models/yatak-odasi/arcadia/05.webp", "/public/images/models/yatak-odasi/arcadia/06.webp", "/public/images/models/yatak-odasi/arcadia/07.webp", "/public/images/models/yatak-odasi/arcadia/08.webp", "/public/images/models/yatak-odasi/arcadia/09.webp", "/public/images/models/yatak-odasi/arcadia/10.webp", "/public/images/models/yatak-odasi/arcadia/11.webp", "/public/images/models/yatak-odasi/arcadia/12.webp", "/public/images/models/yatak-odasi/arcadia/13.webp", "/public/images/models/yatak-odasi/arcadia/14.webp", "/public/images/models/yatak-odasi/arcadia/15.webp", "/public/images/models/yatak-odasi/arcadia/16.webp", "/public/images/models/yatak-odasi/arcadia/17.webp", "/public/images/models/yatak-odasi/arcadia/18.webp", "/public/images/models/yatak-odasi/arcadia/19.webp", "/public/images/models/yatak-odasi/arcadia/20.webp", "/public/images/models/yatak-odasi/arcadia/21.webp", "/public/images/models/yatak-odasi/arcadia/22.webp"];
 ---
 
 <Layout seo={seo} activeService="yatak-odasi">
   <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
       
       <!-- BREADCRUMB -->
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
@@ -61,28 +45,25 @@ const otherCollections = [
         </h1>
       </div>
 
-      <!-- KOLEKSİYONLAR -->
+      <!-- KOLEKSİYON SLIDERLARI (Locus Birebir: 55 Görsel Golf, 19 Görsel Volo, 22 Görsel Arcadia) -->
       <div class="space-y-16 sm:space-y-24">
-        {collections.map((item) => (
-          <section class="space-y-4 sm:space-y-6">
-            <div class="max-w-3xl space-y-3">
-              <h2 class="text-2xl sm:text-3xl font-bold text-[#15231C] tracking-tight" style="font-family: 'Roboto', sans-serif;">
-                {item.name}
-              </h2>
-              <p class="text-xs sm:text-sm text-[#4A443D] font-normal leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-            <div class="w-full overflow-hidden bg-[#ECEAE5]">
-              <img 
-                src={item.image} 
-                alt={`${item.name} Yatak Odası Modeli`}
-                class="w-full h-auto object-cover max-h-[720px] brightness-100 contrast-100"
-                loading="lazy"
-              />
-            </div>
-          </section>
-        ))}
+        <ModelSlider 
+          name="Golf"
+          desc="Golf gardırop ve giyinme odası çözümleri, zarafetle tasarlanmış iç mekanlarda hem estetik hem de fonksiyonel beklentilere eksiksiz yanıt verir."
+          images={golfImages}
+        />
+
+        <ModelSlider 
+          name="Volo"
+          desc="Volo yatak odası koleksiyonu, yalın çizgileri ve akıllı tasarım detaylarıyla çağdaş yaşam alanları için benzersiz bir konfor sunar. Sade ama güçlü estetik anlayışı, mekanlara ferahlık kazandırırken, kişiselleştirilebilir kombinasyonları sayesinde her zevke hitap eden çözümler üretir."
+          images={voloImages}
+        />
+
+        <ModelSlider 
+          name="Arcadia"
+          desc="Zarif gelenek, romantik dokunuşlarla yeniden yorumlandı. Arcadia koleksiyonu, sıcak ahşap detayları ve asil lake yüzeyleriyle yatak odanızı huzur dolu bir sığınağa dönüştürür."
+          images={arcadiaImages}
+        />
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

@@ -129,7 +129,7 @@ const kitchenModels = [
   <!-- ===================================================================== -->
   <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
     
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
       
       <!-- BREADCRUMB (Locus Birebir: Ana Sayfa / Mutfak) -->
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
@@ -146,7 +146,7 @@ const kitchenModels = [
       </div>
 
       <!-- MODEL KARTLARI GRİDİ (Locus Birebir: 3 Sütun Masaüstü, 2 Tablet, 1 Mobil, 1.755 Aspect Ratio) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8 lg:gap-y-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 lg:gap-x-[24px] lg:gap-y-14">
         {kitchenModels.map((item) => {
           const waMsg = `Merhaba, Yeşilay Mutfak ${item.name} (${item.title}) modeli hakkında detaylı bilgi, ölçü ve fiyat teklifi almak istiyorum.`;
           const waHref = `https://wa.me/905324261788?text=${encodeURIComponent(waMsg)}`;
