@@ -57,19 +57,23 @@ const seo = {
 <Layout seo={seo} activeService="Ana Sayfa">
 
   <!-- ===================================================================== -->
-  <!-- 1. APPLE MİMARİSİ HERO ALANI & SİNEMATİK VİDEO (DİNAMİK VIEWPORT VE SIFIR TAŞMA MİMARİSİ) -->
+    <!-- ===================================================================== -->
+  <!-- 1. PREMİUM SİNEMATİK HERO SLIDER (%100 NETLİK, SIFIR SOLUKLAŞTIRMA)     -->
   <!-- ===================================================================== -->
-  <section class="relative w-full overflow-hidden bg-[#FAF9F6] border-b border-[#E5DFD5] min-h-[calc(100svh-72px)] sm:min-h-[calc(100svh-80px)] lg:h-[calc(100svh-80px)] lg:max-h-[900px] flex flex-col justify-between">
+  <section class="relative w-full bg-[#161617] overflow-hidden select-none">
     
-    <!-- ===================================================================== -->
-    <!-- PREMİUM HERO GÖRSEL SLIDER (SIFIR TAŞMA, TAM BOY EKRAN, SİNEMATİK GEÇİŞ) -->
-    <!-- ===================================================================== -->
     <div 
-      class="absolute inset-0 w-full h-full overflow-hidden select-none"
+      class="relative w-full h-[52svh] sm:h-[60svh] lg:h-[68svh] max-h-[720px] min-h-[380px] sm:min-h-[440px] overflow-hidden"
       x-data="{ 
         current: 0,
         total: 4,
         timer: null,
+        titles: [
+          'İtalyan Zarafeti & Akrilik Ada Mutfak',
+          'Kişiye Özel Mimari Mutfak & Salon Tasarımı',
+          'Modern Gömme Dolap & Gardırop Sistemleri',
+          'Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş'
+        ],
         start() {
           this.timer = setInterval(() => { this.next() }, 5500);
         },
@@ -87,7 +91,7 @@ const seo = {
       @mouseenter="stop()"
       @mouseleave="start()"
     >
-      <!-- Slide 1: Modern Lüks Mimari Yaşam Alanı -->
+      <!-- Slide 1: Modern Lüks Mimari Yaşam Alanı (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -98,7 +102,7 @@ const seo = {
           <img 
             src="/media/hero/hero-slide-1.webp" 
             alt="Yeşilay Mutfak Lüks İç Mimarlık ve Özel İmalat Yaşam Alanı" 
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="eager"
             decoding="sync"
             fetchpriority="high"
@@ -108,7 +112,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 2: Kişiye Özel Mimari Mutfak & Salon Tasarımı -->
+      <!-- Slide 2: Kişiye Özel Mimari Mutfak & Salon Tasarımı (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 1 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -119,7 +123,7 @@ const seo = {
           <img 
             src="/media/hero/hero-slide-2.webp" 
             alt="Yeşilay Mutfak Kişiye Özel Mimari Mutfak ve Salon Tasarımı" 
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
             width="1920"
@@ -128,7 +132,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 3: Modern Gömme Dolap & Gardırop Sistemleri -->
+      <!-- Slide 3: Modern Gömme Dolap & Gardırop Sistemleri (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 2 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -139,7 +143,7 @@ const seo = {
           <img 
             src="/media/hero/hero-slide-3.webp" 
             alt="Yeşilay Mutfak Modern Gömme Dolap ve Gardırop Sistemleri" 
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
             width="1920"
@@ -148,7 +152,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 4: Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş -->
+      <!-- Slide 4: Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 3 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -158,7 +162,7 @@ const seo = {
           <img 
             src="/media/hero/hero-slide-4.webp" 
             alt="Yeşilay Mutfak Özel Ölçü Lake Duvar Ünitesi ve Aydınlatmalı Niş Tasarımı" 
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
             width="1024"
@@ -167,158 +171,177 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Sol metin alanını pürüzsüzce kucaklayan dikey yumuşak ışık gradyanı (Sıfır Metin Çakışması) -->
-      <div class="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[54%] bg-gradient-to-r from-[#FAF9F6]/95 via-[#FAF9F6]/80 sm:via-[#FAF9F6]/65 to-transparent pointer-events-none z-10"></div>
-      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FAF9F6] to-transparent pointer-events-none z-10"></div>
+      <!-- Navigasyon Okları (Sol & Sağ) -->
+      <button 
+        type="button" 
+        @click="prev()" 
+        class="absolute left-3.5 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md text-white flex items-center justify-center transition-all duration-200 border border-white/20 hover:scale-105 shadow-lg focus:outline-none"
+        aria-label="Önceki Görsel"
+      >
+        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
 
-      <!-- Slide Kontrol Noktaları (Kompakt, Zarif & Ergonomik) -->
-      <div class="absolute bottom-5 right-5 sm:bottom-6 sm:right-8 z-20 hidden sm:flex items-center gap-2 bg-[#FAF9F6]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#E5DFD5] shadow-xs">
-        <button 
-          type="button" 
-          @click="prev()" 
-          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
-          aria-label="Önceki Görsel"
-        >
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <div class="flex items-center gap-1.5 px-1">
-          <template x-for="i in total" :key="i">
+      <button 
+        type="button" 
+        @click="next()" 
+        class="absolute right-3.5 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md text-white flex items-center justify-center transition-all duration-200 border border-white/20 hover:scale-105 shadow-lg focus:outline-none"
+        aria-label="Sonraki Görsel"
+      >
+        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <!-- Sol Alt: Slide Başlık Rozeti (Şeffaf Zarif Kapsül) -->
+      <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-7 z-20 flex items-center gap-2.5 bg-black/55 backdrop-blur-md px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 text-white shadow-md">
+        <span class="w-2 h-2 rounded-full bg-[#C5A880] animate-pulse"></span>
+        <span class="text-[11.5px] sm:text-[13px] font-medium tracking-wide" x-text="titles[current]"></span>
+      </div>
+
+      <!-- Sağ Alt: Slide Kontrol Noktaları ve Sayı -->
+      <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-7 z-20 flex items-center gap-2 bg-black/55 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 text-white shadow-md">
+        <div class="flex items-center gap-1.5">
+          <template x-for="(dot, i) in total" :key="i">
             <button 
               type="button" 
-              @click="current = i - 1" 
-              class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
-              :class="current === (i - 1) ? 'w-5 bg-[#006039]' : 'w-1.5 bg-[#C5A880]/50 hover:bg-[#C5A880]'"
-              aria-label="Slayt Değiştir"
+              @click="current = i" 
+              class="h-1.5 rounded-full transition-all duration-300 focus:outline-none" 
+              :class="current === i ? 'w-5 sm:w-6 bg-[#C5A880]' : 'w-1.5 sm:w-2 bg-white/40 hover:bg-white/80'" 
+              :aria-label="'Slayt ' + (i + 1)"
             ></button>
           </template>
         </div>
-        <button 
-          type="button" 
-          @click="next()" 
-          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
-          aria-label="Sonraki Görsel"
-        >
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Hero İçerik Container (Dinamik Dikey Akış & Ekrana %100 Uyum) -->
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between pt-4 pb-4 sm:pt-6 sm:pb-6 lg:pt-8 lg:pb-6 z-10">
-      
-      <!-- Üst Grup: Eyebrow + Başlık + Alt Metin + CTA Butonları -->
-      <div class="max-w-2xl space-y-3 sm:space-y-4 lg:space-y-4 my-auto">
-        
-        <!-- Apple Capsule Eyebrow (Rolex Yeşil & Altın Zanaat) -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-[#006039] text-white border border-[#C5A880]/50 rounded-full shadow-[0_4px_16px_rgba(0,96,57,0.3)]">
-          <span class="w-2 h-2 rounded-full bg-[#8B1E2D] animate-pulse"></span>
-          <span class="text-white text-[10.5px] sm:text-[11px] font-semibold tracking-[0.14em] uppercase font-sans">
-            ADATEPE İMALAT ATÖLYESİ • <span class="text-[#C5A880]">28 YILLIK TECRÜBE</span>
-          </span>
-        </div>
-
-        <!-- Dinamik Akıcı Başlık (Fluid Typography Clamp: Her ekrana tam sığar, asla taşmaz) -->
-        <h1 class="text-[clamp(28px,3.4vw,48px)] lg:text-[clamp(32px,3.6vw,52px)] font-bold text-[#1D1D1F] leading-[1.1] tracking-[-0.03em]">
-          Hayalinizdeki Mutfağı, <br />
-          <span class="font-normal italic text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
-          <span class="font-medium text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
-        </h1>
-
-        <!-- Dinamik Alt Metin (Ergonomik satır aralığı ve net odak) -->
-        <p id="hero-answer-engine" class="text-[14px] sm:text-[15px] lg:text-[16px] text-[#424245] font-normal leading-[1.45] max-w-xl tracking-[-0.01em]">
-          Leke tutmayan ipek mat kapaklar, fırçalanmış pirinç detaylar, kadife sessizliğinde Blum raylar ve ferahlatıcı mimari planlama. İzmir genelinde ücretsiz 3D keşif.
-        </p>
-
-        <!-- Apple Call to Action Buttons (Dinamik kompakt buton grubu) -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-1">
-          <a 
-            href={siteConfig.whatsappUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="px-6 sm:px-7 py-3 bg-[#006039] hover:bg-[#00482B] text-white text-[12.5px] sm:text-[13px] font-semibold tracking-[-0.01em] rounded-full border border-[#C5A880]/50 shadow-[0_6px_20px_rgba(0,96,57,0.35)] transition duration-200 flex items-center justify-center gap-2"
-          >
-            <span>WhatsApp ile 3D Keşif İste</span>
-            <span>→</span>
-          </a>
-          <a 
-            href="/tasarimlar/" 
-            class="px-6 sm:px-7 py-3 bg-white hover:bg-[#F5F5F7] text-[#006039] border border-[#006039]/30 hover:border-[#006039] text-[12.5px] sm:text-[13px] font-semibold tracking-[-0.01em] rounded-full shadow-2xs transition duration-200 flex items-center justify-center gap-2"
-          >
-            <span>450 Tasarım Modelini İncele</span>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Alt Grup: Genişletilmiş Premium Hareketli Sayaç Docku (Dinamik Alt Rıhtım Konumu) -->
-      <div id="statsDock" class="mt-auto pt-3 sm:pt-4 w-full">
-        <div class="bg-white/95 backdrop-blur-xl border border-[#006039]/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-6 shadow-[0_16px_40px_rgba(0,96,57,0.08)] relative overflow-hidden">
-          <div class="absolute -right-8 -bottom-8 w-44 h-44 bg-[#006039]/12 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="absolute -left-8 -top-8 w-36 h-36 bg-[#C5A880]/12 rounded-full blur-2xl pointer-events-none"></div>
-
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10">
-            
-            <!-- Sayaç 1: 137 Model -->
-            <div class="space-y-0.5 pr-2 sm:border-r border-[#E5DFD5]/80">
-              <div class="flex items-baseline gap-1.5">
-                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="137">137</span>
-                <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Model</span>
-              </div>
-              <div class="text-[10px] uppercase tracking-wider text-[#C5A880] font-bold">Özgün Koleksiyon</div>
-              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">Mutfak, banyo ve kapı arşivi.</p>
-            </div>
-
-            <!-- Sayaç 2: 28 Yıl -->
-            <div class="space-y-0.5 pr-2 lg:border-r border-[#E5DFD5]/80">
-              <div class="flex items-baseline gap-1.5">
-                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#006039] font-sans" data-target="28">28</span>
-                <span class="text-xs sm:text-sm font-bold text-[#006039]">Yıl</span>
-              </div>
-              <div class="text-[10px] uppercase tracking-wider text-[#006039] font-bold">Atölye Mirası</div>
-              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">1998'den bu yana kendi imalatımız.</p>
-            </div>
-
-            <!-- Sayaç 3: 10 Yıl -->
-            <div class="space-y-0.5 pr-2 sm:border-r border-[#E5DFD5]/80">
-              <div class="flex items-baseline gap-1.5">
-                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="10">10</span>
-                <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Yıl</span>
-              </div>
-              <div class="text-[10px] uppercase tracking-wider text-[#C5A880] font-bold">Gövde Garantisi</div>
-              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">E1 sertifikalı nem mukavemetli MDF.</p>
-            </div>
-
-            <!-- Sayaç 4: 2.850+ -->
-            <div class="space-y-0.5">
-              <div class="flex items-baseline gap-0.5">
-                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="2850" data-format="comma">2.850</span>
-                <span class="text-xl sm:text-2xl font-extrabold text-[#006039]">+</span>
-              </div>
-              <div class="text-[10px] uppercase tracking-wider text-[#006039] font-bold">Tamamlanan Proje</div>
-              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">İzmir genelinde mutlu müşteri referansı.</p>
-            </div>
-
-          </div>
-
-          <!-- AEO & Grounding Micro Bar -->
-          <div class="mt-3.5 pt-2.5 border-t border-[#E5DFD5]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-[11px] text-[#55504A]">
-            <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-pulse"></span>
-              <span><strong>Adatepe İmalat Atölyesi:</strong> Aracı komisyonsuz, milimetrik lazer rölöve ve fotogerçekçi 3D mimari modelleme.</span>
-            </div>
-            <a href="/tasarimlar/" class="text-[#006039] font-bold hover:underline inline-flex items-center gap-1 shrink-0">
-              Koleksiyonu İncele →
-            </a>
-          </div>
-
-        </div>
+        <span class="text-[11px] sm:text-[11.5px] font-semibold text-white/90 pl-2 border-l border-white/25" x-text="(current + 1) + ' / ' + total"></span>
       </div>
 
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 2. APPLE 4-SÜTUNLU MİMARİ AVANTAJ KARTLARI (BÜYÜK & PREMİUM NUMARALAR)-->
+  <!-- 1.1. PREMİUM HERO ALTI TANITIM & CTA BÖLÜMÜ (MİMARİ DÜZEN & SIFIR KARMAŞA) -->
+  <!-- ===================================================================== -->
+  <section class="relative w-full bg-[#FAF9F6] border-b border-[#E5DFD5] py-12 sm:py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Sol Kolon: Eyebrow + H1 + Açıklama + CTA Butonları (7/12) -->
+        <div class="lg:col-span-7 space-y-4 sm:space-y-5">
+          
+          <!-- Apple Capsule Eyebrow (Rolex Yeşil & Altın Zanaat) -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006039] text-white border border-[#C5A880]/50 rounded-full shadow-[0_4px_16px_rgba(0,96,57,0.25)]">
+            <span class="w-2 h-2 rounded-full bg-[#8B1E2D] animate-pulse"></span>
+            <span class="text-white text-[10.5px] sm:text-[11px] font-semibold tracking-[0.14em] uppercase font-sans">
+              ADATEPE İMALAT ATÖLYESİ • <span class="text-[#C5A880]">28 YILLIK TECRÜBE</span>
+            </span>
+          </div>
+
+          <!-- Dinamik Akıcı H1 Başlık -->
+          <h1 class="text-[clamp(28px,3.2vw,48px)] font-bold text-[#1D1D1F] leading-[1.12] tracking-[-0.03em]">
+            Hayalinizdeki Mutfağı, <br />
+            <span class="font-normal italic text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
+            <span class="font-medium text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
+          </h1>
+
+          <!-- Dinamik Alt Metin -->
+          <p id="hero-answer-engine" class="text-[15px] sm:text-[16px] text-[#424245] font-normal leading-[1.55] max-w-xl tracking-[-0.01em]">
+            Leke tutmayan ipek mat kapaklar, fırçalanmış pirinç detaylar, kadife sessizliğinde Blum raylar ve ferahlatıcı mimari planlama. İzmir genelinde ücretsiz 3D keşif ve sözleşmeli üretim garantisi.
+          </p>
+
+          <!-- Apple Call to Action Buttons (CTA Butonları Hero Altında) -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <a 
+              href={siteConfig.whatsappUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="px-7 py-3.5 sm:py-4 bg-[#006039] hover:bg-[#00482B] text-white text-[13px] sm:text-[13.5px] font-semibold tracking-[-0.01em] rounded-full border border-[#C5A880]/60 shadow-[0_8px_24px_rgba(0,96,57,0.3)] hover:shadow-[0_12px_32px_rgba(0,96,57,0.4)] transition duration-200 flex items-center justify-center gap-2 group"
+            >
+              <span>WhatsApp ile 3D Keşif İste</span>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a 
+              href="/tasarimlar/" 
+              class="px-7 py-3.5 sm:py-4 bg-white hover:bg-[#F5F5F7] text-[#006039] border border-[#006039]/30 hover:border-[#006039] text-[13px] sm:text-[13.5px] font-semibold tracking-[-0.01em] rounded-full shadow-2xs hover:shadow-xs transition duration-200 flex items-center justify-center gap-2"
+            >
+              <span>450 Tasarım Modelini İncele</span>
+            </a>
+            <a 
+              href="tel:+902324411060" 
+              class="px-4 py-3 sm:py-3.5 text-[#55504A] hover:text-[#006039] text-[12.5px] sm:text-[13px] font-medium transition duration-200 flex items-center justify-center gap-1.5"
+            >
+              <span>📞 0 (232) 441 10 60</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Sağ Kolon: Genişletilmiş Premium Hareketli Sayaç Kartı (5/12) -->
+        <div class="lg:col-span-5">
+          <div id="statsDock" class="bg-white border border-[#006039]/20 rounded-2xl p-6 sm:p-7 shadow-[0_14px_40px_rgba(0,96,57,0.07)] relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-44 h-44 bg-[#006039]/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-8 -top-8 w-36 h-36 bg-[#C5A880]/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 relative z-10">
+              
+              <!-- Sayaç 1: 137 Model -->
+              <div class="space-y-1 pr-2 border-r border-[#E5DFD5]/80">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="137">137</span>
+                  <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Model</span>
+                </div>
+                <div class="text-[10px] sm:text-[10.5px] uppercase tracking-wider text-[#C5A880] font-bold">Özgün Koleksiyon</div>
+                <p class="text-[11px] text-[#6E675F] leading-snug">Mutfak, banyo ve kapı arşivi.</p>
+              </div>
+
+              <!-- Sayaç 2: 28 Yıl -->
+              <div class="space-y-1 pl-2">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#006039] font-sans" data-target="28">28</span>
+                  <span class="text-xs sm:text-sm font-bold text-[#006039]">Yıl</span>
+                </div>
+                <div class="text-[10px] sm:text-[10.5px] uppercase tracking-wider text-[#006039] font-bold">Atölye Mirası</div>
+                <p class="text-[11px] text-[#6E675F] leading-snug">1998'den bu yana imalat.</p>
+              </div>
+
+              <!-- Sayaç 3: 10 Yıl -->
+              <div class="space-y-1 pr-2 pt-3 sm:pt-4 border-r border-t border-[#E5DFD5]/80">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="10">10</span>
+                  <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Yıl</span>
+                </div>
+                <div class="text-[10px] sm:text-[10.5px] uppercase tracking-wider text-[#C5A880] font-bold">Gövde Garantisi</div>
+                <p class="text-[11px] text-[#6E675F] leading-snug">E1 neme dayanımlı MDF.</p>
+              </div>
+
+              <!-- Sayaç 4: 2.850+ -->
+              <div class="space-y-1 pl-2 pt-3 sm:pt-4 border-t border-[#E5DFD5]/80">
+                <div class="flex items-baseline gap-0.5">
+                  <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="2850" data-format="comma">2.850</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-[#006039]">+</span>
+                </div>
+                <div class="text-[10px] sm:text-[10.5px] uppercase tracking-wider text-[#006039] font-bold">Tamamlanan Proje</div>
+                <p class="text-[11px] text-[#6E675F] leading-snug">Mutlu müşteri referansı.</p>
+              </div>
+
+            </div>
+
+            <!-- AEO & Grounding Micro Bar -->
+            <div class="mt-4 pt-3 border-t border-[#E5DFD5]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-[11px] text-[#55504A] relative z-10">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-pulse"></span>
+                <span><strong>Adatepe Atölyesi:</strong> Aracı komisyonsuz, milimetrik lazer rölöve ve 3D çizim.</span>
+              </div>
+              <a href="/tasarimlar/" class="text-[#006039] font-bold hover:underline inline-flex items-center gap-1 shrink-0">
+                Koleksiyonu İncele →
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+<!-- 2. APPLE 4-SÜTUNLU MİMARİ AVANTAJ KARTLARI (BÜYÜK & PREMİUM NUMARALAR)-->
   <!-- ===================================================================== -->
   <section class="py-16 sm:py-20 border-b border-[#E5DFD5]">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
