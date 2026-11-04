@@ -58,24 +58,45 @@ const seo = {
 
   <!-- ===================================================================== -->
     <!-- ===================================================================== -->
-  <!-- 1. PREMİUM SİNEMATİK HERO SLIDER (%100 NETLİK, SIFIR SOLUKLAŞTIRMA)     -->
+    <!-- ===================================================================== -->
+  <!-- 1. PREMİUM SİNEMATİK HERO SLIDER (%100 NETLİK, SOL ALT LOCUS TYPOGRAPHY)-->
   <!-- ===================================================================== -->
-  <section class="relative w-full bg-[#161617] overflow-hidden select-none">
+  <section class="relative w-full bg-[#161617] overflow-hidden select-none font-roboto">
     
     <div 
-      class="relative w-full h-[52svh] sm:h-[60svh] lg:h-[68svh] max-h-[720px] min-h-[380px] sm:min-h-[440px] overflow-hidden"
+      class="relative w-full h-[54svh] sm:h-[62svh] lg:h-[68svh] max-h-[720px] min-h-[380px] sm:min-h-[440px] overflow-hidden"
       x-data="{ 
         current: 0,
         total: 4,
         timer: null,
-        titles: [
-          'İtalyan Zarafeti & Akrilik Ada Mutfak',
-          'Kişiye Özel Mimari Mutfak & Salon Tasarımı',
-          'Modern Gömme Dolap & Gardırop Sistemleri',
-          'Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş'
+        slides: [
+          {
+            title: 'Sakura',
+            subtitle: 'El becerisi, yaratıcılık ve deneyim.',
+            image: '/media/hero/hero-slide-1.webp',
+            link: '/tasarimlar/'
+          },
+          {
+            title: 'Iconica',
+            subtitle: 'Geleneksel anlayışları aşan minimalist mimari estetik.',
+            image: '/media/hero/hero-slide-2.webp',
+            link: '/tasarimlar/'
+          },
+          {
+            title: 'Milano',
+            subtitle: 'İtalyan zarafeti ve büyük mimarlık anlayışı.',
+            image: '/media/hero/hero-slide-3.webp',
+            link: '/tasarimlar/'
+          },
+          {
+            title: 'Lounge',
+            subtitle: 'Fonksiyonel ve estetik açıdan kusursuz mekanlar.',
+            image: '/media/hero/hero-slide-4.webp',
+            link: '/tasarimlar/'
+          }
         ],
         start() {
-          this.timer = setInterval(() => { this.next() }, 5500);
+          this.timer = setInterval(() => { this.next() }, 6000);
         },
         stop() {
           if (this.timer) clearInterval(this.timer);
@@ -91,7 +112,7 @@ const seo = {
       @mouseenter="stop()"
       @mouseleave="start()"
     >
-      <!-- Slide 1: Modern Lüks Mimari Yaşam Alanı (%100 Net Görsel) -->
+      <!-- Slide 1: Sakura (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -101,7 +122,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-1.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-1.webp" 
-            alt="Yeşilay Mutfak Lüks İç Mimarlık ve Özel İmalat Yaşam Alanı" 
+            alt="Yeşilay Mutfak Sakura Özel İmalat Yaşam Alanı" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="eager"
             decoding="sync"
@@ -112,7 +133,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 2: Kişiye Özel Mimari Mutfak & Salon Tasarımı (%100 Net Görsel) -->
+      <!-- Slide 2: Iconica (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 1 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -122,7 +143,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-2.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-2.webp" 
-            alt="Yeşilay Mutfak Kişiye Özel Mimari Mutfak ve Salon Tasarımı" 
+            alt="Yeşilay Mutfak Iconica Mutfak ve Salon Tasarımı" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -132,7 +153,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 3: Modern Gömme Dolap & Gardırop Sistemleri (%100 Net Görsel) -->
+      <!-- Slide 3: Milano (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 2 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -142,7 +163,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-3.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-3.webp" 
-            alt="Yeşilay Mutfak Modern Gömme Dolap ve Gardırop Sistemleri" 
+            alt="Yeşilay Mutfak Milano Gömme Dolap ve Mutfak Modelleri" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -152,7 +173,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 4: Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş (%100 Net Görsel) -->
+      <!-- Slide 4: Lounge (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 3 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -161,7 +182,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-4.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-4.webp" 
-            alt="Yeşilay Mutfak Özel Ölçü Lake Duvar Ünitesi ve Aydınlatmalı Niş Tasarımı" 
+            alt="Yeşilay Mutfak Lounge Özel Ölçü Lake Tasarım" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -171,74 +192,89 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Navigasyon Okları (Sol & Sağ) -->
+      <!-- SOL ALT BÖLÜM: LOCUS BİREBİR TARZ & FONT & FONT-SIZE AÇIKLAMA -->
+      <!-- Font: Roboto, Title: 48px/bold, Subtitle: 18px/normal, Degrade: Locus framer-gnukv0 -->
+      <div 
+        class="absolute inset-0 z-20 flex flex-col justify-end items-start p-5 sm:p-7 lg:p-[30px] pointer-events-none"
+        style="background: linear-gradient(180deg, rgba(84, 84, 84, 0) 59.95%, rgba(59, 59, 59, 0.3) 74.63%, rgba(5, 5, 5, 0.38) 94.23%);"
+      >
+        <a 
+          :href="slides[current].link" 
+          class="block text-left text-white pointer-events-auto group max-w-xl"
+        >
+          <h2 
+            x-text="slides[current].title" 
+            class="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-white tracking-[-0.04em] leading-[1.2] sm:leading-[1.4] m-0"
+            style="font-family: 'Roboto', sans-serif;"
+          >
+            Sakura
+          </h2>
+          <p 
+            x-text="slides[current].subtitle" 
+            class="text-[15px] sm:text-[17px] lg:text-[18px] font-normal text-white tracking-[-0.04em] leading-[1.3] sm:leading-[1.4] mt-1 sm:mt-1.5 opacity-95"
+            style="font-family: 'Roboto', sans-serif;"
+          >
+            El becerisi, yaratıcılık ve deneyim.
+          </p>
+        </a>
+      </div>
+
+      <!-- Locus Birebir Dairesel Oklar (37x37px, Radius 50%, font-size: 30px) -->
       <button 
         type="button" 
         @click="prev()" 
-        class="absolute left-3.5 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md text-white flex items-center justify-center transition-all duration-200 border border-white/20 hover:scale-105 shadow-lg focus:outline-none"
-        aria-label="Önceki Görsel"
+        class="absolute left-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/25 hover:bg-black/50 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors focus:outline-none"
+        aria-label="Previous"
       >
-        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/></svg>
+        ‹
       </button>
 
       <button 
         type="button" 
         @click="next()" 
-        class="absolute right-3.5 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md text-white flex items-center justify-center transition-all duration-200 border border-white/20 hover:scale-105 shadow-lg focus:outline-none"
-        aria-label="Sonraki Görsel"
+        class="absolute right-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/25 hover:bg-black/50 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors focus:outline-none"
+        aria-label="Next"
       >
-        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+        ›
       </button>
 
-      <!-- Sol Alt: Slide Başlık Rozeti (Şeffaf Zarif Kapsül) -->
-      <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-7 z-20 flex items-center gap-2.5 bg-black/55 backdrop-blur-md px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 text-white shadow-md">
-        <span class="w-2 h-2 rounded-full bg-[#C5A880] animate-pulse"></span>
-        <span class="text-[11.5px] sm:text-[13px] font-medium tracking-wide" x-text="titles[current]"></span>
-      </div>
-
-      <!-- Sağ Alt: Slide Kontrol Noktaları ve Sayı -->
-      <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-7 z-20 flex items-center gap-2 bg-black/55 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 text-white shadow-md">
-        <div class="flex items-center gap-1.5">
-          <template x-for="(dot, i) in total" :key="i">
-            <button 
-              type="button" 
-              @click="current = i" 
-              class="h-1.5 rounded-full transition-all duration-300 focus:outline-none" 
-              :class="current === i ? 'w-5 sm:w-6 bg-[#C5A880]' : 'w-1.5 sm:w-2 bg-white/40 hover:bg-white/80'" 
-              :aria-label="'Slayt ' + (i + 1)"
-            ></button>
-          </template>
-        </div>
-        <span class="text-[11px] sm:text-[11.5px] font-semibold text-white/90 pl-2 border-l border-white/25" x-text="(current + 1) + ' / ' + total"></span>
+      <!-- Sağ Alt: Minimal Slayt Göstergesi -->
+      <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-8 z-30 flex items-center gap-1.5">
+        <template x-for="(slide, i) in total" :key="i">
+          <button 
+            type="button" 
+            @click="current = i" 
+            class="h-1 rounded-full transition-all duration-300 focus:outline-none" 
+            :class="current === i ? 'w-6 bg-white' : 'w-2 bg-white/40 hover:bg-white/80'" 
+            :aria-label="'Slayt ' + (i + 1)"
+          ></button>
+        </template>
       </div>
 
     </div>
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 1.1. PREMİUM HERO ALTI TANITIM & CTA BÖLÜMÜ (MİMARİ DÜZEN & SIFIR KARMAŞA) -->
+  <!-- 1.1. PREMİUM HERO ALTI TANITIM & CTA BÖLÜMÜ (MİMARİ DÜZEN, SIFIR AI İZİ) -->
   <!-- ===================================================================== -->
   <section class="relative w-full bg-[#FAF9F6] border-b border-[#E5DFD5] py-12 sm:py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         
-        <!-- Sol Kolon: Eyebrow + H1 + Açıklama + CTA Butonları (7/12) -->
+        <!-- Sol Kolon: Başlık + Açıklama + CTA Butonları (7/12) -->
         <div class="lg:col-span-7 space-y-4 sm:space-y-5">
           
-          <!-- Apple Capsule Eyebrow (Rolex Yeşil & Altın Zanaat) -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006039] text-white border border-[#C5A880]/50 rounded-full shadow-[0_4px_16px_rgba(0,96,57,0.25)]">
-            <span class="w-2 h-2 rounded-full bg-[#8B1E2D] animate-pulse"></span>
-            <span class="text-white text-[10.5px] sm:text-[11px] font-semibold tracking-[0.14em] uppercase font-sans">
-              ADATEPE İMALAT ATÖLYESİ • <span class="text-[#C5A880]">28 YILLIK TECRÜBE</span>
-            </span>
-          </div>
+          <!-- Saf Kurumsal Eyebrow (Sıfır AI Rozeti, Yalın Mimari Metin) -->
+          <span class="block text-[12px] font-semibold tracking-[0.14em] uppercase text-[#6E675F] font-roboto">
+            ADATEPE İMALAT ATÖLYESİ • 28 YILLIK TECRÜBE
+          </span>
 
-          <!-- Dinamik Akıcı H1 Başlık -->
-          <h1 class="text-[clamp(28px,3.2vw,48px)] font-bold text-[#1D1D1F] leading-[1.12] tracking-[-0.03em]">
+          <!-- Dinamik Akıcı H1 Başlık (SIFIR İTALİK - DİK, GÜÇLÜ TİPOGRAFİ) -->
+          <h1 class="text-[clamp(28px,3.2vw,48px)] font-bold text-[#1D1D1F] leading-[1.15] tracking-[-0.03em]">
             Hayalinizdeki Mutfağı, <br />
-            <span class="font-normal italic text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
-            <span class="font-medium text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
+            <span class="text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
+            <span class="text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
           </h1>
 
           <!-- Dinamik Alt Metin -->
@@ -246,7 +282,7 @@ const seo = {
             Leke tutmayan ipek mat kapaklar, fırçalanmış pirinç detaylar, kadife sessizliğinde Blum raylar ve ferahlatıcı mimari planlama. İzmir genelinde ücretsiz 3D keşif ve sözleşmeli üretim garantisi.
           </p>
 
-          <!-- Apple Call to Action Buttons (CTA Butonları Hero Altında) -->
+          <!-- Call to Action Buttons (Hero Altında Ergonomik ve Kurumsal) -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
             <a 
               href={siteConfig.whatsappUrl} 
@@ -323,10 +359,9 @@ const seo = {
 
             </div>
 
-            <!-- AEO & Grounding Micro Bar -->
+            <!-- Kurumsal Güvence Barı (Sıfır AI İzi) -->
             <div class="mt-4 pt-3 border-t border-[#E5DFD5]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-[11px] text-[#55504A] relative z-10">
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-pulse"></span>
+              <div>
                 <span><strong>Adatepe Atölyesi:</strong> Aracı komisyonsuz, milimetrik lazer rölöve ve 3D çizim.</span>
               </div>
               <a href="/tasarimlar/" class="text-[#006039] font-bold hover:underline inline-flex items-center gap-1 shrink-0">
@@ -350,7 +385,7 @@ const seo = {
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 580 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Zanaat.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Zanaat.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
@@ -423,7 +458,7 @@ const seo = {
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 920 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Koleksiyon.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Koleksiyon.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
@@ -511,14 +546,13 @@ const seo = {
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 920 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Showroom.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Showroom.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#006039]/30 rounded-full text-[11px] font-semibold text-[#006039] uppercase tracking-wider shadow-2xs">
-            <span class="w-2 h-2 rounded-full bg-[#006039] animate-pulse"></span>
+          <span class="block text-[12px] font-semibold text-[#006039] uppercase tracking-[0.14em] font-roboto">
             BUCA GAZİLER MAĞAZAMIZ & ADATEPE ATÖLYEMİZ
-          </div>
+          </span>
           <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
             Canlı Showroomumuzda Dokunun, Keşfedin.
           </h2>
@@ -779,7 +813,7 @@ const seo = {
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 1080 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Mühendislik.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Mühendislik.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
@@ -873,7 +907,7 @@ const seo = {
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 680 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DCD8CE" letter-spacing="-0.02em">Güvence.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DCD8CE" letter-spacing="-0.02em">Güvence.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
@@ -900,7 +934,6 @@ const seo = {
               </th>
               <th class="p-4 sm:p-5 font-bold text-white bg-[#006039] border-t-2 border-[#C5A880] w-3/8 rounded-t-lg shadow-inner">
                 <span class="inline-flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
                   Yeşilay Mutfak (Atölye Güvencesi)
                 </span>
               </th>
@@ -1041,7 +1074,7 @@ const seo = {
       <div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 760 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Şeffaflık.</text>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="normal" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Şeffaflık.</text>
           </svg>
         </div>
         <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
@@ -1077,13 +1110,12 @@ const seo = {
   <section class="py-24 relative overflow-hidden bg-gradient-to-b from-[#042015] via-[#073322] to-[#03150D] text-center border-t border-b border-[#0A3D2A] text-white">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,96,57,0.4)_0%,transparent_70%)] pointer-events-none"></div>
     <div class="relative max-w-3xl mx-auto px-4 sm:px-8 space-y-6 z-10">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md rounded-full border border-[#C5A880]/40 text-[#C5A880] text-[11px] uppercase font-bold tracking-[0.18em]">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-ping"></span>
+      <span class="block text-[#C5A880] text-[12px] uppercase font-bold tracking-[0.18em] font-roboto">
         MİMARİ KEŞİF & ÖZEL RANDEVU
-      </div>
+      </span>
       <h2 class="text-[34px] sm:text-[46px] font-bold text-white tracking-tight leading-[1.12]">
         Evinizin Ruhuna Uygun <br />
-        <span class="text-[#C5A880] font-serif italic">Yeni Bir Mutfak Deneyimi</span>
+        <span class="text-[#C5A880] font-serif">Yeni Bir Mutfak Deneyimi</span>
       </h2>
       <p class="text-[15px] text-[#D8D2C7] font-normal leading-relaxed max-w-xl mx-auto">
         Adatepe atölyemizden uzman mimarımız yerinde milimetrik lazer ölçüsü alsın ve mekanınıza özel fotogerçekçi 3D mimari modelleme hazırlayalım.

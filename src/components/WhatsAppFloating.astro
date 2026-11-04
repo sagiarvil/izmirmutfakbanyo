@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from "../data/siteConfig";
+import { siteConfig } from '../data/siteConfig';
 
 export interface Props {
   service?: string;
@@ -10,50 +10,42 @@ const { service } = Astro.props;
 let dynamicWaText = "Merhaba, Yeşilay Mutfak'tan keşif ve teklif almak istiyorum.";
 if (service) {
   const norm = service.toLowerCase();
-  if (norm.includes("hazır mutfak") || norm.includes("modüler")) {
-    dynamicWaText = "Merhaba, hazır mutfak modelleriniz ve teslim seçenekleriniz hakkında bilgi almak istiyorum.";
-  } else if (norm.includes("mutfak dolabı") || norm.includes("komple mutfak") || norm.includes("mutfak")) {
-    dynamicWaText = "Merhaba, mutfak dolabı veya komple mutfak tadilatı için teklif almak istiyorum.";
-  } else if (norm.includes("banyo")) {
-    dynamicWaText = "Merhaba, banyo yenileme için keşif ve teklif almak istiyorum.";
-  } else if (norm.includes("ev tadilatı") || norm.includes("anahtar teslim") || norm.includes("daire")) {
-    dynamicWaText = "Merhaba, komple ev tadilatı için keşif görüşmesi istiyorum.";
-  } else if (norm.includes("ticari") || norm.includes("projelendirme") || norm.includes("ofis") || norm.includes("fit-out")) {
-    dynamicWaText = "Merhaba, iş yerim için mimari proje ve uygulama teklifi almak istiyorum.";
+  if (norm.includes('hazır mutfak') || norm.includes('modüler')) {
+    dynamicWaText = 'Merhaba, hazır mutfak modelleriniz ve teslim seçenekleriniz hakkında bilgi almak istiyorum.';
+  } else if (norm.includes('mutfak dolabı') || norm.includes('komple mutfak') || norm.includes('mutfak')) {
+    dynamicWaText = 'Merhaba, mutfak dolabı veya komple mutfak tadilatı için teklif almak istiyorum.';
+  } else if (norm.includes('banyo')) {
+    dynamicWaText = 'Merhaba, banyo yenileme için keşif ve teklif almak istiyorum.';
+  } else if (norm.includes('ev tadilatı') || norm.includes('anahtar teslim') || norm.includes('daire')) {
+    dynamicWaText = 'Merhaba, komple ev tadilatı için keşif görüşmesi istiyorum.';
+  } else if (norm.includes('ticari') || norm.includes('projelendirme') || norm.includes('ofis') || norm.includes('fit-out')) {
+    dynamicWaText = 'Merhaba, iş yerim için mimari proje ve uygulama teklifi almak istiyorum.';
   }
 }
 
 const waUrl = `${siteConfig.whatsappUrl}?text=${encodeURIComponent(dynamicWaText)}`;
 ---
 
-<div class="fixed bottom-6 right-5 sm:right-7 z-50 flex flex-col items-end gap-2.5 font-sans" aria-label="Hızlı Mimari İletişim">
-  
-  <!-- WhatsApp Premium Butonu (Atelier Rolex Green & Altın Vurgu) -->
+<!-- ===================================================================== -->
+<!-- WHATSAPP FLOATING BUTTON (Birebir Referans: Koyu Gri Daire + Kırmızı Nokta) -->
+<!-- ===================================================================== -->
+<div class="fixed bottom-6 right-5 sm:right-7 z-50 flex items-center justify-center select-none" aria-label="WhatsApp İletişim">
   <a 
     href={waUrl} 
     target="_blank" 
     rel="noopener noreferrer" 
-    class="relative group flex items-center gap-3 py-3 px-5 bg-gradient-to-r from-[#006039] to-[#083020] hover:from-[#083020] hover:to-[#006039] text-white rounded-full shadow-[0_8px_24px_rgba(0,96,57,0.35)] border border-[#C5A880]/50 backdrop-blur-xl transition-all duration-300 hover:scale-105 active:scale-95" 
-    aria-label="WhatsApp Mimari Danışma"
+    class="relative w-[54px] h-[54px] sm:w-[58px] sm:h-[58px] rounded-full bg-[#545454] hover:bg-[#3f3f3f] text-white flex items-center justify-center shadow-[0_4px_18px_rgba(0,0,0,0.28)] transition-all duration-200 hover:scale-105 active:scale-95 group" 
+    aria-label="WhatsApp ile İletişime Geçin"
     data-track="contact_start"
     data-category="whatsapp_floating"
-    data-type="whatsapp_floating_bubble"
-    data-label="WhatsApp Keşif"
   >
-    <!-- Canlı Nabız Halkası -->
-    <span class="absolute -inset-1 rounded-full bg-[#006039]/25 animate-ping pointer-events-none"></span>
+    <!-- WhatsApp Outline SVG İkonu (Beyaz Çizgisel Baloncuk & Ahize) -->
+    <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-1.115-.06-.275-.088-.63-.223-1.096-.425-1.986-.86-3.274-2.871-3.373-3.003-.099-.133-.804-1.072-.804-2.044 0-.972.508-1.45.69-1.65.182-.2.398-.25.53-.25.133 0 .265.001.382.007.123.006.288-.047.45.344.167.404.57 1.391.62 1.492.05.101.083.22.016.353-.066.133-.1.216-.199.332-.099.117-.208.261-.297.351-.099.099-.202.207-.087.404.116.198.514.849 1.103 1.374.757.675 1.396.884 1.595.983.199.099.315.083.431-.05.116-.134.498-.58.63-.779.133-.199.265-.166.448-.099.182.066 1.157.546 1.356.645.199.1.332.15.381.233.05.083.05.479-.094.884z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-1.115-.06-.275-.088-.63-.223-1.096-.425-1.986-.86-3.274-2.871-3.373-3.003-.099-.133-.804-1.072-.804-2.044 0-.972.508-1.45.69-1.65.182-.2.398-.25.53-.25.133 0 .265.001.382.007.123.006.288-.047.45.344.167.404.57 1.391.62 1.492.05.101.083.22.016.353-.066.133-.1.216-.199.332-.099.117-.208.261-.297.351-.099.099-.202.207-.087.404.116.198.514.849 1.103 1.374.757.675 1.396.884 1.595.983.199.099.315.083.431-.05.116-.134.498-.58.63-.779.133-.199.265-.166.448-.099.182.066 1.157.546 1.356.645.199.1.332.15.381.233.05.083.05.479-.094.884z"/>
+    </svg>
 
-    <!-- WhatsApp SVG İkonu -->
-    <span class="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-white">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-1.115-.06-.275-.088-.63-.223-1.096-.425-1.986-.86-3.274-2.871-3.373-3.003-.099-.133-.804-1.072-.804-2.044 0-.972.508-1.45.69-1.65.182-.2.398-.25.53-.25.133 0 .265.001.382.007.123.006.288-.047.45.344.167.404.57 1.391.62 1.492.05.101.083.22.016.353-.066.133-.1.216-.199.332-.099.117-.208.261-.297.351-.099.099-.202.207-.087.404.116.198.514.849 1.103 1.374.757.675 1.396.884 1.595.983.199.099.315.083.431-.05.116-.134.498-.58.63-.779.133-.199.265-.166.448-.099.182.066 1.157.546 1.356.645.199.1.332.15.381.233.05.083.05.479-.094.884z"/>
-      </svg>
-    </span>
-
-    <div class="flex flex-col text-left leading-none">
-      <span class="text-[9px] uppercase tracking-[0.16em] text-[#C5A880] font-semibold">MİMARİ DANIŞMA</span>
-      <span class="text-[13px] font-bold tracking-tight text-white mt-1">WhatsApp Keşif</span>
-    </div>
+    <!-- Sağ Üst Kırmızı Bildirim Noktası (Kullanıcının Görseliyle %100 Birebir) -->
+    <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-[#FF3D36] border border-white/20" aria-hidden="true"></span>
   </a>
-
 </div>
