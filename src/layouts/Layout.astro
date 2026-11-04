@@ -14,7 +14,7 @@ const { seo, activeService } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="tr" class="scroll-smooth overflow-x-hidden bg-white text-[#222222]">
+<html lang="tr" class="scroll-smooth overflow-x-hidden bg-[#FAF9F6] text-[#1D1D1F]">
   <head>
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET"></script>
@@ -33,7 +33,7 @@ const { seo, activeService } = Astro.props;
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
     
     <script is:inline src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -42,17 +42,6 @@ const { seo, activeService } = Astro.props;
         theme: {
           extend: {
             colors: {
-              locus: {
-                dark: '#111111',
-                body: '#222222',
-                muted: '#575757',
-                lightMuted: '#888888',
-                border: '#ede9e6',
-                borderDark: '#d5d5d5',
-                sand: '#fbf9f6',
-                sandWarm: '#f8f6f3',
-                sandDeep: '#e6e0d7'
-              },
               apple: {
                 bg: '#FAF9F6',
                 surface: '#F5F5F7',
@@ -72,18 +61,14 @@ const { seo, activeService } = Astro.props;
             },
             fontFamily: {
               sans: [
-                'Roboto',
-                'Inter',
                 '-apple-system',
                 'BlinkMacSystemFont',
-                'sans-serif'
-              ],
-              roboto: [
-                'Roboto',
-                'sans-serif'
-              ],
-              inter: [
-                'Inter',
+                '"SF Pro Display"',
+                '"SF Pro Text"',
+                '"SF Pro"',
+                '"Helvetica Neue"',
+                'Helvetica',
+                'Arial',
                 'sans-serif'
               ],
               serif: [
@@ -117,7 +102,7 @@ const { seo, activeService } = Astro.props;
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Yeşilay Mutfak" />
     <meta name="format-detection" content="telephone=yes" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#FAF9F6" />
 
     <!-- Syndication & Feed Katmanı ($10M Mandate v9.1) -->
     <link rel="alternate" type="application/rss+xml" title="Yeşilay Mutfak RSS" href="/feed.xml" />
@@ -135,7 +120,7 @@ const { seo, activeService } = Astro.props;
       <!-- Alpine.js 3.x (Declarative Reactive UI Engine) -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   </head>
-  <body class="min-h-screen flex flex-col font-roboto bg-white text-[#222222] overflow-x-hidden antialiased selection:bg-[#111111] selection:text-white">
+  <body class="min-h-screen flex flex-col font-sans architect-grid-bg text-[#1D1D1F] overflow-x-hidden antialiased selection:bg-[#006039] selection:text-white">
     <Header activeService={activeService} />
     <main id="main-content" class="flex-1 w-full overflow-hidden">
       <slot />

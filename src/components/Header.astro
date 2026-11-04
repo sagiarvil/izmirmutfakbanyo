@@ -1,169 +1,329 @@
 ---
-import { siteConfig } from '../data/siteConfig';
+import { siteConfig } from "../data/siteConfig";
 
 export interface Props {
   activeService?: string;
 }
 
 const { activeService } = Astro.props;
+
+// Hizmete göre dinamik ve güvenli WhatsApp mesajı belirleme
+let dynamicWaText = "Merhaba, Yeşilay Mutfak'tan keşif ve teklif almak istiyorum.";
+if (activeService) {
+  const norm = activeService.toLowerCase();
+  if (norm.includes("hazır mutfak") || norm.includes("modüler") || norm.includes("hazir")) {
+    dynamicWaText = "Merhaba, hazır mutfak modelleriniz ve teslim seçenekleriniz hakkında bilgi almak istiyorum.";
+  } else if (norm.includes("mutfak dolabı") || norm.includes("komple mutfak") || norm.includes("mutfak")) {
+    dynamicWaText = "Merhaba, mutfak dolabı veya komple mutfak tadilatı için teklif almak istiyorum.";
+  } else if (norm.includes("banyo")) {
+    dynamicWaText = "Merhaba, banyo yenileme için keşif ve teklif almak istiyorum.";
+  } else if (norm.includes("ev tadilatı") || norm.includes("anahtar teslim") || norm.includes("daire")) {
+    dynamicWaText = "Merhaba, komple ev tadilatı için keşif görüşmesi istiyorum.";
+  } else if (norm.includes("ticari") || norm.includes("projelendirme") || norm.includes("ofis") || norm.includes("fit-out")) {
+    dynamicWaText = "Merhaba, iş yerim için mimari proje ve uygulama teklifi almak istiyorum.";
+  }
+}
+
+const waCtaUrl = `https://wa.me/905324261788?text=${encodeURIComponent(dynamicWaText)}`;
 ---
 
 <!-- ===================================================================== -->
-<!-- LOCUS BİREBİR HEADER (Masaüstü: 80px, Mobil: 70px, Fixed, 1200px Max) -->
-<!-- Renkler: rgb(116, 113, 108) linkler, rgb(36, 36, 36) İletişim bold   -->
-<!-- Kenarlık: 0.5px solid rgb(133, 133, 133)                              -->
+<!-- PREMİUM AÇIK RENK MİMARİ HEADER & NAVİGASYON (MANDATE STANDARTLARI)   -->
+<!-- Renk Paleti: Arka Plan #FAF9F6 | Metin #15231C | Vurgu #C5A880        -->
+<!-- Ayrım Çizgisi #E5E2DA | Masaüstü ~78px | Mobil ~68px                   -->
 <!-- ===================================================================== -->
 <header 
-  class="fixed top-0 left-0 right-0 z-50 w-full bg-white transition-all duration-200"
-  style="border-bottom: 0.5px solid rgb(133, 133, 133);"
+  class="sticky top-0 z-50 w-full bg-[#FAF9F6]/95 backdrop-blur-md border-b border-[#E5E2DA] shadow-[0_2px_12px_rgba(21,35,28,0.04)] text-[#15231C] transition-all duration-200" 
   id="siteHeader"
-  x-data="{ mobileOpen: false }"
-  @keydown.escape="mobileOpen = false"
+  x-data="{ mobileOpen: false, openMenu: null }"
+  @keydown.escape="mobileOpen = false; openMenu = null"
 >
-  <div class="w-full max-w-[1200px] h-[70px] lg:h-[80px] mx-auto px-5 lg:px-[30px] flex items-center justify-between lg:justify-start gap-2.5 relative">
-    
-    <!-- SOL: LOGO (LOCUS BİREBİR BOYUT: 100x60px, Mobilde: 82px) -->
-    <a 
-      href="/" 
-      class="flex flex-col justify-center select-none group w-[82px] lg:w-[100px] h-[60px] flex-none"
-      aria-label="Yeşilay Mutfak Ana Sayfa"
-    >
-      <span 
-        class="font-roboto text-[16px] lg:text-[18px] tracking-[0.16em] uppercase text-[#111111] font-bold leading-none"
-      >
-        YEŞİLAY
-      </span>
-      <span 
-        class="font-roboto text-[10px] lg:text-[11px] tracking-[0.24em] uppercase text-[rgb(116,113,108)] font-normal leading-none mt-1"
-      >
-        MUTFAK
-      </span>
-    </a>
-
-    <!-- ORTA / SAĞ: ANA MENÜ (LOCUS BİREBİR FONT, ÖLÇÜ VE RENKLER) -->
-    <nav 
-      class="hidden md:flex items-center gap-[28px] lg:gap-[38px] pl-[20px] lg:pl-[30px] flex-1 font-roboto"
-      aria-label="Ana menü"
-    >
-      <a 
-        href="/tasarimlar/" 
-        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
-        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
-        onmouseover="this.style.color='rgb(36, 36, 36)'"
-        onmouseout="this.style.color='rgb(116, 113, 108)'"
-      >
-        MUTFAK
-      </a>
-      <a 
-        href="/salon-modelleri/" 
-        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
-        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
-        onmouseover="this.style.color='rgb(36, 36, 36)'"
-        onmouseout="this.style.color='rgb(116, 113, 108)'"
-      >
-        MOBİLYA
-      </a>
-      <a 
-        href="/hazir-mutfak/" 
-        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
-        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
-        onmouseover="this.style.color='rgb(36, 36, 36)'"
-        onmouseout="this.style.color='rgb(116, 113, 108)'"
-      >
-        TAMAMLAYICI ÜRÜNLER
-      </a>
-      <a 
-        href="/izmir-komple-mutfak-tadilati/" 
-        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
-        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
-        onmouseover="this.style.color='rgb(36, 36, 36)'"
-        onmouseout="this.style.color='rgb(116, 113, 108)'"
-      >
-        CİHAZ
-      </a>
-      <a 
-        href="/hakkimizda/" 
-        class="text-[13px] leading-none uppercase tracking-normal transition-colors"
-        style="color: rgb(116, 113, 108); font-family: 'Roboto', sans-serif;"
-        onmouseover="this.style.color='rgb(36, 36, 36)'"
-        onmouseout="this.style.color='rgb(116, 113, 108)'"
-      >
-        KURUMSAL
-      </a>
-
-      <!-- SAĞ GRUP (İLETİŞİM BOLD + 4 İKON - LOCUS framer-18odg87 BİREBİR) -->
-      <div class="ml-auto flex items-center gap-[10px]">
-        <a 
-          href="/iletisim/" 
-          class="text-[13px] font-bold leading-none uppercase tracking-normal text-[rgb(36,36,36)] hover:text-black transition-colors mr-3"
-          style="font-family: 'Roboto', sans-serif;"
-        >
-          İLETİŞİM
+  
+  <!-- 1. ÜST YARDIMCI MİMARİ BİLGİ ŞERİDİ (Buca Showroom & Doğrudan Telefon) -->
+  <div class="w-full bg-[#F3EFEA] border-b border-[#E5E2DA] text-[11px] text-[#4A443D] py-1 px-4 sm:px-6 lg:px-8 hidden md:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/iletisim/" class="hover:text-[#15231C] flex items-center gap-1.5 transition font-medium">
+          <span class="text-[#C5A880]">📍</span>
+          <span>Buca Showroom & İmalat Atölyesi</span>
+          <span class="text-[#C5A880] text-[9px] font-bold">→ İletişim & Harita</span>
         </a>
-
-        <!-- Harita İkonu (framer-1ma8swo: 21x24px) -->
+        <span class="text-[#D0CAC0]">•</span>
+        <span class="text-[#756E65]">Pzt - Cmt: 09:00 - 19:30</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <span class="text-[#756E65]">Mimari Danışma Hattı:</span>
         <a 
-          href="/iletisim/" 
-          class="w-[21px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
-          aria-label="Konum ve Harita"
+          href="tel:+902324411060" 
+          class="text-[#15231C] hover:text-[#C5A880] font-bold tracking-tight transition flex items-center gap-1.5"
+          data-track="contact_start"
+          data-category="telefon"
+          data-type="header_top_phone"
         >
-          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
-            <path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,204.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path>
+          <svg class="w-3 h-3 text-[#C5A880] fill-current" viewBox="0 0 24 24">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.27.36-.67.25-1.02A11.36 11.36 0 019 4.31a1 1 0 00-1-1H4.5c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
           </svg>
-        </a>
-
-        <!-- E-posta İkonu (framer-19f35xi: 27x24px) -->
-        <a 
-          href="mailto:bilgi@yesilaymutfak.com" 
-          class="w-[27px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
-          aria-label="E-posta Gönder"
-        >
-          <svg width="22" height="20" viewBox="0 0 256 256" fill="currentColor">
-            <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM208,192H48V64H208V192Zm-80-50.69L68.8,92.53a8,8,0,0,1,10.4-12.16L128,119.53l48.8-39.16a8,8,0,0,1,10.4,12.16Z"></path>
-          </svg>
-        </a>
-
-        <!-- Katalog İkonu (framer-rhul9e: 31x24px) -->
-        <a 
-          href="/kataloglar/" 
-          class="w-[31px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
-          aria-label="Kataloglar"
-        >
-          <svg width="22" height="20" viewBox="0 0 256 256" fill="currentColor">
-            <path d="M216,40H72A40,40,0,0,0,32,80V200a40,40,0,0,0,40,40H216a8,8,0,0,0,8-8V48A8,8,0,0,0,216,40ZM72,56H208V184H72a23.86,23.86,0,0,1-13.84,4.41A23.82,23.82,0,0,1,48,185.09V80A24,24,0,0,1,72,56Zm136,168H72a24.11,24.11,0,0,0-20.73,11.83A39.69,39.69,0,0,0,72,224H208Z"></path>
-          </svg>
-        </a>
-
-        <!-- Arama İkonu (framer-359z46: 24x24px) -->
-        <a 
-          href="/tasarimlar/" 
-          class="w-[24px] h-[24px] flex items-center justify-center text-[rgb(51,51,51)] hover:text-black transition-colors"
-          aria-label="Arama"
-        >
-          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
-            <path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"></path>
-          </svg>
+          <span>0232 441 10 60</span>
         </a>
       </div>
+    </div>
+  </div>
+
+  <!-- 2. ANA NAVİGASYON ŞERİDİ (Masaüstü: ~76-82px | Mobil: ~66px) -->
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-4">
+    
+    <!-- SOL: YEŞİLAY MUTFAK LOGO -->
+    <a href="/" class="flex items-center group shrink-0 py-1 select-none" aria-label="Yeşilay Mutfak Anasayfa" data-track="nav_click" data-category="brand" data-label="logo">
+      <img 
+        src="/yesilay-mutfak-logo.png" 
+        alt="Yeşilay Mutfak" 
+        class="h-9 sm:h-10 lg:h-[46px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        width="132" 
+        height="46" 
+        loading="eager" 
+      />
+    </a>
+
+    <!-- ORTA: TEK SIRA YENİ STRÜKTÜREL MENÜ (HİZMETLERİMİZ | MODELLER | YAPILAN İŞLER | TİCARİ PROJELER) -->
+    <nav 
+      class="hidden xl:flex items-center space-x-1.5 2xl:space-x-3 text-[13px] 2xl:text-[13.5px] font-semibold text-[#15231C] tracking-[0.03em] whitespace-nowrap"
+      aria-label="Masaüstü Ana Menü"
+    >
+      
+      <!-- 1. HİZMETLERİMİZ DROPDOWN -->
+      <div 
+        class="relative py-2" 
+        @mouseenter="openMenu = 'hizmetlerimiz'" 
+        @mouseleave="openMenu = null"
+      >
+        <button 
+          type="button" 
+          class="flex items-center gap-1 px-2.5 py-1.5 rounded-md hover:text-[#C5A880] hover:bg-[#F3EFEA]/60 transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#C5A880]/50"
+          :aria-expanded="openMenu === 'hizmetlerimiz'"
+          aria-haspopup="true"
+          @click="openMenu = openMenu === 'hizmetlerimiz' ? null : 'hizmetlerimiz'"
+          data-track="nav_click"
+          data-category="hizmetlerimiz"
+          data-label="dropdown_trigger"
+        >
+          <span>HİZMETLERİMİZ</span>
+          <svg class="w-3.5 h-3.5 text-[#C5A880] transition-transform duration-200" :class="openMenu === 'hizmetlerimiz' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <!-- Dropdown Paneli -->
+        <div 
+          x-show="openMenu === 'hizmetlerimiz'"
+          x-transition:enter="transition ease-out duration-150"
+          x-transition:enter-start="opacity-0 translate-y-1"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          x-transition:leave="transition ease-in duration-100"
+          x-transition:leave-start="opacity-100 translate-y-0"
+          x-transition:leave-end="opacity-0 translate-y-1"
+          class="absolute left-0 top-full pt-1.5 min-w-[290px] w-max z-50"
+          style="display: none;"
+          role="menu"
+        >
+          <div class="bg-white rounded-lg shadow-[0_12px_36px_rgba(21,35,28,0.12)] border border-[#E5E2DA] py-2 divide-y divide-[#F3EFEA]">
+            <!-- Mutfak -->
+            <a href="/mutfak-dolabi/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="mutfak">
+              <div class="font-bold text-[#15231C]">Mutfak</div>
+              <div class="text-[11px] text-[#756E65]">Özel Ölçü Mutfak Dolabı & Komple Mutfak Tadilatı</div>
+            </a>
+            <!-- Banyo -->
+            <a href="/izmir-banyo-yenileme-seramik/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="banyo">
+              <div class="font-bold text-[#15231C]">Banyo</div>
+              <div class="text-[11px] text-[#756E65]">Komple Banyo Yenileme, İzolasyon & Seramik</div>
+            </a>
+            <!-- Ev Tadilatı -->
+            <a href="/izmir-anahtar-teslim-tadilat/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="ev_tadilati">
+              <div class="font-bold text-[#15231C]">Ev Tadilatı</div>
+              <div class="text-[11px] text-[#756E65]">Anahtar Teslim Komple Daire & Villa Renovasyonu</div>
+            </a>
+            <!-- Cam Balkon -->
+            <a href="/izmir-cam-balkon-sistemleri/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="cam_balkon">
+              <div class="font-bold text-[#15231C]">Cam Balkon</div>
+              <div class="text-[11px] text-[#756E65]">Katlanır, Isıcamlı & Sürme Cam Balkon Sistemleri</div>
+            </a>
+            <!-- Kahve Köşesi -->
+            <a href="/kahve-kosesi-modelleri/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="kahve_kosesi">
+              <div class="font-bold text-[#15231C]">Kahve Köşesi</div>
+              <div class="text-[11px] text-[#756E65]">Özel Tasarım Kahve İstasyonu & Bar Modülleri</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. MODELLER DROPDOWN -->
+      <div 
+        class="relative py-2" 
+        @mouseenter="openMenu = 'modeller'" 
+        @mouseleave="openMenu = null"
+      >
+        <button 
+          type="button" 
+          class="flex items-center gap-1 px-2.5 py-1.5 rounded-md hover:text-[#C5A880] hover:bg-[#F3EFEA]/60 transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#C5A880]/50"
+          :aria-expanded="openMenu === 'modeller'"
+          aria-haspopup="true"
+          @click="openMenu = openMenu === 'modeller' ? null : 'modeller'"
+          data-track="nav_click"
+          data-category="modeller"
+          data-label="dropdown_trigger"
+        >
+          <span>MODELLER</span>
+          <svg class="w-3.5 h-3.5 text-[#C5A880] transition-transform duration-200" :class="openMenu === 'modeller' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <!-- Dropdown Paneli -->
+        <div 
+          x-show="openMenu === 'modeller'"
+          x-transition:enter="transition ease-out duration-150"
+          x-transition:enter-start="opacity-0 translate-y-1"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          x-transition:leave="transition ease-in duration-100"
+          x-transition:leave-start="opacity-100 translate-y-0"
+          x-transition:leave-end="opacity-0 translate-y-1"
+          class="absolute left-0 top-full pt-1.5 min-w-[270px] w-max z-50"
+          style="display: none;"
+          role="menu"
+        >
+          <div class="bg-white rounded-lg shadow-[0_12px_36px_rgba(21,35,28,0.12)] border border-[#E5E2DA] py-2 divide-y divide-[#F3EFEA]">
+            <a href="/tasarimlar/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-bold transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="tum_modeller">
+              <span>Tüm Modeller Arşivi</span>
+              <span class="px-1.5 py-0.5 bg-[#F3EFEA] text-[#15231C] text-[10px] rounded font-semibold">450 Model</span>
+            </a>
+            <a href="/yatak-odasi-modelleri/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="yatak_odasi_modelleri">
+              <span>Yatak Odası & Gardırop</span>
+              <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">99 Model</span>
+            </a>
+            <a href="/salon-modelleri/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="salon_modelleri">
+              <span>Salon & TV Üniteleri</span>
+              <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">68 Model</span>
+            </a>
+            <a href="/genc-odasi-modelleri/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="genc_odasi_modelleri">
+              <span>Genç Odası Modelleri</span>
+              <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">92 Model</span>
+            </a>
+            <a href="/cocuk-odasi-modelleri/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="cocuk_odasi_modelleri">
+              <span>Çocuk Odası Modelleri</span>
+              <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">45 Model</span>
+            </a>
+            <a href="/camasir-odasi-modelleri/" class="block px-4 py-2 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="camasir_odasi_modelleri">
+              <span>Çamaşır Odası & Kiler</span>
+              <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">9 Model</span>
+            </a>
+            <a href="/tasarimlar/?kategori=mutfak" class="block px-4 py-1.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="mutfak_modelleri">
+              <span>Mutfak Modelleri</span>
+              <span class="text-[10px] text-[#756E65]">40 Model</span>
+            </a>
+            <a href="/tasarimlar/?kategori=banyo" class="block px-4 py-1.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="banyo_modelleri">
+              <span>Banyo Modelleri</span>
+              <span class="text-[10px] text-[#756E65]">25 Model</span>
+            </a>
+            <a href="/tasarimlar/?kategori=kapilar" class="block px-4 py-1.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="ic_kapi_modelleri">
+              <span>İç Kapı Modelleri</span>
+              <span class="text-[10px] text-[#756E65]">39 Model</span>
+            </a>
+            <a href="/tasarimlar/?kategori=gomme-dolap" class="block px-4 py-1.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal flex items-center justify-between" role="menuitem" data-track="nav_click" data-category="modeller" data-label="gomme_dolap_modelleri">
+              <span>Gömme Dolap</span>
+              <span class="text-[10px] text-[#756E65]">33 Model</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. YAPILAN İŞLER (Gerçek Tamamlanmış Müşteri Projeleri) -->
+      <a 
+        href="/yapilan-isler/" 
+        class="px-2.5 py-1.5 rounded-md hover:text-[#C5A880] hover:bg-[#F3EFEA]/60 transition duration-200"
+        data-track="nav_click"
+        data-category="referanslar"
+        data-label="yapilan_isler"
+      >
+        YAPILAN İŞLER
+      </a>
+
+      <!-- 6. TİCARİ PROJELER (Ofis, Klinik, Mağaza B2B Fit-Out) -->
+      <a 
+        href="/projelendirme/" 
+        class="px-2.5 py-1.5 rounded-md text-[#15231C] hover:text-[#C5A880] hover:bg-[#F3EFEA]/60 transition duration-200 flex items-center gap-1.5 font-bold"
+        data-track="nav_click"
+        data-category="ticari"
+        data-label="ticari_projeler_b2b"
+      >
+        <span>TİCARİ PROJELER</span>
+        <span class="px-1.5 py-0.2 bg-[#C5A880]/20 border border-[#C5A880]/60 text-[#8F7249] text-[9.5px] rounded font-bold">B2B</span>
+      </a>
+
+      <!-- 7. HAKKIMIZDA (28 Yıllık Zanaat & Atölye Güvencesi) -->
+      <a 
+        href="/hakkimizda/" 
+        class="px-2.5 py-1.5 rounded-md hover:text-[#C5A880] hover:bg-[#F3EFEA]/60 transition duration-200"
+        data-track="nav_click"
+        data-category="kurumsal"
+        data-label="hakkimizda"
+      >
+        HAKKIMIZDA
+      </a>
 
     </nav>
 
-    <!-- MOBİL HAMBURGER BUTONU (Locus framer-1qqtfod BİREBİR) -->
-    <button 
-      type="button"
-      class="md:hidden w-[44px] h-[44px] flex flex-col justify-center items-center gap-[5px] text-[rgb(97,97,97)] focus:outline-none"
-      @click="mobileOpen = !mobileOpen"
-      aria-label="Menüyü Aç/Kapat"
-      :aria-expanded="mobileOpen"
-    >
-      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-transform duration-200" :class="mobileOpen ? 'rotate-45 translate-y-[6.5px]' : ''"></span>
-      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-opacity duration-200" :class="mobileOpen ? 'opacity-0' : ''"></span>
-      <span class="w-5 h-[1.5px] bg-[rgb(97,97,97)] rounded-full transition-transform duration-200" :class="mobileOpen ? '-rotate-45 -translate-y-[6.5px]' : ''"></span>
-    </button>
+    <!-- SAĞ: BİRİNCİL DÖNÜŞÜM BUTONU (KEŞİF & TEKLİF AL) & MOBİL BUTONLARI -->
+    <div class="flex items-center gap-2.5 shrink-0">
+      
+      <!-- Masaüstü Doğrudan Telefon Butonu (Kompakt) -->
+      <a 
+        href="tel:+902324411060" 
+        class="hidden sm:inline-flex xl:hidden items-center gap-1.5 px-3 py-2 text-xs font-bold text-[#15231C] border border-[#E5E2DA] rounded-lg hover:bg-[#F3EFEA] transition"
+        aria-label="Showroom Telefonu"
+        data-track="contact_start"
+        data-category="telefon"
+        data-type="header_compact_phone"
+      >
+        <span class="text-[#C5A880]">📞</span>
+        <span>0232 441 10 60</span>
+      </a>
+
+      <!-- BİRİNCİL CTA: KEŞİF & TEKLİF AL (WhatsApp & Akıllı Teklif Hattı) -->
+      <a 
+        href={waCtaUrl} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 bg-[#006039] hover:bg-[#00482B] text-white font-bold text-xs sm:text-[12.5px] tracking-[0.04em] uppercase rounded-lg border border-[#C5A880]/50 transition-all duration-200 shadow-[0_4px_14px_rgba(0,96,57,0.25)] hover:shadow-[0_6px_20px_rgba(0,96,57,0.35)] whitespace-nowrap"
+        data-track="cta_click"
+        data-category="primary_cta"
+        data-type="kesif_teklif_al"
+      >
+        <span>KEŞİF & TEKLİF AL</span>
+        <span class="text-[#C5A880]">→</span>
+      </a>
+
+      <!-- Mobil Menü Butonu (Touch target min 44x44px) -->
+      <button 
+        type="button" 
+        class="xl:hidden w-11 h-11 flex items-center justify-center rounded-lg bg-[#F3EFEA] hover:bg-[#EAE4DC] text-[#15231C] border border-[#E5E2DA] focus:outline-none focus:ring-2 focus:ring-[#C5A880]"
+        aria-label="Menüyü Aç/Kapat"
+        :aria-expanded="mobileOpen"
+        @click="mobileOpen = !mobileOpen"
+        data-track="nav_click"
+        data-category="mobile_toggle"
+      >
+        <svg x-show="!mobileOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg x-show="mobileOpen" class="w-5 h-5" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+    </div>
 
   </div>
 
-  <!-- MOBİL MENÜ ÇEKMECESİ -->
+  <!-- ===================================================================== -->
+  <!-- 3. MOBİL AÇILIR ACCORDION MENÜ (Erişilebilir, Touch-Friendly, Açık Tema) -->
+  <!-- ===================================================================== -->
   <div 
     x-show="mobileOpen"
     x-transition:enter="transition ease-out duration-200"
@@ -172,39 +332,223 @@ const { activeService } = Astro.props;
     x-transition:leave="transition ease-in duration-150"
     x-transition:leave-start="opacity-100 translate-y-0"
     x-transition:leave-end="opacity-0 -translate-y-2"
-    class="md:hidden bg-white border-b border-[rgb(133,133,133)] px-6 py-8 shadow-xl"
+    class="xl:hidden bg-[#FAF9F6] border-t border-[#E5E2DA] px-4 py-5 shadow-2xl max-h-[calc(100vh-80px)] overflow-y-auto"
     style="display: none;"
+    id="mobileMenuPanel"
+    x-data="{ accHizmetlerimiz: false, accModeller: false }"
   >
-    <nav class="flex flex-col space-y-5 font-roboto text-[13px] tracking-normal uppercase">
-      <a href="/tasarimlar/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
-        MUTFAK
-      </a>
-      <a href="/salon-modelleri/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
-        MOBİLYA
-      </a>
-      <a href="/hazir-mutfak/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
-        TAMAMLAYICI ÜRÜNLER
-      </a>
-      <a href="/izmir-komple-mutfak-tadilati/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
-        CİHAZ
-      </a>
-      <a href="/hakkimizda/" class="text-[rgb(116,113,108)] hover:text-black pb-2 border-b border-[#f3efe8]">
-        KURUMSAL
-      </a>
-      <a href="/iletisim/" class="text-[rgb(36,36,36)] font-bold pb-2 border-b border-[#f3efe8]">
-        İLETİŞİM
-      </a>
-    </nav>
-    <div class="mt-6 pt-4 border-t border-[#ede9e6] flex flex-col gap-3">
+    <nav class="flex flex-col space-y-2 text-sm font-semibold text-[#15231C]">
+      
+      <!-- Ana Sayfa -->
       <a 
-        href="tel:+902324411060" 
-        class="text-[13px] font-roboto font-medium text-[rgb(36,36,36)] flex items-center justify-center gap-2"
+        href="/" 
+        class="py-2.5 px-3 rounded-lg hover:bg-[#F3EFEA] hover:text-[#006039] transition"
+        @click="mobileOpen = false"
       >
-        <span>📞</span> 0 (232) 441 10 60
+        ANA SAYFA
       </a>
-    </div>
+
+      <!-- HİZMETLERİMİZ Accordion -->
+      <div class="border-b border-[#E5E2DA]/80 pb-1.5">
+        <button 
+          type="button" 
+          class="w-full flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-[#F3EFEA] text-left"
+          @click="accHizmetlerimiz = !accHizmetlerimiz"
+          :aria-expanded="accHizmetlerimiz"
+        >
+          <span class="font-bold">HİZMETLERİMİZ</span>
+          <svg class="w-4 h-4 text-[#C5A880] transition-transform duration-200" :class="accHizmetlerimiz ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div x-show="accHizmetlerimiz" class="pl-4 pr-2 py-1.5 space-y-1.5 text-xs text-[#4A443D] border-l-2 border-[#C5A880] ml-3 mt-1" style="display: none;">
+          <a href="/mutfak-dolabi/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+            <span class="font-bold block text-[#15231C]">Mutfak</span>
+            <span class="text-[11px] text-[#756E65]">Özel Ölçü Mutfak Dolabı & Tadilat</span>
+          </a>
+          <a href="/izmir-banyo-yenileme-seramik/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+            <span class="font-bold block text-[#15231C]">Banyo</span>
+            <span class="text-[11px] text-[#756E65]">Komple Banyo Yenileme & Seramik</span>
+          </a>
+          <a href="/izmir-anahtar-teslim-tadilat/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+            <span class="font-bold block text-[#15231C]">Ev Tadilatı</span>
+            <span class="text-[11px] text-[#756E65]">Anahtar Teslim Komple Daire Renovasyonu</span>
+          </a>
+          <a href="/izmir-cam-balkon-sistemleri/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+            <span class="font-bold block text-[#15231C]">Cam Balkon</span>
+            <span class="text-[11px] text-[#756E65]">Katlanır & Isıcamlı Balkon Sistemleri</span>
+          </a>
+          <a href="/kahve-kosesi-modelleri/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+            <span class="font-bold block text-[#15231C]">Kahve Köşesi</span>
+            <span class="text-[11px] text-[#756E65]">Özel Kahve İstasyonu & Bar Üniteleri</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- MODELLER Accordion -->
+      <div class="border-b border-[#E5E2DA]/80 pb-1.5">
+        <button 
+          type="button" 
+          class="w-full flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-[#F3EFEA] text-left"
+          @click="accModeller = !accModeller"
+          :aria-expanded="accModeller"
+        >
+          <span class="font-bold">MODELLER (450 TASARIM)</span>
+          <svg class="w-4 h-4 text-[#C5A880] transition-transform duration-200" :class="accModeller ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div x-show="accModeller" class="pl-4 pr-2 py-1.5 space-y-1.5 text-xs text-[#4A443D] border-l-2 border-[#C5A880] ml-3 mt-1" style="display: none;">
+          <a href="/yatak-odasi-modelleri/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-bold flex justify-between items-center" @click="mobileOpen = false">
+            <span>Yatak Odası & Gardırop</span>
+            <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">99 Model</span>
+          </a>
+          <a href="/salon-modelleri/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-bold flex justify-between items-center" @click="mobileOpen = false">
+            <span>Salon & TV Üniteleri</span>
+            <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">68 Model</span>
+          </a>
+          <a href="/genc-odasi-modelleri/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-bold flex justify-between items-center" @click="mobileOpen = false">
+            <span>Genç Odası Modelleri</span>
+            <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">92 Model</span>
+          </a>
+          <a href="/cocuk-odasi-modelleri/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-bold flex justify-between items-center" @click="mobileOpen = false">
+            <span>Çocuk Odası Modelleri</span>
+            <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">45 Model</span>
+          </a>
+          <a href="/camasir-odasi-modelleri/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-bold flex justify-between items-center" @click="mobileOpen = false">
+            <span>Çamaşır Odası & Kiler</span>
+            <span class="px-1.5 py-0.2 bg-[#E8F5E9] text-[#006039] text-[10px] rounded font-bold">9 Model</span>
+          </a>
+          <a href="/tasarimlar/" class="block py-1.5 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-semibold border-t border-[#E5E2DA] pt-2" @click="mobileOpen = false">Tüm Modeller Arşivi (450)</a>
+          <a href="/tasarimlar/?kategori=mutfak" class="block py-1 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039]" @click="mobileOpen = false">Mutfak Modelleri (40)</a>
+          <a href="/tasarimlar/?kategori=banyo" class="block py-1 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039]" @click="mobileOpen = false">Banyo Modelleri (25)</a>
+          <a href="/tasarimlar/?kategori=kapilar" class="block py-1 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039]" @click="mobileOpen = false">İç Kapı Modelleri (39)</a>
+          <a href="/tasarimlar/?kategori=gomme-dolap" class="block py-1 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039]" @click="mobileOpen = false">Gömme Dolap (33)</a>
+        </div>
+      </div>
+
+      <!-- YAPILAN İŞLER -->
+      <a 
+        href="/yapilan-isler/" 
+        class="py-2.5 px-3 rounded-lg hover:bg-[#F3EFEA] hover:text-[#006039] transition font-bold"
+        @click="mobileOpen = false"
+      >
+        YAPILAN İŞLER (REFERANSLAR)
+      </a>
+
+      <!-- TİCARİ PROJELER -->
+      <a 
+        href="/projelendirme/" 
+        class="py-2.5 px-3 rounded-lg bg-[#F3EFEA] text-[#15231C] hover:bg-[#EAE4DC] transition font-bold flex items-center justify-between"
+        @click="mobileOpen = false"
+      >
+        <span>TİCARİ PROJELER & FIT-OUT</span>
+        <span class="px-2 py-0.5 bg-[#C5A880] text-white text-[10px] rounded font-bold">B2B</span>
+      </a>
+
+      <!-- HAKKIMIZDA -->
+      <a 
+        href="/hakkimizda/" 
+        class="py-2.5 px-3 rounded-lg hover:bg-[#F3EFEA] hover:text-[#006039] transition font-bold"
+        @click="mobileOpen = false"
+      >
+        HAKKIMIZDA (28 YILLIK ATÖLYE)
+      </a>
+
+      <!-- İkincil Bağlantılar (Showroom & İletişim) -->
+      <div class="pt-3 border-t border-[#E5E2DA] space-y-2 text-xs">
+        <a href="/iletisim/" class="block py-2 px-3 text-[#4A443D] hover:text-[#15231C] font-medium" @click="mobileOpen = false">
+          📍 Showroom & Atölye: Buca / İzmir
+        </a>
+        <a href="tel:+902324411060" class="block py-2 px-3 text-[#15231C] font-bold bg-[#F3EFEA] rounded-lg">
+          📞 0232 441 10 60 — Hemen Arayın
+        </a>
+      </div>
+
+      <!-- Mobil Menü İçi CTA Butonu -->
+      <div class="pt-2">
+        <a 
+          href={waCtaUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full py-3 bg-[#006039] hover:bg-[#00482B] text-white font-bold text-center rounded-lg block uppercase text-xs tracking-wider border border-[#C5A880]/50 shadow-md"
+          data-track="cta_click"
+          data-category="mobile_menu_cta"
+        >
+          WhatsApp ile 3D Keşif İste →
+        </a>
+      </div>
+
+    </nav>
   </div>
+
 </header>
 
-<!-- NAV_SPACE: Fixed Header Arkasında Kalan 80px / 70px Boşluk (Locus framer-16rri12 Birebir) -->
-<div class="w-full h-[70px] lg:h-[80px] flex-none" aria-hidden="true"></div>
+<!-- ===================================================================== -->
+<!-- 4. MOBİL ALT SABİT AKSİYON BARI (Telefonla Ara + WhatsApp Teklif Al)    -->
+<!-- ===================================================================== -->
+<div class="xl:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FAF9F6]/95 backdrop-blur-md border-t border-[#E5E2DA] px-3 py-2 shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex items-center justify-between gap-2.5">
+  <!-- Telefonla Ara -->
+  <a 
+    href="tel:+902324411060" 
+    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 bg-[#F3EFEA] hover:bg-[#EAE4DC] text-[#15231C] text-xs font-bold rounded-lg border border-[#E5E2DA] transition active:scale-95"
+    data-track="contact_start"
+    data-category="mobil_alt_bar"
+    data-type="telefon_ara"
+  >
+    <svg class="w-3.5 h-3.5 text-[#006039] fill-current" viewBox="0 0 24 24">
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.27.36-.67.25-1.02A11.36 11.36 0 019 4.31a1 1 0 00-1-1H4.5c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
+    </svg>
+    <span>0232 441 10 60</span>
+  </a>
+
+  <!-- WhatsApp Teklif Al -->
+  <a 
+    href={waCtaUrl} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 bg-[#006039] hover:bg-[#00482B] text-white text-xs font-bold rounded-lg border border-[#C5A880]/50 transition active:scale-95 shadow-sm"
+    data-track="cta_click"
+    data-category="mobil_alt_bar"
+    data-type="whatsapp_teklif"
+  >
+    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-1.115-.06-.275-.088-.63-.223-1.096-.425-1.986-.86-3.274-2.871-3.373-3.003-.099-.133-.804-1.072-.804-2.044 0-.972.508-1.45.69-1.65.182-.2.398-.25.53-.25.133 0 .265.001.382.007.123.006.288-.047.45.344.167.404.57 1.391.62 1.492.05.101.083.22.016.353-.066.133-.1.216-.199.332-.099.117-.208.261-.297.351-.099.099-.202.207-.087.404.116.198.514.849 1.103 1.374.757.675 1.396.884 1.595.983.199.099.315.083.431-.05.116-.134.498-.58.63-.779.133-.199.265-.166.448-.099.182.066 1.157.546 1.356.645.199.1.332.15.381.233.05.083.05.479-.094.884z"/>
+    </svg>
+    <span>WhatsApp Teklif</span>
+  </a>
+</div>
+
+<!-- GTM & GA4 Telemetri Scripti (nav_click, cta_click, contact_start) -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const trackElements = document.querySelectorAll("[data-track]");
+    trackElements.forEach((el) => {
+      el.addEventListener("click", () => {
+        const eventName = el.getAttribute("data-track");
+        const category = el.getAttribute("data-category") || "";
+        const label = el.getAttribute("data-label") || el.textContent.trim().slice(0, 30);
+        const type = el.getAttribute("data-type") || "";
+        
+        if (typeof window.gtag === "function") {
+          window.gtag("event", eventName, {
+            event_category: category,
+            event_label: label,
+            cta_type: type,
+            page_path: window.location.pathname
+          });
+        }
+        
+        if (window.dataLayer && Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: eventName,
+            menu_category: category,
+            interaction_label: label,
+            cta_type: type,
+            page_path: window.location.pathname
+          });
+        }
+      });
+    });
+  });
+</script>

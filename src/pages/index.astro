@@ -1,126 +1,77 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { siteConfig } from "../data/siteConfig";
+import tasarimlar from "../data/tasarimlarData.json";
+
+// Kare formatta sergilenecek 8 seçkin tasarım modeli
+const featuredModels = tasarimlar.slice(0, 8);
 
 const seo = {
-  title: "Yeşilay Mutfak | İthal ve İtalyan Mutfak Tasarımı İzmir",
-  description: "Yeşilay Mutfak; özgün İtalyan mutfak koleksiyonları, modern yaşam alanı mobilyaları ve projeye özel mimari çözümleri İzmir ve Ege Bölgesi'nde sunar.",
+  title: "Yeşilay Mutfak — Lüks Mutfak Tasarımı, Banyo & Anahtar Teslim Renovasyon",
+  description: "İzmir Buca Adatepe atölyemizden kişiye ve mekâna özel projelendirilen akrilik, lake mutfak dolapları, lüks banyo renovasyonu ve anahtar teslim konut taahhüdü. 28 yıllık tecrübe, 137 tescilli model arşivi.",
   canonical: `${siteConfig.siteUrl}/`,
   serviceName: "Lüks Mimarlık & Mutfak İmalatı",
   keywords: [
-    "yeşilay mutfak",
-    "izmir lüks mutfak tasarımı",
-    "italyan mutfak izmir",
-    "özel mutfak dolabı izmir",
-    "modern mutfak modelleri",
-    "buca mutfak atölyesi",
-    "alsancak mutfak showroom",
-    "mimari mutfak projelendirme"
+    "yeşilay mutfak luxury",
+    "yeşilay mutfak mimarlık",
+    "izmir özel mutfak dolabı",
+    "lake mutfak modelleri 2026",
+    "lüks banyo dolabı izmir",
+    "adatepe mutfak atölyesi",
+    "çeşme mutfak tadilatı",
+    "urla lüks renovasyon"
+  ],
+  faqList: [
+    {
+      question: "Dolap kapaklarında parmak izi ve leke tutmayan malzeme kullanıyor musunuz?",
+      answer: "Evet. Koleksiyonumuzda özel nanoteknolojik ipek mat lake ve İtalyan akrilik kapaklar kullanıyoruz. Yüzeyler parmak izi tutmaz, nemli mikro fiber bezle tek hamlede kolayca temizlenir."
+    },
+    {
+      question: "Tasarım aşamasında renk ve malzeme uyumunu nasıl görebiliriz?",
+      answer: "Mimarımız yerinde lazer rölöve aldıktan sonra evinizin ışık açısına uygun fotogerçekçi 3D mimari çizim hazırlar. Tezgah, kulp, zemin ve kapak renk uyumunu üretime geçmeden önce ekranınızda birebir görürsünüz."
+    },
+    {
+      question: "Çekmece ve dolap iç mekanizmalarında hangi donanımları tercih ediyorsunuz?",
+      answer: "Tüm sistemlerimizde Avusturya menşeili Blum ve Almanya menşeili Häfele entegre sessiz frenli raylar ve kiler sistemleri kullanıyoruz. Çekmeceler tek dokunuşla sessizce kapanır ve 10 yıl garantilidir."
+    },
+    {
+      question: "İzmir genelinde mutfak yaptırırken Yeşilay Mutfak'ı tercih etmenin somut avantajı nedir?",
+      answer: "Aracı veya komisyoncu showroom olmadan doğrudan Buca Adatepe imalat atölyemizden birinci el fiyat alırsınız. Gövdede standart olarak neme mukavemetli 18mm E1 MDF-Lam ve Avusturya Blum mekanizma kullanılır. Resmi sözleşmemizde taahhüt edilen teslim tarihine sadakat garantisi ve gecikilen her takvim günü için cezai şart güvencesi sunulur."
+    },
+    {
+      question: "Türkiye genelinden veya şehir dışından (İstanbul, Bodrum, Ankara vb.) özel mutfak siparişi verebilir miyiz?",
+      answer: "Evet. Mimari plan veya yaklaşık ölçü gönderen müşterilerimiz için 2 saat içinde fotogerçekçi 3D mimari modelleme ve net atölye maliyeti hazırlanır. Buca atölyemizde CNC ve fırın lake ile üretilen dolaplar korunaklı sandıklı lojistikle Türkiye geneline sevk edilir ve talep edilirse uzman montaj ekibimizce yerinde kurulur."
+    },
+    {
+      question: "Mutfak tadilatında usta dolandırıcılığı veya sonradan fiyat artışına karşı güvenceniz nedir?",
+      answer: "Yeşilay Mutfak tüm işlerinde resmi ıslak imzalı sözleşme yapar. Sözleşmede teslim günü kesin olarak yazılır ve gecikilen her takvim günü için resmi gecikme tazminatı ödenir. Sabit fiyat garantisi geçerlidir; iş başladıktan sonra malzeme veya işçilik adı altında 1 TL dahi ek ücret talep edilmez."
+    },
+    {
+      question: "Sözleşmeli süre taahhüdü ve temiz teslimat garantiniz var mı?",
+      answer: "Tüm projelerimizi resmi noter onaylı gecikme cezalı sözleşmeyle yürütüyoruz. İmalat ve montaj ekibimiz montaj bitiminde detaylı temizlik yaparak alanınızı kullanıma hazır teslim eder."
+    }
   ]
 };
-
-// Modeller Verisi (Locus 2 Col Modeller Birebir)
-const kitchenModels = [
-  {
-    id: "iconica",
-    title: "Iconica",
-    desc1: "Iconica, geleneksel tasarım anlayışlarını aşan ve üst gola profilini ortadan kaldıran bir sistemle yeni bir estetik bakış açısı sunuyor.",
-    desc2: "Tezgah ve kapak arasında kusursuz bir bütünlük sağlanıyor. Farklı ve yeni malzemelerle sınırsız estetik seçenekler sunuyor.",
-    image: "/images/locus/model-iconica.jpg",
-    link: "/tasarimlar/"
-  },
-  {
-    id: "lounge",
-    title: "Lounge",
-    desc1: "Lounge form fonksiyonu takip eder felsefesiyle şekillenerek, günlük yaşamı estetik ve işlevsellik odaklı yorumluyor. Böylece mutfak ortamını fonksiyonel ve estetik açıdan tatmin edici hale getiriyor.",
-    desc2: "Alçaltılmış baza yapısı ile çağdaş ve minimalist bakış açısı vurgulanıyor.",
-    image: "/images/locus/model-lounge.jpg",
-    link: "/tasarimlar/"
-  },
-  {
-    id: "milano",
-    title: "Milano",
-    desc1: 'Milano, "Made in Italy" tasarım geleneği ve büyük mimarlık anlayışına dayanan bir stilin ifadesidir. Gerçek bir "yeni stil" olarak, fazla süsleme veya abartıdan uzak, sade, net ve etkileyici bir anlayışla mekan kalitesini yansıtır.',
-    desc2: "Asil ahşap ve taş dokusuyla zamansız bir dinginlik sunar.",
-    image: "/images/locus/model-milano.jpg",
-    link: "/tasarimlar/"
-  },
-  {
-    id: "pavese",
-    title: "Pavese",
-    desc1: "Geçmişin tatlarına dönüş. Pavese, deneyim, zanaatkarlık ve ustalık değerlerini yaşatan bir işleme sürecinin sonucudur.",
-    desc2: "45° kesimli çerçeve ve özel tasarım kulpuyla öne çıkan kapak, geleneksel dünyayı yeniden yorumlayarak benzersiz tatlarla dolu bir mutfak atmosferi sunuyor.",
-    image: "/images/locus/model-pavese.jpg",
-    link: "/tasarimlar/"
-  }
-];
-
-// Mobilya ve Yaşam Alanları (Locus Colombini Slider Birebir)
-const furnitureCategories = [
-  { name: "Salon", image: "/images/locus/mob-salon.webp", link: "/salon-modelleri/" },
-  { name: "Kitaplık", image: "/images/locus/mob-kitaplik.jpg", link: "/tasarimlar/" },
-  { name: "Yatak Odası", image: "/images/locus/mob-yatak.webp", link: "/yatak-odasi-modelleri/" },
-  { name: "Genç Odası", image: "/images/locus/mob-genc.webp", link: "/genc-odasi-modelleri/" },
-  { name: "Çocuk Odası", image: "/images/locus/mob-cocuk.webp", link: "/cocuk-odasi-modelleri/" },
-  { name: "Çamaşır Odası", image: "/images/locus/mob-camasir.jpg", link: "/camasir-odasi-modelleri/" }
-];
-
-// Sandalye & Masa Galeri Görselleri (Et al. Birebir)
-const chairImages = [
-  "/images/locus/sandalye-1.jpg",
-  "/images/locus/sandalye-2.jpg",
-  "/images/locus/sandalye-3.jpg",
-  "/images/locus/sandalye-4.jpg",
-  "/images/locus/sandalye-5.jpg",
-  "/images/locus/sandalye-6.jpg",
-  "/images/locus/sandalye-7.jpg",
-  "/images/locus/sandalye-8.jpg",
-  "/images/locus/sandalye-9.jpg",
-  "/images/locus/sandalye-10.jpg",
-  "/images/locus/sandalye-11.jpg",
-  "/images/locus/sandalye-12.jpg"
-];
 ---
 
 <Layout seo={seo} activeService="Ana Sayfa">
 
   <!-- ===================================================================== -->
-  <!-- 1. HERO SLIDER ALANI (LOCUS LIGHTWEIGHT HERO SLIDER BİREBİR)          -->
-  <!-- Ölçü: max-w-[1200px], aspect-ratio: 2.4 (1200x500/600), Roboto Font   -->
-  <!-- Oklar: Sol ve sağda 37px dairesel yarı saydam ‹ ve › butonları         -->
+  <!-- 1. APPLE MİMARİSİ HERO ALANI & SİNEMATİK VİDEO (DİNAMİK VIEWPORT VE SIFIR TAŞMA MİMARİSİ) -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white font-roboto overflow-hidden">
+  <section class="relative w-full overflow-hidden bg-[#FAF9F6] border-b border-[#E5DFD5] min-h-[calc(100svh-72px)] sm:min-h-[calc(100svh-80px)] lg:h-[calc(100svh-80px)] lg:max-h-[900px] flex flex-col justify-between">
+    
+    <!-- ===================================================================== -->
+    <!-- PREMİUM HERO GÖRSEL SLIDER (SIFIR TAŞMA, TAM BOY EKRAN, SİNEMATİK GEÇİŞ) -->
+    <!-- ===================================================================== -->
     <div 
-      class="w-full max-w-[1200px] mx-auto relative overflow-hidden aspect-[0.975] max-h-[500px] sm:aspect-[2.4] sm:max-h-[600px] select-none"
-      x-data="{
-        slides: [
-          {
-            title: 'Sakura',
-            subtitle: 'El becerisi, yaratıcılık ve deneyim.',
-            image: '/images/locus/hero-sakura.jpg',
-            link: '/tasarimlar/'
-          },
-          {
-            title: 'Iconica',
-            subtitle: 'Geleneksel anlayışları aşan üst golasız estetik.',
-            image: '/images/locus/model-iconica.jpg',
-            link: '/tasarimlar/'
-          },
-          {
-            title: 'Milano',
-            subtitle: 'Büyük mimarlık anlayışına dayanan asil bir stil.',
-            image: '/images/locus/model-milano.jpg',
-            link: '/tasarimlar/'
-          }
-        ],
+      class="absolute inset-0 w-full h-full overflow-hidden select-none"
+      x-data="{ 
         current: 0,
-        total: 3,
+        total: 4,
         timer: null,
-        init() {
-          this.start();
-        },
         start() {
-          this.timer = setInterval(() => { this.next(); }, 6000);
+          this.timer = setInterval(() => { this.next() }, 5500);
         },
         stop() {
           if (this.timer) clearInterval(this.timer);
@@ -132,455 +83,395 @@ const chairImages = [
           this.current = (this.current - 1 + this.total) % this.total;
         }
       }"
+      x-init="start()"
       @mouseenter="stop()"
       @mouseleave="start()"
     >
-      <!-- Görsel Katmanları (Stable Hero Background + Slides) -->
-      <template x-for="(slide, idx) in slides" :key="idx">
-        <div 
-          class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
-          :class="current === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
-        >
+      <!-- Slide 1: Modern Lüks Mimari Yaşam Alanı -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
+      >
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-1.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-1.webp" type="image/webp" />
           <img 
-            :src="slide.image" 
-            :alt="slide.title" 
-            class="w-full h-full object-cover object-center block"
+            src="/media/hero/hero-slide-1.webp" 
+            alt="Yeşilay Mutfak Lüks İç Mimarlık ve Özel İmalat Yaşam Alanı" 
+            class="w-full h-full object-cover object-center"
             loading="eager"
+            decoding="sync"
             fetchpriority="high"
-            width="1200"
-            height="600"
+            width="1920"
+            height="977"
           />
-        </div>
-      </template>
-
-      <!-- Server-rendered İlk Görsel (Zero CLS & Anında LCP) -->
-      <div 
-        class="absolute inset-0 w-full h-full"
-        :class="current === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
-      >
-        <img 
-          src="/images/locus/hero-sakura.jpg" 
-          alt="Yeşilay Mutfak Sakura Koleksiyonu" 
-          class="w-full h-full object-cover object-center block"
-          loading="eager"
-          fetchpriority="high"
-          width="1200"
-          height="600"
-        />
+        </picture>
       </div>
 
-      <!-- Hero Gradient Overlay (Locus framer-gnukv0 Birebir CSS) -->
+      <!-- Slide 2: Kişiye Özel Mimari Mutfak & Salon Tasarımı -->
       <div 
-        class="absolute inset-0 z-20 flex flex-col justify-end items-start p-5 sm:p-7 lg:p-[30px] gap-3 sm:gap-4 lg:gap-[17px]"
-        style="background: linear-gradient(180deg, rgba(84, 84, 84, 0) 59.95%, rgba(59, 59, 59, 0.3) 74.63%, rgba(5, 5, 5, 0.38) 94.23%);"
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 1 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
       >
-        <!-- Tıklanabilir Model Başlığı ve Açıklaması -->
-        <a 
-          :href="slides[current].link" 
-          class="block group text-left text-white"
-        >
-          <h2 
-            x-text="slides[current].title" 
-            class="text-[34px] sm:text-[42px] lg:text-[48px] font-bold text-white tracking-[-0.04em] leading-[1.2] sm:leading-[1.4] m-0"
-            style="font-family: 'Roboto', sans-serif;"
-          >
-            Sakura
-          </h2>
-          <p 
-            x-text="slides[current].subtitle" 
-            class="text-[15px] sm:text-[17px] lg:text-[18px] font-normal text-white tracking-[-0.04em] leading-[1.3] sm:leading-[1.4] mt-1 sm:mt-1.5 opacity-95"
-            style="font-family: 'Roboto', sans-serif;"
-          >
-            El becerisi, yaratıcılık ve deneyim.
-          </p>
-        </a>
-
-        <!-- Sertifika / Logo Nişanesi (Locus Venetalogo3 Birebir Boyutu: 219px x 28px) -->
-        <div class="w-[137px] sm:w-[180px] lg:w-[219px] aspect-[7.856] flex items-center pt-1">
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-2.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-2.webp" type="image/webp" />
           <img 
-            src="/images/locus/cert-badge.png" 
-            alt="Yeşilay Mutfak Sertifikası" 
-            class="h-6 sm:h-7 lg:h-8 w-auto object-contain brightness-0 invert opacity-90"
-            width="219"
-            height="28"
+            src="/media/hero/hero-slide-2.webp" 
+            alt="Yeşilay Mutfak Kişiye Özel Mimari Mutfak ve Salon Tasarımı" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="977"
           />
-        </div>
+        </picture>
       </div>
 
-      <!-- Slider Navigasyon Okları (Locus Birebir: 37x37px, radius 50%, top 50%, translate-y-50%) -->
-      <button 
-        type="button"
-        @click="prev()"
-        aria-label="Previous"
-        class="absolute left-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors"
-      >
-        ‹
-      </button>
-      <button 
-        type="button"
-        @click="next()"
-        aria-label="Next"
-        class="absolute right-[15px] top-1/2 -translate-y-1/2 z-30 w-[37px] h-[37px] rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center font-roboto text-[30px] font-light leading-none cursor-pointer border-0 transition-colors"
-      >
-        ›
-      </button>
-
-    </div>
-  </section>
-
-  <!-- ===================================================================== -->
-  <!-- 2. BİZ KİMİZ? (LOCUS FEATURES / CONTENT BLOĞU BİREBİR)                -->
-  <!-- Max-Width: 1200px | Roboto Font | Eyebrow + H1 + 2 Paragraf + Buton  -->
-  <!-- ===================================================================== -->
-  <section class="w-full bg-white font-roboto">
-    <div class="max-w-[1200px] mx-auto py-16 sm:py-20 lg:py-[70px] px-6 sm:px-10 lg:px-0">
-      
-      <!-- Eyebrow: BİZ KİMİZ? -->
-      <span 
-        class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-4"
-        style="color: #575757; font-family: 'Roboto', sans-serif;"
-      >
-        BİZ KİMİZ?
-      </span>
-
-      <!-- H1 Başlık (Locus: 31px - 37px, font-weight: 500, letter-spacing: -0.04em, line-height: 1.1em, color: #575757) -->
-      <h1 
-        class="text-[26px] sm:text-[31px] lg:text-[37px] font-medium tracking-[-0.04em] leading-[1.1] mb-8 max-w-[850px]"
-        style="color: #575757; font-family: 'Roboto', sans-serif;"
-      >
-        Mutfak ve Mobilyayı Bir Bütün Olarak Planlıyoruz
-      </h1>
-
-      <!-- Paragraflar (Locus: font-size 16px - 20px, line-height 1.3em, color #575757) -->
+      <!-- Slide 3: Modern Gömme Dolap & Gardırop Sistemleri -->
       <div 
-        class="space-y-6 text-[15px] sm:text-[18px] lg:text-[20px] font-normal leading-[1.3] max-w-[950px] mb-10"
-        style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 2 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
       >
-        <p>
-          Yeşilay Mutfak, 1992’den bu yana İzmir merkezli olarak mutfak ve mobilya projelendirmesi ile kişiye özel imalat hizmeti sunar. Modern İtalyan çizgisine sahip özgün mutfak koleksiyonlarını ve yaşam alanı mobilyalarını; mekanınıza, ihtiyaçlarınıza ve yaşam alışkanlıklarınıza göre planlıyoruz.
-        </p>
-        <p>
-          İzmir ve Ege Bölgesi’ndeki konut ve ticari projelerde, mutfak ve mobilya seçimini tezgah ve ankastre cihazlarla birlikte ele alıyoruz. Yerleşimden malzeme uyumuna kadar tasarım kararlarını, estetik ve günlük kullanım ihtiyaçlarını birlikte gözeterek oluşturuyoruz.
-        </p>
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-3.avif" type="image/avif" />
+          <source srcset="/media/hero/hero-slide-3.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-3.webp" 
+            alt="Yeşilay Mutfak Modern Gömme Dolap ve Gardırop Sistemleri" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="977"
+          />
+        </picture>
       </div>
 
-      <!-- Buton (Locus Birebir: 204px x 45px, border: 1px solid #d5d5d5, font 12px, tracking 0.08em) -->
-      <div>
-        <a 
-          href="/hakkimizda/" 
-          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
-          style="font-family: 'Roboto', sans-serif;"
+      <!-- Slide 4: Özel Ölçü Lake Duvar Ünitesi & Aydınlatmalı Niş -->
+      <div 
+        class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
+        :class="current === 3 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
+      >
+        <picture class="w-full h-full block">
+          <source srcset="/media/hero/hero-slide-4.webp" type="image/webp" />
+          <img 
+            src="/media/hero/hero-slide-4.webp" 
+            alt="Yeşilay Mutfak Özel Ölçü Lake Duvar Ünitesi ve Aydınlatmalı Niş Tasarımı" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+            width="1024"
+            height="642"
+          />
+        </picture>
+      </div>
+
+      <!-- Sol metin alanını pürüzsüzce kucaklayan dikey yumuşak ışık gradyanı (Sıfır Metin Çakışması) -->
+      <div class="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[54%] bg-gradient-to-r from-[#FAF9F6]/95 via-[#FAF9F6]/80 sm:via-[#FAF9F6]/65 to-transparent pointer-events-none z-10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FAF9F6] to-transparent pointer-events-none z-10"></div>
+
+      <!-- Slide Kontrol Noktaları (Kompakt, Zarif & Ergonomik) -->
+      <div class="absolute bottom-5 right-5 sm:bottom-6 sm:right-8 z-20 hidden sm:flex items-center gap-2 bg-[#FAF9F6]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#E5DFD5] shadow-xs">
+        <button 
+          type="button" 
+          @click="prev()" 
+          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
+          aria-label="Önceki Görsel"
         >
-          YEŞİLAY MUTFAK’I TANIYIN
-        </a>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="flex items-center gap-1.5 px-1">
+          <template x-for="i in total" :key="i">
+            <button 
+              type="button" 
+              @click="current = i - 1" 
+              class="h-1.5 rounded-full transition-all duration-300 focus:outline-none"
+              :class="current === (i - 1) ? 'w-5 bg-[#006039]' : 'w-1.5 bg-[#C5A880]/50 hover:bg-[#C5A880]'"
+              aria-label="Slayt Değiştir"
+            ></button>
+          </template>
+        </div>
+        <button 
+          type="button" 
+          @click="next()" 
+          class="p-1 text-[#15231C] hover:text-[#006039] transition focus:outline-none"
+          aria-label="Sonraki Görsel"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
-
     </div>
-  </section>
 
-  <!-- ===================================================================== -->
-  <!-- 3. TASARIM VE UYGULAMA SÜRECİ (LOCUS PROCESS BLOĞU BİREBİR)          -->
-  <!-- Padding: 0 70px 70px | 3 Kolon: Mekan ve yerleşim | Mutfak | Teslimat -->
-  <!-- ===================================================================== -->
-  <section class="w-full bg-white font-roboto">
-    <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-0 pb-16 lg:pb-[70px]">
+    <!-- Hero İçerik Container (Dinamik Dikey Akış & Ekrana %100 Uyum) -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between pt-4 pb-4 sm:pt-6 sm:pb-6 lg:pt-8 lg:pb-6 z-10">
       
-      <!-- Üst Başlık Grubu -->
-      <div class="mb-12 lg:mb-16">
-        <span 
-          class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-3"
-          style="color: #575757; font-family: 'Roboto', sans-serif;"
-        >
-          TASARIM VE UYGULAMA SÜRECİ
-        </span>
-        <h2 
-          class="text-[26px] sm:text-[31px] lg:text-[37px] font-medium tracking-[-0.04em] leading-[1.1]"
-          style="color: #575757; font-family: 'Roboto', sans-serif;"
-        >
-          Mutfağınızdan yaşam alanınıza
-        </h2>
-      </div>
-
-      <!-- 3 Kolonlu Süreç Konuları (Locus: border-top: 1px solid #bdbdbd, gap: 70px) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-[70px] pt-8 lg:pt-[70px] border-t border-[#bdbdbd]">
+      <!-- Üst Grup: Eyebrow + Başlık + Alt Metin + CTA Butonları -->
+      <div class="max-w-2xl space-y-3 sm:space-y-4 lg:space-y-4 my-auto">
         
-        <!-- 1. Konu -->
-        <div class="space-y-3">
-          <h3 
-            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
-            style="color: #222222; font-family: 'Roboto', sans-serif;"
-          >
-            Mekan ve yerleşim
-          </h3>
-          <p 
-            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
-            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
-          >
-            Ölçüleri ve günlük kullanım ihtiyaçlarınızı değerlendiriyor, mutfak ve mobilya yerleşimini birlikte netleştiriyoruz.
-          </p>
+        <!-- Apple Capsule Eyebrow (Rolex Yeşil & Altın Zanaat) -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-[#006039] text-white border border-[#C5A880]/50 rounded-full shadow-[0_4px_16px_rgba(0,96,57,0.3)]">
+          <span class="w-2 h-2 rounded-full bg-[#8B1E2D] animate-pulse"></span>
+          <span class="text-white text-[10.5px] sm:text-[11px] font-semibold tracking-[0.14em] uppercase font-sans">
+            ADATEPE İMALAT ATÖLYESİ • <span class="text-[#C5A880]">28 YILLIK TECRÜBE</span>
+          </span>
         </div>
 
-        <!-- 2. Konu -->
-        <div class="space-y-3">
-          <h3 
-            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
-            style="color: #222222; font-family: 'Roboto', sans-serif;"
-          >
-            Mutfak, tezgah ve tamamlayıcı ürünler
-          </h3>
-          <p 
-            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
-            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
-          >
-            Mutfağı tezgah ve ankastre cihazlarla birlikte ele alıyoruz. Mobilya, masa ve sandalye seçimlerinde de ölçü, malzeme ve kullanım uyumunu gözetiyoruz.
-          </p>
-        </div>
+        <!-- Dinamik Akıcı Başlık (Fluid Typography Clamp: Her ekrana tam sığar, asla taşmaz) -->
+        <h1 class="text-[clamp(28px,3.4vw,48px)] lg:text-[clamp(32px,3.6vw,52px)] font-bold text-[#1D1D1F] leading-[1.1] tracking-[-0.03em]">
+          Hayalinizdeki Mutfağı, <br />
+          <span class="font-normal italic text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
+          <span class="font-medium text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
+        </h1>
 
-        <!-- 3. Konu -->
-        <div class="space-y-3">
-          <h3 
-            class="text-[18px] sm:text-[20px] lg:text-[25px] font-medium tracking-[-0.04em] leading-[1.3]"
-            style="color: #222222; font-family: 'Roboto', sans-serif;"
+        <!-- Dinamik Alt Metin (Ergonomik satır aralığı ve net odak) -->
+        <p id="hero-answer-engine" class="text-[14px] sm:text-[15px] lg:text-[16px] text-[#424245] font-normal leading-[1.45] max-w-xl tracking-[-0.01em]">
+          Leke tutmayan ipek mat kapaklar, fırçalanmış pirinç detaylar, kadife sessizliğinde Blum raylar ve ferahlatıcı mimari planlama. İzmir genelinde ücretsiz 3D keşif.
+        </p>
+
+        <!-- Apple Call to Action Buttons (Dinamik kompakt buton grubu) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-1">
+          <a 
+            href={siteConfig.whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="px-6 sm:px-7 py-3 bg-[#006039] hover:bg-[#00482B] text-white text-[12.5px] sm:text-[13px] font-semibold tracking-[-0.01em] rounded-full border border-[#C5A880]/50 shadow-[0_6px_20px_rgba(0,96,57,0.35)] transition duration-200 flex items-center justify-center gap-2"
           >
-            Teslimat, montaj ve destek
-          </h3>
-          <p 
-            class="text-[15px] sm:text-[16px] font-normal leading-[1.4]"
-            style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
+            <span>WhatsApp ile 3D Keşif İste</span>
+            <span>→</span>
+          </a>
+          <a 
+            href="/tasarimlar/" 
+            class="px-6 sm:px-7 py-3 bg-white hover:bg-[#F5F5F7] text-[#006039] border border-[#006039]/30 hover:border-[#006039] text-[12.5px] sm:text-[13px] font-semibold tracking-[-0.01em] rounded-full shadow-2xs transition duration-200 flex items-center justify-center gap-2"
           >
-            Teslimat ve montajı üstleniyor, satış sonrası desteğimizle kullanım sürecinde de yanınızda oluyoruz.
-          </p>
+            <span>450 Tasarım Modelini İncele</span>
+          </a>
         </div>
 
       </div>
 
-    </div>
-  </section>
+      <!-- Alt Grup: Genişletilmiş Premium Hareketli Sayaç Docku (Dinamik Alt Rıhtım Konumu) -->
+      <div id="statsDock" class="mt-auto pt-3 sm:pt-4 w-full">
+        <div class="bg-white/95 backdrop-blur-xl border border-[#006039]/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-6 shadow-[0_16px_40px_rgba(0,96,57,0.08)] relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-44 h-44 bg-[#006039]/12 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-8 -top-8 w-36 h-36 bg-[#C5A880]/12 rounded-full blur-2xl pointer-events-none"></div>
 
-  <!-- ===================================================================== -->
-  <!-- 4. ÖNE ÇIKAN MUTFAK MODELLERİ (LOCUS 2 COL MODELLER BİREBİR)        -->
-  <!-- Üst Bant: bg #e6e0d7, border-top 1px solid #222, padding 35px 70px   -->
-  <!-- Modeller: bg #ede9e6a1, 2 Kolon, 460px görsel                        -->
-  <!-- Alt Bant: bg #e6e0d7, border-bottom 1px solid #222                   -->
-  <!-- ===================================================================== -->
-  <section class="w-full font-roboto">
-    
-    <!-- Üst Başlık Bandı (Locus framer-1p36md6 Birebir) -->
-    <div 
-      class="w-full py-8 lg:py-[35px] px-6 sm:px-10 lg:px-[70px] text-center"
-      style="background-color: #e6e0d7; border-top: 1px solid #222;"
-    >
-      <span 
-        class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-1"
-        style="color: #575757; font-family: 'Roboto', sans-serif;"
-      >
-        Mutfak
-      </span>
-      <h2 
-        class="text-[24px] sm:text-[28px] lg:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
-        style="color: #575757; font-family: 'Roboto', sans-serif;"
-      >
-        Öne Çıkan Mutfak Modelleri
-      </h2>
-    </div>
-
-    <!-- 4 Model Bloğu (Locus 2 Col Modeller Birebir) -->
-    <div style="background-color: #ede9e6a1;">
-      {kitchenModels.map((m, idx) => (
-        <div class="w-full max-w-[2018px] mx-auto border-b border-[#d5d5d5]/50 last:border-b-0">
-          <div class={`grid grid-cols-1 lg:grid-cols-2 items-center min-h-[460px] ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10">
             
-            <!-- Görsel Kolonu (Locus: height 460px) -->
-            <div class={`w-full h-[320px] sm:h-[400px] lg:h-[460px] overflow-hidden ${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-              <a href={m.link} class="block w-full h-full group overflow-hidden">
-                <img 
-                  src={m.image} 
-                  alt={m.title} 
-                  class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="lazy"
-                  width="960"
-                  height="460"
-                />
-              </a>
+            <!-- Sayaç 1: 137 Model -->
+            <div class="space-y-0.5 pr-2 sm:border-r border-[#E5DFD5]/80">
+              <div class="flex items-baseline gap-1.5">
+                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="137">137</span>
+                <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Model</span>
+              </div>
+              <div class="text-[10px] uppercase tracking-wider text-[#C5A880] font-bold">Özgün Koleksiyon</div>
+              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">Mutfak, banyo ve kapı arşivi.</p>
             </div>
 
-            <!-- Metin Kolonu (Locus: padding 70px) -->
-            <div class={`p-8 sm:p-12 lg:p-[70px] space-y-6 ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
-              <h3 
-                class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
-                style="color: #575757; font-family: 'Roboto', sans-serif;"
-              >
-                {m.title}
-              </h3>
-              
-              <div 
-                class="space-y-4 text-[15px] sm:text-[16px] font-normal leading-[1.4]"
-                style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
-              >
-                <p>{m.desc1}</p>
-                {m.desc2 && <p>{m.desc2}</p>}
+            <!-- Sayaç 2: 28 Yıl -->
+            <div class="space-y-0.5 pr-2 lg:border-r border-[#E5DFD5]/80">
+              <div class="flex items-baseline gap-1.5">
+                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#006039] font-sans" data-target="28">28</span>
+                <span class="text-xs sm:text-sm font-bold text-[#006039]">Yıl</span>
               </div>
+              <div class="text-[10px] uppercase tracking-wider text-[#006039] font-bold">Atölye Mirası</div>
+              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">1998'den bu yana kendi imalatımız.</p>
+            </div>
 
-              <div class="pt-2">
+            <!-- Sayaç 3: 10 Yıl -->
+            <div class="space-y-0.5 pr-2 sm:border-r border-[#E5DFD5]/80">
+              <div class="flex items-baseline gap-1.5">
+                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="10">10</span>
+                <span class="text-xs sm:text-sm font-bold text-[#C5A880]">Yıl</span>
+              </div>
+              <div class="text-[10px] uppercase tracking-wider text-[#C5A880] font-bold">Gövde Garantisi</div>
+              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">E1 sertifikalı nem mukavemetli MDF.</p>
+            </div>
+
+            <!-- Sayaç 4: 2.850+ -->
+            <div class="space-y-0.5">
+              <div class="flex items-baseline gap-0.5">
+                <span class="stat-counter text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-[#1D1D1F] font-sans" data-target="2850" data-format="comma">2.850</span>
+                <span class="text-xl sm:text-2xl font-extrabold text-[#006039]">+</span>
+              </div>
+              <div class="text-[10px] uppercase tracking-wider text-[#006039] font-bold">Tamamlanan Proje</div>
+              <p class="text-[11px] text-[#6E675F] leading-snug hidden sm:block">İzmir genelinde mutlu müşteri referansı.</p>
+            </div>
+
+          </div>
+
+          <!-- AEO & Grounding Micro Bar -->
+          <div class="mt-3.5 pt-2.5 border-t border-[#E5DFD5]/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-[11px] text-[#55504A]">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-pulse"></span>
+              <span><strong>Adatepe İmalat Atölyesi:</strong> Aracı komisyonsuz, milimetrik lazer rölöve ve fotogerçekçi 3D mimari modelleme.</span>
+            </div>
+            <a href="/tasarimlar/" class="text-[#006039] font-bold hover:underline inline-flex items-center gap-1 shrink-0">
+              Koleksiyonu İncele →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 2. APPLE 4-SÜTUNLU MİMARİ AVANTAJ KARTLARI (BÜYÜK & PREMİUM NUMARALAR)-->
+  <!-- ===================================================================== -->
+  <section class="py-16 sm:py-20 border-b border-[#E5DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER (Dev Enlemesine Soft Watermark Üstte, Altında Başlık Grubu) -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 580 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Zanaat.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Kusursuz Detaylar. Tavizsiz Kalite.
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-xl mx-auto leading-relaxed">
+            Her milimetresi yaşam alışkanlıklarınıza ve mekanınızın ışığına göre şekillenen birinci sınıf atölye üretimi.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Kart 01 -->
+        <div class="p-8 bg-white border border-[#E5DFD5] hover:border-[#006039]/50 rounded-2xl apple-card space-y-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.12)] transition duration-300 group">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#006039] to-[#042015] text-[#C5A880] border border-[#C5A880]/50 flex items-center justify-center text-[38px] font-black font-sans shadow-[0_8px_24px_rgba(0,96,57,0.4)] group-hover:scale-105 transition-transform duration-300">
+            01
+          </div>
+          <h3 class="text-[21px] sm:text-[22px] font-extrabold text-[#1D1D1F] tracking-tight leading-snug">Leke Tutmayan Mat Yüzeyler</h3>
+          <p class="text-[15px] text-[#55504A] font-normal leading-[1.6]">
+            Parmak izi bırakmayan, nem ve buhardan etkilenmeyen antibakteriyel İtalyan lake ve akrilik teknolojisi.
+          </p>
+        </div>
+
+        <!-- Kart 02 -->
+        <div class="p-8 bg-white border border-[#E5DFD5] hover:border-[#006039]/50 rounded-2xl apple-card space-y-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.12)] transition duration-300 group">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#006039] to-[#042015] text-[#C5A880] border border-[#C5A880]/50 flex items-center justify-center text-[38px] font-black font-sans shadow-[0_8px_24px_rgba(0,96,57,0.4)] group-hover:scale-105 transition-transform duration-300">
+            02
+          </div>
+          <h3 class="text-[21px] sm:text-[22px] font-extrabold text-[#1D1D1F] tracking-tight leading-snug">Kadife Sessizliğinde Blum Ray</h3>
+          <p class="text-[15px] text-[#55504A] font-normal leading-[1.6]">
+            Avusturya menşeili entegre frenli mekanizmalar ile dolap kapakları ve çekmeceler daima sessizce kapanır.
+          </p>
+        </div>
+
+        <!-- Kart 03 -->
+        <div class="p-8 bg-white border border-[#E5DFD5] hover:border-[#006039]/50 rounded-2xl apple-card space-y-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.12)] transition duration-300 group">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#006039] to-[#042015] text-[#C5A880] border border-[#C5A880]/50 flex items-center justify-center text-[38px] font-black font-sans shadow-[0_8px_24px_rgba(0,96,57,0.4)] group-hover:scale-105 transition-transform duration-300">
+            03
+          </div>
+          <h3 class="text-[21px] sm:text-[22px] font-extrabold text-[#1D1D1F] tracking-tight leading-snug">3D Çizimle Birebir Önizleme</h3>
+          <p class="text-[15px] text-[#55504A] font-normal leading-[1.6]">
+            Evinizin ölçülerine özel fotogerçekçi 3D mimari modelleme ile renkleri ve kulpları önceden görün.
+          </p>
+        </div>
+
+        <!-- Kart 04 -->
+        <div class="p-8 bg-white border border-[#E5DFD5] hover:border-[#006039]/50 rounded-2xl apple-card space-y-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.12)] transition duration-300 group">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#006039] to-[#042015] text-[#C5A880] border border-[#C5A880]/50 flex items-center justify-center text-[38px] font-black font-sans shadow-[0_8px_24px_rgba(0,96,57,0.4)] group-hover:scale-105 transition-transform duration-300">
+            04
+          </div>
+          <h3 class="text-[21px] sm:text-[22px] font-extrabold text-[#1D1D1F] tracking-tight leading-snug">Sözleşmeli Süre & Sabit Fiyat</h3>
+          <p class="text-[15px] text-[#55504A] font-normal leading-[1.6]">
+            Sürpriz masraf çıkarmayan resmi sözleşme, gecikme cezası garantisi ve temiz, tertipli montaj teslimi.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. %100 KARE VE SİMETRİK GÖRSEL VİTRİNİ (APPLE PHOTO GRID)          -->
+  <!-- ===================================================================== -->
+  <section class="py-20 border-b border-[#E5DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER (Dev Enlemesine Soft Watermark Üstte, Altında Başlık Grubu) -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 920 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Koleksiyon.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Öne Çıkan Mimari Modellerimiz.
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-xl mx-auto leading-relaxed">
+            İzmir genelinde villa ve seçkin konutlar için üretilen 137 tescilli özgün tasarım arşivi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kategori Filtre Butonları -->
+      <div class="flex flex-wrap gap-2 text-[12px]">
+        <a href="/tasarimlar/" class="px-4 py-2 bg-[#006039] hover:bg-[#00482B] text-white font-semibold rounded-full border border-[#C5A880]/40 shadow-[0_4px_12px_rgba(0,96,57,0.25)]">Tümü (137 Model)</a>
+        <a href="/tasarimlar/?kategori=mutfak" class="px-4 py-2 bg-white text-[#1D1D1F] hover:text-[#006039] hover:border-[#006039] font-medium rounded-full border border-[#D2D2D7] hover:bg-[#F5F5F7] transition">Mutfak Tasarımları (40)</a>
+        <a href="/tasarimlar/?kategori=kapilar" class="px-4 py-2 bg-white text-[#1D1D1F] hover:text-[#006039] hover:border-[#006039] font-medium rounded-full border border-[#D2D2D7] hover:bg-[#F5F5F7] transition">Özel Kapılar (39)</a>
+        <a href="/tasarimlar/?kategori=gomme-dolap" class="px-4 py-2 bg-white text-[#1D1D1F] hover:text-[#006039] hover:border-[#006039] font-medium rounded-full border border-[#D2D2D7] hover:bg-[#F5F5F7] transition">Giyinme Odası (33)</a>
+        <a href="/tasarimlar/?kategori=banyo" class="px-4 py-2 bg-white text-[#1D1D1F] hover:text-[#006039] hover:border-[#006039] font-medium rounded-full border border-[#D2D2D7] hover:bg-[#F5F5F7] transition">Lüks Banyo (25)</a>
+      </div>
+
+      <!-- %100 KARE VE SİMETRİK GRID (aspect-square & hizada kartlar) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {featuredModels.map((item) => (
+          <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-xl overflow-hidden flex flex-col justify-between apple-card transition duration-300">
+            
+            <!-- KARE GÖRSEL KAPSAYICI (aspect-square: 100% simetrik, taşma yok) -->
+            <div class="relative w-full aspect-square overflow-hidden bg-[#F5F5F7] shrink-0">
+              <img 
+                src={item.img} 
+                alt={item.altText || item.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy" 
+              />
+              <span class="absolute top-3 left-3 px-2.5 py-1 bg-[#006039]/95 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md border border-[#C5A880]/40 shadow-2xs">
+                {item.modelNo}
+              </span>
+            </div>
+
+            <!-- Bilgi Alanı (Kusursuz Eşit Yükseklik & Tipografi) -->
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <div class="space-y-1">
+                <span class="text-[11px] uppercase tracking-wider font-semibold text-[#C5A880] block">
+                  {item.category}
+                </span>
+                <h3 class="text-[14px] font-semibold text-[#1D1D1F] group-hover:text-[#006039] transition line-clamp-2 leading-snug tracking-tight">
+                  {item.title}
+                </h3>
+              </div>
+              
+              <div class="pt-3 border-t border-[#E5DFD5] flex items-center justify-between text-[12px]">
+                <span class="text-[#86868B]">Özel Ölçü Üretim</span>
                 <a 
-                  href={m.link} 
-                  class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
-                  style="font-family: 'Roboto', sans-serif;"
+                  href={`https://wa.me/905324261788?text=Merhaba,%20${item.modelNo}%20kodlu%20modeliniz%20hakkında%20bilgi%20ve%20ücretsiz%203D%20keşif%20istiyorum.`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="px-2.5 py-1 bg-[#006039]/10 hover:bg-[#006039] text-[#006039] hover:text-white rounded-full font-semibold text-[11.5px] transition flex items-center gap-1 border border-[#006039]/20 hover:border-[#006039]"
                 >
-                  KOLEKSİYONU KEŞFEDİN
+                  <span>3D Keşif</span> <span>→</span>
                 </a>
               </div>
             </div>
 
           </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Alt Buton Bandı (Locus framer-46r3lr Birebir) -->
-    <div 
-      class="w-full py-8 lg:py-[35px] px-6 sm:px-10 lg:px-[70px] flex items-center justify-center"
-      style="background-color: #e6e0d7; border-bottom: 1px solid #222;"
-    >
-      <a 
-        href="/tasarimlar/" 
-        class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#222] bg-[#222] text-white hover:bg-transparent hover:text-[#222] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
-        style="font-family: 'Roboto', sans-serif;"
-      >
-        TÜM MODELLER
-      </a>
-    </div>
-
-  </section>
-
-  <!-- ===================================================================== -->
-  <!-- 5. TAMAMLAYICI ÜRÜNLER (SANDALYE VE MASA / ET AL. BLOĞU BİREBİR)     -->
-  <!-- Border-Top: 1px solid #222 | Padding: 35px 70px | Görsel Izgarası     -->
-  <!-- ===================================================================== -->
-  <section class="w-full bg-white font-roboto" style="border-top: 1px solid #222;">
-    <div class="w-full max-w-[1400px] mx-auto py-12 lg:py-[70px] px-6 sm:px-10 lg:px-[70px]">
-      
-      <!-- Başlık ve Giriş -->
-      <div class="max-w-[700px] mx-auto text-center mb-10">
-        <span 
-          class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-2"
-          style="color: #575757; font-family: 'Roboto', sans-serif;"
-        >
-          Tamamlayıcı Ürünler
-        </span>
-        <h3 
-          class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1] mb-4"
-          style="color: #575757; font-family: 'Roboto', sans-serif;"
-        >
-          Sandalye ve Masa
-        </h3>
-        <p 
-          class="text-[15px] sm:text-[16px] leading-[1.5] mb-6"
-          style="color: #575757; font-family: 'Roboto', sans-serif; letter-spacing: -0.04em;"
-        >
-          Modern yaşamın ihtiyaçlarına uygun, sürdürülebilir ve şık masa ve sandalye koleksiyonlarıyla fark yaratır. Hem iç mekanlarda hem de dış mekanlarda kullanıma uygun estetik çözümler sunar.
-        </p>
-        <div>
-          <a 
-            href="/tasarimlar/" 
-            class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
-            style="font-family: 'Roboto', sans-serif;"
-          >
-            KOLEKSİYONU KEŞFEDİN
-          </a>
-        </div>
-      </div>
-
-      <!-- Sandalye ve Masa Izgarası (Locus aspect-ratio: 1.93878 Birebir) -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pt-6">
-        {chairImages.map((img, i) => (
-          <div class="overflow-hidden bg-[#fbf9f6] aspect-square group border border-[#ede9e6]">
-            <img 
-              src={img} 
-              alt={`Tasarım Sandalye ve Masa Koleksiyonu ${i + 1}`} 
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-              width="400"
-              height="400"
-            />
-          </div>
         ))}
       </div>
 
-    </div>
-  </section>
-
-  <!-- ===================================================================== -->
-  <!-- 6. MOBİLYA VE YAŞAM ALANLARI (COLOMBINI CASA BİREBİR)                 -->
-  <!-- Salon, Kitaplık, Yatak Odası, Genç Odası, Çocuk Odası, Çamaşır Odası   -->
-  <!-- ===================================================================== -->
-  <section class="w-full bg-[#fbf9f6] font-roboto border-t border-[#ede9e6]">
-    <div class="w-full max-w-[1300px] mx-auto py-16 lg:py-[70px] px-6 sm:px-10">
-      
-      <!-- Başlık Grubu -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
-        <div>
-          <span 
-            class="block text-[12px] font-normal tracking-[0.08em] uppercase mb-2"
-            style="color: #575757; font-family: 'Roboto', sans-serif;"
-          >
-            MOBİLYA & YAŞAM ALANLARI
-          </span>
-          <h2 
-            class="text-[26px] sm:text-[31px] font-medium tracking-[-0.04em] leading-[1.1]"
-            style="color: #222222; font-family: 'Roboto', sans-serif;"
-          >
-            Yeşilay Casa Koleksiyonu
-          </h2>
-        </div>
-        <div 
-          class="text-[14px] max-w-[420px]"
-          style="color: #575757; font-family: 'Roboto', sans-serif;"
-        >
-          Mutfaktan salona, giyinme odalarından genç ve çocuk odalarına kadar evinizin her köşesinde mimari uyum.
-        </div>
-      </div>
-
-      <!-- 6 Kategori Kartı (Locus Birebir Kart Yapısı) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {furnitureCategories.map((c) => (
-          <a 
-            href={c.link} 
-            class="group block bg-white border border-[#ede9e6] overflow-hidden transition-all duration-300 hover:shadow-md"
-          >
-            <div class="aspect-[16/10] overflow-hidden bg-[#f2efe9]">
-              <img 
-                src={c.image} 
-                alt={c.name} 
-                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
-                width="600"
-                height="375"
-              />
-            </div>
-            <div class="p-6 flex items-center justify-between">
-              <h3 
-                class="text-[18px] sm:text-[20px] font-medium tracking-[-0.03em] group-hover:text-[#575757] transition-colors"
-                style="color: #111111; font-family: 'Roboto', sans-serif;"
-              >
-                {c.name}
-              </h3>
-              <span class="text-[18px] text-[#111111] transform transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      <!-- Keşfet Butonu -->
-      <div class="mt-12 text-center">
-        <a 
-          href="/salon-modelleri/" 
-          class="inline-flex items-center justify-center w-[204px] h-[45px] border border-[#d5d5d5] hover:border-[#111111] hover:bg-[#111111] hover:text-white text-[rgb(97,97,97)] text-[12px] font-normal tracking-[0.08em] uppercase transition-all duration-200"
-          style="font-family: 'Roboto', sans-serif;"
-        >
-          KOLEKSİYONU KEŞFEDİN
+      <!-- Alt Buton -->
+      <div class="text-center pt-4">
+        <a href="/tasarimlar/" class="inline-block px-10 py-3.5 bg-white hover:bg-[#F5F5F7] text-[#1D1D1F] border border-[#D2D2D7] text-[13px] font-semibold tracking-tight rounded-full shadow-2xs transition">
+          137 Model Arşivinin Tamamını Görüntüle
         </a>
       </div>
 
@@ -588,207 +479,663 @@ const chairImages = [
   </section>
 
   <!-- ===================================================================== -->
-  <!-- 7. MULTI-STEP İLETİŞİM & TEKLİF FORMU (LOCUS MULTI-STEP FORM BİREBİR) -->
-  <!-- Max-width: 800px | Padding: 35px 20px | Adım 1 / 2 & Adım 2 / 2      -->
+  <!-- 3.8. GERÇEK SHOWROOM & İMALAT DENEYİMİ (CANLI VİTRİN VE ATÖLYE KANITI) -->
   <!-- ===================================================================== -->
-  <section class="w-full bg-white font-roboto border-t border-[#ede9e6]" id="iletisim-formu">
-    <div class="max-w-[800px] mx-auto py-16 lg:py-[70px] px-6 sm:px-10">
+  <section class="py-20 sm:py-28 border-b border-[#E5DFD5] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
       
-      <!-- Form Kartı -->
-      <div 
-        class="bg-white border border-[#ede9e6] p-6 sm:p-10 shadow-[0_2px_16px_rgba(0,0,0,0.03)]"
-        x-data="{
-          step: 1,
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-          kvkk: false,
-          submitted: false,
-          errorMsg: '',
-          goNext() {
-            if (!this.name.trim() || !this.email.trim() || !this.phone.trim()) {
-              this.errorMsg = 'Lütfen zorunlu alanları (*) doldurunuz.';
-              return;
-            }
-            this.errorMsg = '';
-            this.step = 2;
-          },
-          goBack() {
-            this.step = 1;
-            this.errorMsg = '';
-          },
-          submitForm() {
-            if (!this.kvkk) {
-              this.errorMsg = 'Lütfen KVKK aydınlatma metnini onaylayınız.';
-              return;
-            }
-            this.submitted = true;
-          }
-        }"
-      >
-        <!-- Başlık ve Adım Bilgisi -->
-        <div class="flex items-center justify-between border-b border-[#ede9e6] pb-5 mb-7">
-          <div>
-            <span 
-              class="block text-[11px] font-normal tracking-[0.08em] uppercase mb-1"
-              style="color: #888888; font-family: 'Roboto', sans-serif;"
-            >
-              MİMARİ DANIŞMANLIK & TEKLİF
-            </span>
-            <h2 
-              class="text-[22px] sm:text-[26px] font-medium tracking-[-0.04em]"
-              style="color: #111111; font-family: 'Roboto', sans-serif;"
-            >
-              Daha Fazla Bilgi Alın
-            </h2>
-          </div>
-          <div class="text-[12px] font-normal text-[#888888] tracking-wider uppercase">
-            <span x-text="'Adım ' + step + ' / 2'">Adım 1 / 2</span>
-          </div>
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 920 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Showroom.</text>
+          </svg>
         </div>
-
-        <!-- Hata Mesajı -->
-        <div x-show="errorMsg" class="mb-6 p-3 bg-red-50 border border-red-200 text-red-700 text-[13px]" style="display: none;">
-          <span x-text="errorMsg"></span>
-        </div>
-
-        <!-- Başarı Mesajı -->
-        <div x-show="submitted" class="py-12 text-center space-y-4" style="display: none;">
-          <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
-            ✓
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#006039]/30 rounded-full text-[11px] font-semibold text-[#006039] uppercase tracking-wider shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-[#006039] animate-pulse"></span>
+            BUCA GAZİLER MAĞAZAMIZ & ADATEPE ATÖLYEMİZ
           </div>
-          <h3 class="text-[22px] font-medium text-[#111111]">Talebiniz Alındı</h3>
-          <p class="text-[15px] text-[#575757] max-w-[460px] mx-auto leading-relaxed">
-            Mimari ekibimiz bilgilerinizi inceleyerek en kısa sürede sizinle iletişime geçecektir. İlginiz için teşekkür ederiz.
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Canlı Showroomumuzda Dokunun, Keşfedin.
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-2xl mx-auto leading-relaxed">
+            Sadece sanal kataloglarda değil; İzmir Buca Gaziler'deki seçkin showroomumuzda ışıl ışıl aydınlatmalar, birinci sınıf lake kapaklar, porselen tezgahlar ve sessiz mekanizmaları birebir deneyimleyebilirsiniz.
           </p>
         </div>
+      </div>
 
-        <!-- FORM ADIMLARI -->
-        <div x-show="!submitted">
+      <!-- BÜYÜK SHOWROOM HERO BANNER & REALITY GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        
+        <!-- BÜYÜK KART: GECE SHOWROOM DIŞ CEPHE (7 KOLON) -->
+        <div class="lg:col-span-7 group relative bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,96,57,0.12)] transition-all duration-500 flex flex-col">
+          <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#1A1A1A]">
+            <img 
+              src="/media/real/yesilay-showroom-gece-cephe.webp" 
+              alt="Yeşilay Mutfak Buca Gaziler Lüks Showroom Gece Dış Cephesi" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
+            <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#006039]/90 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider rounded-full border border-[#C5A880]/50 shadow-md">
+                LÜKS SHOWROOM
+              </span>
+              <span class="px-3 py-1 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium rounded-full border border-white/20">
+                Gaziler Mh. 1084/2 Sk. No: 1/A Buca
+              </span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-white space-y-1.5">
+              <span class="text-[#C5A880] text-[12px] font-semibold tracking-wider uppercase block">İZMİR'İN KALBİNDE</span>
+              <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Cem Yeşilay Luxury Mutfak & Banyo Deneyimi</h3>
+              <p class="text-xs sm:text-sm text-gray-200 line-clamp-2 font-light">
+                Geniş vitrinli, son teknoloji aydınlatmalı ve en yeni mimari trendleri sergileyen amiral mağazamız haftanın 6 günü hizmetinizdedir.
+              </p>
+            </div>
+          </div>
           
-          <!-- ADIM 1: İLETİŞİM ALANLARI -->
-          <div x-show="step === 1" class="space-y-5">
-            <div>
-              <label class="block text-[13px] font-medium text-[#111111] mb-2">
-                Ad Soyad <span class="text-red-500">*</span>
-              </label>
-              <input 
-                type="text" 
-                x-model="name" 
-                placeholder="Adınız ve soyadınız" 
-                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
-                required
-              />
+          <div class="p-6 bg-white flex flex-wrap items-center justify-between gap-4 border-t border-[#E5DFD5]">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#006039]/10 text-[#006039] flex items-center justify-center font-bold text-lg">
+                📍
+              </div>
+              <div>
+                <span class="text-xs text-[#86868B] block">Konum & Ziyaret</span>
+                <span class="text-sm font-semibold text-[#1D1D1F]">Buca Gaziler • 09:00 - 19:30</span>
+              </div>
             </div>
+            <a 
+              href="/iletisim/" 
+              class="px-5 py-2.5 bg-[#006039] hover:bg-[#00482B] text-white text-[12.5px] font-semibold rounded-full border border-[#C5A880]/40 transition shadow-2xs inline-flex items-center gap-1.5"
+            >
+              <span>Yol Tarifi Al</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
 
-            <div>
-              <label class="block text-[13px] font-medium text-[#111111] mb-2">
-                Email <span class="text-red-500">*</span>
-              </label>
-              <input 
-                type="email" 
-                x-model="email" 
-                placeholder="ornek@email.com" 
-                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
-                required
+        <!-- 2 DİKEY/KARE KART: MİMARİ DANIŞMANLIK & İÇ MEKAN (5 KOLON) -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+          
+          <!-- Kart 1: Gerçek Mimari Danışmanlık ve Proje Masası -->
+          <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.1)] transition-all duration-300 flex flex-col sm:flex-row lg:flex-row">
+            <div class="relative w-full sm:w-48 lg:w-48 aspect-video sm:aspect-square lg:aspect-square shrink-0 overflow-hidden bg-[#1A1A1A]">
+              <img 
+                src="/media/real/yesilay-mimari-danismanlik-toplanti-square.webp" 
+                alt="Cem Yeşilay Mimari Danışmanlık ve Müşteri Projelendirme Toplantısı" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy" 
               />
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-[#006039] text-white text-[9.5px] font-bold uppercase rounded">
+                MİMARİ PROJE
+              </span>
             </div>
-
-            <div>
-              <label class="block text-[13px] font-medium text-[#111111] mb-2">
-                Telefon <span class="text-red-500">*</span>
-              </label>
-              <input 
-                type="tel" 
-                x-model="phone" 
-                placeholder="0 (5XX) XXX XX XX" 
-                class="w-full h-[45px] px-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
-                required
-              />
-            </div>
-
-            <div class="pt-4 flex justify-end">
-              <button 
-                type="button"
-                @click="goNext()"
-                class="w-[160px] h-[45px] bg-[#111111] hover:bg-[#333333] text-white text-[12px] font-medium tracking-[0.08em] uppercase transition-colors flex items-center justify-center cursor-pointer"
-              >
-                Sonraki →
-              </button>
+            <div class="p-5 flex flex-col justify-between space-y-2">
+              <div class="space-y-1">
+                <span class="text-[11px] font-bold text-[#C5A880] uppercase tracking-wider block">BİREBİR REHBERLİK</span>
+                <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                  Mimarımızla Birlikte Hayalinizdeki Mutfağı Çizin
+                </h4>
+                <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                  Renk kartelaları, kapak numuneleri ve zemin uyumunu masamızda birlikte inceleyip fotogerçekçi 3D planlıyoruz.
+                </p>
+              </div>
+              <a href="/iletisim/" class="text-[11.5px] font-semibold text-[#006039] flex items-center gap-1">
+                <span>Ücretsiz Keşif Randevusu</span> <span>→</span>
+              </a>
             </div>
           </div>
 
-          <!-- ADIM 2: MESAJ & DOSYA YÜKLEME -->
-          <div x-show="step === 2" class="space-y-5" style="display: none;">
-            <div>
-              <label class="block text-[13px] font-medium text-[#111111] mb-2">
-                Mesajınız
-              </label>
-              <textarea 
-                x-model="message" 
-                rows="4"
-                placeholder="Projeniz hakkında detaylar, ölçüler veya merak ettikleriniz..." 
-                class="w-full p-4 border border-[#d5d5d5] focus:border-[#111111] focus:outline-none text-[14px] text-[#111111] transition-colors"
-              ></textarea>
+          <!-- Kart 2: Showroom Panoramik İç Mekan & Yaşam Alanı -->
+          <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,96,57,0.1)] transition-all duration-300 flex flex-col sm:flex-row lg:flex-row">
+            <div class="relative w-full sm:w-48 lg:w-48 aspect-video sm:aspect-square lg:aspect-square shrink-0 overflow-hidden bg-[#1A1A1A]">
+              <img 
+                src="/media/real/yesilay-showroom-ic-mekan-square.webp" 
+                alt="Yeşilay Mutfak Showroom İç Mekan ve Teşhir Alanı" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy" 
+              />
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-[#C5A880] text-[#1D1D1F] text-[9.5px] font-bold uppercase rounded">
+                CANLI TEŞHİR
+              </span>
             </div>
-
-            <!-- Dosya Yükleme (Dropzone - Locus Birebir) -->
-            <div>
-              <label class="block text-[13px] font-medium text-[#111111] mb-2">
-                Ölçü ve Fotoğraf Yükleyin
-              </label>
-              <div class="border-2 border-dashed border-[#d5d5d5] hover:border-[#111111] p-6 text-center cursor-pointer transition-colors bg-[#faf9f7]">
-                <div class="text-2xl mb-1 text-[#888888]">📎</div>
-                <p class="text-[13px] text-[#575757] font-medium">
-                  Dosya yüklemek için tıklayın veya dosyayı buraya sürükleyin.
+            <div class="p-5 flex flex-col justify-between space-y-2">
+              <div class="space-y-1">
+                <span class="text-[11px] font-bold text-[#006039] uppercase tracking-wider block">MERMER & LÜKS PANEL</span>
+                <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                  Şömineli TV Duvarı & Hilton Banyo Köşesi
+                </h4>
+                <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                  Mermer arka plan panelleri, gizli LED detayları ve lake mobilya kombinasyonlarını showroomumuzda canlı görün.
                 </p>
-                <p class="text-[11px] text-[#888888] mt-1">
-                  PDF, DWG, JPG veya PNG • Maks. 25 MB
-                </p>
-                <input type="file" multiple class="hidden" id="fileUploadInput" />
               </div>
+              <a href="/yasam-alanlari-mutfak-modelleri/" class="text-[11.5px] font-semibold text-[#006039] flex items-center gap-1">
+                <span>Detayları İnceleyin</span> <span>→</span>
+              </a>
             </div>
-
-            <!-- KVKK Onay Kutusu -->
-            <div class="space-y-3 pt-2 text-[12px] text-[#575757]">
-              <label class="flex items-start gap-2.5 cursor-pointer select-none">
-                <input 
-                  type="checkbox" 
-                  x-model="kvkk" 
-                  class="mt-0.5 rounded-none border-[#d5d5d5] text-[#111111] focus:ring-0"
-                />
-                <span>
-                  Bu formda vermiş olduğum kişisel verilerimin Yeşilay Mutfak Ltd. tarafından <a href="/hakkimizda/" class="text-[#111111] underline">KVKK Aydınlatma Metninde</a> belirtilen şekilde ve amaçlarda işlenmesine rıza veriyorum.
-                </span>
-              </label>
-            </div>
-
-            <!-- Butonlar: Geri & Gönder -->
-            <div class="pt-4 flex items-center justify-between">
-              <button 
-                type="button"
-                @click="goBack()"
-                class="h-[45px] px-6 border border-[#d5d5d5] text-[#575757] hover:text-[#111111] hover:border-[#111111] text-[12px] font-medium tracking-[0.08em] uppercase transition-colors cursor-pointer"
-              >
-                ← Geri
-              </button>
-              <button 
-                type="button"
-                @click="submitForm()"
-                class="w-[160px] h-[45px] bg-[#111111] hover:bg-[#333333] text-white text-[12px] font-medium tracking-[0.08em] uppercase transition-colors flex items-center justify-center cursor-pointer"
-              >
-                Gönder
-              </button>
-            </div>
-
           </div>
 
         </div>
 
       </div>
 
+      <!-- 4 KARTLI GERÇEK ÜRÜN GALERİSİ -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        
+        <!-- Ürün 1: Hilton Banyo Dolabı Luxury -->
+        <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative w-full aspect-square overflow-hidden bg-[#F5F5F7]">
+            <img 
+              src="/media/real/yesilay-hilton-banyo-dolabi-luxury-square.webp" 
+              alt="Özel İmalat Hilton Banyo Dolabı ve LED Ayna" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy" 
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
+              SHOWROOM MODELİ
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+            <div class="space-y-1">
+              <span class="text-[10.5px] uppercase font-bold text-[#006039]">Lüks Banyo Mobilyası</span>
+              <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                Hilton Asma Banyo Dolabı & Dokunmatik LED Ayna
+              </h4>
+              <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                E1 yeşil marin gövde, İtalyan ipek mat lake kapaklar ve çanak lavabolu mimari uygulama.
+              </p>
+            </div>
+            <a href="/banyo-tadilati/" class="pt-2 text-[12px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1">
+              <span>Banyo Çözümlerini İncele</span> <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ürün 2: Müşteri Malzeme Seçim Alanı -->
+        <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative w-full aspect-square overflow-hidden bg-[#F5F5F7]">
+            <img 
+              src="/media/real/yesilay-banyo-secimi-musteri-square.webp" 
+              alt="Müşterimiz Showroomda Banyo ve Seramik Malzemelerini İncelerken" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy" 
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
+              GERÇEK DENEYİM
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+            <div class="space-y-1">
+              <span class="text-[10.5px] uppercase font-bold text-[#C5A880]">Yerinde Karar Kolaylığı</span>
+              <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                Canlı Numunelerle Banyo & Islak Hacim Seçimi
+              </h4>
+              <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                Gömme bataryalar, seramikler ve ayna tasarımlarını atölye ustalarımızla birlikte seçme konforu.
+              </p>
+            </div>
+            <a href="/izmir-banyo-yenileme-seramik/" class="pt-2 text-[12px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1">
+              <span>Banyo Yenileme Rehberi</span> <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ürün 3: Şömineli TV Ünitesi & Mermer Duvar -->
+        <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative w-full aspect-square overflow-hidden bg-[#F5F5F7]">
+            <img 
+              src="/media/real/yesilay-tv-unitesi-somine-luxury-square.webp" 
+              alt="Lüks Mermer Panel ve Şömineli Akıllı TV Duvarı Ünitesi" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy" 
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
+              YAŞAM ALANI
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+            <div class="space-y-1">
+              <span class="text-[10.5px] uppercase font-bold text-[#006039]">Özel Konsept Tasarım</span>
+              <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                Mermer Duvar & Şömineli Akıllı TV Ünitesi
+              </h4>
+              <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                Büyük boy bookmatch mermer desen plakalar, lineer gizli LED aydınlatma ve lake konsol.
+              </p>
+            </div>
+            <a href="/yasam-alanlari-mutfak-modelleri/" class="pt-2 text-[12px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1">
+              <span>Yaşam Alanlarını Gör</span> <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ürün 4: Fluted Cam Kapak Mekanizması -->
+        <div class="group bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative w-full aspect-square overflow-hidden bg-[#F5F5F7]">
+            <img 
+              src="/media/real/yesilay-aluminyum-fluted-cam-kapak-square.webp" 
+              alt="Alüminyum Çerçeveli ve Fluted Tırtıklı Cam Mutfak Dolabı Kapağı" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+              loading="lazy" 
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
+              MİMARİ DONANIM
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-2">
+            <div class="space-y-1">
+              <span class="text-[10.5px] uppercase font-bold text-[#C5A880]">İtalyan Trend Donanım</span>
+              <h4 class="text-[15px] font-bold text-[#1D1D1F] group-hover:text-[#006039] transition leading-snug">
+                Fluted Cam & Alüminyum Profil Kapak Sistemi
+              </h4>
+              <p class="text-[12px] text-[#6E675F] leading-relaxed line-clamp-2">
+                Entegre LED dikey profilli, parmak izi bırakmayan füme ve bronz cam kapak çözümleri.
+              </p>
+            </div>
+            <a href="/mutfak-dolabi/" class="pt-2 text-[12px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1">
+              <span>Mutfak Modellerini İncele</span> <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. APPLE BENTO HİZMET BLOKLARI                                       -->
+  <!-- ===================================================================== -->
+  <section class="py-20 border-b border-[#E5DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER (Dev Enlemesine Soft Watermark Üstte, Altında Başlık Grubu) -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 1080 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#D5D0C5" letter-spacing="-0.02em">Mühendislik.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Evinizin Her Detayına Özel Mühendislik.
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-xl mx-auto leading-relaxed">
+            Özel ölçü mutfak dolabı imalatından banyo renovasyonuna ve komple anahtar teslim taahhüde.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Hizmet 1 -->
+        <div class="bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-xl p-6 space-y-4 apple-card flex flex-col justify-between group transition duration-300">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-[#006039] px-3 py-1 rounded-full border border-[#C5A880]/40 inline-block shadow-2xs">
+              MUTFAK İMALATI
+            </span>
+            <h3 class="text-[17px] font-semibold text-[#1D1D1F] tracking-tight group-hover:text-[#006039] transition">Özel Ölçü Lüks Mutfak Dolabı</h3>
+            <p class="text-[13px] text-[#6E675F] font-normal leading-[1.45]">
+              İpek mat lake, İtalyan akrilik ve masif ahşap kapaklar. Mekanınıza milimetrik oturan ergonomik dolap sistemleri.
+            </p>
+          </div>
+          <a href="/izmir-mutfak-dolabi-imalati/" class="text-[13px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1 pt-2">
+            <span>İncele</span> <span>→</span>
+          </a>
+        </div>
+
+        <!-- Hizmet 2 -->
+        <div class="bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-xl p-6 space-y-4 apple-card flex flex-col justify-between group transition duration-300">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-[#006039] px-3 py-1 rounded-full border border-[#C5A880]/40 inline-block shadow-2xs">
+              RENOVASYON
+            </span>
+            <h3 class="text-[17px] font-semibold text-[#1D1D1F] tracking-tight group-hover:text-[#006039] transition">Komple Mutfak Renovasyonu</h3>
+            <p class="text-[13px] text-[#6E675F] font-normal leading-[1.45]">
+              Kırım, su tesisatı, elektrik altyapısı, porselen veya kuvars tezgah dahil A'dan Z'ye anahtar teslim mutfak dönüşümü.
+            </p>
+          </div>
+          <a href="/izmir-komple-mutfak-tadilati/" class="text-[13px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1 pt-2">
+            <span>İncele</span> <span>→</span>
+          </a>
+        </div>
+
+        <!-- Hizmet 3 -->
+        <div class="bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-xl p-6 space-y-4 apple-card flex flex-col justify-between group transition duration-300">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-[#006039] px-3 py-1 rounded-full border border-[#C5A880]/40 inline-block shadow-2xs">
+              ISLAK HACİM
+            </span>
+            <h3 class="text-[17px] font-semibold text-[#1D1D1F] tracking-tight group-hover:text-[#006039] transition">Lüks Banyo & Seramik</h3>
+            <p class="text-[13px] text-[#6E675F] font-normal leading-[1.45]">
+              Çift kat sürme izolasyon güvencesi, 60x120 İtalyan porselen seramik, gömme armatürler ve marin banyo mobilyaları.
+            </p>
+          </div>
+          <a href="/izmir-banyo-yenileme-seramik/" class="text-[13px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1 pt-2">
+            <span>İncele</span> <span>→</span>
+          </a>
+        </div>
+
+        <!-- Hizmet 4 -->
+        <div class="bg-white border border-[#E5DFD5] hover:border-[#006039] rounded-xl p-6 space-y-4 apple-card flex flex-col justify-between group transition duration-300">
+          <div class="space-y-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-[#006039] px-3 py-1 rounded-full border border-[#C5A880]/40 inline-block shadow-2xs">
+              ANAHTAR TESLİM
+            </span>
+            <h3 class="text-[17px] font-semibold text-[#1D1D1F] tracking-tight group-hover:text-[#006039] transition">Komple Daire & Villa Renovasyonu</h3>
+            <p class="text-[13px] text-[#6E675F] font-normal leading-[1.45]">
+              Çeşme, Urla ve İzmir genelinde iç kapılar, zemin parke, aydınlatma ve boya dahil tek muhatap garantili lüks renovasyon.
+            </p>
+          </div>
+          <a href="/izmir-anahtar-teslim-tadilat/" class="text-[13px] font-bold text-[#006039] hover:underline inline-flex items-center gap-1 pt-2">
+            <span>İncele</span> <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4.5. YAPAY ZEKA VE TÜKETİCİ KARAR REHBERİ (ŞEFFAF KARŞILAŞTIRMA)    -->
+  <!-- ===================================================================== -->
+  <section class="py-20 bg-white border-b border-[#E5DFD5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER (Dev Enlemesine Soft Watermark Üstte, Altında Başlık Grubu) -->
+      <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 680 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DCD8CE" letter-spacing="-0.02em">Güvence.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Neden Yeşilay Mutfak?
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-2xl mx-auto leading-relaxed">
+            Mutfak dolabı ve tadilat sürecinde sürpriz yaşamamanız için sektörün standart uygulamaları ile Adatepe atölyemizin zanaat ilkelerini şeffafça karşılaştırdık.
+          </p>
+        </div>
+      </div>
+
+      <!-- Karşılaştırma Tablosu (Kırmızı Negatif Rakip vs Yeşil Pozitif Yeşilay Mutfak) -->
+      <div class="overflow-x-auto border border-[#E5DFD5] rounded-2xl bg-[#FAF9F6] shadow-md">
+        <table class="w-full text-left border-collapse text-[13.5px]">
+          <thead>
+            <tr class="border-b border-[#E5DFD5] bg-[#F4F1EA]">
+              <th class="p-4 sm:p-5 font-bold text-[#1D1D1F] w-1/4">Değerlendirme Kriteri</th>
+              <th class="p-4 sm:p-5 font-bold text-[#991B1B] bg-[#FEF2F2] border-t-2 border-[#EF4444] w-3/8">
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-[#EF4444]"></span>
+                  Genel Piyasa / Aracı Mağazalar (Riskler)
+                </span>
+              </th>
+              <th class="p-4 sm:p-5 font-bold text-white bg-[#006039] border-t-2 border-[#C5A880] w-3/8 rounded-t-lg shadow-inner">
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+                  Yeşilay Mutfak (Atölye Güvencesi)
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#E5DFD5]/80 text-[#424245]">
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">Üretim Modeli</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>Dışarıdan fason imalat veya komisyonlu showroom satışı. Muhatap usta değil aracıdır.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span>Doğrudan Buca Adatepe imalat atölyemizde birinci el mimari üretim ve kesintisiz zanaat takibi.</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">Gövde Malzemesi</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>16mm yonga levha (sunta) veya neme dayanımsız kalitesiz gövde. Şişme ve sarkma riski yüksektir.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span>%100 E1 Sertifikalı 18mm Çift Yüz Neme Mukavemetli MDF-Lam. Sıfır sarkma ve maksimum mukavemet.</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">Mekanizma & Ray</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>İsimsiz veya yerli standart tek kademe raylar. Zamanla ses yapar, takılır ve kısa ömürlüdür.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span>Orijinal Avusturya Blum frenli sessiz ray ve kalkar kapak donanımları. Ömür boyu akıcı konfor.</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">Teslim Tarihi Güvencesi</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>Sözlü vaatler; haftalarca süren gecikmeler ve müşteriyi mağdur eden bağlayıcısız süreçler.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span>Resmi sözleşmede gün bazlı kesin teslim tarihi ve noter onaylı <strong>Gecikme Cezası Taahhüdü</strong>.</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">Fiyat Şeffaflığı</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>İşe başlandıktan sonra sürekli çıkan sürpriz ek malzeme, nakliye, montaj ve usta masrafları.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span><strong>Sabit Fiyat Garantisi:</strong> Sözleşme tutarı haricinde 1 TL dahi sürpriz ek masraf çıkarılamaz.</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-white/60 transition">
+              <td class="p-4 sm:p-5 font-semibold text-[#1D1D1F]">İmalat Öncesi Onay</td>
+              <td class="p-4 sm:p-5 text-[#991B1B] bg-[#FEF2F2]/50 border-r border-[#FCA5A5]/40">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#DC2626] font-bold text-base leading-none shrink-0">✕</span>
+                  <span>Katalogdan rastgele seçim veya basit 2 boyutlu elle çizim; sonuçta hayal kırıklığı riski.</span>
+                </div>
+              </td>
+              <td class="p-4 sm:p-5 font-semibold text-[#006039] bg-[#006039]/8 border-l border-r border-[#006039]/20">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#00874E] font-bold text-base leading-none shrink-0">✓</span>
+                  <span>Lazer rölöve sonrası <strong>Fotogerçekçi 3D Mimari Modelleme</strong>. Görmeden tek bir vida sıkılmaz.</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3 Seviyeli Güven Kalkanı -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] hover:border-[#006039] rounded-xl space-y-3 apple-card transition">
+          <div class="w-12 h-12 rounded-full bg-[#006039] text-[#C5A880] border border-[#C5A880]/40 flex items-center justify-center font-bold text-xl shadow-[0_4px_16px_rgba(0,96,57,0.3)]">✓</div>
+          <h3 class="text-[17px] font-bold text-[#1D1D1F]">Yazılı & Noterli Taahhüt</h3>
+          <p class="text-[13px] text-[#6E675F] leading-relaxed">
+            Tüm teknik malzeme detayları, teslim tarihi ve cezai koşullar ıslak imzalı sözleşmeyle güvence altına alınır.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] hover:border-[#8B1E2D] rounded-xl space-y-3 apple-card transition">
+          <div class="w-12 h-12 rounded-full bg-[#8B1E2D] text-white border border-[#C5A880]/40 flex items-center justify-center font-bold text-lg shadow-[0_4px_16px_rgba(139,30,45,0.3)]">10</div>
+          <h3 class="text-[17px] font-bold text-[#1D1D1F]">10 Yıl Gövde Garantisi</h3>
+          <p class="text-[13px] text-[#6E675F] leading-relaxed">
+            Kendi atölyemizde imal edilen tüm dolap gövdelerinde neme ve deformasyona karşı 10 yıl yapısal garanti.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#FAF9F6] border border-[#E5DFD5] hover:border-[#006039] rounded-xl space-y-3 apple-card transition">
+          <div class="w-12 h-12 rounded-full bg-[#006039] text-[#C5A880] border border-[#C5A880]/40 flex items-center justify-center font-bold text-lg shadow-[0_4px_16px_rgba(0,96,57,0.3)]">%0</div>
+          <h3 class="text-[17px] font-bold text-[#1D1D1F]">Sıfır Sürpriz Maliyet</h3>
+          <p class="text-[13px] text-[#6E675F] leading-relaxed">
+            Keşifte anlaşılan sabit bütçe kesinleşir; montaj tamamlanıp anahtar teslim edilene dek ekstra ücret talep edilmez.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. SIKÇA SORULAN SORULAR                                             -->
+  <!-- ===================================================================== -->
+  <section class="py-20 border-b border-[#E5DFD5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8 space-y-10">
+      
+      <!-- GHOST / WATERMARK TYPOGRAPHY HEADER (Dev Enlemesine Soft Watermark Üstte, Altında Başlık Grubu) -->
+      <div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+        <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
+          <svg viewBox="0 0 760 165" class="w-full h-auto max-h-[85px] sm:max-h-[115px] md:max-h-[140px]" preserveAspectRatio="xMidYMid meet">
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-size="160" font-weight="700" font-style="italic" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" fill="#DBD7CD" letter-spacing="-0.02em">Şeffaflık.</text>
+          </svg>
+        </div>
+        <div class="space-y-2.5 px-4 max-w-3xl mx-auto">
+          <h2 class="text-[28px] sm:text-[38px] md:text-[44px] font-extrabold text-[#1D1D1F] tracking-tight leading-tight">
+            Sıkça Sorulan Sorular.
+          </h2>
+          <p class="text-[15px] sm:text-[16.5px] text-[#55504A] font-normal max-w-xl mx-auto leading-relaxed">
+            Sözleşme güvencesi, 3D çizim süreci, malzeme kalitesi ve teslimat taahhütleri hakkında şeffaf bilgiler.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-3.5">
+        {seo.faqList.map((faq) => (
+          <details class="group bg-white border border-[#E5DFD5] p-5 rounded-xl transition open:border-[#006039] apple-card">
+            <summary class="text-[15px] font-semibold text-[#1D1D1F] cursor-pointer list-none flex items-center justify-between tracking-tight">
+              <span>{faq.question}</span>
+              <span class="text-[#C5A880] group-open:rotate-180 transition-transform text-xs">▼</span>
+            </summary>
+            <p class="mt-3 text-[13px] text-[#6E675F] font-normal leading-[1.5] border-t border-[#E5DFD5] pt-3">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. SON ÇAĞRI (ROLEX ZÜMRÜT KÖŞKÜ & VIP MİMARİ RANDEVU)              -->
+  <!-- ===================================================================== -->
+  <section class="py-24 relative overflow-hidden bg-gradient-to-b from-[#042015] via-[#073322] to-[#03150D] text-center border-t border-b border-[#0A3D2A] text-white">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,96,57,0.4)_0%,transparent_70%)] pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-8 space-y-6 z-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md rounded-full border border-[#C5A880]/40 text-[#C5A880] text-[11px] uppercase font-bold tracking-[0.18em]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#8B1E2D] animate-ping"></span>
+        MİMARİ KEŞİF & ÖZEL RANDEVU
+      </div>
+      <h2 class="text-[34px] sm:text-[46px] font-bold text-white tracking-tight leading-[1.12]">
+        Evinizin Ruhuna Uygun <br />
+        <span class="text-[#C5A880] font-serif italic">Yeni Bir Mutfak Deneyimi</span>
+      </h2>
+      <p class="text-[15px] text-[#D8D2C7] font-normal leading-relaxed max-w-xl mx-auto">
+        Adatepe atölyemizden uzman mimarımız yerinde milimetrik lazer ölçüsü alsın ve mekanınıza özel fotogerçekçi 3D mimari modelleme hazırlayalım.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+        <a 
+          href="https://wa.me/905324261788" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full sm:w-auto px-10 py-4 bg-[#006039] hover:bg-[#00482B] text-white font-bold text-[13px] tracking-wide uppercase rounded-full border border-[#C5A880] shadow-[0_8px_24px_rgba(0,96,57,0.5)] transition duration-300 flex items-center justify-center gap-2 group"
+        >
+          <span>WhatsApp ile VIP Keşif Al</span>
+          <span class="text-[#C5A880] group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+        <a 
+          href="tel:02324411060" 
+          class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md font-semibold text-[13px] tracking-tight rounded-full transition"
+        >
+          📞 0232 441 10 60
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Hero video kaldırıldı, yerine yüksek performanslı CSS/Alpine slider entegre edildi.
+
+      const counters = document.querySelectorAll(".stat-counter");
+      if (!counters.length) return;
+
+      let animated = false;
+      const animateCounters = () => {
+        if (animated) return;
+        animated = true;
+
+        counters.forEach((counter) => {
+          const target = parseInt(counter.getAttribute("data-target") || "0", 10);
+          const format = counter.getAttribute("data-format");
+          const duration = 1800;
+          const startTime = performance.now();
+
+          const updateCount = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = Math.floor(easeProgress * target);
+
+            if (format === "comma") {
+              counter.textContent = currentVal.toLocaleString("tr-TR");
+            } else {
+              counter.textContent = currentVal.toString();
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCount);
+            } else {
+              if (format === "comma") {
+                counter.textContent = target.toLocaleString("tr-TR");
+              } else {
+                counter.textContent = target.toString();
+              }
+            }
+          };
+
+          requestAnimationFrame(updateCount);
+        });
+      };
+
+      // Anında ve pürüzsüz animasyon tetikleme (hero alanında doğrudan çalışır)
+      setTimeout(() => {
+        animateCounters();
+      }, 350);
+    });
+  </script>
 
 </Layout>
