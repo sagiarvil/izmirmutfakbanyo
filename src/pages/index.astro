@@ -71,28 +71,28 @@ const seo = {
         timer: null,
         slides: [
           {
-            title: 'Sakura',
-            subtitle: 'El becerisi, yaratıcılık ve deneyim.',
+            title: 'Lumina',
+            subtitle: 'El becerisi, yaratıcılık ve usta işçilik.',
             image: '/media/hero/hero-slide-1.webp',
-            link: '/tasarimlar/'
+            link: '/izmir-mutfak-dolabi-imalati/'
           },
           {
-            title: 'Iconica',
-            subtitle: 'Geleneksel anlayışları aşan minimalist mimari estetik.',
+            title: 'Statuario',
+            subtitle: 'Monolitik porselen ada ve minimalist mimari estetik.',
             image: '/media/hero/hero-slide-2.webp',
-            link: '/tasarimlar/'
+            link: '/izmir-mutfak-dolabi-imalati/'
           },
           {
-            title: 'Milano',
-            subtitle: 'İtalyan zarafeti ve büyük mimarlık anlayışı.',
+            title: 'Portofino',
+            subtitle: 'İpek mat lake zarafeti ve büyük mimarlık anlayışı.',
             image: '/media/hero/hero-slide-3.webp',
-            link: '/tasarimlar/'
+            link: '/izmir-mutfak-dolabi-imalati/'
           },
           {
-            title: 'Lounge',
+            title: 'Belvedere',
             subtitle: 'Fonksiyonel ve estetik açıdan kusursuz mekanlar.',
             image: '/media/hero/hero-slide-4.webp',
-            link: '/tasarimlar/'
+            link: '/izmir-mutfak-dolabi-imalati/'
           }
         ],
         start() {
@@ -112,7 +112,7 @@ const seo = {
       @mouseenter="stop()"
       @mouseleave="start()"
     >
-      <!-- Slide 1: Sakura (%100 Net Görsel) -->
+      <!-- Slide 1: Lumina (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -122,7 +122,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-1.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-1.webp" 
-            alt="Yeşilay Mutfak Sakura Özel İmalat Yaşam Alanı" 
+            alt="Yeşilay Mutfak Lumina Özel İmalat Yaşam Alanı" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="eager"
             decoding="sync"
@@ -133,7 +133,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 2: Iconica (%100 Net Görsel) -->
+      <!-- Slide 2: Statuario (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 1 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -143,7 +143,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-2.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-2.webp" 
-            alt="Yeşilay Mutfak Iconica Mutfak ve Salon Tasarımı" 
+            alt="Yeşilay Mutfak Statuario Mutfak ve Salon Tasarımı" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -153,7 +153,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 3: Milano (%100 Net Görsel) -->
+      <!-- Slide 3: Portofino (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 2 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -163,7 +163,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-3.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-3.webp" 
-            alt="Yeşilay Mutfak Milano Gömme Dolap ve Mutfak Modelleri" 
+            alt="Yeşilay Mutfak Portofino Gömme Dolap ve Mutfak Modelleri" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -173,7 +173,7 @@ const seo = {
         </picture>
       </div>
 
-      <!-- Slide 4: Lounge (%100 Net Görsel) -->
+      <!-- Slide 4: Belvedere (%100 Net Görsel) -->
       <div 
         class="absolute inset-0 w-full h-full transition-all duration-1000 ease-out"
         :class="current === 3 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0 pointer-events-none'"
@@ -182,7 +182,7 @@ const seo = {
           <source srcset="/media/hero/hero-slide-4.webp" type="image/webp" />
           <img 
             src="/media/hero/hero-slide-4.webp" 
-            alt="Yeşilay Mutfak Lounge Özel Ölçü Lake Tasarım" 
+            alt="Yeşilay Mutfak Belvedere Özel Ölçü Lake Tasarım" 
             class="w-full h-full object-cover object-center block brightness-100 contrast-100"
             loading="lazy"
             decoding="async"
@@ -207,7 +207,7 @@ const seo = {
             class="text-[32px] sm:text-[40px] lg:text-[48px] font-bold text-white tracking-[-0.04em] leading-[1.2] sm:leading-[1.4] m-0"
             style="font-family: 'Roboto', sans-serif;"
           >
-            Sakura
+            Lumina
           </h2>
           <p 
             x-text="slides[current].subtitle" 
