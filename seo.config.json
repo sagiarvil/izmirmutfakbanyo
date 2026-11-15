@@ -1,0 +1,33 @@
+{
+  "contractVersion": "REAL-SEO-2026-APEX-v4.0",
+  "stack": "static-html",
+  "domain": "https://izmirmutfakbanyo.com.tr",
+  "brandName": "İzmir Mutfak Banyo",
+  "legalName": "Yeşilay Mutfak Banyo Mobilya Dekorasyon San. ve Tic. Ltd. Şti.",
+  "organizationSubType": "HomeGoodsStore",
+  "telephoneE164": "+905324261788",
+  "email": "yesilaymutfak@gmail.com",
+  "address": {
+    "streetAddress": "Kaynaklar Merkez Mah. Atölye Cad. No:14, Buca",
+    "addressLocality": "Buca",
+    "addressRegion": "İzmir",
+    "postalCode": "35390",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "latitude": "38.3685",
+    "longitude": "27.2842"
+  },
+  "founderOrAuthor": {
+    "name": "İsmail Yeşilay",
+    "jobTitle": "Kurucu & Baş Tasarımcı",
+    "profileUrl": "https://izmirmutfakbanyo.com.tr/hakkimizda/",
+    "sameAs": []
+  },
+  "cannibalizationThreshold": 0.78,
+  "allowedPartnerDomains": [
+    "wa.me",
+    "api.whatsapp.com"
+  ],
+  "indexNowKey": "4f3b13d08a58aa2a17eedb8945a29a16"
+}

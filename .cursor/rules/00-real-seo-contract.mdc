@@ -1,0 +1,11 @@
+---
+description: REAL-SEO-2026 APEX v4.0 Bağlayıcı SEO, Gerçek Tarayıcı CWV, Yamyamlaşma ve GSC Sözleşmesi
+globs: "**/*"
+alwaysApply: true
+---
+
+# ZORUNLU UYGULAMA SÖZLEŞMESİ (APEX v4.0)
+
+1. Kök dizindeki `AGENTS.md` sözleşmesinin 25 kapısını ve `seo.config.json` gerçek verilerini eksiksiz uygula.
+2. Kök dizinde `seo_actions.json` varsa içindeki sorgu yamyamlaşması, CTR başlık revizyonu ve iç link görevlerini kodda kapat.
+3. Her görev sonunda `python3 seo_enforcer.py --audit` çalıştır; skor **100/100** (gerçek tarayıcı render dahil) olmadan görevi tamamlama.

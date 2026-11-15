@@ -1,0 +1,11 @@
+{
+  "name": "izmir-mutfak-banyo-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "İzmir Mutfak Banyo kurumsal web sitesi ve REAL-SEO-2026 doğrulama paketi",
+  "scripts": {
+    "verify:seo": "python3 seo_enforcer.py --audit . https://izmirmutfakbanyo.com.tr",
+    "push:indexnow": "python3 seo_enforcer.py --ping-indexnow ."
+  }
+}

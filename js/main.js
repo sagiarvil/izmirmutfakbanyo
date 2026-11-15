@@ -363,7 +363,7 @@ function initContactForm() {
         data._template = 'table';
         data._captcha = 'false';
 
-        const response = await fetch('https://formsubmit.co/ajax/barisbagirlar@gmail.com', {
+        const response = await fetch('https://formsubmit.co/ajax/yesilaymutfak@gmail.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -388,7 +388,7 @@ function initContactForm() {
         feedback.style.backgroundColor = '#fee2e2';
         feedback.style.color = '#b91c1c';
         feedback.style.border = '1px solid #fca5a5';
-        feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> İletim sırasında bir sorun oluştu. Lütfen doğrudan <a href="https://wa.me/905393333303" target="_blank" style="color:#b91c1c;text-decoration:underline;font-weight:700;">WhatsApp hattımızdan</a> bize ulaşın.';
+        feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> İletim sırasında bir sorun oluştu. Lütfen doğrudan <a href="https://wa.me/905324261788" target="_blank" rel="noopener noreferrer" style="color:#b91c1c;text-decoration:underline;font-weight:700;">WhatsApp hattımızdan</a> bize ulaşın.';
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalHTML;
@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mSpecs) mSpecs.textContent = specs;
       if (mDesc) mDesc.textContent = desc;
       if (mWa) {
-        mWa.href = 'https://wa.me/905393333303?text=' + encodeURIComponent('Merhaba, ' + mid + ' kodlu model (' + title + ') hakkında fiyat ve keşif bilgisi almak istiyorum.');
+        mWa.href = 'https://wa.me/905324261788?text=' + encodeURIComponent('Merhaba, ' + mid + ' kodlu model (' + title + ') hakkında fiyat ve keşif bilgisi almak istiyorum.');
       }
 
       modelDetailModal.style.display = 'flex';
@@ -589,3 +589,38 @@ function initDropdownNav() {
     }
   });
 }
+
+/* ==========================================================================
+   APPLE MOTION ARCHITECTURE — SCROLL-DRIVEN STAGGERED REVEAL (80ms)
+   ========================================================================== */
+function initAppleScrollReveal() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const targets = document.querySelectorAll(
+    '.service-card, .solution-card, .cat-feature-card, .news-card, .team-card, .checklist-card, .specs-table-wrapper, .specs-table-container, .faq-item'
+  );
+  if (!targets.length) return;
+
+  targets.forEach((el) => {
+    el.classList.add('reveal-up');
+  });
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      const visible = entries.filter((entry) => entry.isIntersecting);
+      visible.forEach((entry, idx) => {
+        const el = entry.target;
+        el.style.transitionDelay = `${Math.min(idx * 80, 480)}ms`;
+        el.classList.add('is-revealed');
+        obs.unobserve(el);
+      });
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', initAppleScrollReveal);
+

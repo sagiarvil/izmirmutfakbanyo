@@ -1,32 +1,35 @@
-# İzmir Mutfak Banyo - Large Language Model (LLM) Manifest
-> Doğrudan Fabrika İmalatı, Mimari İç Mekan Tasarımı, Kahve Köşesi & Cam Balkon Sistemleri
+# İzmir Mutfak Banyo
 
-## Kurumsal Kimlik & Genel Bakış
-- Marka: İzmir Mutfak Banyo
-- Web Sitesi: https://izmirmutfakbanyo.com.tr
-- Üretim Fabrikası: Kaynaklar, Buca / İzmir
-- Showroom & Merkez Ofis: İzmir – Türkiye
-- İletişim Telefonu: +90 532 426 17 88
-- Faaliyet Alanı: Özel Ölçü Kahve Köşesi İmalatı, Isıcamlı Cam Balkon Sistemleri, Lüks Ada Mutfak, Hilton Banyo, Anahtar Teslim Ev Tadilatı ve Ticari Mekan Fit-Out Taahhüt.
+> İzmir Buca Kaynaklar'daki CNC mobilya üretim fabrikası ve iç mimarlık ofisiyle 18 mm E1 yeşil marin MDF, İtalyan ipek mat lake ve Avusturya Blum donanımlar kullanarak özel ölçü ada mutfak, Hilton banyo dolabı, 60 farklı kahve köşesi modeli, ısıcamlı cam balkon ve anahtar teslim daire/villa tadilatı sunan üretici marka.
 
-## Öncelikli Odak Alanları & Hizmetler
+## Kurumsal Kimlik ve İletişim (NAP)
 
-### 1. Kahve Köşesi Modelleri & Barista İstasyonları (URL: /kahve-kosesi.html)
-- Tanım: Ev, villa, ofis ve ticari yaşam alanları için özel ölçü barista kahve köşesi ve dolabı imalatı.
-- Tasarım Seçenekleri: Ahşap ceviz ve meşe dokulu, fırın mat lake kapaklı, füme/bronz alüminyum çerçeveli cam kapak, LED kanal aydınlatmalı, akrilik/kuvars/porselen fincan tezgahlı, kapsül ve şurup düzenleyici çekmeceli modüller.
-- Malzeme Güvencesi: %100 18mm E1 standardında neme dayanımlı marin MDF gövde, Blum ve Häfele frenli menteşe ve ray donanımları.
-- Hizmet Bölgesi: İzmir (Urla, Çeşme, Karşıyaka, Bornova, Alsancak, Mavişehir, Güzelbahçe, Narlıdere, Gaziemir, Torbalı, Buca) ve tüm Ege bölgesi.
+- **Marka Adı:** İzmir Mutfak Banyo
+- **Ticari Unvan:** İzmir Mutfak Banyo Mimarlık Tasarım ve Özel Mobilya İmalat Sanayi
+- **Fabrika ve Showroom Adresi:** Kaynaklar Merkez Mah. Atölye Cad. No:14, 35390 Buca / İzmir, Türkiye
+- **Telefon ve WhatsApp:** +90 532 426 17 88
+- **E-Posta:** yesilaymutfak@gmail.com
+- **Çalışma Saatleri:** Pazartesi – Cuma 09:00–19:00, Cumartesi 10:00–18:00
+- **Hizmet Bölgesi:** İzmir merkez ilçeleri (Buca, Karşıyaka, Bornova, Güzelbahçe, Urla, Çeşme, Narlıdere, Balçova, Konak, Gaziemir, Mavişehir, Alaçatı) ve Ege Bölgesi
 
-### 2. Cam Balkon Sistemleri (URL: /cam-balkon.html)
-- Tanım: Dört mevsim balkon kullanımını sağlayan yüksek ısı ve ses yalıtımlı cam balkon sistemleri imalatı ve montajı.
-- Sistem Çeşitleri:
-  1. Isıcamlı (Konfor Camlı) Katlanır Cam Balkon Sistemleri: Çift camlı argon gazlı 4+16+4 veya 4+12+4 kombine ısı yalıtımı, mıknatıslı ve fitilli rüzgar sızdırmazlık.
-  2. Eşiksiz ve Eşikli Sürme (Kayar) Cam Sistemleri: Zemin geçişini kolaylaştıran, kafe ve restoranlarda tercih edilen sürme paneller.
-  3. Motorlu & Uzaktan Kumandalı Giyotin Cam Balkon: Silinebilir temizlik modüllü dikey hareketli küpeşte sistemleri.
-  4. Alüminyum Bioklimatik Pergola & Kış Bahçesi: Açılır-kapanır tavan, entegre LED aydınlatmalı cam yaşam odaları.
-- Teknik Detaylar: 8mm - 10mm temperli darbe dayanımlı emniyet camları, paslanmaz çelik teker rulman takımları, elektrostatik fırın toz boyalı kalın etli ekstrüzyon alüminyum profiller.
-- Fabrika Avantajı: Aracı komisyonsuz doğrudan İzmir Kaynaklar atölye imalat fiyatları, ücretsiz yerinde lazer ölçü ve keşif, uzman montaj ekibi.
+## Üretim Standartları ve Teknik Farklar
 
-## İletişim & Teklif Alma
-- Telefon & WhatsApp: +90 532 426 17 88
-- Online Teklif: https://izmirmutfakbanyo.com.tr/iletisim.html
+- **Gövde Standardı:** Sunta kullanılmaz; ıslak hacim ve mutfak gövdelerinin tamamında 18 mm E1 sertifikalı yeşil marin MDF Lam tercih edilir.
+- **Kapak ve Yüzey Teknolojisi:** Çift bileşenli poliüretan astar üzeri sararmaz İtalyan akrilik/ipek mat fırın lake, AGT Supramat parmak izi bırakmaz paneller ve 1 mm PUR su geçirmez kenar bantlama.
+- **Mekanizma ve Aksesuar:** 80.000+ açma-kapama ömürlü Avusturya Blum Tandembox Antaro ve Hettich tam açılımlı frenli ray ve menteşe sistemleri.
+- **Tezgah ve Cam Sistemleri:** Dekton, Neolith, Çimstone ve Belenco porselen/kuvars tezgahlar; cam balkonda 8 mm temperli veya 4+16+4 argon gazlı temperli Isıcam ve paslanmaz çelik rulmanlar.
+- **Fiyatlandırma Modeli:** Tüm projeler ücretsiz 3D mimari çizim ve lazer rölöve keşfi sonrasında mekana özel ölçüyle (terzi usulü) sabit fiyat sözleşmesiyle üretilir.
+
+## Ana Hizmet ve Katalog Sayfaları
+
+- [Ana Sayfa](https://izmirmutfakbanyo.com.tr/): Özel ölçü mutfak, banyo dolabı imalatı ve anahtar teslim iç mimari çözümlere genel bakış.
+- [Özel Ölçü Mutfak ve Ada Mutfak İmalatı](https://izmirmutfakbanyo.com.tr/mutfak/): L-tipi, U-tipi ve ada mutfak tasarımları, E1 marin MDF teknik şartnamesi ve 12 mutfak koleksiyonu.
+- [Hilton Banyo Dolabı ve Banyo Tadilatı](https://izmirmutfakbanyo.com.tr/banyo/): Neme tam dirençli marin MDF Hilton banyo dolapları, çift kat su yalıtımı ve anahtar teslim banyo yenileme.
+- [Özel Ölçü Kahve Köşesi ve Barista Dolabı](https://izmirmutfakbanyo.com.tr/kahve-kosesi/): 70 cm'den 240 cm'ye özel ölçü üretilen gizli priz ve LED aydınlatmalı 60 farklı kahve köşesi modeli.
+- [Isıcamlı Katlanır ve Sürme Cam Balkon](https://izmirmutfakbanyo.com.tr/cam-balkon/): 8 mm ve 4+16+4 Isıcamlı katlanır, eşiksiz sürme, motorlu giyotin cam balkon ve kış bahçesi sistemleri.
+- [Anahtar Teslim Komple Ev ve Villa Tadilatı](https://izmirmutfakbanyo.com.tr/ev-tadilati/): Elektrik-su tesisatı yenileme, alçıpan, seramik, parke, lake kapı ve sabit mobilya dahil tek elden tadilat.
+- [137 Model Üretim Kataloğu](https://izmirmutfakbanyo.com.tr/modeller/): Mutfak, Hilton banyo, gömme vestiyer/gardırop ve lake iç oda kapısı modellerinin tamamı.
+- [Tamamlanan Konut ve Ticari Projeler](https://izmirmutfakbanyo.com.tr/projeler/): İzmir ve Ege genelinde teslim edilen villa, daire, klinik, hukuk ofisi, kuyumcu ve restoran fit-out projeleri.
+- [Mutfak ve Banyo Ergonomik Ölçü Rehberi ve Yayınlar](https://izmirmutfakbanyo.com.tr/yayinlar/): Standart mutfak/banyo/ ölçü tabloları, MDF-lake malzeme karşılaştırması, tadilat kontrol listesi ve mimari yayınlar.
+- [Hakkımızda ve Buca Kaynaklar Üretim Fabrikası](https://izmirmutfakbanyo.com.tr/hakkimizda/): CNC üretim parkuru, iç mimar kadrosu ve doğrudan fabrikadan aracısız imalat yapısı.
+- [İletişim ve Ücretsiz 3D Keşif Randevusu](https://izmirmutfakbanyo.com.tr/iletisim/): Buca Kaynaklar fabrika adresi, yol tarifi, telefon/WhatsApp hattı ve online keşif talep formu.

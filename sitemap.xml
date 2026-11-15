@@ -3,62 +3,1805 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://izmirmutfakbanyo.com.tr/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-15</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-1.webp</image:loc>
+      <image:title>İzmir Özel Ölçü Lüks Ada Mutfak Tasarımı ve İmalatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-2.webp</image:loc>
+      <image:title>İpek Mat Fırın Lake Modern Mutfak Dolabı Uygulaması</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-3.webp</image:loc>
+      <image:title>Anahtar Teslim Villa İç Mimari ve Açık Mutfak Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-4.webp</image:loc>
+      <image:title>Porselen Tezgahlı Kulpsuz Antrasit Ada Mutfak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-5.webp</image:loc>
+      <image:title>Buca Kaynaklar Fabrikası Özel Mobilya ve Mutfak Üretimi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-6.webp</image:loc>
+      <image:title>Doğal Meşe ve Mat Beyaz İskandinav Mutfak Tasarımı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-7.webp</image:loc>
+      <image:title>Özel Ölçü Hilton Banyo Dolabı ve Mermer Islak Hacim</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-8.webp</image:loc>
+      <image:title>Çift Lavabolu Ebeveyn Banyo ve Spa Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-9.webp</image:loc>
+      <image:title>Anahtar Teslim Komple Daire ve Salon İç Mimarisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-10.webp</image:loc>
+      <image:title>Gömme Vestiyer, Giyinme Odası ve Lake Oda Kapısı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-11.webp</image:loc>
+      <image:title>Kurumsal Ofis ve Ticari Mağaza Fit-Out Mimarisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-12.webp</image:loc>
+      <image:title>Isıcamlı Panoramik Cam Balkon ve Kış Bahçesi Uygulaması</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-1.webp</image:loc>
+      <image:title>2026 Ege Bölgesi En İyi Mimarlık Ofisleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-2.webp</image:loc>
+      <image:title>Ergonomi ve Malzeme Semineri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-3.webp</image:loc>
+      <image:title>Fit-Out ve Şantiye Eğitimi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-4.webp</image:loc>
+      <image:title>Sürdürülebilir Malzemeler Paneli</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-5.webp</image:loc>
+      <image:title>Yapı Kataloğu Röportaj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-6.webp</image:loc>
+      <image:title>Milliyet Mimarlık Yayını</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-7.webp</image:loc>
+      <image:title>Showroom ve Banyo Tasarım Paneli</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-8.webp</image:loc>
+      <image:title>A Design Award Ödülü</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-1.webp</image:loc>
+      <image:title>Urla Ada Mutfak 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-2.webp</image:loc>
+      <image:title>Çeşme Villa Mutfak 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-3.webp</image:loc>
+      <image:title>Alsancak Penthouse Master Banyo 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-4.webp</image:loc>
+      <image:title>Mavişehir Rezidans Açık Mutfak 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-5.webp</image:loc>
+      <image:title>Güzelbahçe Doğa Evi Lake Mutfak 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-6.webp</image:loc>
+      <image:title>Karşıyaka Sahil Dairesi Banyo 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-7.webp</image:loc>
+      <image:title>Çeşme Çiftlikköy Villa Fit-Out 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-8.webp</image:loc>
+      <image:title>Narlıdere Rezidans İntema Ada Mutfak 3D Render vs Fit-Out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-01.webp</image:loc>
+      <image:title>Kahve Köşesi Modelleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-1.webp</image:loc>
+      <image:title>Mutfak Tasarımları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-2.webp</image:loc>
+      <image:title>Banyo Tasarımları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-3.webp</image:loc>
+      <image:title>Konut ve Villa Tasarımları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-4.webp</image:loc>
+      <image:title>Showroom ve Ticari Mekan Tasarımları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/izmir-cambalkon.webp</image:loc>
+      <image:title>Cam Balkon Sistemleri</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/kahve-kosesi.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/mutfak/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/inova_detail.webp</image:loc>
+      <image:title>İzmir Özel Ölçü Mutfak Dolabı ve Ada Mutfak İmalatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/inova_1.webp</image:loc>
+      <image:title>Linea Serisi Kulpsuz Modern Ada Mutfak Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/prime_1.webp</image:loc>
+      <image:title>Arte Serisi Mat Lake ve Ahşap Ada Mutfak Dolabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/fresca_1.webp</image:loc>
+      <image:title>Vento Serisi Açık Konsept Ada Mutfak Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/toscana_1.webp</image:loc>
+      <image:title>Country Shaker Klasik Lake Mutfak Dolabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/vega_1.webp</image:loc>
+      <image:title>Stella Serisi Minimalist Modern Mutfak Tasarımı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/siena_1.webp</image:loc>
+      <image:title>Palazzo Neoklasik Özel Freze Lake Mutfak İmalatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/norda_1.webp</image:loc>
+      <image:title>Nordic Serisi Doğal Ahşap ve Huş Mutfak Dolabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/inova_2.webp</image:loc>
+      <image:title>Linea Arch Porselen Ada Tezgah ve Ankastre Kule Mutfak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/toscana_2.webp</image:loc>
+      <image:title>Country Luxe Ahşap Tezgâhlı Ada Mutfak Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/fresca_2.webp</image:loc>
+      <image:title>Vento Loft Ada Tezgah ve Entegre Bar Mutfak Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/prime_2.webp</image:loc>
+      <image:title>Arte Elegance Mat Antrasit ve Meşe Mutfak Dolabı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/mutfak-tasarim/vega_2.webp</image:loc>
+      <image:title>Stella Compact Ada Mutfak Tadilatı ve Depolama</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/cam-balkon.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/banyo/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-2.webp</image:loc>
+      <image:title>İzmir Özel Ölçü Hilton Banyo Dolabı ve Anahtar Teslim Banyo Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-1.webp</image:loc>
+      <image:title>Asma Hilton Banyo Dolabı &amp; Dokunmatik LED Ayna (MODEL-1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-2.webp</image:loc>
+      <image:title>Çift Lavabolu Kuvars Tezgahlı Ebeveyn Banyo Dolabı (MODEL-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-3.webp</image:loc>
+      <image:title>Masif Ahşap Tezgah &amp; Mat Siyah Çanak Lavabo Dolabı (MODEL-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-4.webp</image:loc>
+      <image:title>Çamaşır &amp; Kurutma Makinesi Gizleme Banyo Kulesi (MODEL-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-5.webp</image:loc>
+      <image:title>Dar Banyolar İçin Aynalı Üst Modüllü Kompakt Dolap (MODEL-5)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-6.webp</image:loc>
+      <image:title>Porselen Mermer Tezgahlı &amp; Altın Bataryalı Banyo Dolabı (MODEL-6)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-8.webp</image:loc>
+      <image:title>İskandinav Marin Meşe Dokulu Suya Dayanıklı Dolap (MODEL-8)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-9.webp</image:loc>
+      <image:title>Gece Sensörlü Alt LED Aydınlatmalı Antrasit Dolap (MODEL-9)</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/projeler.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/cam-balkon/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/carousel-1.webp</image:loc>
+      <image:title>İzmir Isıcamlı Katlanır ve Sürme Cam Balkon Sistemleri İmalatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/izmir-cambalkon.webp</image:loc>
+      <image:title>İzmir Cam Balkon İmalat ve Montaj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/katlanir-cambalkon.webp</image:loc>
+      <image:title>İzmir Katlanır Cambalkon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/surgulu-cambalkon.webp</image:loc>
+      <image:title>İzmir Sürgülü Cam Balkon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/giyotin-cambalkon.webp</image:loc>
+      <image:title>İzmir Giyotin Cam Balkon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/izmir-kis-bahcesi.webp</image:loc>
+      <image:title>İzmir Kış Bahçesi Sistemleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/izmir-pergola.webp</image:loc>
+      <image:title>İzmir Pergola ve Tente</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/izmir-plise-perde.webp</image:loc>
+      <image:title>İzmir Cambalkon Plise Perde</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/cam-balkon/testimonial-1.webp</image:loc>
+      <image:title>Yorum Deniz K.</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/mutfak.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/ev-tadilati/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/services/service-3.webp</image:loc>
+      <image:title>İzmir Anahtar Teslim Komple Ev ve Villa Tadilatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_villa_renovasyon_05.webp</image:loc>
+      <image:title>Urla Çeşmealtı Lüks Villa Komple Renovasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_ada_mutfak_01.webp</image:loc>
+      <image:title>Karşıyaka Mavişehir Rezidans Açık Salon &amp; Mutfak Dönüşümü</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_spa_banyo_03.webp</image:loc>
+      <image:title>Alsancak Tarihi Daire Islak Hacim &amp; Altyapı Yenileme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_modern_mutfak_02.webp</image:loc>
+      <image:title>Bornova Evka 3 Dubleks Çatı Katı &amp; Salon Yenileme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-1.webp</image:loc>
+      <image:title>Güzelbahçe Deniz Manzaralı Villa Salon &amp; Mutfak Tasarımı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_dogal_banyo_04.webp</image:loc>
+      <image:title>Bostanlı Sahil Dairesi Minimalist Renovasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/render/render-3.webp</image:loc>
+      <image:title>Narlıdere Sahilevleri Lüks Konut Modernizasyonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_country_mutfak_06.webp</image:loc>
+      <image:title>Çeşme Ilıca Yazlık Konut Komple Tadilatı</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/banyo.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/kahve-kosesi/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-01.webp</image:loc>
+      <image:title>İzmir Özel Ölçü Kahve Köşesi ve Ev Tipi Barista Dolabı İmalatı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-02.webp</image:loc>
+      <image:title>Modern Minimalist Ahşap Kulplu Kahve Köşesi ve Fincan Ünitesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-03.webp</image:loc>
+      <image:title>Modern Minimalist Ahşap Kulplu Kahve Köşesi ve Fincan Ünitesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-04.webp</image:loc>
+      <image:title>İskandinav Meşe Gövdeli Çok Raflı Barista Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-05.webp</image:loc>
+      <image:title>İskandinav Meşe Gövdeli Çok Raflı Barista Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-06.webp</image:loc>
+      <image:title>İskandinav Meşe Gövdeli Çok Raflı Barista Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-07.webp</image:loc>
+      <image:title>Rustik Masif Ahşap Tablalı Fonksiyonel Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-08.webp</image:loc>
+      <image:title>Rustik Masif Ahşap Tablalı Fonksiyonel Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-09.webp</image:loc>
+      <image:title>Rustik Masif Ahşap Tablalı Fonksiyonel Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-10.webp</image:loc>
+      <image:title>İki Kapaklı Geniş Kiler Bölmeli Çok Amaçlı Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-11.webp</image:loc>
+      <image:title>İki Kapaklı Geniş Kiler Bölmeli Çok Amaçlı Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-12.webp</image:loc>
+      <image:title>İki Kapaklı Geniş Kiler Bölmeli Çok Amaçlı Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-13.webp</image:loc>
+      <image:title>Led Aydınlatmalı Füme Temperli Cam Kapaklı 4 Kapaklı Kahve Ünitesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-14.webp</image:loc>
+      <image:title>Led Aydınlatmalı Füme Temperli Cam Kapaklı 4 Kapaklı Kahve Ünitesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-15.webp</image:loc>
+      <image:title>Led Aydınlatmalı Füme Temperli Cam Kapaklı 4 Kapaklı Kahve Ünitesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-16.webp</image:loc>
+      <image:title>Entegre Spot Aydınlatmalı Vitrinli 5 Kapaklı Lüks Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-17.webp</image:loc>
+      <image:title>Entegre Spot Aydınlatmalı Vitrinli 5 Kapaklı Lüks Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-18.webp</image:loc>
+      <image:title>Entegre Spot Aydınlatmalı Vitrinli 5 Kapaklı Lüks Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-19.webp</image:loc>
+      <image:title>Kompakt Askılıklı Fincan Raflı Ahşap Mutfak Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-20.webp</image:loc>
+      <image:title>Kompakt Askılıklı Fincan Raflı Ahşap Mutfak Kahve Köşesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-21.webp</image:loc>
+      <image:title>Kompakt Askılıklı Fincan Raflı Ahşap Mutfak Kahve Köşesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-22.webp</image:loc>
+      <image:title>Özel Ölçü Raf Bölmeli Geniş Tezgahlı Konsol Kahve Ünitesi (120x62 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-23.webp</image:loc>
+      <image:title>Özel Ölçü Raf Bölmeli Geniş Tezgahlı Konsol Kahve Ünitesi (120x62 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-24.webp</image:loc>
+      <image:title>Özel Ölçü Raf Bölmeli Geniş Tezgahlı Konsol Kahve Ünitesi (120x62 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-25.webp</image:loc>
+      <image:title>Dört Kapaklı ve Çift Çekmeceli Çatal-Bıçak &amp; Kapsül Düzenleyicili Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-26.webp</image:loc>
+      <image:title>Dört Kapaklı ve Çift Çekmeceli Çatal-Bıçak &amp; Kapsül Düzenleyicili Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-27.webp</image:loc>
+      <image:title>Dört Kapaklı ve Çift Çekmeceli Çatal-Bıçak &amp; Kapsül Düzenleyicili Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-28.webp</image:loc>
+      <image:title>Yedi Kapaklı İki Çekmeceli Geniş Hacimli Çok Fonksiyonlu Kiler &amp; Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-29.webp</image:loc>
+      <image:title>Yedi Kapaklı İki Çekmeceli Geniş Hacimli Çok Fonksiyonlu Kiler &amp; Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-30.webp</image:loc>
+      <image:title>Yedi Kapaklı İki Çekmeceli Geniş Hacimli Çok Fonksiyonlu Kiler &amp; Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-31.webp</image:loc>
+      <image:title>Dört Kapaklı Açık Teşhir Raflı Mutfak Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-32.webp</image:loc>
+      <image:title>Dört Kapaklı Açık Teşhir Raflı Mutfak Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-33.webp</image:loc>
+      <image:title>Dört Kapaklı Açık Teşhir Raflı Mutfak Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-34.webp</image:loc>
+      <image:title>Dört Kapaklı Simetrik Orta Bölmeli Barista Servis Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-35.webp</image:loc>
+      <image:title>Dört Kapaklı Simetrik Orta Bölmeli Barista Servis Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-36.webp</image:loc>
+      <image:title>Dört Kapaklı Simetrik Orta Bölmeli Barista Servis Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-37.webp</image:loc>
+      <image:title>Üç Çekmeceli Dört Kapaklı Geniş Depolamalı Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-38.webp</image:loc>
+      <image:title>Üç Çekmeceli Dört Kapaklı Geniş Depolamalı Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-39.webp</image:loc>
+      <image:title>Üç Çekmeceli Dört Kapaklı Geniş Depolamalı Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-40.webp</image:loc>
+      <image:title>180 cm Dokuz Kapaklı Tam Boy Mimari Mutfak &amp; Kahve Depolama Ünitesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-41.webp</image:loc>
+      <image:title>180 cm Dokuz Kapaklı Tam Boy Mimari Mutfak &amp; Kahve Depolama Ünitesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-42.webp</image:loc>
+      <image:title>180 cm Dokuz Kapaklı Tam Boy Mimari Mutfak &amp; Kahve Depolama Ünitesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-43.webp</image:loc>
+      <image:title>Katlanabilir Açılır Masalı Kompakt Kahve Köşesi (70 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-44.webp</image:loc>
+      <image:title>Katlanabilir Açılır Masalı Kompakt Kahve Köşesi (70 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-45.webp</image:loc>
+      <image:title>Katlanabilir Açılır Masalı Kompakt Kahve Köşesi (70 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-46.webp</image:loc>
+      <image:title>Yüksek Boy Kiler &amp; Barista Kahve Dolabı (190x80 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-47.webp</image:loc>
+      <image:title>Yüksek Boy Kiler &amp; Barista Kahve Dolabı (190x80 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-48.webp</image:loc>
+      <image:title>Yüksek Boy Kiler &amp; Barista Kahve Dolabı (190x80 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-49.webp</image:loc>
+      <image:title>Mat Beyaz Lake Kapaklı Çok Raflı Geniş Hacimli Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-50.webp</image:loc>
+      <image:title>Mat Beyaz Lake Kapaklı Çok Raflı Geniş Hacimli Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-51.webp</image:loc>
+      <image:title>Mat Beyaz Lake Kapaklı Çok Raflı Geniş Hacimli Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-52.webp</image:loc>
+      <image:title>İki Modüllü Çift Gövdeli Kiler &amp; Kahve Köşesi Dolabı (190x120 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-53.webp</image:loc>
+      <image:title>İki Modüllü Çift Gövdeli Kiler &amp; Kahve Köşesi Dolabı (190x120 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-54.webp</image:loc>
+      <image:title>İki Modüllü Çift Gövdeli Kiler &amp; Kahve Köşesi Dolabı (190x120 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-55.webp</image:loc>
+      <image:title>Zeytin Yeşili Lake Kapaklı Yüksek Hacimli Kiler &amp; Kahve Köşesi (190x120 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-56.webp</image:loc>
+      <image:title>Zeytin Yeşili Lake Kapaklı Yüksek Hacimli Kiler &amp; Kahve Köşesi (190x120 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-57.webp</image:loc>
+      <image:title>Zeytin Yeşili Lake Kapaklı Yüksek Hacimli Kiler &amp; Kahve Köşesi (190x120 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-58.webp</image:loc>
+      <image:title>Ferah Açık Raflı Çift Kapaklı Pratik Tezgah Mutfak Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-59.webp</image:loc>
+      <image:title>Ferah Açık Raflı Çift Kapaklı Pratik Tezgah Mutfak Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-60.webp</image:loc>
+      <image:title>Ferah Açık Raflı Çift Kapaklı Pratik Tezgah Mutfak Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-61.webp</image:loc>
+      <image:title>Geniş Tezgahlı Akıllı Raf Düzenekli Kahve İstasyonu (85 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-62.webp</image:loc>
+      <image:title>Geniş Tezgahlı Akıllı Raf Düzenekli Kahve İstasyonu (85 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-63.webp</image:loc>
+      <image:title>Geniş Tezgahlı Akıllı Raf Düzenekli Kahve İstasyonu (85 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-64.webp</image:loc>
+      <image:title>Ahşap Çerçeve Kapaklı Fincan Askılıklı Kompakt Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-65.webp</image:loc>
+      <image:title>Mat Beyaz Kiler Boyutlu Açık Tezgahlı Kahve Dolabı (160 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-66.webp</image:loc>
+      <image:title>Mat Beyaz Kiler Boyutlu Açık Tezgahlı Kahve Dolabı (160 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-67.webp</image:loc>
+      <image:title>Mat Beyaz Kiler Boyutlu Açık Tezgahlı Kahve Dolabı (160 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-68.webp</image:loc>
+      <image:title>Doğal Ahşap Dokulu Geniş Hacimli Kapaklı Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-69.webp</image:loc>
+      <image:title>Doğal Ahşap Dokulu Geniş Hacimli Kapaklı Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-70.webp</image:loc>
+      <image:title>Doğal Ahşap Dokulu Geniş Hacimli Kapaklı Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-71.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Tek Modüllü Barista Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-72.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Tek Modüllü Barista Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-73.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Tek Modüllü Barista Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-74.webp</image:loc>
+      <image:title>Dar Mekanlara Özel Çekmeceli Kompakt Kahve İstasyonu (80 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-75.webp</image:loc>
+      <image:title>Dar Mekanlara Özel Çekmeceli Kompakt Kahve İstasyonu (80 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-76.webp</image:loc>
+      <image:title>Dar Mekanlara Özel Çekmeceli Kompakt Kahve İstasyonu (80 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-77.webp</image:loc>
+      <image:title>Dört Modüllü Dev Kiler &amp; Barista Komple Depolama Sistemi (190x240 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-78.webp</image:loc>
+      <image:title>Dört Modüllü Dev Kiler &amp; Barista Komple Depolama Sistemi (190x240 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-79.webp</image:loc>
+      <image:title>Dört Modüllü Dev Kiler &amp; Barista Komple Depolama Sistemi (190x240 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-80.webp</image:loc>
+      <image:title>Zarif Çizgili İki Kapaklı Teşhir Raflı Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-81.webp</image:loc>
+      <image:title>Ada Yeşili Çift Modüllü Geniş Kiler &amp; Kahve İstasyonu (190x160 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-82.webp</image:loc>
+      <image:title>Ada Yeşili Çift Modüllü Geniş Kiler &amp; Kahve İstasyonu (190x160 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-83.webp</image:loc>
+      <image:title>Ada Yeşili Çift Modüllü Geniş Kiler &amp; Kahve İstasyonu (190x160 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-84.webp</image:loc>
+      <image:title>Entegre Gizli Ledli İki Kapaklı Modern Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-85.webp</image:loc>
+      <image:title>Entegre Gizli Ledli İki Kapaklı Modern Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-86.webp</image:loc>
+      <image:title>Entegre Gizli Ledli İki Kapaklı Modern Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-87.webp</image:loc>
+      <image:title>İkiz Modüllü Simetrik Kiler Dolabı ve Kahve Barı (190x160 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-88.webp</image:loc>
+      <image:title>İkiz Modüllü Simetrik Kiler Dolabı ve Kahve Barı (190x160 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-89.webp</image:loc>
+      <image:title>İkiz Modüllü Simetrik Kiler Dolabı ve Kahve Barı (190x160 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-90.webp</image:loc>
+      <image:title>Dikey Raflı Tek Kapaklı Ergonomik Kahve Köşesi Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-91.webp</image:loc>
+      <image:title>Dikey Raflı Tek Kapaklı Ergonomik Kahve Köşesi Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-92.webp</image:loc>
+      <image:title>Dikey Raflı Tek Kapaklı Ergonomik Kahve Köşesi Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-93.webp</image:loc>
+      <image:title>180 cm Mat Beyaz Çok Bölmeli Kiler Tipi Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-94.webp</image:loc>
+      <image:title>180 cm Mat Beyaz Çok Bölmeli Kiler Tipi Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-95.webp</image:loc>
+      <image:title>180 cm Mat Beyaz Çok Bölmeli Kiler Tipi Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-96.webp</image:loc>
+      <image:title>Dört Kapaklı Beş Raflı Lake Yüzeyli Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-97.webp</image:loc>
+      <image:title>Dört Kapaklı Beş Raflı Lake Yüzeyli Kahve Köşesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-98.webp</image:loc>
+      <image:title>Dört Kapaklı Beş Raflı Lake Yüzeyli Kahve Köşesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-99.webp</image:loc>
+      <image:title>Altı Kapaklı Bronz Cam Vitrinli Ledli Kahve Köşesi (125 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-100.webp</image:loc>
+      <image:title>Altı Kapaklı Bronz Cam Vitrinli Ledli Kahve Köşesi (125 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-101.webp</image:loc>
+      <image:title>Altı Kapaklı Bronz Cam Vitrinli Ledli Kahve Köşesi (125 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-102.webp</image:loc>
+      <image:title>Ceviz Kaplama Cam Vitrinli Işıklı Lüks Kahve Konsolu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-103.webp</image:loc>
+      <image:title>Ceviz Kaplama Cam Vitrinli Işıklı Lüks Kahve Konsolu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-104.webp</image:loc>
+      <image:title>Ceviz Kaplama Cam Vitrinli Işıklı Lüks Kahve Konsolu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-105.webp</image:loc>
+      <image:title>Alt Bölmeli Gizli Led Aydınlatmalı Barista Kahve Barı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-106.webp</image:loc>
+      <image:title>İki Kapaklı Minimalist Ahşap Kulplu Çok Amaçlı Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-107.webp</image:loc>
+      <image:title>İki Kapaklı Minimalist Ahşap Kulplu Çok Amaçlı Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-108.webp</image:loc>
+      <image:title>İki Kapaklı Minimalist Ahşap Kulplu Çok Amaçlı Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-109.webp</image:loc>
+      <image:title>Derin Teleskopik Çekmeceli Açık Teşhir Raflı Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-110.webp</image:loc>
+      <image:title>Derin Teleskopik Çekmeceli Açık Teşhir Raflı Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-111.webp</image:loc>
+      <image:title>Çok Gözlü Kiler &amp; Fincan Raf Düzenekli Kahve Ünitesi (154 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-112.webp</image:loc>
+      <image:title>Çok Gözlü Kiler &amp; Fincan Raf Düzenekli Kahve Ünitesi (154 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-113.webp</image:loc>
+      <image:title>Çok Gözlü Kiler &amp; Fincan Raf Düzenekli Kahve Ünitesi (154 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-114.webp</image:loc>
+      <image:title>Petek Üstü İnce Hatlı Dresuar Tipi Kahve Köşesi (90 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-115.webp</image:loc>
+      <image:title>Petek Üstü İnce Hatlı Dresuar Tipi Kahve Köşesi (90 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-116.webp</image:loc>
+      <image:title>Petek Üstü İnce Hatlı Dresuar Tipi Kahve Köşesi (90 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-117.webp</image:loc>
+      <image:title>120 cm Füme Cam Kapaklı Led Ambiyans Aydınlatmalı Kahve Barı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-118.webp</image:loc>
+      <image:title>120 cm Füme Cam Kapaklı Led Ambiyans Aydınlatmalı Kahve Barı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-119.webp</image:loc>
+      <image:title>120 cm Füme Cam Kapaklı Led Ambiyans Aydınlatmalı Kahve Barı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-120.webp</image:loc>
+      <image:title>Mat Zümrüt Yeşili 4 Modüllü Büyük Kiler &amp; Kahve İstasyonu (190x240 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-121.webp</image:loc>
+      <image:title>Mat Zümrüt Yeşili 4 Modüllü Büyük Kiler &amp; Kahve İstasyonu (190x240 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-122.webp</image:loc>
+      <image:title>Mat Zümrüt Yeşili 4 Modüllü Büyük Kiler &amp; Kahve İstasyonu (190x240 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-123.webp</image:loc>
+      <image:title>İki Çekmeceli ve Kadeh/Fincan Askılıklı Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-124.webp</image:loc>
+      <image:title>Toros Meşesi Dokulu Ahşap Ayaklı Modüler Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-125.webp</image:loc>
+      <image:title>Toros Meşesi Dokulu Ahşap Ayaklı Modüler Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-126.webp</image:loc>
+      <image:title>Toros Meşesi Dokulu Ahşap Ayaklı Modüler Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-127.webp</image:loc>
+      <image:title>40 cm İnce Hatlı Dikey Kiler &amp; Kahve Dolabı (190x40 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-128.webp</image:loc>
+      <image:title>40 cm İnce Hatlı Dikey Kiler &amp; Kahve Dolabı (190x40 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-129.webp</image:loc>
+      <image:title>40 cm İnce Hatlı Dikey Kiler &amp; Kahve Dolabı (190x40 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-130.webp</image:loc>
+      <image:title>İki Kapaklı Raflı Kompakt Mutfak Servis Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-131.webp</image:loc>
+      <image:title>İki Kapaklı Raflı Kompakt Mutfak Servis Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-132.webp</image:loc>
+      <image:title>İki Kapaklı Raflı Kompakt Mutfak Servis Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-133.webp</image:loc>
+      <image:title>135 cm Mat Beyaz İki Kademeli Kahve ve Mutfak Ünitesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-134.webp</image:loc>
+      <image:title>135 cm Mat Beyaz İki Kademeli Kahve ve Mutfak Ünitesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-135.webp</image:loc>
+      <image:title>135 cm Mat Beyaz İki Kademeli Kahve ve Mutfak Ünitesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-136.webp</image:loc>
+      <image:title>120 cm Beyaz Lake Gövdeli Geniş Çok Amaçlı Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-137.webp</image:loc>
+      <image:title>120 cm Beyaz Lake Gövdeli Geniş Çok Amaçlı Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-138.webp</image:loc>
+      <image:title>120 cm Beyaz Lake Gövdeli Geniş Çok Amaçlı Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-139.webp</image:loc>
+      <image:title>Açık Teşhir Raflı Tek Kapaklı Dikey Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-140.webp</image:loc>
+      <image:title>Açık Teşhir Raflı Tek Kapaklı Dikey Kahve Köşesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-141.webp</image:loc>
+      <image:title>Açık Teşhir Raflı Tek Kapaklı Dikey Kahve Köşesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-142.webp</image:loc>
+      <image:title>Retro Çizgili Ahşap Ayaklı Çok Fonksiyonlu Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-143.webp</image:loc>
+      <image:title>Retro Çizgili Ahşap Ayaklı Çok Fonksiyonlu Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-144.webp</image:loc>
+      <image:title>Mat Beyaz Çizgisel Detaylı Ergonomik Kahve İstasyonu - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-145.webp</image:loc>
+      <image:title>Mat Beyaz Çizgisel Detaylı Ergonomik Kahve İstasyonu - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-146.webp</image:loc>
+      <image:title>Mat Beyaz Çizgisel Detaylı Ergonomik Kahve İstasyonu - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-147.webp</image:loc>
+      <image:title>Hasır Sepetli Doğal Ahşap Dokulu Country Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-148.webp</image:loc>
+      <image:title>Hasır Sepetli Doğal Ahşap Dokulu Country Kahve Köşesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-149.webp</image:loc>
+      <image:title>Hasır Sepetli Doğal Ahşap Dokulu Country Kahve Köşesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-150.webp</image:loc>
+      <image:title>Beyaz &amp; Ahşap Kombinasyonlu İki Renkli Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-151.webp</image:loc>
+      <image:title>Beyaz &amp; Ahşap Kombinasyonlu İki Renkli Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-152.webp</image:loc>
+      <image:title>Beyaz &amp; Ahşap Kombinasyonlu İki Renkli Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-153.webp</image:loc>
+      <image:title>Çift Modüllü Geniş Kiler Boyutlu Kahve Depolama Sistemi (190x160 cm) - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-154.webp</image:loc>
+      <image:title>Çift Modüllü Geniş Kiler Boyutlu Kahve Depolama Sistemi (190x160 cm) - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-155.webp</image:loc>
+      <image:title>Çift Modüllü Geniş Kiler Boyutlu Kahve Depolama Sistemi (190x160 cm) - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-156.webp</image:loc>
+      <image:title>Geniş Tablalı Mat Beyaz Kahve ve Mutfak Servis Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-157.webp</image:loc>
+      <image:title>Geniş Tablalı Mat Beyaz Kahve ve Mutfak Servis Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-158.webp</image:loc>
+      <image:title>Geniş Tablalı Mat Beyaz Kahve ve Mutfak Servis Dolabı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-159.webp</image:loc>
+      <image:title>Bronz Reflektif Cam Kapaklı Led Işıklı Beyaz Kahve Köşesi - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-160.webp</image:loc>
+      <image:title>Bronz Reflektif Cam Kapaklı Led Işıklı Beyaz Kahve Köşesi - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-161.webp</image:loc>
+      <image:title>Bronz Reflektif Cam Kapaklı Led Işıklı Beyaz Kahve Köşesi - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-162.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Üst Raflı Mutfak Kahve Barı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-163.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Üst Raflı Mutfak Kahve Barı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-164.webp</image:loc>
+      <image:title>Doğal Meşe Kaplamalı Üst Raflı Mutfak Kahve Barı - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-165.webp</image:loc>
+      <image:title>Rustik Meşe Yüzeyli Modüler Kahve İstasyonu ve Servis Sehpası - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-166.webp</image:loc>
+      <image:title>Rustik Meşe Yüzeyli Modüler Kahve İstasyonu ve Servis Sehpası - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-167.webp</image:loc>
+      <image:title>Rustik Meşe Yüzeyli Modüler Kahve İstasyonu ve Servis Sehpası - Görsel 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-168.webp</image:loc>
+      <image:title>Cam Kapaklı Vitrin Bölmeli Dikey Raflı Beyaz Kahve Dolabı - Görsel 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-169.webp</image:loc>
+      <image:title>Cam Kapaklı Vitrin Bölmeli Dikey Raflı Beyaz Kahve Dolabı - Görsel 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/kahve-kosesi/kahve-ozel-170.webp</image:loc>
+      <image:title>Cam Kapaklı Vitrin Bölmeli Dikey Raflı Beyaz Kahve Dolabı - Görsel 3</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://izmirmutfakbanyo.com.tr/modeller/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-4.webp</image:loc>
+      <image:title>İzmir Mutfak Banyo 137 Model Üretim Kataloğu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-1-3.webp</image:loc>
+      <image:title>Ada Mutfak &amp; Porselen Tezgahlı Mat Antrasit Dolap (MODEL-1-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-1.webp</image:loc>
+      <image:title>Asma Hilton Banyo Dolabı &amp; Dokunmatik LED Ayna (MODEL-1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-1-2.webp</image:loc>
+      <image:title>Manyetik Kilitli &amp; Gizli Menteşeli Beyaz Lake Kapı (MODEL-1-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-1-4.webp</image:loc>
+      <image:title>Tavana Sıfır Entegre LED Aydınlatmalı Sürgülü Dolap (MODEL-1-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-2-4.webp</image:loc>
+      <image:title>Bostanlı Kaşmir Gri Lake Mutfak Dolabı (MODEL-2-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-2.webp</image:loc>
+      <image:title>Çift Lavabolu Kuvars Tezgahlı Ebeveyn Banyo Dolabı (MODEL-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-2-2.webp</image:loc>
+      <image:title>Modern Antrasit İpek Mat İç Oda Kapısı (MODEL-2-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-2-3.webp</image:loc>
+      <image:title>Ortası Cam Takı Adalı Lüks Giyinme Odası Dolabı (MODEL-2-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-3-4.webp</image:loc>
+      <image:title>Doğal Meşe &amp; Mat Beyaz L Tipi Mutfak Dolabı (MODEL-3-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-3.webp</image:loc>
+      <image:title>Masif Ahşap Tezgah &amp; Mat Siyah Çanak Lavabo Dolabı (MODEL-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-3-2.webp</image:loc>
+      <image:title>Neo-Klasik Çıtalı Beyaz Lake Salon Kapısı (MODEL-3-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-5-3.webp</image:loc>
+      <image:title>Füme Reflekte Cam Kapaklı Alüminyum Çerçeveli Gardırop (MODEL-5-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-4-4.webp</image:loc>
+      <image:title>Urla Taş Ev Çıtalı Country Mutfak Dolabı (MODEL-4-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-4.webp</image:loc>
+      <image:title>Çamaşır &amp; Kurutma Makinesi Gizleme Banyo Kulesi (MODEL-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-4-2.webp</image:loc>
+      <image:title>Pervazsız Duvarla Hemyüz Gizli Pivot Kapı (MODEL-4-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-6-3.webp</image:loc>
+      <image:title>Boy Aynalı &amp; Gizli Ayakkabılıklı Antre Vestiyeri (MODEL-6-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-5-4.webp</image:loc>
+      <image:title>Çizilmez Akrilik Parlak Beyaz Mutfak Dolabı (MODEL-5-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-5.webp</image:loc>
+      <image:title>Dar Banyolar İçin Aynalı Üst Modüllü Kompakt Dolap (MODEL-5)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-5-2.webp</image:loc>
+      <image:title>Doğal Ceviz Kaplama Dikey Derzli Oda Kapısı (MODEL-5-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-7-3.webp</image:loc>
+      <image:title>Mat Kaşmir Dikey Çıtalı Yatak Odası Gömme Dolabı (MODEL-7-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-6-4.webp</image:loc>
+      <image:title>Mavişehir Monoblok Ada Mutfak Ünitesi (MODEL-6-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-6.webp</image:loc>
+      <image:title>Porselen Mermer Tezgahlı &amp; Altın Bataryalı Banyo Dolabı (MODEL-6)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-6-2.webp</image:loc>
+      <image:title>Çeşme Alaçatı Rustik Çıtalı Beyaz Ahşap Kapı (MODEL-6-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-8-3.webp</image:loc>
+      <image:title>Çatı Katı Eğimli Tavanlara Özel Rölöve Dolabı (MODEL-8-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-7-4.webp</image:loc>
+      <image:title>İskandinav Açık Meşe Kulpsuz Mutfak Dolabı (MODEL-7-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-8.webp</image:loc>
+      <image:title>İskandinav Marin Meşe Dokulu Suya Dayanıklı Dolap (MODEL-8)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-7-2.webp</image:loc>
+      <image:title>Füme Cam Çıtalı Modern Aydınlık Salon Kapısı (MODEL-7-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-9-3.webp</image:loc>
+      <image:title>Doğal Meşe &amp; Antrasit Kombinasyonlu Gardırop (MODEL-9-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-8-4.webp</image:loc>
+      <image:title>Klasik Taçlı Zümrüt Yeşili Lake Mutfak (MODEL-8-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-9.webp</image:loc>
+      <image:title>Gece Sensörlü Alt LED Aydınlatmalı Antrasit Dolap (MODEL-9)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-8-2.webp</image:loc>
+      <image:title>Yatay CNC İşlemeli Antrasit Gri Lake Kapı (MODEL-8-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-10-3.webp</image:loc>
+      <image:title>İki Duvar Arası Niş Sürgülü Ray Dolap Sistemi (MODEL-10-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-9-4.webp</image:loc>
+      <image:title>Küçük Daireler İçin Düz Hatlı Kompakt Mutfak (MODEL-9-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-10.webp</image:loc>
+      <image:title>Mermer Tezgahlı Çıtalı Nostaljik Beyaz Lake Banyo (MODEL-10)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-9-2.webp</image:loc>
+      <image:title>Görkemli Çift Kanatlı Klasik Salon Kapısı (MODEL-9-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-11-3.webp</image:loc>
+      <image:title>Açık Raf Sistemli Minimalist Walk-in Closet (MODEL-11-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-10-4.webp</image:loc>
+      <image:title>Endüstriyel Loft Füme Cam Kapaklı Mutfak (MODEL-10-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-11.webp</image:loc>
+      <image:title>Robot Süpürge Geçişine Uygun Ayaklı Modern Banyo (MODEL-11)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-10-2.webp</image:loc>
+      <image:title>İskandinav Açık Meşe Kaplama Sade Oda Kapısı (MODEL-10-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-12-3.webp</image:loc>
+      <image:title>Gizli Çamaşır &amp; Kurutma Makinesi Koridor Dolabı (MODEL-12-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-11-4.webp</image:loc>
+      <image:title>Karşıyaka Soft Bej Kesintisiz Kulpsuz Mutfak (MODEL-11-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-12.webp</image:loc>
+      <image:title>Klozet Üzeri Gömme Rezervuar Depolama Dolabı (MODEL-12)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-11-2.webp</image:loc>
+      <image:title>Duvar İçi Kasetli Sürgülü Oda Kapısı Sistemi (MODEL-11-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-14-3.webp</image:loc>
+      <image:title>Country Panjur Havalandırma Kapaklı Giysi Dolabı (MODEL-14-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-12-4.webp</image:loc>
+      <image:title>Geniş Balkon &amp; Salon İçin Çift Sıra Paralel Mutfak (MODEL-12-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-13.webp</image:loc>
+      <image:title>Buğu Rezistanslı Aynalı Kapaklı Lüks Banyo Dolabı (MODEL-13)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-12-2.webp</image:loc>
+      <image:title>Soft Kaşmir Lake Üç Panelli İç Oda Kapısı (MODEL-12-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-15-3.webp</image:loc>
+      <image:title>Çalışma Masasıyla Birleşen Genç Odası Gömme Dolabı (MODEL-15-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-13-4.webp</image:loc>
+      <image:title>Neme Dayanıklı Çift Renk Membran Mutfak (MODEL-13-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-14.webp</image:loc>
+      <image:title>Mat Zeytin Yeşili Lake &amp; Açık Raflı Spa Dolabı (MODEL-14)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-13-2.webp</image:loc>
+      <image:title>Monokrom Siyah Mat Lake Modern İç Kapı (MODEL-13-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-16-3.webp</image:loc>
+      <image:title>Ölü Alan Bırakmayan Döner Askılıklı L Gardırop (MODEL-16-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-14-4.webp</image:loc>
+      <image:title>Şaraplık Bölmeli &amp; Kuvars Tezgahlı Lüks Mutfak (MODEL-14-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-15.webp</image:loc>
+      <image:title>Sıfır Derzli Monoblok Döküm Lavabolu Banyo Dolabı (MODEL-15)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-14-2.webp</image:loc>
+      <image:title>Akustik Ses Yalıtımlı Dolgulu Çalışma Odası Kapısı (MODEL-14-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-17-3.webp</image:loc>
+      <image:title>Koyu Ceviz Gövde &amp; Deri Kulplu Yatak Odası Dolabı (MODEL-17-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-15-4.webp</image:loc>
+      <image:title>Retro Çıtalı Antrasit &amp; Masif Ahşap Mutfak (MODEL-15-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-16.webp</image:loc>
+      <image:title>Havlu &amp; Bornoz Boy Kilerli Kapsamlı Banyo Mobilyası (MODEL-16)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-15-2.webp</image:loc>
+      <image:title>Geniş Kordon Pervazlı Kırık Beyaz Lake Kapı (MODEL-15-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-18-3.webp</image:loc>
+      <image:title>Klasik Taç Pervazlı 6 Kapaklı Beyaz Lake Gardırop (MODEL-18-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-16-4.webp</image:loc>
+      <image:title>Bornova Villa Tipi U Mutfak Dolabı &amp; Kiler (MODEL-16-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-17.webp</image:loc>
+      <image:title>Gizli Entegre Basamaklı Çocuk Dostu Banyo Dolabı (MODEL-17)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-16-2.webp</image:loc>
+      <image:title>Dikey Cam Bölmeli Işık Geçiren Hol Kapısı (MODEL-16-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-19-3.webp</image:loc>
+      <image:title>Kimyasal Salınımsız Antibakteriyel Bebek Gardırobu (MODEL-19-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-17-4.webp</image:loc>
+      <image:title>Fırın Boyalı Beyaz Lake Tavana Sıfır Mutfak (MODEL-17-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-18.webp</image:loc>
+      <image:title>Dar Köşeler İçin Üçgen Açılı Lavabo Dolap Modülü (MODEL-18)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-17-2.webp</image:loc>
+      <image:title>Doğal Dişbudak Eskitme Gri Cilalı Tasarım Kapı (MODEL-17-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-20-3.webp</image:loc>
+      <image:title>Yatak Başlığı Köprülü Yer Kazandıran Yatak Odası Dolabı (MODEL-20-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-18-4.webp</image:loc>
+      <image:title>Mermer Dokulu Seramik Panelli Vizon Mutfak (MODEL-18-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-19.webp</image:loc>
+      <image:title>Antik Pirinç Kulplu Füme Mat Lake Country Banyo (MODEL-19)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-18-2.webp</image:loc>
+      <image:title>Asimetrik CNC Kanallı Dinamik Genç Odası Kapısı (MODEL-18-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-21-3.webp</image:loc>
+      <image:title>Frenli Menteşeli İpek Mat Beyaz Minimalist Dolap (MODEL-21-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-19-4.webp</image:loc>
+      <image:title>Japandi Ahşap Çıtalı Minimalist Mutfak Adası (MODEL-19-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-21.webp</image:loc>
+      <image:title>Kapağa Entegre Kirli Sepetli Pratik Banyo Dolabı (MODEL-21)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-19-2.webp</image:loc>
+      <image:title>Füme Boy Aynalı Yatak Odası Geçiş Kapısı (MODEL-19-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-22-3.webp</image:loc>
+      <image:title>Bronz Cam Kapaklı Şık Aydınlatmalı Ebeveyn Gardırobu (MODEL-22-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-20-4.webp</image:loc>
+      <image:title>Alaçatı Panjur Kapaklı Rustik Mutfak Dolabı (MODEL-20-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-22.webp</image:loc>
+      <image:title>Doğal Tik Ağacı Marin Tutkallı Islak Hacim Dolabı (MODEL-22)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-20-2.webp</image:loc>
+      <image:title>Çift Yönlü İki Renkli Kontrast Koridor Kapısı (MODEL-20-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-23-3.webp</image:loc>
+      <image:title>Robot Süpürge Yuvalı &amp; LED Kanallı Giriş Vestiyeri (MODEL-23-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-21-4.webp</image:loc>
+      <image:title>Ölü Alan Bırakmayan Döner Kilerli L Mutfak (MODEL-21-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-23.webp</image:loc>
+      <image:title>Saat &amp; Sıcaklık Göstergeli Akıllı LED Aynalı Dolap (MODEL-23)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-21-2.webp</image:loc>
+      <image:title>Yüksek Darbe Dayanımlı Amerikan Panel Kapı (MODEL-21-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-24-3.webp</image:loc>
+      <image:title>Panoramik Açılan Akordeon Kapaklı Gömme Dolap (MODEL-24-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-22-4.webp</image:loc>
+      <image:title>Koyu Füme Mat Lake &amp; Pirinç Kulplu Mutfak (MODEL-22-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-24.webp</image:loc>
+      <image:title>Prizli &amp; Tıraş Makinesi Şarjlı Gizli Çekmeceli Dolap (MODEL-24)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-22-2.webp</image:loc>
+      <image:title>Mutfak İçin Çift Yönlü Yaylı Çarpma Ahşap Kapı (MODEL-22-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-25-2.webp</image:loc>
+      <image:title>Kravatlık &amp; Pantolonluk Modüllü Antrasit Gardırop (MODEL-25-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-23-4.webp</image:loc>
+      <image:title>Stüdyo 1+1 Daire Gizli Cihazlı Kompakt Mutfak (MODEL-23-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-39.webp</image:loc>
+      <image:title>Leke Tutmaz İpek Mat Vizon Gömme Lavabolu Dolap (MODEL-39)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-23-2.webp</image:loc>
+      <image:title>Tavan Boyu Süpürgelik Hemyüz Minimalist Kapı (MODEL-23-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-26-2.webp</image:loc>
+      <image:title>Pencere Önü Sedir Depolamalı Giyinme Odası Dolabı (MODEL-26-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-24-4.webp</image:loc>
+      <image:title>Çift Adalı Ultra Lüks Villa Mutfak Mimarisi (MODEL-24-4)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-41.webp</image:loc>
+      <image:title>İki Duvar Arası Özel Ölçü Duvardan Duvara Banyo Dolabı (MODEL-41)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-24-2.webp</image:loc>
+      <image:title>El Oyması Altın Varak Detaylı Avangard Kapı (MODEL-24-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-27-2.webp</image:loc>
+      <image:title>Şifreli Gizli Mücevher Çekmeceli Güvenli Gardırop (MODEL-27-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-25-3.webp</image:loc>
+      <image:title>Açık Gri İpek Mat Lake &amp; Ahşap Bar Masalı Mutfak (MODEL-25-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-45.webp</image:loc>
+      <image:title>Masif Kütük Tezgahlı El Yapımı Seramik Çanak Banyo (MODEL-45)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-25.webp</image:loc>
+      <image:title>Dikey Pirinç Profilli Koyu Meşe Lüks Kapı (MODEL-25)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-28-2.webp</image:loc>
+      <image:title>Doğal Dişbudak Çıtalı Bohem Yatak Odası Dolabı (MODEL-28-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-26-3.webp</image:loc>
+      <image:title>Altın Gola Profilli Antrasit Mutfak Dolabı (MODEL-26-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-26.webp</image:loc>
+      <image:title>Fransız Tipi Çoklu Cam Çıtalı Beyaz Kapı (MODEL-26)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-29-2.webp</image:loc>
+      <image:title>3 Metre Yüksek Tavanlar İçin Asansör Askılıklı Dolap (MODEL-29-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-27-3.webp</image:loc>
+      <image:title>Yüksek Tavanlı Evler İçin Cam Vitrinli Mutfak (MODEL-27-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-27.webp</image:loc>
+      <image:title>Islak Hacim Neme Dayanıklı Çift Göbekli Kapı (MODEL-27)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-30-2.webp</image:loc>
+      <image:title>Gizli Kulp Kanallı Açık Bej Düz Hatlı Gardırop (MODEL-30-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-28-3.webp</image:loc>
+      <image:title>Leke Tutmaz Beyaz Akrilik &amp; Çimstone Mutfak (MODEL-28-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-28.webp</image:loc>
+      <image:title>Metal Karkaslı Masif Ahşap Rustik Barn Door (MODEL-28)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-31-2.webp</image:loc>
+      <image:title>Kitaplık &amp; Portmanto Birleşimli Koridor Duvar Dolabı (MODEL-31-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-29-3.webp</image:loc>
+      <image:title>Yumuşak Kavisli Köşe Adalı Ergonomik Mutfak (MODEL-29-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-29.webp</image:loc>
+      <image:title>Fitilli Sessiz Kapanan Vizon Renk Lake Kapı (MODEL-29)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-32-2.webp</image:loc>
+      <image:title>Nem Korumalı Çift Kirli Sepetli Banyo Önü Dolabı (MODEL-32-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-30-3.webp</image:loc>
+      <image:title>Doğal Meşe Gövde &amp; Mat Siyah Lake Mutfak (MODEL-30-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-30.webp</image:loc>
+      <image:title>Ağır Tok Masif Dolgulu Koyu Ceviz Kapı (MODEL-30)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-33-2.webp</image:loc>
+      <image:title>Odayı Genişleten Aynalı 4 Kapılı Modern Gardırop (MODEL-33-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-31-3.webp</image:loc>
+      <image:title>Kahve Köşeli &amp; Cam Kiler Dolaplı Gurme Mutfak (MODEL-31-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-31.webp</image:loc>
+      <image:title>Kare Cam Menfezli Şık Mutfak Kapısı (MODEL-31)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-35-2.webp</image:loc>
+      <image:title>Masif Meşe Çerçeveli El İşçiliği Country Dolap (MODEL-35-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-32-3.webp</image:loc>
+      <image:title>Kompakt Laminat Çizilmez Tezgahlı Modern Mutfak (MODEL-32-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-32.webp</image:loc>
+      <image:title>Geometrik CNC Oyma Desenli Modern Tasarım Kapı (MODEL-32)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-36-2.webp</image:loc>
+      <image:title>Yüksekliği Değiştirilebilir Modüler Raflı Dolap (MODEL-36-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-33-3.webp</image:loc>
+      <image:title>Toprak Tonlarında Mat Lake Urla Köy Evi Mutfağı (MODEL-33-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-33.webp</image:loc>
+      <image:title>Doğal Tik Ağacı Marin Tutkallı Banyo Kapısı (MODEL-33)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-37-2.webp</image:loc>
+      <image:title>Yatak Odası - Banyo Geçişli Çift Taraflı Dolap Holü (MODEL-37-2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-34-3.webp</image:loc>
+      <image:title>Fasulye Köşe Mekanizmalı Akıllı L Mutfak (MODEL-34-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-34.webp</image:loc>
+      <image:title>36 dB Yüksek Ses Yalıtımlı Sinema Odası Kapısı (MODEL-34)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-35-3.webp</image:loc>
+      <image:title>Mat Antrasit &amp; Doğal Dişbudak Kontrast Mutfak (MODEL-35-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-35.webp</image:loc>
+      <image:title>Oval Kavis Çıtalı Çocuk Odası Beyaz Kapısı (MODEL-35)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-36-3.webp</image:loc>
+      <image:title>Beyaz Lake Üzeri Dikey Derzli Country Mutfak (MODEL-36-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-36.webp</image:loc>
+      <image:title>Çizilmez Kompakt Laminat Yüzeyli Dayanıklı Kapı (MODEL-36)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-40.webp</image:loc>
+      <image:title>Geniş Pencereli Aydınlık Ada Mutfak Planı (MODEL-40)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-37.webp</image:loc>
+      <image:title>Pervazsız Gizli Kasalı Monoblok Masif Kapı (MODEL-37)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-42.webp</image:loc>
+      <image:title>Kulpsuz Bas-Aç Monolitik Duvar Mutfak Ünitesi (MODEL-42)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-37-3.webp</image:loc>
+      <image:title>Akrilik Parlak Yansıtıcı Yüzeyli Beyaz Kapı (MODEL-37-3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-43.webp</image:loc>
+      <image:title>İzmir İklimine Dayanıklı Ahşap Melamin Mutfak (MODEL-43)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-46.webp</image:loc>
+      <image:title>Tarihi Taş Kemer Uyumlu Klasik Kemerli Kapı (MODEL-46)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/tasarimlar/model-44.webp</image:loc>
+      <image:title>8 Kişilik Entegre Yemek Masalı Ada Mutfak (MODEL-44)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://izmirmutfakbanyo.com.tr/projeler/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_01.webp</image:loc>
+      <image:title>Ofis, Hukuk &amp;amp; Görüşme Ofisleri Projelendirme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_02.webp</image:loc>
+      <image:title>Klinik, Diş &amp;amp; Veteriner Klinikleri Mimarisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_06.webp</image:loc>
+      <image:title>Cafe, Restoran &amp;amp; Gastro Yaşam Alanları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_04.webp</image:loc>
+      <image:title>Kuyumcu, Optik &amp;amp; Tekstil Mağazaları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_10.webp</image:loc>
+      <image:title>Otel &amp;amp; Butik Otel İç Mimari Projeleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_03.webp</image:loc>
+      <image:title>Banka Şube Kurulumları &amp;amp; Kurumsal Alanlar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_05.webp</image:loc>
+      <image:title>Yurtdışı Ticari Projeler &amp;amp; İhracat Mimarisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_08.webp</image:loc>
+      <image:title>Optik &amp;amp; Göz Sağlığı Deneyim Mağazaları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_07.webp</image:loc>
+      <image:title>Tekstil, Butik &amp;amp; Moda Showroomları</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/projelendirme/hero/hero_09.webp</image:loc>
+      <image:title>Kuyumcu &amp;amp; Yüksek Güvenlikli Mücevherat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_hukuk_01.webp</image:loc>
+      <image:title>Bayraklı Tower Hukuk &amp; Danışmanlık Ofisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_yonetim_02.webp</image:loc>
+      <image:title>Bayraklı Megapol Minimalist İcra Kurulu &amp; Yönetim Ofisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_banka_03.webp</image:loc>
+      <image:title>Alsancak Kurumsal Özel Bankacılık &amp; Portföy Yönetim Şubesi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_toplanti_04.webp</image:loc>
+      <image:title>Mistral Kule Uluslararası Ticaret &amp; İhracat Yönetim Ofisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_finans_05.webp</image:loc>
+      <image:title>Folkart Towers Uluslararası Finans &amp;amp; Danışmanlık Ofisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/ofis_holding_06.webp</image:loc>
+      <image:title>Bayraklı Ege Perla Holding Genel Koordinasyon Merkezi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_dis_01.webp</image:loc>
+      <image:title>Alsancak Ağız &amp; Diş Sağlığı Polikliniği</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_veteriner_02.webp</image:loc>
+      <image:title>Karşıyaka Özel Sağlık &amp; Klinik Muayenehane Ünitesi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_estetik_03.webp</image:loc>
+      <image:title>Mavişehir Medikal Estetik &amp; Danışmanlık Kliniği</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_lobi_04.webp</image:loc>
+      <image:title>Bayraklı Modern Klinik Karşılama &amp; Hasta Dinlenme Salonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_cerrahi_05.webp</image:loc>
+      <image:title>Alsancak Göz &amp;amp; Cerrahi Tıp Merkezi Uygulama Alanı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/klinik_fizik_06.webp</image:loc>
+      <image:title>Bostanlı Bütüncül Terapi &amp;amp; Klinik Rehabilitasyon Merkezi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_lounge_01.webp</image:loc>
+      <image:title>Alaçatı Taş Konsept Gastro Lounge &amp; Bistro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_kav_02.webp</image:loc>
+      <image:title>Urla Şarap Bağı Butik Restoranı &amp; Tadım Salonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_otel_03.webp</image:loc>
+      <image:title>Çeşme Ayayorgi Butik Otel Resepsiyon &amp; Lounge Restoran</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_cafe_04.webp</image:loc>
+      <image:title>Kordon Artisan Roastery &amp; Gastro Bar Konsepti</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_brasserie_05.webp</image:loc>
+      <image:title>Alsancak Mimari Gastro Bistro &amp;amp; Brasserie</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/gastro_butik_otel_06.webp</image:loc>
+      <image:title>Urla Bağ Yolu Butik Otel &amp;amp; Şef Restoranı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_kuyumcu_01.webp</image:loc>
+      <image:title>Alsancak Zümrüt &amp; Pırlanta VIP Kuyumcusu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_optik_02.webp</image:loc>
+      <image:title>Mavişehir Lüks Gözlük &amp; Optometrik Deneyim Salonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_moda_03.webp</image:loc>
+      <image:title>Alsancak Haute Couture Moda Evi &amp; Özel Dikim Showroomu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_kasa_04.webp</image:loc>
+      <image:title>Göztepe VIP Mücevherat &amp; Yüksek Güvenlikli Kasa Alanı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_mobilya_05.webp</image:loc>
+      <image:title>Velunor Mimari Mobilya &amp; Yaşam Tasarım Mağazası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/magaza_aydinlatma_06.webp</image:loc>
+      <image:title>Lumori Mimari Aydınlatma &amp; Tasarım Showroomu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_ada_mutfak_01.webp</image:loc>
+      <image:title>Urla Doğa Evleri Ada Mutfak &amp; Kiler</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_modern_mutfak_02.webp</image:loc>
+      <image:title>Çeşme Ilıca Minimalist İtalyan Lake Mutfak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_spa_banyo_03.webp</image:loc>
+      <image:title>Mavişehir Penthouse Çift Hilton Ebeveyn Banyosu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_dogal_banyo_04.webp</image:loc>
+      <image:title>Alaçatı Rustik Doğal Taş &amp; Meşe Hilton Banyo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_villa_renovasyon_05.webp</image:loc>
+      <image:title>Urla Kekliktepe Akıllı Villa Komple Renovasyonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/portfolio/curated/konut_country_mutfak_06.webp</image:loc>
+      <image:title>Güzelbahçe Masif Ahşap Country Ada Mutfak</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/ev-tadilati.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/yayinlar/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-3.webp</image:loc>
+      <image:title>Mutfak ve Banyo Ergonomik Ölçü Rehberi ve Mimari Yayınlar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-1.webp</image:loc>
+      <image:title>Architizer 2026 Ege Bölgesi İç Mimarlık Seçkisi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-2.webp</image:loc>
+      <image:title>Milliyet Mimarlık Dergisi Çeşme Villa Mutfak Dosyası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-3.webp</image:loc>
+      <image:title>Interior Snapshots Urla Doğa Evleri Ada Mutfak Projesi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-4.webp</image:loc>
+      <image:title>Yapı Kataloğu Mutfak ve Banyoda Yatırım Değeri Röportajı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-5.webp</image:loc>
+      <image:title>Ege Mimarlık Dergisi Akdeniz İkliminde Malzeme Seçimi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-6.webp</image:loc>
+      <image:title>Uluslararası Banyo ve Spa Tasarım Yıllığı Sunumu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-7.webp</image:loc>
+      <image:title>Maison Française İzmir Yeni Nesil Mutfak ve Kahve Köşesi Trendleri</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/news/news-8.webp</image:loc>
+      <image:title>Home Art Dergisi Alsancak Penthouse Açık Plan Mutfak İncelemesi</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/modeller.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://izmirmutfakbanyo.com.tr/hakkimizda/</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-5.webp</image:loc>
+      <image:title>İzmir Buca Kaynaklar CNC Mobilya ve Lake Üretim Fabrikası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/team/team-1.webp</image:loc>
+      <image:title>İzmir Mutfak Banyo Mimari Tasarım ve Lazer Rölöve Ekibi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/team/team-2.webp</image:loc>
+      <image:title>İç Mimarlık ve 3D Fotogerçekçi Modelleme Departmanı</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/team/team-3.webp</image:loc>
+      <image:title>Anahtar Teslim Şantiye ve Fit-Out Mühendislik Koordinasyonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/team/team-4.webp</image:loc>
+      <image:title>Buca Kaynaklar CNC Ahşap ve İtalyan Lake Üretim Ekibi</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://izmirmutfakbanyo.com.tr/hakkimizda.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://izmirmutfakbanyo.com.tr/iletisim.html</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://izmirmutfakbanyo.com.tr/iletisim/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://izmirmutfakbanyo.com.tr/assets/images/hero/slide-9.webp</image:loc>
+      <image:title>İzmir Mutfak Banyo İletişim ve Buca Kaynaklar Fabrika Adresi</image:title>
+    </image:image>
   </url>
 </urlset>
