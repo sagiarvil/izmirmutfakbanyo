@@ -1,62 +1,32 @@
-export type PageRole = 'home' | 'hub' | 'category' | 'service' | 'product' | 'tool' | 'article' | 'legal';
-export type IndexDirective = 'index, follow' | 'noindex, follow' | 'noindex, nofollow';
-export type MobilePrimaryAction = 'call' | 'navigate' | 'buy' | 'form' | 'scan' | 'chat';
+export type PageSchemaRole = 'home' | 'contact' | 'collection' | 'service' | 'article' | 'noindex';
 
-export interface SemanticTriple {
-  readonly subject: string;
-  readonly predicate: string;
-  readonly object: string;
-}
-
-export interface SeoEntityRef {
-  readonly id: string;
+export interface CatalogItemInput {
   readonly name: string;
-  readonly type: 'Organization' | 'Person' | 'Product' | 'Service' | 'SoftwareApplication' | 'HomeAndConstructionBusiness';
-  readonly sameAs: readonly string[];
-  readonly wikidataQid?: string;
-  readonly googleKgMid?: string;
+  readonly url: string;
+  readonly image: string;
+  readonly description?: string;
 }
 
-export interface MobileConfig {
-  readonly viewport: string;
-  readonly primaryAction: MobilePrimaryAction;
-  readonly bottomNavEnabled: boolean;
-  readonly thumbZonePosition: 'bottom-center' | 'bottom-right';
-  readonly touchTargetsValidated: boolean;
-  readonly horizontalScrollFree: boolean;
-  readonly thumbSafeHeroAnswer: boolean;
-  readonly voiceQueryPatterns: readonly string[];
-  readonly speakableSelectors: readonly string[];
-  readonly pwaInstallable: boolean;
+export interface BreadcrumbInput {
+  readonly name: string;
+  readonly item: string;
 }
 
-export interface MobileCwvBudget {
-  readonly lcpMs: number;  // Max 2000
-  readonly inpMs: number;  // Max 150
-  readonly cls: number;    // Max 0.05
-  readonly ttfbMs: number; // Max 300
-  readonly htmlKb: number; // Max 60
+export interface FaqInput {
+  readonly question: string;
+  readonly answer: string;
 }
 
 export interface SeoPageRecord {
   readonly route: string;
-  readonly locale: string;
-  readonly role: PageRole;
-  readonly indexDirective: IndexDirective;
-  readonly canonicalRoute: string;
+  readonly role: PageSchemaRole;
   readonly title: string;
   readonly metaDescription: string;
-  readonly h1: string;
-  readonly primaryIntent: string;
-  readonly primaryEntity: SeoEntityRef;
-  readonly semanticTriples: readonly SemanticTriple[];
-  readonly heroAnswerEngine: string;
+  readonly image: string;
+  readonly serviceType?: string;
+  readonly areaServed?: string | readonly string[];
   readonly publishedAt: string;
   readonly modifiedAt: string;
-  readonly bodyContentHash?: string;
-  readonly llmSubGraphRoute: string;
-  readonly mobileSubGraphRoute: string;
-  readonly breadcrumbs: readonly { readonly name: string; readonly item: string }[];
-  readonly mobile: MobileConfig;
-  readonly mobileCwvBudget: MobileCwvBudget;
+  readonly breadcrumbs: readonly BreadcrumbInput[];
+  readonly catalogItems?: readonly CatalogItemInput[];
 }

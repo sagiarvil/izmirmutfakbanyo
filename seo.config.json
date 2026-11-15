@@ -1,0 +1,36 @@
+{
+  "contractVersion": "REAL-SEO-2026-APEX-v4.0",
+  "stack": "astro",
+  "domain": "https://yesilaymutfak.com",
+  "brandName": "Yeşilay Mutfak",
+  "legalName": "Yeşilay Mutfak & İç Mekân Tasarımı İmalat Atölyesi",
+  "organizationSubType": "LocalBusiness",
+  "telephoneE164": "+902324411060",
+  "email": "yesilaymutfak@gmail.com",
+  "address": {
+    "streetAddress": "Gaziler Mahallesi 1084/2 Sokak No: 1/A (Gazi Osman Paşa Cd. Köşesi)",
+    "addressLocality": "Buca",
+    "addressRegion": "İzmir",
+    "postalCode": "35380",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "latitude": "38.392083",
+    "longitude": "27.180623"
+  },
+  "founderOrAuthor": {
+    "name": "Cem Yeşilay",
+    "jobTitle": "Kurucu Ortak & Üretim Direktörü",
+    "profileUrl": "https://yesilaymutfak.com/hakkimizda/",
+    "sameAs": [
+      "https://www.instagram.com/yesilaymutfak"
+    ]
+  },
+  "cannibalizationThreshold": 0.78,
+  "allowedPartnerDomains": [
+    "share.google",
+    "instagram.com",
+    "wa.me"
+  ],
+  "indexNowKey": "5a88f39eb8c2024fa40e73f916798cbf"
+}

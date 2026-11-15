@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 
 const seo = {
   title: "İzmir Modern Mutfak Modelleri | Kulpsuz & Gola Profil İmalat",
-  description: "İzmir'de aracı olmadan doğrudan atölyeden modern mutfak dolabı imalatı. Kulpsuz gola profiller, monoblok mat lake ve akrilik kapaklar, Blum çekmeceler ve ücretsiz 3D sanal mekan çizimi.",
+  description: "İzmir'de doğrudan atölyeden modern mutfak dolabı imalatı. Kulpsuz gola profiller, mat lake ve akrilik kapaklar, Blum raylar ve ücretsiz 3D keşif.",
   canonical: "https://yesilaymutfak.com/modern-mutfak-modelleri/",
   serviceName: "Modern Mutfak Modelleri İmalatı",
   breadcrumbs: [
@@ -111,6 +111,7 @@ const models = [
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
         İzmir Modern Mutfak Modelleri: <br /><span class="font-normal text-emerald-400">Kulpsuz Gola Profil &amp; Kusursuz Geometri</span>
       </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir modern mutfak modelleri; minimalist kulpsuz gola alüminyum profiller, çizilmeye dirençli anti-fingerprint akrilik veya mat lake yüzeyler, entegre LED lineer aydınlatmalar ve akıllı köşe kiler çözümleriyle tasarlanır. Yeşilay Mutfak Buca atölyesinde milimetrik lazer rölöveyle üretilip montajı yapılır.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-2xl">
         Kulpların yarattığı görsel karmaşayı ortadan kaldıran monoblok yüzeyler, fırınlanmış elektrostatik gola profiller ve İtalyan akrilik &amp; lake dokular. 28 yıllık mimari ve tasarım atölye ustalığımızla hayalinizdeki modern mutfağı milimetrik lazer ölçüsü ve 3D sanal simülasyonla tasarlıyoruz.
@@ -198,14 +199,15 @@ const models = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {models.map((m) => (
+        {models.map((m, idx) => (
           <div class="bg-stone-50 border border-stone-200 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
             <div class="relative h-64 sm:h-72 overflow-hidden bg-stone-900">
               <img 
                 src={m.img} 
                 alt={`${m.title} - İzmir Modern Mutfak Modelleri`} 
                 class="w-full h-full object-cover transition duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchpriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
                 width="600"
                 height="400"
@@ -349,8 +351,11 @@ const models = [
             <img 
               src="/media/real/yesilay-aluminyum-fluted-cam-kapak.webp" 
               alt="Alüminyum Profil ve Fluted Cam Kapak Mekanizması" 
+              width="1080"
+              height="1920"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-3 py-1 bg-[#006039] text-white text-[10px] font-bold uppercase tracking-wider rounded">
               GERÇEK DETAY
@@ -372,8 +377,11 @@ const models = [
             <img 
               src="/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp" 
               alt="Mimarımızla Birebir Mutfak Projelendirme Masası" 
+              width="1200"
+              height="675"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-3 py-1 bg-[#C5A880] text-[#1D1D1F] text-[10px] font-bold uppercase tracking-wider rounded">
               MİMARİ PROJE
@@ -394,9 +402,12 @@ const models = [
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
             <img 
               src="/media/real/yesilay-showroom-gece-cephe.webp" 
-              alt="Yeşilay Mutfak Showroom Dış Cephesi" 
+              alt="Yeşilay Mutfak Showroom Buca Dış Cephesi" 
+              width="1672"
+              height="941"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-3 py-1 bg-stone-900 text-white text-[10px] font-bold uppercase tracking-wider rounded">
               BUCA SHOWROOM
@@ -473,6 +484,52 @@ const models = [
             <p class="text-xs text-stone-400 line-clamp-1">Ada tipi oturma barları, entegre salon mobilyaları ve açık plan ferahlığı.</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modern Mutfak Donanım ve Profil Seçenekleri Tablosu (G17 NavBoost) -->
+  <section class="py-12 bg-white border-b border-stone-200" data-seo-interactive="true">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-6 text-center font-editorial">İzmir Modern Mutfak Modelleri Teknik Donanım ve Malzeme Karşılaştırması</h2>
+      <div class="overflow-x-auto rounded-xl border border-stone-200">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-800 font-semibold border-b border-stone-200">
+              <th class="p-3 sm:p-4">Özellik</th>
+              <th class="p-3 sm:p-4">Gola Kulpsuz Lake Seri</th>
+              <th class="p-3 sm:p-4">Akrilik Parlak / Mat Seri</th>
+              <th class="p-3 sm:p-4">Doğal Meşe &amp; Ahşap Seri</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Kapak Yapısı</td>
+              <td class="p-3 sm:p-4">22mm İpek Mat Fırın Lake</td>
+              <td class="p-3 sm:p-4">18mm Çizilmez Anti-Fingerprint Akrilik</td>
+              <td class="p-3 sm:p-4">Doğal Kaplama / Masif Meşe Çıtalı</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Kulp Çözümü</td>
+              <td class="p-3 sm:p-4 text-emerald-800 font-medium">Gizli Alüminyum L ve C Gola Profil</td>
+              <td class="p-3 sm:p-4">Entegre Bas-Aç Tip-On / J-Kulp</td>
+              <td class="p-3 sm:p-4">Minimalist Siyah Mat Profil / Gizli Kulp</td>
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Çekmece Rayı</td>
+              <td class="p-3 sm:p-4">Blum Legrabox İnce Yanak</td>
+              <td class="p-3 sm:p-4">Blum Tandembox Frenli</td>
+              <td class="p-3 sm:p-4">Häfele Matrix Box Frenli</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Su &amp; Buhar Dayanımı</td>
+              <td class="p-3 sm:p-4 text-emerald-800 font-medium">Yüksek (Poliüretan Lake Yalıtımlı)</td>
+              <td class="p-3 sm:p-4">Tam Dayanımlı (PUR Kenar Bantlı)</td>
+              <td class="p-3 sm:p-4">Su İtici Mat Vernik Korumalı</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

@@ -3,806 +3,474 @@ import type { SeoPageRecord } from './registry.types';
 export const DOMAIN = 'yesilaymutfak.com';
 export const SITE_URL = 'https://yesilaymutfak.com';
 
-const defaultMobile = {
-  viewport: 'width=device-width, initial-scale=1, viewport-fit=cover, minimum-scale=1, maximum-scale=5',
-  primaryAction: 'call' as const,
-  bottomNavEnabled: true,
-  thumbZonePosition: 'bottom-center' as const,
-  touchTargetsValidated: true,
-  horizontalScrollFree: true,
-  thumbSafeHeroAnswer: true,
-  voiceQueryPatterns: [
-    'İzmir Buca özel imalat mutfak dolabı nerede yaptırılır?',
-    'Yeşilay Mutfak mutfak dolabı modelleri ve keşif randevusu',
-    'İzmir lüks banyo yenileme ve seramik işçiliği fiyatları'
-  ],
-  speakableSelectors: ['#hero-answer-engine', 'h1', '.speakable-content'],
-  pwaInstallable: true
-};
-
-const defaultCwv = {
-  lcpMs: 1600,
-  inpMs: 80,
-  cls: 0.02,
-  ttfbMs: 140,
-  htmlKb: 45
-};
+const PUBLISHED_AT = '2024-01-15T09:00:00+03:00';
+const MODIFIED_AT = '2026-11-14T12:00:00+03:00';
 
 export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
   '/': {
     route: '/',
-    locale: 'tr-TR',
     role: 'home',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/',
-    title: 'Yeşilay Mutfak | İzmir Özel İmalat Mutfak & Banyo',
-    metaDescription: 'İzmir genelinde Adatepe atölyemizde üretilen özel ölçü lüks mutfak dolapları, anahtar teslim banyo ve daire tadilatı. Ücretsiz 3D mimari keşif alın.',
-    h1: 'Hayalinizdeki Mutfağı, Kişiye Özel Çizgilerle Gerçeğe Dönüştürüyoruz.',
-    primaryIntent: 'izmir mutfak dolabı imalatı ve lüks tadilat',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'providesService', object: 'Özel Ölçü Lüks Mutfak Dolabı İmalatı' },
-      { subject: 'Yeşilay Mutfak', predicate: 'locatedIn', object: 'Adatepe, Buca, İzmir' },
-      { subject: 'Yeşilay Mutfak', predicate: 'hasExperience', object: '28 Yıl Atölye Zanaatı' },
-      { subject: 'Yeşilay Mutfak', predicate: 'usesHardware', object: 'Blum ve Häfele Frenli Gizli Sistemler' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak & Mimarlık, 1998 yılından bu yana İzmir Buca Adatepe atölyesinde 28 yıllık zanaat birikimiyle kişiye özel lüks mutfak dolabı imalatı ve anahtar teslim tadilat yapmaktadır. 137 tescilli model arşivi, E1 sertifikalı nem mukavemetli MDF gövde, Blum frenli mekanizmalar ve 10 yıl bütünleşik atölye garantisi sunar.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/home.md',
-    mobileSubGraphRoute: '/llms/mobile/home.md',
-    breadcrumbs: [],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    title: 'İzmir Özel Ölçü Mutfak Dolabı & Tadilat | Yeşilay Mutfak',
+    metaDescription: 'İzmir Buca Adatepe atölyemizde 18 mm E1 MDF ve Blum donanımla özel ölçü mutfak dolabı, banyo ve anahtar teslim tadilat. Ücretsiz 3D keşif randevusu alın.',
+    image: '/media/hero/hero-slide-1.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: []
   },
-
   '/hakkimizda/': {
     route: '/hakkimizda/',
-    locale: 'tr-TR',
     role: 'article',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hakkimizda/',
-    title: 'Hakkımızda | 28 Yıllık Zanaat & Lüks Atölye Mirası | Yeşilay Mutfak',
-    metaDescription: '1998 yılından bu yana İzmir Adatepe atölyemizde kişiye özel lüks mutfak dolabı ve mimari mobilya üretiyoruz. 2.850+ tamamlanan proje ve 10 yıl garanti.',
-    h1: '28 Yıllık Usta Zanaatı, Çağdaş İç Mimari Mühendislikle Buluşuyor.',
-    primaryIntent: 'yeşilay mutfak kimdir atölye imalat tecrübesi',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak',
-      type: 'Organization',
-      sameAs: ['https://www.instagram.com/yesilaymutfak']
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'foundedIn', object: '1998' },
-      { subject: 'Yeşilay Mutfak Atölyesi', predicate: 'operatesIn', object: 'Buca Adatepe İzmir' },
-      { subject: 'Yeşilay Mutfak', predicate: 'completedProjects', object: '2850 Üzeri Konut ve Villa' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak, 1998 yılında kurulan İzmir Adatepe merkezli özel mobilya imalat atölyesidir. 28 yıldır fırın lake, doğal ahşap kaplama ve akrilik mutfak sistemlerini doğrudan kendi marangozluk altyapısında üretmektedir. Aracı komisyonsuz, milimetrik lazer rölöve ve 10 yıl garantiyle çalışır.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/hakkimizda.md',
-    mobileSubGraphRoute: '/llms/mobile/hakkimizda.md',
+    title: 'Hakkımızda – 28 Yıllık Buca Atölye Mirası | Yeşilay Mutfak',
+    metaDescription: '1998 yılından bu yana İzmir Buca Adatepe atölyemizde aracı komisyonu olmadan özel ölçü mutfak dolabı ve mimari mobilya üretiyoruz. Atölyemizi tanıyın.',
+    image: '/media/real/yesilay-buca-showroom-dis-bina.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
       { name: 'Hakkımızda', item: '/hakkimizda/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    ]
   },
-
   '/iletisim/': {
     route: '/iletisim/',
-    locale: 'tr-TR',
-    role: 'legal',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/iletisim/',
-    title: 'İletişim & Atölye Ulaşım Rehberi | Yeşilay Mutfak Buca',
-    metaDescription: 'İzmir Buca Adatepe imalat atölyemize yol tarifi alın, doğrudan telefon veya WhatsApp ile mimari keşif randevusu oluşturun. 0232 441 10 60.',
-    h1: 'Atölyemizde Kahve Eşliğinde Projenizi Birlikte Çizelim.',
-    primaryIntent: 'yeşilay mutfak mutfak iletişim adres telefon yol tarifi',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak Atölye',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: ['https://share.google/C0WRDJ4gisVAQIAzr']
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak Atölye', predicate: 'streetAddress', object: 'Gaziler Mahallesi 1084/2 Sokak No: 1/A (Gazi Osman Paşa Cd. Köşesi) Buca/İzmir' },
-      { subject: 'Yeşilay Mutfak Atölye', predicate: 'telephone', object: '+902324411060' },
-      { subject: 'Yeşilay Mutfak Atölye', predicate: 'geoCoordinate', object: '38.392083, 27.180623' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak mağaza ve imalat atölyesi İzmir Buca Gaziler Mahallesi 1084/2 Sokak No: 1/A adresindedir. Telefon: 0232 441 10 60. Çalışma saatleri Pazartesi-Cumartesi 09:00-19:30 arasıdır.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/iletisim.md',
-    mobileSubGraphRoute: '/llms/mobile/iletisim.md',
+    role: 'contact',
+    title: 'İletişim & Buca Showroom Yol Tarifi | Yeşilay Mutfak',
+    metaDescription: 'İzmir Buca Gaziler showroomumuza ve Adatepe imalat atölyemize yol tarifi alın. Ücretsiz lazer rölöve ve 3D keşif için 0232 441 10 60 hattımızı arayın.',
+    image: '/media/real/yesilay-showroom-gece-cephe.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'İletişim & Ulaşım', item: '/iletisim/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+      { name: 'İletişim', item: '/iletisim/' }
+    ]
   },
-
-  '/tasarimlar/': {
-    route: '/tasarimlar/',
-    locale: 'tr-TR',
-    role: 'hub',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/tasarimlar/',
-    title: '137 Tasarım Modeli Kataloğu | Yeşilay Mutfak Koleksiyon',
-    metaDescription: 'Özel imalat 137 modern, ada, country mutfak dolabı, lüks banyo ve giyinme odası modelini inceleyin. Mekanınıza özel 3D rölöve keşif talebi oluşturun.',
-    h1: '137 Özgün Tasarım Modeli: Mutfak, Banyo ve Yaşam Alanları',
-    primaryIntent: 'özel tasarım mutfak modelleri kataloğu 137 model',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#collection',
-      name: 'Yeşilay Mutfak 137 Tasarım Modeli Arşivi',
-      type: 'Product',
-      sameAs: ['https://yesilaymutfak.com/tasarimlar/']
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak Tasarımlar', predicate: 'modelCount', object: '137 Özgün Mimari Model' },
-      { subject: 'Yeşilay Mutfak Tasarımlar', predicate: 'categoryList', object: 'Mutfak, Banyo, Kapı, Giyinme Odası' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak 137 model tasarım arşivi, İzmir genelinde villa ve lüks konutlar için geliştirilmiş 40 mutfak dolabı, 25 banyo mobilyası, 39 kapı ve 33 giyinme odası tasarımından oluşur. Tüm modeller mekânın mimari ölçülerine göre özel imal edilir.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/tasarimlar.md',
-    mobileSubGraphRoute: '/llms/mobile/tasarimlar.md',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Tasarım Koleksiyonu (137)', item: '/tasarimlar/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
   '/izmir-mutfak-dolabi-imalati/': {
     route: '/izmir-mutfak-dolabi-imalati/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/izmir-mutfak-dolabi-imalati/',
-    title: 'İzmir Mutfak Dolabı İmalatı | Özel Ölçü Lüks İmalat | Yeşilay Mutfak',
-    metaDescription: 'İzmir genelinde Adatepe atölyemizde kişiye özel akrilik, lake ve ahşap mutfak dolapları üretiyoruz. Blum mekanizma, 10 yıl garanti ve ücretsiz 3D keşif.',
-    h1: 'İzmir Özel Ölçü Mutfak Dolabı İmalatı ve Atölye Üretimi',
-    primaryIntent: 'izmir özel ölçü mutfak dolabı imalatı fiyatları',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/izmir-mutfak-dolabi-imalati/#service',
-      name: 'Özel Mutfak Dolabı İmalat Servisi',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Mutfak Dolabı İmalatı', predicate: 'offeredBy', object: 'Yeşilay Mutfak' },
-      { subject: 'Mutfak Dolapları', predicate: 'usesMaterial', object: 'E1 Sertifikalı Nem Dirençli MDF' }
-    ],
-    heroAnswerEngine: 'İzmir mutfak dolabı imalatında Yeşilay Mutfak, Adatepe Buca atölyesinde aracı komisyonsuz doğrudan üretim yapar. Akrilik, ipek mat lake ve masif ahşap kapak çeşitleriyle Blum ve Häfele menteşe sistemleri standart olarak sunulur. 10 yıl gövde garantilidir.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/mutfak-dolabi.md',
-    mobileSubGraphRoute: '/llms/mobile/mutfak-dolabi.md',
+    role: 'collection',
+    title: 'İzmir Özel Ölçü Mutfak Dolabı Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Buca Adatepe atölyemizde üretilen ipek mat lake, çizilmez akrilik ve masif meşe özel ölçü mutfak dolabı modelleri. Ücretsiz 3D mimari çizim teklifi alın.',
+    image: '/images/models/mutfak/sakura.jpg',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Mutfak Dolabı İmalatı', item: '/izmir-mutfak-dolabi-imalati/' }
+      { name: 'Mutfak Dolabı Modelleri', item: '/izmir-mutfak-dolabi-imalati/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Lumina İpek Mat Lake Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/sakura.jpg' },
+      { name: 'Statuario Porselen Tezgahlı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/iconica.jpg' },
+      { name: 'Solyma Akrilik ve Doğal Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/convivio.jpg' },
+      { name: 'Linea Minimalist Mutfak Koleksiyonu', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/start-time.jpg' },
+      { name: 'Portofino Poliüretan Mat Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/milano.jpg' },
+      { name: 'Belvedere Açık Plan Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/lounge.jpg' },
+      { name: 'Serena Neo-Klasik Çıtalı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/armonia.jpg' },
+      { name: 'Vetro Reflekte Cam Vitrinli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/ri-flex.jpg' },
+      { name: 'Plana Entegre J-Kulp Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/tablet.jpg' },
+      { name: 'Natura Masif Meşe ve Akrilik Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/like.jpg' },
+      { name: 'Nostalgia Country Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/memory.jpg' },
+      { name: 'Onyx Antrasit İpek Mat Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/oyster.jpg' },
+      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/pavese.jpg' },
+      { name: 'Spazio Tavan Boyu Kilerli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/ethica.jpg' },
+      { name: 'Canaletto Yivli Fluted Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/extra.jpg' }
+    ]
   },
-
-  '/izmir-komple-mutfak-tadilati/': {
-    route: '/izmir-komple-mutfak-tadilati/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/izmir-komple-mutfak-tadilati/',
-    title: 'İzmir Komple Mutfak Tadilatı | Anahtar Teslim Yenileme | Yeşilay Mutfak',
-    metaDescription: 'Kırım, sıhhi tesisat, porselen tezgah, seramik ve dolap montajıyla anahtar teslim komple mutfak tadilatı. Buca atölye güvencesiyle sürpriz masrafsız.',
-    h1: 'İzmir Komple Mutfak Tadilatı ve Anahtar Teslim Renovasyon',
-    primaryIntent: 'izmir komple mutfak tadilatı kırım tesisat tezgah dahil',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/izmir-komple-mutfak-tadilati/#service',
-      name: 'Komple Mutfak Renovasyon Servisi',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Komple Mutfak Tadilatı', predicate: 'includes', object: 'Kırım, Tesisat, Zemin, Tezgah, Dolap Montajı' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak İzmir komple mutfak tadilatı sürecinde eski mutfağın tozsuz kırımı, elektrik ve sıhhi tesisat yenilemesi, su yalıtımı, porselen tezgah uygulaması ve özel dolap imalatını tek elden yürütür. Taahhüt edilen takvimde eksiksiz teslim eder.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/mutfak-tadilati.md',
-    mobileSubGraphRoute: '/llms/mobile/mutfak-tadilati.md',
+  '/tasarimlar/': {
+    route: '/tasarimlar/',
+    role: 'collection',
+    title: 'Mutfak, Banyo ve Dolap Modelleri Kataloğu | Yeşilay Mutfak',
+    metaDescription: 'Özel ölçü üretilen 137+ modern, ada ve country mutfak dolabı, banyo mobilyası, lake iç kapı ve gömme dolap modelini inceleyin. 3D keşif talebi oluşturun.',
+    image: '/media/tasarimlar/model-1-3.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Komple Mutfak Tadilatı', item: '/izmir-komple-mutfak-tadilati/' }
+      { name: 'Tasarımlar Kataloğu', item: '/tasarimlar/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Özel Ölçü Mutfak Dolabı Modelleri', url: '/izmir-mutfak-dolabi-imalati/', image: '/media/tasarimlar/model-1-3.webp' },
+      { name: 'Modern Kulpsuz Mutfak Modelleri', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern_mutfak.webp' },
+      { name: 'Klasik ve Country Lake Mutfak Modelleri', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik_mutfak.webp' },
+      { name: 'Lüks Banyo Dolabı ve Yenileme', url: '/izmir-banyo-yenileme-seramik/', image: '/media/real/yesilay-hilton-banyo-dolabi-luxury.webp' },
+      { name: 'Yatak Odası ve Gardırop Modelleri', url: '/yatak-odasi-modelleri/', image: '/images/models/koleksiyonlar/yatak-golf.webp' },
+      { name: 'Kahve Köşesi ve Barista Üniteleri', url: '/kahve-kosesi-modelleri/', image: '/media/real/yesilay-aluminyum-fluted-cam-kapak.webp' }
+    ]
   },
-
-  '/izmir-banyo-yenileme-seramik/': {
-    route: '/izmir-banyo-yenileme-seramik/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/izmir-banyo-yenileme-seramik/',
-    title: 'İzmir Banyo Tadilatı & Seramik Yenileme | Lüks Banyo | Yeşilay Mutfak',
-    metaDescription: 'Çift kat sürme su yalıtımı, lazer kesim porselen seramik, gömme rezervuar ve özel banyo mobilyası imalatı. İzmir genelinde 10 yıl garantili lüks banyo.',
-    h1: 'İzmir Lüks Banyo Tadilatı, Su Yalıtımı ve Porselen Seramik',
-    primaryIntent: 'izmir banyo tadilatı su yalıtımı seramik döşeme banyo dolabı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/izmir-banyo-yenileme-seramik/#service',
-      name: 'Lüks Banyo Renovasyon Servisi',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Banyo Tadilatı', predicate: 'warranty', object: 'Çift Katman Su Yalıtım Güvencesi' }
-    ],
-    heroAnswerEngine: 'İzmir banyo yenileme projelerinde Yeşilay Mutfak, çift kat sürme elastik su yalıtımı, Geberit/VitrA gömme rezervuarlar, İtalyan duş kanalları ve marin neme mukavim özel banyo mobilyaları imal eder. Sızıntı riskini sıfıra indiren mühendislik disiplini uygular.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/banyo-tadilati.md',
-    mobileSubGraphRoute: '/llms/mobile/banyo-tadilati.md',
+  '/modern-mutfak-modelleri/': {
+    route: '/modern-mutfak-modelleri/',
+    role: 'collection',
+    title: 'İzmir Modern & Kulpsuz Mutfak Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Kulpsuz Gola profil, parmak izi bırakmayan ipek mat lake ve UV akrilik modern mutfak dolabı imalatı. İzmir geneli ücretsiz lazer ölçü ve 3D çizim alın.',
+    image: '/media/cinematic/modern_mutfak.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Banyo Tadilatı & Seramik', item: '/izmir-banyo-yenileme-seramik/' }
+      { name: 'Mutfak Modelleri', item: '/izmir-mutfak-dolabi-imalati/' },
+      { name: 'Modern Mutfak Modelleri', item: '/modern-mutfak-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Kulpsuz Gola Profil İpek Mat Lake Mutfak', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern_mutfak.webp' },
+      { name: 'Alüminyum Fluted Cam Vitrinli Modern Mutfak', url: '/modern-mutfak-modelleri/', image: '/media/real/yesilay-aluminyum-fluted-cam-kapak.webp' },
+      { name: 'Porselen Ada Tezgahlı Antrasit Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/oyster.jpg' }
+    ]
   },
-
-  '/izmir-anahtar-teslim-tadilat/': {
-    route: '/izmir-anahtar-teslim-tadilat/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/izmir-anahtar-teslim-tadilat/',
-    title: 'İzmir Anahtar Teslim Tadilat & Villa Renovasyonu | Yeşilay Mutfak',
-    metaDescription: 'Çeşme, Urla ve İzmir genelinde sürpriz maliyet çıkarmayan noter tasdikli sözleşmeli anahtar teslim villa ve lüks daire renovasyonu. Ücretsiz keşif alın.',
-    h1: 'İzmir Anahtar Teslim Komple Daire & Villa Renovasyonu',
-    primaryIntent: 'izmir anahtar teslim tadilat noter sözleşmeli taahhüt',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/izmir-anahtar-teslim-tadilat/#service',
-      name: 'Anahtar Teslim Mimari Taahhüt',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Anahtar Teslim Tadilat', predicate: 'contractType', object: 'Sabit Bütçeli Hukuki Taahhüt' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak anahtar teslim tadilat hizmeti, İzmir, Çeşme ve Urla genelinde konut ve villaların baştan sona renovasyonunu kapsar. Sabit maliyet garantisi, gecikme cezalı noter sözleşmesi ve mimari şantiye şefliğiyle yönetilir.',
-    publishedAt: '2024-01-15T09:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/ev-tadilati.md',
-    mobileSubGraphRoute: '/llms/mobile/ev-tadilati.md',
+  '/klasik-country-mutfak-modelleri/': {
+    route: '/klasik-country-mutfak-modelleri/',
+    role: 'collection',
+    title: 'İzmir Klasik & Country Mutfak Modelleri | Yeşilay Mutfak',
+    metaDescription: 'CNC çıtalı kapaklar, sararmayan poliüretan fırın lake ve masif ahşap detaylarla klasik country mutfak imalatı. Buca atölyemizden ücretsiz 3D keşif alın.',
+    image: '/media/cinematic/klasik_mutfak.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Anahtar Teslim Tadilat', item: '/izmir-anahtar-teslim-tadilat/' }
+      { name: 'Mutfak Modelleri', item: '/izmir-mutfak-dolabi-imalati/' },
+      { name: 'Klasik & Country Mutfak Modelleri', item: '/klasik-country-mutfak-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Çıtalı İpek Mat Fırın Lake Country Mutfak', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik_mutfak.webp' },
+      { name: 'Serena Neo-Klasik Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/armonia.jpg' },
+      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/pavese.jpg' }
+    ]
   },
-
-  '/2026-mutfak-dolabi-fiyatlari/': {
-    route: '/2026-mutfak-dolabi-fiyatlari/',
-    locale: 'tr-TR',
-    role: 'article',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/2026-mutfak-dolabi-fiyatlari/',
-    title: '2026 Mutfak Dolabı Fiyatları İzmir | Metretül Maliyet | Yeşilay Mutfak',
-    metaDescription: '2026 yılı güncel akrilik, lake, masif ahşap mutfak dolabı metretül imalat fiyatları ve hesaplama rehberi. Doğrudan Adatepe atölye maliyet avantajı.',
-    h1: '2026 İzmir Mutfak Dolabı Metretül Fiyatları ve Maliyet Rehberi',
-    primaryIntent: '2026 mutfak dolabı metretül fiyatları izmir lake akrilik',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/2026-mutfak-dolabi-fiyatlari/#article',
-      name: '2026 Mutfak Dolabı Fiyat Analizi',
-      type: 'Product',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: '2026 Mutfak Dolabı Fiyatları', predicate: 'pricingBasis', object: 'Metretül ve Mekanizma Kalitesi' }
-    ],
-    heroAnswerEngine: '2026 yılı İzmir mutfak dolabı fiyatları kapak türü (akrilik, lake, masif) ve ray/menteşe donanımına göre metretül bazında değişkenlik gösterir. Yeşilay Mutfak, Adatepe atölyesinde aracı kârı olmaksızın şeffaf maliyet tablosu ve ücretsiz 3D rölöve keşfi sunar.',
-    publishedAt: '2026-01-01T00:00:00+03:00',
-    modifiedAt: '2026-10-17T23:40:00+03:00',
-    llmSubGraphRoute: '/llms/pages/mutfak-dolabi-fiyatlari.md',
-    mobileSubGraphRoute: '/llms/mobile/mutfak-dolabi-fiyatlari.md',
+  '/yasam-alanlari-mutfak-modelleri/': {
+    route: '/yasam-alanlari-mutfak-modelleri/',
+    role: 'collection',
+    title: 'Açık Mutfak & Ada Bar Yaşam Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Salonla bütünleşik açık plan ada mutfaklar, kahvaltı barları ve entegre mermer TV üniteleri. Mekanınıza özel 3D mimari rölöve ve imalat teklifi alın.',
+    image: '/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: '2026 Fiyat Rehberi', item: '/2026-mutfak-dolabi-fiyatlari/' }
+      { name: 'Mutfak Modelleri', item: '/izmir-mutfak-dolabi-imalati/' },
+      { name: 'Açık Mutfak & Yaşam Alanları', item: '/yasam-alanlari-mutfak-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Salonla Bütünleşik Ada Bar Mutfak Tasarımı', url: '/yasam-alanlari-mutfak-modelleri/', image: '/media/cinematic/life_alanlar.webp' },
+      { name: 'Şömineli Mermer TV Ünitesi ve Açık Mutfak', url: '/yasam-alanlari-mutfak-modelleri/', image: '/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp' },
+      { name: 'Moderna Salon ve Yaşam Alanı Koleksiyonu', url: '/salon-modelleri/', image: '/images/models/koleksiyonlar/salon-golf.webp' }
+    ]
   },
-
-  '/hizmet-bolgeleri/buca/': {
-    route: '/hizmet-bolgeleri/buca/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hizmet-bolgeleri/buca/',
-    title: 'Buca Mutfak Tadilatı & Özel Ölçü Dolap İmalatı | Yeşilay Mutfak',
-    metaDescription: 'Buca\'da kendi Adatepe atölyemizde imal edilen özel ölçü mutfak dolapları ve anahtar teslim mutfak-banyo tadilatı. Şirinyer, Buca Koop ve Gaziler\'e doğrudan üretici fiyatı.',
-    h1: 'Buca Mutfak Tadilatı & Özel Ölçü Lüks Mutfak Dolabı İmalatı',
-    primaryIntent: 'buca mutfak tadilatı dolap imalatı banyo yenileme',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/hizmet-bolgeleri/buca/#service',
-      name: 'Buca Mutfak Tadilatı ve İmalatı',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Buca Mutfak İmalatı', predicate: 'workshopLocation', object: 'Adatepe Mahallesi, Buca / İzmir' }
-    ],
-    heroAnswerEngine: 'Buca mutfak tadilatı ve dolap imalatında Yeşilay Mutfak, Adatepe atölyesinde %100 18mm E1 neme dayanımlı MDF ve Avusturya Blum donanımlarla doğrudan üretici avantajı sunar.',
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
+  '/hazir-mutfak-modelleri-izmir/': {
+    route: '/hazir-mutfak-modelleri-izmir/',
+    role: 'collection',
+    title: 'Hazır & Modüler Mutfak Modelleri İzmir | Yeşilay Mutfak',
+    metaDescription: '18 mm E1 MDF gövdeli, Blum frenli menteşeli hazır ve modüler mutfak dolabı modelleri. Buca atölyemizden hızlı teslimat ve doğrudan üretici teklifi alın.',
+    image: '/media/tasarimlar/model-5.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Hizmet Bölgeleri', item: '/hizmet-bolgeleri/buca/' },
-      { name: 'Buca', item: '/hizmet-bolgeleri/buca/' }
+      { name: 'Mutfak Modelleri', item: '/izmir-mutfak-dolabi-imalati/' },
+      { name: 'Hazır & Modüler Mutfak Modelleri', item: '/hazir-mutfak-modelleri-izmir/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
-  '/hizmet-bolgeleri/narlidere/': {
-    route: '/hizmet-bolgeleri/narlidere/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hizmet-bolgeleri/narlidere/',
-    title: 'Narlıdere Mutfak Tadilatı & Sahilevleri Lüks Mutfak Dolabı | Yeşilay Mutfak',
-    metaDescription: 'Narlıdere ve Sahilevleri\'ndeki villa ve lüks konutlar için özel ölçü ada mutfak, ipek mat fırın lake dolaplar ve anahtar teslim daire renovasyonu. Blum mekanizmalı mimari imalat.',
-    h1: 'Narlıdere Mutfak Tadilatı & Özel İmalat Lüks Ada Mutfaklar',
-    primaryIntent: 'narlıdere mutfak tadilatı sahilevleri villa mutfak dolabı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/hizmet-bolgeleri/narlidere/#service',
-      name: 'Narlıdere Mutfak Tadilatı ve Lüks Dolap İmalatı',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Narlıdere Villa Mutfakları', predicate: 'materialStandard', object: 'İpek Mat Fırın Lake ve Porselen Ada' }
-    ],
-    heroAnswerEngine: 'Narlıdere ve Sahilevleri villalarında Yeşilay Mutfak, porselen şelale ada tezgahlar, sararmayan fırın lake dolaplar ve Blum Legrabox donanımlarla anahtar teslim renovasyon uygular.',
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Hizmet Bölgeleri', item: '/hizmet-bolgeleri/buca/' },
-      { name: 'Narlıdere', item: '/hizmet-bolgeleri/narlidere/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
-  '/hizmet-bolgeleri/guzelbahce/': {
-    route: '/hizmet-bolgeleri/guzelbahce/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hizmet-bolgeleri/guzelbahce/',
-    title: 'Güzelbahçe Villa Mutfak Tadilatı & Yelki Mutfak Dolabı | Yeşilay Mutfak',
-    metaDescription: 'Güzelbahçe ve Yelki villalarına özel ada mutfak tasarımları, porselen tezgah ve komple villa renovasyonu. Kendi atölyemizde E1 neme dayanıklı MDF ve Blum mekanizmayla imalat.',
-    h1: 'Güzelbahçe Villa Mutfak Tadilatı & Özel İmalat Ada Tezgah Tasarımları',
-    primaryIntent: 'güzelbahçe villa mutfak tadilatı yelki dolap imalatı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/hizmet-bolgeleri/guzelbahce/#service',
-      name: 'Güzelbahçe Villa Mutfak Tadilatı',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Güzelbahçe Villa Mutfakları', predicate: 'designFeature', object: 'Bahçe Veranda Entegre Porselen Ada' }
-    ],
-    heroAnswerEngine: 'Güzelbahçe ve Yelki villalarında Yeşilay Mutfak, verandayla bütünleşen ada tezgahlar, çizilmez porselen plakalar ve gecikme tazminatlı resmi sözleşmeyle komple taahhüt sunar.',
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Hizmet Bölgeleri', item: '/hizmet-bolgeleri/buca/' },
-      { name: 'Güzelbahçe', item: '/hizmet-bolgeleri/guzelbahce/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
-  '/hizmet-bolgeleri/urla/': {
-    route: '/hizmet-bolgeleri/urla/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hizmet-bolgeleri/urla/',
-    title: 'Urla Mutfak Tadilatı & Taş Ev Villa Mutfak Dolabı | Yeşilay Mutfak',
-    metaDescription: 'Urla, Kekliktepe ve İskele\'de taş ev ve lüks villalara özel ahşap kaplama, lake mutfak dolapları ve komple ev tadilatı. 28 yıllık atölye zanaatı ve mimari taahhüt.',
-    h1: 'Urla Mutfak Tadilatı & Taş Ev ve Bağ Villası Özel İmalatı',
-    primaryIntent: 'urla mutfak tadilatı kekliktepe taş ev mutfak dolabı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/hizmet-bolgeleri/urla/#service',
-      name: 'Urla Mutfak Tadilatı ve Taş Ev İmalatı',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Urla Taş Ev Mutfakları', predicate: 'materialSpec', object: 'Doğal Meşe Kaplama ve E1 Marin MDF' }
-    ],
-    heroAnswerEngine: 'Urla ve Kekliktepe taş ev ve bağ villalarında Yeşilay Mutfak, doğal meşe kaplama, rustik lake kapaklar ve neme mukavim marin MDF gövde ile mimari renovasyon gerçekleştirir.',
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Hizmet Bölgeleri', item: '/hizmet-bolgeleri/buca/' },
-      { name: 'Urla', item: '/hizmet-bolgeleri/urla/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
-  '/hizmet-bolgeleri/cesme/': {
-    route: '/hizmet-bolgeleri/cesme/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/hizmet-bolgeleri/cesme/',
-    title: 'Çeşme & Alaçatı Villa Mutfak Tadilatı | Yeşilay Mutfak',
-    metaDescription: 'Çeşme, Alaçatı, Ilıca ve Dalyan\'daki lüks villalara özel marin gövde mutfak dolapları, porselen tezgah ve komple yazlık tadilatı. Sezon öncesi gün garantili teslimat.',
-    h1: 'Çeşme & Alaçatı Villa Mutfak Tadilatı: Sezon Öncesi Gün Garantili Lüks Renovasyon',
-    primaryIntent: 'çeşme mutfak tadilatı alaçatı villa dolap yenileme',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/hizmet-bolgeleri/cesme/#service',
-      name: 'Çeşme Villa Mutfak Tadilatı',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Çeşme Yazlık Tadilatı', predicate: 'guarantee', object: 'Sezon Öncesi Gün Bazlı Gecikme Tazminatlı Teslim' }
-    ],
-    heroAnswerEngine: 'Çeşme ve Alaçatı villalarında Yeşilay Mutfak, tuzlu sahil havasına dirençli yeşil marin MDF gövdeler, sararmayan fırın lake ve yaz sezonu öncesi gün garantili sözleşmeli teslimat sunar.',
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Hizmet Bölgeleri', item: '/hizmet-bolgeleri/buca/' },
-      { name: 'Çeşme', item: '/hizmet-bolgeleri/cesme/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
-  },
-
-  '/projelendirme/': {
-    route: '/projelendirme/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/projelendirme/',
-    title: 'İzmir Ticari Mekân Projelendirme & Fit-Out | Yeşilay Mutfak',
-    metaDescription: "İzmir'de mağaza, ofis ve kafe-restoran için mimari projelendirme, 3D tasarım ve anahtar teslim fit-out çözümleri. Projeniz için görüşme talep edin.",
-    h1: 'İzmir Ticari Mekân Projelendirme ve Anahtar Teslim Fit-Out',
-    primaryIntent: 'İzmir ticari mekân projelendirme ve anahtar teslim fit-out',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/projelendirme/#service',
-      name: 'Ticari Mekân Mimari Projelendirme ve Fit-Out',
-      type: 'Service',
-      sameAs: ['https://yesilaymutfak.com/#organization']
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'providesService', object: 'Ticari Mekân Mimari Projelendirme ve Fit-Out' }
-    ],
-    heroAnswerEngine: "İzmir'de mağaza, ofis ve kafe-restoran için mimari projelendirme, 3D tasarım ve anahtar teslim fit-out çözümleri. Projeniz için görüşme talep edin.",
-    publishedAt: '2026-10-31T00:00:00+03:00',
-    modifiedAt: '2026-10-31T00:00:00+03:00',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Projelendirme', item: '/projelendirme/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: '180–240 cm Düz Cephe Modüler Mutfak Sistemi', url: '/hazir-mutfak-modelleri-izmir/', image: '/media/tasarimlar/model-5.webp' },
+      { name: 'L Tipi Köşe Modüler Mutfak Paketi', url: '/hazir-mutfak-modelleri-izmir/', image: '/media/tasarimlar/model-8.webp' },
+      { name: 'Ada Eklentili Modüler Akrilik Mutfak', url: '/hazir-mutfak-modelleri-izmir/', image: '/media/tasarimlar/model-12.webp' }
+    ]
   },
   '/kahve-kosesi-modelleri/': {
     route: '/kahve-kosesi-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/kahve-kosesi-modelleri/',
-    title: 'İzmir Kahve Köşesi Modelleri & Özel İmalat | Yeşilay Mutfak',
-    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen modern, rustik ve kilerli kahve köşesi dolapları. Blum mekanizmalı, kahve makinelerine tam uyumlu terzi usulü barista üniteleri.',
-    h1: 'İzmir Özel Ölçü Kahve Köşesi Dolabı & Barista İstasyonu İmalatı',
-    primaryIntent: 'izmir kahve köşesi modelleri ve özel barista dolabı imalatı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      {
-        subject: 'Yeşilay Mutfak',
-        predicate: 'manufactures',
-        object: 'Özel Ölçü Barista Kahve Köşesi Dolabı'
-      },
-      {
-        subject: 'Kahve Köşesi Modelleri',
-        predicate: 'locationCreated',
-        object: 'İzmir Buca Adatepe İmalat Atölyesi'
-      },
-      {
-        subject: 'Barista Dolapları',
-        predicate: 'offersMaterial',
-        object: '18mm E1 Çift Yüz Melamin MDF ve Blum Mekanizma'
-      }
-    ],
-    heroAnswerEngine: 'İzmir\'de kişiye özel kahve köşesi modelleri: Buca Adatepe atölyemizde mutfağınızın boş nişine, duvar ölçüsüne ve espresso/filtre kahve ekipmanlarınıza tam uyumlu olarak üretilir. 18mm E1 MDF, gizli priz kanalı, fincan askılıkları ve Blum frenli ray garantisi.',
-    publishedAt: '2026-11-01T12:00:00.000Z',
-    modifiedAt: '2026-11-01T12:00:00.000Z',
-    llmSubGraphRoute: '/llms/pages/kahve-kosesi.md',
-    mobileSubGraphRoute: '/llms/mobile/kahve-kosesi.md',
+    role: 'collection',
+    title: 'İzmir Özel Ölçü Kahve Köşesi Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Buca atölyemizde niş ölçünüze özel üretilen LED aydınlatmalı, gizli prizli ve Blum çekmeceli kahve köşesi dolapları. Ücretsiz 3D tasarım teklifi alın.',
+    image: '/media/real/yesilay-showroom-ic-mekan.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
       { name: 'Tasarımlar', item: '/tasarimlar/' },
       { name: 'Kahve Köşesi Modelleri', item: '/kahve-kosesi-modelleri/' }
     ],
-    mobile: {
-      ...defaultMobile,
-      voiceQueryPatterns: [
-        'İzmir kahve köşesi dolabı yapan atölye nerede?',
-        'Özel ölçü barista kahve köşesi fiyatı ne kadar?',
-        'Buca kahve dolabı imalatı'
-      ]
-    },
-    mobileCwvBudget: defaultCwv
-  },
-  '/izmir-cam-balkon-sistemleri/': {
-    route: '/izmir-cam-balkon-sistemleri/',
-    locale: 'tr-TR',
-    role: 'service',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/izmir-cam-balkon-sistemleri/',
-    title: 'İzmir Cam Balkon Sistemleri & Isıcamlı İmalat | Yeşilay Mutfak',
-    metaDescription: 'İzmir geneli katlanır cam balkon, sürme ve ısıcamlı mimari cam balkon sistemleri. Buca atölye güvencesi, 8mm/10mm temperli cam ve paslanmaz rulman konforu.',
-    h1: 'İzmir Isıcamlı & Katlanır Cam Balkon Sistemleri İmalatı',
-    primaryIntent: 'izmir cam balkon fiyatları ve ısıcamlı katlanır sistem imalatı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      {
-        subject: 'Yeşilay Mutfak',
-        predicate: 'installs',
-        object: 'Mimari Isıcamlı Cam Balkon Sistemleri'
-      },
-      {
-        subject: 'Cam Balkon Sistemleri',
-        predicate: 'availableIn',
-        object: 'İzmir ve Tüm İlçeleri'
-      },
-      {
-        subject: 'Isıcamlı Balkon Kapama',
-        predicate: 'providesWarranty',
-        object: 'Su ve Rüzgar Yalıtım Garantisi'
-      }
-    ],
-    heroAnswerEngine: 'İzmir cam balkon sistemleri: Katlanır, sürmeli ve ısıcamlı balkon çözümlerimizle evinizi 4 mevsim konforlu bir yaşam alanına dönüştürüyoruz. Şişecam patentli temperli camlar, elektrostatik fırın boyalı alüminyum profiller ve ücretsiz yerinde lazerli keşif.',
-    publishedAt: '2026-11-01T12:00:00.000Z',
-    modifiedAt: '2026-11-01T12:00:00.000Z',
-    llmSubGraphRoute: '/llms/pages/cam-balkon.md',
-    mobileSubGraphRoute: '/llms/mobile/cam-balkon.md',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Anahtar Teslim Tadilat', item: '/izmir-anahtar-teslim-tadilat/' },
-      { name: 'İzmir Cam Balkon Sistemleri', item: '/izmir-cam-balkon-sistemleri/' }
-    ],
-    mobile: {
-      ...defaultMobile,
-      voiceQueryPatterns: [
-        'İzmir ısıcamlı cam balkon metrekare fiyatı',
-        'Katlanır cam balkon su sızdırır mı?',
-        'Buca cam balkon montajı yapan firmalar'
-      ]
-    },
-    mobileCwvBudget: defaultCwv
-  },
-  '/yatak-odasi-modelleri/': {
-    route: '/yatak-odasi-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/yatak-odasi-modelleri/',
-    title: 'İzmir Yatak Odası Modelleri & Özel İmalat Gardırop | 99 Model Kataloğu',
-    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 99 lüks yatak odası modeli. İtalyan lake gardıroplar, füme cam kapaklı giyinme odaları, Blum mekanizmalı karyola ve şifonyerler.',
-    h1: 'İzmir Özel İmalat Yatak Odası & Gardırop Modelleri',
-    primaryIntent: 'izmir özel imalat yatak odası modelleri ve giyinme odası',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Lüks Gardırop ve Giyinme Odası' },
-      { subject: 'Yatak Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
-      { subject: 'Yatak Odası Mobilyaları', predicate: 'offersMaterial', object: 'E1 Marin MDF Gövde, İtalyan Lake ve Blum Mekanizma' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak İzmir Buca Adatepe atölyesinde üretilen 99 özgün yatak odası ve gardırop modeli. Walk-in closet giyinme odaları, sürgülü ve akordeon lake dolaplar, E1 marin gövde ve 10 yıl bütünleşik atölye garantisi.',
-    publishedAt: '2026-11-04T00:00:00.000Z',
-    modifiedAt: '2026-11-04T00:00:00.000Z',
-    breadcrumbs: [
-      { name: 'Ana Sayfa', item: '/' },
-      { name: 'Modeller', item: '/tasarimlar/' },
-      { name: 'Yatak Odası Modelleri', item: '/yatak-odasi-modelleri/' }
-    ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Fluted Cam Kapaklı LED Aydınlatmalı Barista Dolabı', url: '/kahve-kosesi-modelleri/#modeller', image: '/media/real/yesilay-aluminyum-fluted-cam-kapak-square.webp' },
+      { name: 'Modern Minimalist Ahşap Kulplu Kahve Köşesi', url: '/kahve-kosesi-modelleri/#modeller', image: '/media/tasarimlar/model-14.webp' },
+      { name: 'Kiler Bölmeli ve Çekmeceli Kahve İstasyonu', url: '/kahve-kosesi-modelleri/#modeller', image: '/media/tasarimlar/model-18.webp' }
+    ]
   },
   '/salon-modelleri/': {
     route: '/salon-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/salon-modelleri/',
-    title: 'İzmir Modern Salon & TV Ünitesi Modelleri | 68 Özel İmalat Tasarım',
-    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 68 salon ve TV ünitesi modeli. Akustik ahşap çıtalı yaşam duvarları, asma konsollar, şömineli üniteler ve kütüphaneler.',
-    h1: 'İzmir Özel İmalat Salon & TV Ünitesi Modelleri',
-    primaryIntent: 'izmir özel imalat salon mobilyası ve tv ünitesi',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Salon ve TV Ünitesi Mobilyaları' },
-      { subject: 'Salon Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
-      { subject: 'TV Üniteleri', predicate: 'offersMaterial', object: 'Gizli Kablo Tünelleri, Akustik Ahşap Çıta ve İtalyan Lake' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak İzmir Buca atölyesinde üretilen 68 özgün salon mobilyası ve TV ünitesi modeli. Yüzen konsollar, entegre LED aydınlatmalı kütüphane duvarları, gizli kablo kanalları ve 10 yıl atölye garantisi.',
-    publishedAt: '2026-11-04T00:00:00.000Z',
-    modifiedAt: '2026-11-04T00:00:00.000Z',
+    role: 'collection',
+    title: 'Özel Ölçü Salon & TV Ünitesi Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Moderna, Aura ve Elegance serisi özel ölçü TV üniteleri, duvar kütüphaneleri ve asma konsollar. İzmir Buca atölyemizden ücretsiz 3D keşif randevusu alın.',
+    image: '/images/models/koleksiyonlar/salon-golf.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Modeller', item: '/tasarimlar/' },
-      { name: 'Salon Modelleri', item: '/salon-modelleri/' }
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
+      { name: 'Salon & TV Ünitesi Modelleri', item: '/salon-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Moderna Modüler Salon ve TV Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/golf/01.webp' },
+      { name: 'Aura Asma Konsol ve Duvar Sistemi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/volo/01.webp' },
+      { name: 'Elegance Kütüphaneli Yaşam Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/arcadia/01.webp' }
+    ]
+  },
+  '/yatak-odasi-modelleri/': {
+    route: '/yatak-odasi-modelleri/',
+    role: 'collection',
+    title: 'Yatak Odası, Gardırop & Giyinme Odası | Yeşilay Mutfak',
+    metaDescription: 'Tavan boyu sürgülü ve menteşeli lake gardıroplar, LED aydınlatmalı giyinme odaları ve ada şifonyerler. İzmir içi ücretsiz rölöve ve 3D proje teklifi alın.',
+    image: '/images/models/koleksiyonlar/yatak-golf.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
+      { name: 'Yatak Odası & Gardırop Modelleri', item: '/yatak-odasi-modelleri/' }
+    ],
+    catalogItems: [
+      { name: 'Zenith Özel Ölçü Gardırop ve Yatak Odası Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/golf/01.webp' },
+      { name: 'Sera Giyinme Odası ve Raylı Dolap Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/volo/01.webp' },
+      { name: 'Palazzo Klasik ve Lake Gardırop Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/arcadia/01.webp' }
+    ]
   },
   '/genc-odasi-modelleri/': {
     route: '/genc-odasi-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/genc-odasi-modelleri/',
-    title: 'İzmir Genç Odası Modelleri & Özel İmalat | 92 Model Kataloğu',
-    metaDescription: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen 92 genç odası modeli. Entegre çalışma masalı, ranzalı, kitaplıklı ve geniş depolamalı ergonomik tasarımlar.',
-    h1: 'İzmir Özel İmalat Genç Odası & Çalışma İstasyonu Modelleri',
-    primaryIntent: 'izmir özel imalat genç odası mobilyaları',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Genç Odası ve Çalışma Masaları' },
-      { subject: 'Genç Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
-      { subject: 'Genç Odası Mobilyaları', predicate: 'offersMaterial', object: 'E1 Sertifikalı Sağlıklı Gövde ve Blum Yavaşlatıcılar' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 92 özgün genç odası modeli. Entegre çalışma masaları, merdiven altı depolamalı ranzalar, modüler dolap sistemleri ve 10 yıl atölye garantisi.',
-    publishedAt: '2026-11-04T00:00:00.000Z',
-    modifiedAt: '2026-11-04T00:00:00.000Z',
+    role: 'collection',
+    title: 'Ergonomik Genç Odası & Dolap Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Çalışma masası, kitaplık ve geniş depolama dolaplarıyla özel ölçü genç odası tasarımları. E1 sertifikalı sağlıklı MDF gövde ile ücretsiz 3D keşif alın.',
+    image: '/images/models/koleksiyonlar/genc-golf.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
       { name: 'Genç Odası Modelleri', item: '/genc-odasi-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Dinamik Ergonomik Çalışma Üniteli Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/golf/01.webp' },
+      { name: 'Nova Modüler Kitaplıklı Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/volo/01.webp' },
+      { name: 'KlasikZamansız Lake Genç Odası Serisi', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/arcadia/01.webp' }
+    ]
   },
   '/cocuk-odasi-modelleri/': {
     route: '/cocuk-odasi-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/cocuk-odasi-modelleri/',
-    title: 'İzmir Çocuk Odası Modelleri & Özel İmalat | 45 Güvenli Model',
-    metaDescription: 'İzmir Buca atölyemizde miniklerin sağlığı ve güvenliği için üretilen 45 çocuk odası modeli. Montessori uyumlu alçak karyolalar, yuvarlatılmış köşeler, anti-alerjik lake mobilyalar.',
-    h1: 'İzmir Özel İmalat Çocuk Odası Modelleri',
-    primaryIntent: 'izmir özel imalat çocuk odası mobilyaları',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Güvenli Çocuk Odası Mobilyaları' },
-      { subject: 'Çocuk Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
-      { subject: 'Çocuk Mobilyaları', predicate: 'offersMaterial', object: 'Yuvarlatılmış Kenarlar, EN 71-3 Güvenli Boya ve Montessori Tasarım' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 45 güvenli ve ergonomik çocuk odası modeli. Montessori alçak yataklar, anti-alerjik su bazlı boyalar, parmak sıkışmayan Blum menteşeler ve 10 yıl garanti.',
-    publishedAt: '2026-11-04T00:00:00.000Z',
-    modifiedAt: '2026-11-04T00:00:00.000Z',
+    role: 'collection',
+    title: 'Montessori & Lake Çocuk Odası Modelleri | Yeşilay Mutfak',
+    metaDescription: 'EN 71-3 su bazlı anti-alerjik lake boyalı, yuvarlatılmış güvenli köşeli ve Montessori uyumlu özel ölçü çocuk odası mobilyaları. Ücretsiz 3D keşif alın.',
+    image: '/images/models/koleksiyonlar/cocuk-golf.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Modeller', item: '/tasarimlar/' },
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
       { name: 'Çocuk Odası Modelleri', item: '/cocuk-odasi-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Neşe Montessori Uyumlu Çocuk Odası Koleksiyonu', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/golf/01.webp' },
+      { name: 'Masal Anti-Alerjik Su Bazlı Lake Çocuk Odası', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/volo/01.webp' }
+    ]
   },
   '/camasir-odasi-modelleri/': {
     route: '/camasir-odasi-modelleri/',
-    locale: 'tr-TR',
-    role: 'product',
-    indexDirective: 'index, follow',
-    canonicalRoute: '/camasir-odasi-modelleri/',
-    title: 'İzmir Çamaşır Odası & Kiler Dolabı Modelleri | 9 Özel İmalat Çözüm',
-    metaDescription: 'İzmir Buca atölyemizde üretilen özel ölçü çamaşır ve kurutma makinesi dolapları, gizli ütü masalı kiler üniteleri ve suya dayanıklı marin banyo dolapları.',
-    h1: 'İzmir Özel İmalat Çamaşır Odası & Kiler Dolabı Modelleri',
-    primaryIntent: 'izmir çamaşır odası ve kiler dolabı imalatı',
-    primaryEntity: {
-      id: 'https://yesilaymutfak.com/#organization',
-      name: 'Yeşilay Mutfak & Mimarlık Lüks İmalat Atölyesi',
-      type: 'HomeAndConstructionBusiness',
-      sameAs: [
-        'https://www.instagram.com/yesilaymutfak',
-        'https://wa.me/905324261788'
-      ],
-      wikidataQid: 'Q11589432'
-    },
-    semanticTriples: [
-      { subject: 'Yeşilay Mutfak', predicate: 'manufactures', object: 'Özel Ölçü Çamaşır ve Kurutma Makinesi Dolapları' },
-      { subject: 'Çamaşır Odası Modelleri', predicate: 'locationCreated', object: 'İzmir Buca Adatepe İmalat Atölyesi' },
-      { subject: 'Kiler Dolapları', predicate: 'offersMaterial', object: 'Suya Dayanıklı Marin Yeşil MDF ve Teleskopik Çamaşır Sepetleri' }
-    ],
-    heroAnswerEngine: 'Yeşilay Mutfak Buca atölyesinde üretilen 9 özel çamaşır odası ve kiler dolabı çözümü. Çamaşır-kurutma kuleleri, gizli ütü masaları, suya dayanıklı marin gövde ve 10 yıl garanti.',
-    publishedAt: '2026-11-04T00:00:00.000Z',
-    modifiedAt: '2026-11-04T00:00:00.000Z',
+    role: 'collection',
+    title: 'Çamaşır Odası & Kiler Dolabı Modelleri | Yeşilay Mutfak',
+    metaDescription: 'Çamaşır ve kurutma makinesi kule kabinleri, gizli kirli sepeti ve neme dayanıklı boy kiler dolapları. İzmir geneli ücretsiz ölçü ve imalat teklifi alın.',
+    image: '/images/models/koleksiyonlar/camasir-ana.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
     breadcrumbs: [
       { name: 'Ana Sayfa', item: '/' },
-      { name: 'Modeller', item: '/tasarimlar/' },
-      { name: 'Çamaşır Odası Modelleri', item: '/camasir-odasi-modelleri/' }
+      { name: 'Tasarımlar', item: '/tasarimlar/' },
+      { name: 'Çamaşır Odası & Kiler Modelleri', item: '/camasir-odasi-modelleri/' }
     ],
-    mobile: defaultMobile,
-    mobileCwvBudget: defaultCwv
+    catalogItems: [
+      { name: 'Pratik Çamaşır ve Kurutma Makinesi Kule Dolap Sistemi', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/01.webp' },
+      { name: 'Gizli Deterjanlıklı ve Ütü Masalı Yardımcı Alan Dolabı', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/02.webp' }
+    ]
   },
+  '/yapilan-isler/': {
+    route: '/yapilan-isler/',
+    role: 'collection',
+    title: 'İzmir Tamamlanan Mutfak & Tadilat İşleri | Yeşilay Mutfak',
+    metaDescription: '1998 yılından bugüne İzmir, Çeşme ve Urla genelinde teslim ettiğimiz 72+ gerçek mutfak, banyo ve villa tadilatı referans projesini fotoğraflarıyla inceleyin.',
+    image: '/media/projeler/proje-01.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Yapılan İşler & Referanslar', item: '/yapilan-isler/' }
+    ],
+    catalogItems: [
+      { name: 'Karşıyaka Mavişehir Porselen Ada Mutfak Dönüşümü', url: '/yapilan-isler/', image: '/media/projeler/proje-01.webp' },
+      { name: 'Çeşme Alaçatı Taş Villa Komple Mutfak ve Banyo Uygulaması', url: '/yapilan-isler/', image: '/media/projeler/proje-02.webp' },
+      { name: 'Urla Kekliktepe Doğal Meşe ve İpek Mat Lake Mutfak', url: '/yapilan-isler/', image: '/media/projeler/proje-03.webp' },
+      { name: 'Buca Şirinyer Komple 3+1 Daire ve Mutfak Tadilatı', url: '/yapilan-isler/', image: '/media/projeler/proje-04.webp' }
+    ]
+  },
+  '/izmir-komple-mutfak-tadilati/': {
+    route: '/izmir-komple-mutfak-tadilati/',
+    role: 'service',
+    serviceType: 'Anahtar Teslim Komple Mutfak Tadilatı ve Dolap İmalatı',
+    title: 'İzmir Komple Mutfak Tadilatı & Yenileme | Yeşilay Mutfak',
+    metaDescription: 'Kırım, sıhhi ve elektrik tesisatı, porselen tezgah, seramik ve özel ölçü dolap montajıyla anahtar teslim mutfak tadilatı. Sözleşmeli keşif teklifi alın.',
+    image: '/media/real/yesilay-showroom-ic-mekan.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Komple Mutfak Tadilatı', item: '/izmir-komple-mutfak-tadilati/' }
+    ]
+  },
+  '/izmir-banyo-yenileme-seramik/': {
+    route: '/izmir-banyo-yenileme-seramik/',
+    role: 'service',
+    serviceType: 'Su Yalıtımlı Banyo Tadilatı, Seramik ve Banyo Dolabı İmalatı',
+    title: 'İzmir Banyo Tadilatı & Seramik Yenileme | Yeşilay Mutfak',
+    metaDescription: 'Çift kat elastik su yalıtımı, 60x120 rektifiyeli porselen seramik, gömme rezervuar ve marin banyo dolabı imalatı. İzmir içi ücretsiz keşif randevusu alın.',
+    image: '/media/real/yesilay-hilton-banyo-dolabi-luxury.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Banyo Tadilatı & Seramik', item: '/izmir-banyo-yenileme-seramik/' }
+    ]
+  },
+  '/izmir-komple-daire-tadilati/': {
+    route: '/izmir-komple-daire-tadilati/',
+    role: 'service',
+    serviceType: 'Anahtar Teslim Komple Daire ve Ev Tadilatı',
+    title: 'İzmir Komple Daire & Ev Tadilatı Hizmeti | Yeşilay Mutfak',
+    metaDescription: 'Elektrik-su tesisatı, şap, parke, alçı-boya, lake iç kapı, mutfak ve banyo dahil sözleşmeli komple daire tadilatı. Mimarımızdan ücretsiz 3D keşif alın.',
+    image: '/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Komple Daire Tadilatı', item: '/izmir-komple-daire-tadilati/' }
+    ]
+  },
+  '/izmir-anahtar-teslim-tadilat/': {
+    route: '/izmir-anahtar-teslim-tadilat/',
+    role: 'service',
+    serviceType: 'Sözleşmeli Anahtar Teslim Villa ve Konut Tadilatı',
+    title: 'Anahtar Teslim Tadilat İzmir – Sözleşmeli | Yeşilay Mutfak',
+    metaDescription: 'İzmir, Çeşme ve Urla genelinde sabit bütçe ve gecikme tazminatı garantili anahtar teslim daire ve villa tadilatı. Ücretsiz mimari rölöve randevusu alın.',
+    image: '/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Anahtar Teslim Tadilat', item: '/izmir-anahtar-teslim-tadilat/' }
+    ]
+  },
+  '/izmir-cam-balkon-sistemleri/': {
+    route: '/izmir-cam-balkon-sistemleri/',
+    role: 'service',
+    serviceType: 'Isıcamlı Katlanır, Sürme ve Giyotin Cam Balkon İmalatı',
+    title: 'İzmir Isıcamlı & Katlanır Cam Balkon | Yeşilay Mutfak',
+    metaDescription: 'Şişecam Konfor ısıcamlı katlanır, eşiksiz sürme ve motorlu giyotin cam balkon sistemleri. Buca atölye güvencesiyle ücretsiz lazer ölçü randevusu alın.',
+    image: '/media/cam-balkon/izmir-cambalkon.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Cam Balkon Sistemleri', item: '/izmir-cam-balkon-sistemleri/' }
+    ]
+  },
+  '/projelendirme/': {
+    route: '/projelendirme/',
+    role: 'service',
+    serviceType: 'Ticari Mekân Mimari Projelendirme ve Anahtar Teslim Fit-Out',
+    title: 'İzmir Ticari Mekân Projelendirme Fit-Out | Yeşilay Mutfak',
+    metaDescription: 'Ofis, klinik, mağaza ve kafe-restoranlar için 3D mimari tasarım, özel ahşap imalat ve anahtar teslim fit-out taahhüt. Kurumsal keşif görüşmesi talep edin.',
+    image: '/images/projelendirme/hero/hero_01.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Ticari Mekân Projelendirme', item: '/projelendirme/' }
+    ]
+  },
+  '/2026-mutfak-dolabi-fiyatlari/': {
+    route: '/2026-mutfak-dolabi-fiyatlari/',
+    role: 'article',
+    title: '2026 İzmir Mutfak Dolabı Fiyatları Rehberi | Yeşilay Mutfak',
+    metaDescription: '2026 İzmir mutfak dolabı metretül hesaplama cetveli; akrilik, ipek mat lake ve porselen tezgah karşılaştırması. Atölyeden şeffaf keşif ve 3D teklif alın.',
+    image: '/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: '2026 Mutfak Dolabı Fiyatları Rehberi', item: '/2026-mutfak-dolabi-fiyatlari/' }
+    ]
+  },
+  '/hizmet-bolgeleri/buca/': {
+    route: '/hizmet-bolgeleri/buca/',
+    role: 'service',
+    serviceType: 'Buca Özel Ölçü Mutfak Dolabı İmalatı ve Komple Tadilat',
+    areaServed: 'Buca, İzmir',
+    title: 'Buca Mutfak Tadilatı & Dolap İmalatı | Yeşilay Mutfak',
+    metaDescription: 'Buca Adatepe imalat atölyemizden Şirinyer, Buca Koop ve tüm mahallelere aracısız fabrika fiyatıyla özel ölçü mutfak dolabı ve tadilat. Ücretsiz keşif alın.',
+    image: '/media/real/yesilay-showroom-gece-cephe.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Buca Mutfak Tadilatı', item: '/hizmet-bolgeleri/buca/' }
+    ]
+  },
+  '/hizmet-bolgeleri/cesme/': {
+    route: '/hizmet-bolgeleri/cesme/',
+    role: 'service',
+    serviceType: 'Çeşme ve Alaçatı Villa Mutfak İmalatı ve Yazlık Tadilatı',
+    areaServed: 'Çeşme, İzmir',
+    title: 'Çeşme & Alaçatı Villa Mutfak Tadilatı | Yeşilay Mutfak',
+    metaDescription: 'Çeşme ve Alaçatı taş villalarına özel neme dayanıklı marin MDF mutfak dolabı, porselen tezgah ve yaz yasağı öncesi teslim garantili tadilat keşfi alın.',
+    image: '/media/hero/hero-slide-2.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Çeşme & Alaçatı Mutfak Tadilatı', item: '/hizmet-bolgeleri/cesme/' }
+    ]
+  },
+  '/hizmet-bolgeleri/guzelbahce/': {
+    route: '/hizmet-bolgeleri/guzelbahce/',
+    role: 'service',
+    serviceType: 'Güzelbahçe ve Yelki Villa Ada Mutfak ve Komple Tadilat',
+    areaServed: 'Güzelbahçe, İzmir',
+    title: 'Güzelbahçe & Yelki Villa Mutfak Tadilatı | Yeşilay Mutfak',
+    metaDescription: 'Güzelbahçe, Yelki ve Kahramandere müstakil villalarına özel geniş ada mutfak, porselen tezgah ve anahtar teslim tadilat. Ücretsiz 3D keşif randevusu alın.',
+    image: '/media/hero/hero-slide-3.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Güzelbahçe Villa Mutfak Tadilatı', item: '/hizmet-bolgeleri/guzelbahce/' }
+    ]
+  },
+  '/hizmet-bolgeleri/narlidere/': {
+    route: '/hizmet-bolgeleri/narlidere/',
+    role: 'service',
+    serviceType: 'Narlıdere ve Sahilevleri Lüks Mutfak Dolabı ve Renovasyon',
+    areaServed: 'Narlıdere, İzmir',
+    title: 'Narlıdere & Sahilevleri Mutfak Tadilatı | Yeşilay Mutfak',
+    metaDescription: 'Narlıdere ve Sahilevleri rezidans ile yalı dairelerine özel ipek mat fırın lake ada mutfak, Blum mekanizma ve sessiz şantiye yönetimli tadilat keşfi alın.',
+    image: '/media/hero/hero-slide-4.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Narlıdere Mutfak Tadilatı', item: '/hizmet-bolgeleri/narlidere/' }
+    ]
+  },
+  '/hizmet-bolgeleri/urla/': {
+    route: '/hizmet-bolgeleri/urla/',
+    role: 'service',
+    serviceType: 'Urla ve Kekliktepe Taş Ev Mutfak Dolabı ve Villa Tadilatı',
+    areaServed: 'Urla, İzmir',
+    title: 'Urla Taş Ev & Villa Mutfak Tadilatı | Yeşilay Mutfak',
+    metaDescription: 'Urla, Kekliktepe ve İskele bağ villaları ile taş evlere özel doğal meşe kaplama, country lake mutfak dolabı ve anahtar teslim tadilat için keşif alın.',
+    image: '/media/cinematic/klasik_mutfak.webp',
+    publishedAt: PUBLISHED_AT,
+    modifiedAt: MODIFIED_AT,
+    breadcrumbs: [
+      { name: 'Ana Sayfa', item: '/' },
+      { name: 'Urla Mutfak Tadilatı', item: '/hizmet-bolgeleri/urla/' }
+    ]
+  }
 };

@@ -3,14 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
-  title: "Genç Odası Modelleri | Modern & Fonksiyonel Genç Odası Tasarımları",
-  description: "Yeşilay Mutfak genç odası koleksiyonları. Gençliğin ritmine ayak uyduran ergonomik çalışma masaları, modüler dolaplar ve depolama alanları.",
+  title: "Ergonomik Genç Odası & Dolap Modelleri | Yeşilay Mutfak",
+  description: "Çalışma masası, kitaplık ve geniş depolama dolaplarıyla özel ölçü genç odası tasarımları. E1 sertifikalı sağlıklı MDF gövde ile ücretsiz 3D keşif alın.",
   canonical: "https://yesilaymutfak.com/genc-odasi-modelleri/",
   serviceName: "Genç Odası Modelleri",
   breadcrumbs: [
     { name: "Ana Sayfa", url: "/" },
-    { name: "Mobilya", url: "/tasarimlar/" },
-    { name: "Genç Odası", url: "/genc-odasi-modelleri/" }
+    { name: "Tasarımlar", url: "/tasarimlar/" },
+    { name: "Genç Odası Modelleri", url: "/genc-odasi-modelleri/" }
   ]
 };
 
@@ -35,35 +35,112 @@ const arcadiaImages = ["/images/models/genc-odasi/arcadia/01.webp", "/images/mod
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
+        <a href="/tasarimlar/" class="hover:text-[#15231C] transition">Tasarımlar</a>
+        <span>/</span>
         <span class="text-[#15231C] font-semibold">Genç Odası</span>
       </nav>
 
       <!-- H1 BAŞLIK -->
       <div class="pt-2">
-        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
-          Genç Odası
+        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+          Ergonomik Genç Odası ve Çalışma Ünitesi Modelleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir özel imalat genç odası modelleri; ergonomik çalışma masaları, entegre LED aydınlatmalı kitaplıklar ve sessiz frenli raylı gardıroplarla gençlerin odaklanma ve depolama ihtiyaçlarını karşılar. Yeşilay Mutfak, Buca atölyesinde E1 sınıfı dayanıklı malzemelerle 10 yıl garantili üretim yapar.</p>
+        <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
+          İzmir Buca Adatepe imalat atölyemizde üretilen 92 genç odası tasarımı. Entegre çalışma masaları, kitaplıklar, bazalı karyolalar ve E1 normunda sağlıklı 18 mm MDF dolaplar.
+        </p>
       </div>
 
-      <!-- KOLEKSİYON SLIDERLARI (Özgün Koleksiyonlar: Moderna, Aura, Elegance) -->
+      <!-- KOLEKSİYON SLIDERLARI -->
       <div class="space-y-16 sm:space-y-24">
         <ModelSlider 
-          name="Moderna"
+          name="Dinamik Ergonomik Çalışma Üniteli Genç Odası"
           desc="Gençliğin ritmine ayak uyduran tasarımlar. Modüler çalışma üniteleri, geniş depolama çözümleri ve dinamik renk kombinasyonları ile gençlerin kendi alanlarını yaratmalarını sağlar."
           images={golfImages}
+          categoryLabel="Ergonomik Genç Odası"
+          priorityFirst={true}
         />
 
         <ModelSlider 
-          name="Aura"
+          name="Nova Modüler Kitaplıklı Genç Odası"
           desc="Aura genç odası koleksiyonu, yalın tasarımıyla dikkat çekerken, gençlerin değişen ihtiyaçlarına pratik ve şık çözümler sunar. Modüler yapısıyla kişisel alanı özgürce düzenleme imkanı tanır; çalışmak, dinlenmek ve hayal kurmak için ideal bir ortam yaratır."
           images={voloImages}
+          categoryLabel="Kitaplıklı Genç Odası"
         />
 
         <ModelSlider 
-          name="Elegance"
+          name="Klasik Zamansız Lake Genç Odası Serisi"
           desc="Klasik stil, her yaşa uyum sağlar. Zamansız çizgiler, doğal ahşap dokunuşlar ve konforlu detaylarla uzun yıllar keyifle kullanılacak genç odaları."
           images={arcadiaImages}
+          categoryLabel="Lake Ahşap Genç Odası"
         />
+      </div>
+
+      <!-- ÇALIŞMA VE ERGONOMİ STANDARTLARI TABLOSU -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+              ERGONOMİ & POSTÜR SAĞLIĞI
+            </span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
+              Genç Odası Çalışma Masası ve Karyola Ergonomi Kriterleri
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
+              Uzun saatler ders çalışan ve bilgisayar başında vakit geçiren gençlerin omurga sağlığı için masa yüksekliği, aydınlatma açısı ve yatak havalandırma standartlarını titizlikle projelendiriyoruz:
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-[#15231C] text-white">
+                  <th class="p-3.5 font-semibold">Mobilya Ünitesi</th>
+                  <th class="p-3.5 font-semibold">Standart Genişlik</th>
+                  <th class="p-3.5 font-semibold">Ergonomik Yükseklik</th>
+                  <th class="p-3.5 font-semibold">Derinlik / Hacim</th>
+                  <th class="p-3.5 font-semibold">Teknik Güvenlik & Konfor Standardı</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-200 text-stone-700">
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Entegre Çalışma Masası</td>
+                  <td class="p-3.5">120 – 160 cm</td>
+                  <td class="p-3.5">74 – 76 cm</td>
+                  <td class="p-3.5">60 – 70 cm</td>
+                  <td class="p-3.5">Gizli monitör kablo geçişi, bas-aç kırtasiye çekmecesi, yuvarlatılmış kenar</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Modüler Duvar Kitaplığı</td>
+                  <td class="p-3.5">80 – 140 cm</td>
+                  <td class="p-3.5">180 – 220 cm</td>
+                  <td class="p-3.5">30 – 35 cm</td>
+                  <td class="p-3.5">Gizli duvara sabitleme ankrajı, sarkmayan 25 mm güçlendirilmiş raf tablası</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Bazalı Genç Karyolası</td>
+                  <td class="p-3.5">100 / 120 cm</td>
+                  <td class="p-3.5">45 – 50 cm (Yatak dahil)</td>
+                  <td class="p-3.5">200 cm (İç net)</td>
+                  <td class="p-3.5">Emniyet kilitli çift pistonlu amortisör, çelik karkas profil, geniş sandık</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Genç Gardırop Ünitesi</td>
+                  <td class="p-3.5">140 – 200 cm</td>
+                  <td class="p-3.5">220 – 260 cm</td>
+                  <td class="p-3.5">60 cm</td>
+                  <td class="p-3.5">Frenli sürgü/menteşe mekanizması, pantolonluk ve ayarlanabilir raf sistemi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
+            <p>
+              Küçük kardeşler için Montessori tarzı alçak tasarımları <a href="/cocuk-odasi-modelleri/" class="text-[#006039] font-semibold underline underline-offset-4">çocuk odası modellerimizden</a> inceleyebilir, tüm ev tadilatı ihtiyaçlarınız için <a href="/izmir-anahtar-teslim-tadilat/" class="text-[#006039] font-semibold underline underline-offset-4">İzmir anahtar teslim tadilat</a> sayfamızı ziyaret edebilirsiniz.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

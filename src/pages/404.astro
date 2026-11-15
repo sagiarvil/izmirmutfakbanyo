@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { siteConfig } from "../data/siteConfig";
 
 const seo = {
-  title: "Sayfa Bulunamadı (404) | Yeşilay Mutfak & Mimarlık",
-  description: "Aradığınız sayfa taşınmış veya silinmiş olabilir. İzmir mutfak ve banyo tadilatı ana sayfasına dönün.",
-  canonical: "https://yesilaymutfak.com/404/"
+  title: "Sayfa Bulunamadı (404) | Yeşilay Mutfak",
+  description: "Aradığınız sayfa taşınmış veya silinmiş olabilir. İzmir özel ölçü mutfak ve banyo tadilatı ana sayfasına dönün.",
+  canonical: "https://yesilaymutfak.com/404.html",
+  image: "/media/real/yesilay-showroom-gece-cephe.webp",
+  noindex: true
 };
 ---
 
@@ -15,7 +16,7 @@ const seo = {
       <span class="text-7xl sm:text-8xl font-black text-stone-800 block">404</span>
       <h1 class="text-2xl sm:text-3xl font-light font-editorial">Aradığınız Sayfa Bulunamadı</h1>
       <p class="text-xs sm:text-sm text-stone-400 font-light leading-relaxed">
-        Ulaşmak istediğiniz sayfa adresi değişmiş veya taşınmış olabilir. 1998'den gelen güvencemizle mutfak, banyo ve ev tadilatı hizmetlerimizi incelemek için ana sayfaya dönebilirsiniz.
+        Ulaşmak istediğiniz sayfa adresi değişmiş veya taşınmış olabilir. 1998'den gelen atölye güvencemizle mutfak, banyo ve ev tadilatı hizmetlerimizi incelemek için ana sayfaya dönebilirsiniz.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
         <a href="/" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg">

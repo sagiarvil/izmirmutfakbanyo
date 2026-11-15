@@ -156,8 +156,12 @@ const seo = {
             <img
               src={slide.resim}
               alt={slide.baslik}
+              width="1920"
+              height="1280"
               class="w-full h-full object-cover object-center transform scale-100 transition-transform duration-7000 ease-out"
               loading={index === 0 ? "eager" : "lazy"}
+              fetchpriority={index === 0 ? "high" : "auto"}
+              decoding="async"
             />
             <!-- Gradient Overlay: OSO Mimarlık Saf Minimalist Gradyan -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/40"></div>
@@ -249,7 +253,7 @@ const seo = {
           <div class="flex-1 h-full bg-white/20 relative overflow-hidden">
             <div
               class="h-full bg-amber-500 transition-all duration-300"
-              :class={`activeSlide === ${i} ? w-full : w-0`}
+              :class={`activeSlide === ${i} ? 'w-full' : 'w-0'`}
             ></div>
           </div>
         ))}
@@ -265,6 +269,7 @@ const seo = {
         <h1 class="text-3xl md:text-5xl font-light text-slate-900 tracking-tight leading-snug">
           İzmir Ticari Mekân <strong class="font-semibold text-slate-950">Projelendirme ve Fit-Out</strong> Çözümleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir ticari mekan projelendirme ve fit-out mimarlık hizmetleri; mağaza, ofis, cafe, restoran, klinik ve showroom alanlarında 3D konsept tasarımdan CNC atölye mobilya üretimine ve anahtar teslim şantiye yönetimine kadar eksiksiz sunulur. Yeşilay Mutfak, zaman ve bütçe taahhüdüyle teslim eder.</p>
         <div class="w-16 h-1 bg-amber-500 mx-auto"></div>
         <p class="text-base md:text-lg text-slate-600 font-normal leading-relaxed text-justify md:text-center">
           Yeşilay Mimarlık; modern ve çağdaş mimarlık anlayışını estetik, işlevsel ve yaratıcı çözümlerle birleştirerek her ölçekte yenilikçi mekânlar tasarlar. Firmamız mimari – iç mimari tasarım ve projelendirme ile anahtar teslim (fit-out) uygulama hizmetleri sunar. Tasarımdan uygulamaya uzanan tüm süreçlerde detay odaklı yaklaşımı ve teknik uzmanlığıyla; ofis, mağaza, konut ve cafe-restoran gibi tüm ticari ve yaşam alanlarını konforlu, prestijli ve yüksek verimli hâle getiriyoruz.
@@ -492,9 +497,12 @@ const seo = {
               <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <img
                   src={proj.dosya}
-                  alt={proj.baslik}
+                  alt={`${proj.baslik} - İzmir Ticari Mimari Proje`}
+                  width="1502"
+                  height="935"
                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                   loading="lazy"
+                  decoding="async"
                 />
                 <!-- Kategori Rozeti -->
                 <div class="absolute top-4 left-4">
@@ -557,13 +565,13 @@ const seo = {
             <div class="grid grid-cols-2 gap-3">
               <div class="space-y-1.5">
                 <div class="aspect-video bg-slate-100 rounded overflow-hidden border border-slate-200">
-                  <img src="/images/projelendirme/render-01.webp" alt="3D Render" class="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/projelendirme/render-01.webp" alt="Bayraklı Ofis 3D Render Modellemesi" width="800" height="450" class="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <p class="text-[11px] font-mono text-slate-500 text-center uppercase tracking-wider">3D Onaylanan Tasarım</p>
               </div>
               <div class="space-y-1.5">
                 <div class="aspect-video bg-slate-100 rounded overflow-hidden border border-slate-200">
-                  <img src="/images/projelendirme/fitout-01.webp" alt="Fit-Out Uygulama" class="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/projelendirme/fitout-01.webp" alt="Bayraklı Ofis Fit-Out Uygulama Sonucu" width="800" height="450" class="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <p class="text-[11px] font-mono text-emerald-600 text-center uppercase tracking-wider font-semibold">Tamamlanan Uygulama</p>
               </div>
@@ -581,13 +589,13 @@ const seo = {
             <div class="grid grid-cols-2 gap-3">
               <div class="space-y-1.5">
                 <div class="aspect-video bg-slate-100 rounded overflow-hidden border border-slate-200">
-                  <img src="/images/projelendirme/render-02.webp" alt="3D Render" class="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/projelendirme/render-02.webp" alt="Bornova Lojistik Merkezi 3D Tasarımı" width="800" height="450" class="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <p class="text-[11px] font-mono text-slate-500 text-center uppercase tracking-wider">3D Onaylanan Tasarım</p>
               </div>
               <div class="space-y-1.5">
                 <div class="aspect-video bg-slate-100 rounded overflow-hidden border border-slate-200">
-                  <img src="/images/projelendirme/fitout-02.webp" alt="Fit-Out Uygulama" class="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/projelendirme/fitout-02.webp" alt="Bornova Lojistik Merkezi Tamamlanan Fit-Out Uygulaması" width="800" height="450" class="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <p class="text-[11px] font-mono text-emerald-600 text-center uppercase tracking-wider font-semibold">Tamamlanan Uygulama</p>
               </div>
@@ -1006,6 +1014,47 @@ const seo = {
     <script is:inline src="/assets/lead-form.js" defer></script>
 
   </main>
+
+  <!-- Ticari Mekan Mimari Projelendirme Süreç Tablosu (G17 NavBoost) -->
+  <section class="py-12 bg-white border-b border-stone-200" data-seo-interactive="true">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-6 text-center font-editorial">İzmir Ticari Mekan ve Fit-Out Projelendirme Aşamaları</h2>
+      <div class="overflow-x-auto rounded-xl border border-stone-200">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-800 font-semibold border-b border-stone-200">
+              <th class="p-3 sm:p-4">Süreç</th>
+              <th class="p-3 sm:p-4">Açıklama &amp; Çıktı</th>
+              <th class="p-3 sm:p-4">Mekanik / Elektrik Entegrasyonu</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">1. Lazer Rölöve &amp; Konsept</td>
+              <td class="p-3 sm:p-4">Saha incelemesi, sirkülasyon analizi ve 3D tasarım</td>
+              <td class="p-3 sm:p-4">Mevcut klima, yangın sprinkler ve trafo gücü tespiti</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">2. Mimari İmalat Çizimleri</td>
+              <td class="p-3 sm:p-4">Özel teşhir üniteleri, banko ve vitrin detay projeleri</td>
+              <td class="p-3 sm:p-4">Gizli LED kanalları ve zemin buat bağlantıları</td>
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">3. Atölye CNC Üretimi</td>
+              <td class="p-3 sm:p-4">İzmir atölyemizde yangına dayanıklı lake ve marin mobilya</td>
+              <td class="p-3 sm:p-4">Häfele ticari sınıf ağır yük mekanizma montajı</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">4. Gece / Vardiyalı Montaj</td>
+              <td class="p-3 sm:p-4">AVM veya cadde mağaza açılış takvimine tam uyum</td>
+              <td class="p-3 sm:p-4">Aydınlatma otomasyonu ve ses sistemi devreye alma</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
 </Layout>
 <style>
 

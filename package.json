@@ -7,10 +7,12 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "verify:seo": "python3 verify_seo.py",
+    "audit:apex": "python3 seo_enforcer.py --audit ./dist https://yesilaymutfak.com",
+    "indexnow": "node scripts/notify-indexnow.cjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.4.2"
   },
   "devDependencies": {

@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { siteConfig } from "../../data/siteConfig";
+
+const seo = {
+  title: "KVKK Aydınlatma Metni | Yeşilay Mutfak",
+  description: "Yeşilay Mutfak 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni ve veri güvenliği ilkeleri.",
+  canonical: "https://yesilaymutfak.com/kvkk-aydinlatma-metni/",
+  image: "/media/real/yesilay-showroom-gece-cephe.webp",
+  noindex: true
+};
+---
+
+<Layout seo={seo}>
+  <section class="py-16 sm:py-24 bg-[#FAF9F6] text-[#1D1D1F]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8 space-y-8">
+      <nav class="flex items-center space-x-2 text-xs text-[#6E675F]" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#006039] transition">Ana Sayfa</a>
+        <span>/</span>
+        <span class="text-[#1D1D1F] font-semibold">KVKK Aydınlatma Metni</span>
+      </nav>
+
+      <h1 class="text-2xl sm:text-4xl font-serif font-bold text-[#15231C]">
+        6698 Sayılı KVKK Kapsamında Kişisel Verilerin Korunması Aydınlatma Metni
+      </h1>
+
+      <div class="bg-white border border-[#E5DFD5] p-6 sm:p-8 space-y-5 text-xs sm:text-sm text-[#4A443D] leading-relaxed">
+        <p>
+          <strong>Veri Sorumlusu:</strong> {siteConfig.legalName} ({siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}/{siteConfig.address.addressRegion}) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel verilerinizin güvenliğine azami hassasiyet göstermekteyiz.
+        </p>
+
+        <h2 class="text-base sm:text-lg font-bold text-[#15231C] pt-2">1. İşlenen Kişisel Veriler ve İşleme Amaçları</h2>
+        <p>
+          İletişim formlarımız, telefon hattımız ({siteConfig.phoneFormatted}) veya WhatsApp danışma hattımız üzerinden paylaştığınız ad-soyad, telefon numarası, e-posta adresi, proje konumu ve mimari ölçü bilgileriniz; yalnızca ücretsiz keşif randevusunun oluşturulması, 3D iç mimari projelendirme çalışmasının hazırlanması ve fiyat teklifinin tarafınıza iletilmesi amacıyla işlenmektedir.
+        </p>
+
+        <h2 class="text-base sm:text-lg font-bold text-[#15231C] pt-2">2. Kişisel Verilerin Aktarımı ve Saklama Süresi</h2>
+        <p>
+          Toplanan kişisel verileriniz üçüncü taraf reklam veya pazarlama ağlarıyla kesinlikle paylaşılmaz; yalnızca yasal yükümlülükler çerçevesinde yetkili kamu kurumlarıyla veya sözleşmeli üretim/montaj sürecinin ifası için kendi bünyemizdeki mimari ekibimizle sınırlı olarak kullanılır.
+        </p>
+
+        <h2 class="text-base sm:text-lg font-bold text-[#15231C] pt-2">3. Veri Sahibi Olarak Haklarınız</h2>
+        <p>
+          KVKK’nın 11. maddesi kapsamındaki bilgi talep etme, düzeltme veya silme taleplerinizi <a href={`mailto:${siteConfig.email}`} class="text-[#006039] font-semibold underline">{siteConfig.email}</a> adresine e-posta göndererek ya da Buca showroom adresimize yazılı başvuruda bulunarak iletebilirsiniz.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

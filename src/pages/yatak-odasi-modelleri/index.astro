@@ -3,14 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
-  title: "Yatak Odası Modelleri | Özel İmalat Gardırop & Giyinme Odası",
-  description: "Yeşilay Mutfak modern yatak odası ve giyinme odası koleksiyonları. Akıllı iç donanımlı sürgülü dolaplar, lake gardıroplar ve ada şifonyerler.",
+  title: "Yatak Odası, Gardırop & Giyinme Odası | Yeşilay Mutfak",
+  description: "Tavan boyu sürgülü ve menteşeli lake gardıroplar, LED aydınlatmalı giyinme odaları ve ada şifonyerler. İzmir içi ücretsiz rölöve ve 3D proje teklifi alın.",
   canonical: "https://yesilaymutfak.com/yatak-odasi-modelleri/",
   serviceName: "Yatak Odası Modelleri",
   breadcrumbs: [
     { name: "Ana Sayfa", url: "/" },
-    { name: "Mobilya", url: "/tasarimlar/" },
-    { name: "Yatak Odası", url: "/yatak-odasi-modelleri/" }
+    { name: "Tasarımlar", url: "/tasarimlar/" },
+    { name: "Yatak Odası & Gardırop Modelleri", url: "/yatak-odasi-modelleri/" }
   ]
 };
 
@@ -35,35 +35,112 @@ const arcadiaImages = ["/images/models/yatak-odasi/arcadia/01.webp", "/images/mo
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
+        <a href="/tasarimlar/" class="hover:text-[#15231C] transition">Tasarımlar</a>
+        <span>/</span>
         <span class="text-[#15231C] font-semibold">Yatak Odası</span>
       </nav>
 
       <!-- H1 BAŞLIK -->
       <div class="pt-2">
-        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
-          Yatak Odası
+        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+          Özel Ölçü Yatak Odası ve Gardırop Modelleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir özel ölçü yatak odası mobilyaları; tavana kadar sürgülü veya kapaklı akıllı gardırop üniteleri, entegre sensörlü LED aydınlatmalar, pantolonluk ve aksesuar çekmeceleriyle depolama alanını maksimize eder. Yeşilay Mutfak, Buca atölyesinde E1 sınıfı MDF gövdeyle 10 yıl garantili üretir.</p>
+        <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
+          İzmir Buca Adatepe imalat atölyemizde kişiye özel üretilen 99 mimari gardırop, giyinme odası ve yatak odası tasarımı. Tavan boyu raylı ve menteşeli dolaplar, füme cam kapaklar, entegre LED aydınlatmalar ve kadife çekmece içi aksesuarlar.
+        </p>
       </div>
 
-      <!-- KOLEKSİYON SLIDERLARI (Özgün Koleksiyonlar: Moderna, Aura, Elegance) -->
+      <!-- KOLEKSİYON SLIDERLARI -->
       <div class="space-y-16 sm:space-y-24">
         <ModelSlider 
-          name="Moderna"
+          name="Zenith Özel Ölçü Gardırop ve Yatak Odası Serisi"
           desc="Moderna gardırop ve giyinme odası çözümleri, zarafetle tasarlanmış iç mekanlarda hem estetik hem de fonksiyonel beklentilere eksiksiz yanıt verir."
           images={golfImages}
+          categoryLabel="Gardırop & Giyinme Odası"
+          priorityFirst={true}
         />
 
         <ModelSlider 
-          name="Aura"
+          name="Sera Giyinme Odası ve Raylı Dolap Serisi"
           desc="Aura yatak odası koleksiyonu, yalın çizgileri ve akıllı tasarım detaylarıyla çağdaş yaşam alanları için benzersiz bir konfor sunar. Sade ama güçlü estetik anlayışı, mekanlara ferahlık kazandırırken, kişiselleştirilebilir kombinasyonları sayesinde her zevke hitap eden çözümler üretir."
           images={voloImages}
+          categoryLabel="Sürgülü Raylı Gardırop"
         />
 
         <ModelSlider 
-          name="Elegance"
+          name="Palazzo Klasik ve Lake Gardırop Serisi"
           desc="Zarif gelenek, romantik dokunuşlarla yeniden yorumlandı. Elegance koleksiyonu, sıcak ahşap detayları ve asil lake yüzeyleriyle yatak odanızı huzur dolu bir sığınağa dönüştürür."
           images={arcadiaImages}
+          categoryLabel="Lake Gardırop Koleksiyonu"
         />
+      </div>
+
+      <!-- TEKNİK DOLAP İÇİ ERGONOMİ VE DÜZENLEME TABLOSU -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+              GİYİNME ODASI & GARDIROP MİMARİSİ
+            </span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
+              Özel Ölçü Gardırop İç Bölümleme ve Ergonomi Standartları
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
+              Hazır seri dolaplarda kıyafetlerin sığmaması veya askılıkların yetersiz kalması sık karşılaşılan sorunlardır. Atölyemizde gardıropları gardırop derinliği (60-65 cm) ve askı boylarına göre milimetrik bölümlendiriyoruz:
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-[#15231C] text-white">
+                  <th class="p-3.5 font-semibold">Bölüm Fonksiyonu</th>
+                  <th class="p-3.5 font-semibold">Önerilen Net Yükseklik</th>
+                  <th class="p-3.5 font-semibold">İdeal Modül Derinliği</th>
+                  <th class="p-3.5 font-semibold">Mekanizma / Donanım</th>
+                  <th class="p-3.5 font-semibold">Kullanım Avantajı</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-200 text-stone-700">
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Uzun Elbise & Palto Askılığı</td>
+                  <td class="p-3.5">140 – 165 cm</td>
+                  <td class="p-3.5">60 – 65 cm</td>
+                  <td class="p-3.5">Işıklı alüminyum LED askı borusu</td>
+                  <td class="p-3.5">Elbise ve montların tabana değmesini ve kırışmasını önler</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Gömlek & Ceket Askılığı (Çift Kat)</td>
+                  <td class="p-3.5">90 – 105 cm (x2)</td>
+                  <td class="p-3.5">60 – 62 cm</td>
+                  <td class="p-3.5">Üstte asansörlü askı (servetto), altta sabit</td>
+                  <td class="p-3.5">Tavan yüksekliğini çift katlı kullanarak depolamayı 2 katına çıkarır</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Aksesuarlık & Saat / Takı Çekmecesi</td>
+                  <td class="p-3.5">12 – 16 cm</td>
+                  <td class="p-3.5">50 – 55 cm</td>
+                  <td class="p-3.5">Blum Tandem tam açılım frenli ray, füme cam tabla</td>
+                  <td class="p-3.5">Kadife kaplı bölmeler ile saat, kravat ve takı düzeni sağlar</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Gizli Ayakkabılık ve Çanta Rafları</td>
+                  <td class="p-3.5">25 – 35 cm (Eğimli/Düz)</td>
+                  <td class="p-3.5">38 – 45 cm</td>
+                  <td class="p-3.5">Alüminyum stoplu çekme raflar, gizli koku filtresi</td>
+                  <td class="p-3.5">Ayakkabı ve çantaların ezilmeden hava alarak saklanmasını sağlar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
+            <p>
+              Banyo ve yatak odasını birleştiren ebeveyn süit projelerimiz için <a href="/izmir-banyo-yenileme-seramik/" class="text-[#006039] font-semibold underline underline-offset-4">İzmir lüks banyo yenileme</a> çözümlerimizi, genel ev mobilyalarımız için <a href="/tasarimlar/" class="text-[#006039] font-semibold underline underline-offset-4">özel imalat modeller kataloğumuzu</a> inceleyebilirsiniz.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

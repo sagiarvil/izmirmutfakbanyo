@@ -3,14 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
-  title: "Çocuk Odası Modelleri | Güvenli & Ergonomik Çocuk Odası Tasarımları",
-  description: "Yeşilay Mutfak çocuk odası koleksiyonları. Oyunla büyüyen, düzenle şekillenen, anti-alerjik ve güvenli çocuk mobilyaları.",
+  title: "Montessori & Lake Çocuk Odası Modelleri | Yeşilay Mutfak",
+  description: "EN 71-3 su bazlı anti-alerjik lake boyalı, yuvarlatılmış güvenli köşeli ve Montessori uyumlu özel ölçü çocuk odası mobilyaları. Ücretsiz 3D keşif alın.",
   canonical: "https://yesilaymutfak.com/cocuk-odasi-modelleri/",
   serviceName: "Çocuk Odası Modelleri",
   breadcrumbs: [
     { name: "Ana Sayfa", url: "/" },
-    { name: "Mobilya", url: "/tasarimlar/" },
-    { name: "Çocuk Odası", url: "/cocuk-odasi-modelleri/" }
+    { name: "Tasarımlar", url: "/tasarimlar/" },
+    { name: "Çocuk Odası Modelleri", url: "/cocuk-odasi-modelleri/" }
   ]
 };
 
@@ -34,30 +34,100 @@ const voloImages = ["/images/models/cocuk-odasi/volo/01.webp", "/images/models/c
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
+        <a href="/tasarimlar/" class="hover:text-[#15231C] transition">Tasarımlar</a>
+        <span>/</span>
         <span class="text-[#15231C] font-semibold">Çocuk Odası</span>
       </nav>
 
       <!-- H1 BAŞLIK -->
       <div class="pt-2">
-        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
-          Çocuk Odası
+        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+          Montessori ve Su Bazlı Lake Çocuk Odası Modelleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir çocuk odası mobilyaları; toksik madde içermeyen su bazlı EN 71-3 sertifikalı lake boya, yuvarlatılmış köşe güvenliği ve Montessori ilkelerine uygun ergonomik modüllerle üretilir. Yeşilay Mutfak, Buca atölyesinde çocuğunuzun büyüme evrelerine uyum sağlayan fonksiyonel mekanlar teslim eder.</p>
+        <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
+          İzmir Buca Adatepe imalat atölyemizde miniklerin sağlığı ve güvenliği için üretilen 43 çocuk odası mobilyası. EN 71-3 oyuncak güvenlik standartlı su bazlı kokusuz boyalar, çarpmayı önleyen yuvarlak hatlar ve bağımsız hareket imkanı sunan Montessori karyolalar.
+        </p>
       </div>
 
-      <!-- KOLEKSİYON SLIDERLARI (Locus Birebir: 10 Görsel Golf, 33 Görsel Volo) -->
-      <!-- KOLEKSİYON SLIDERLARI (Özgün Koleksiyonlar: Moderna, Aura) -->
+      <!-- KOLEKSİYON SLIDERLARI -->
       <div class="space-y-16 sm:space-y-24">
         <ModelSlider 
-          name="Moderna"
+          name="Neşe Montessori Uyumlu Çocuk Odası Koleksiyonu"
           desc="Oyunla büyüyen, düzenle şekillenen odalar. Çocukların hayal dünyasını zenginleştiren, güvenli yuvarlatılmış köşeler ve modüler oyuncak depolama sistemleri."
           images={golfImages}
+          categoryLabel="Montessori Çocuk Odası"
+          priorityFirst={true}
         />
 
         <ModelSlider 
-          name="Aura"
+          name="Masal Anti-Alerjik Su Bazlı Lake Çocuk Odası"
           desc="Aura çocuk odası koleksiyonu, yalın ve neşeli tasarımıyla dikkat çekerken, çocukların değişen ihtiyaçlarına pratik ve şık çözümler sunar. Sağlığa zararsız E1 standartlarında su bazlı boyalar ve dayanıklı mekanizmalar."
           images={voloImages}
+          categoryLabel="Anti-Alerjik Lake Çocuk Odası"
         />
+      </div>
+
+      <!-- ÇOCUK GÜVENLİK STANDARTLARI VE MALZEME TABLOSU -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+              ÇOCUK SAĞLIĞI & GÜVENLİĞİ STANDARDI
+            </span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
+              Çocuk Odası İmalatında Kullanılan Malzeme ve Güvenlik Kriterleri
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
+              Çocuk odalarında kimyasal buharlaşma (VOC salınımı) ve parmak sıkışma risklerini sıfıra indirmek için Buca atölyemizde yalnızca sertifikalı hammadde ve özel menteşeler kullanıyoruz:
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-[#15231C] text-white">
+                  <th class="p-3.5 font-semibold">Güvenlik Unsuru</th>
+                  <th class="p-3.5 font-semibold">Yeşilay İmalat Standardı</th>
+                  <th class="p-3.5 font-semibold">Uluslararası Sertifika</th>
+                  <th class="p-3.5 font-semibold">Çocuğa Sağladığı Fayda</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-200 text-stone-700">
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Boya & Yüzey Kaplama</td>
+                  <td class="p-3.5">İtalyan su bazlı kokusuz poliüretan astar ve son kat</td>
+                  <td class="p-3.5">EN 71-3 (Oyuncak Güvenliği)</td>
+                  <td class="p-3.5">Ağır metal ve solvent içermez, miniklerin kemirme/temasında %100 zehirsizdir</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Gövde Levhası</td>
+                  <td class="p-3.5">18 mm yüksek yoğunluklu neme mukavim MDF-Lam</td>
+                  <td class="p-3.5">E1 Normu (Sıfır Formaldehit)</td>
+                  <td class="p-3.5">Solunum yollarını rahatsız eden kimyasal koku yaymaz, alerji yapmaz</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Menteşe ve Ray Mekanizması</td>
+                  <td class="p-3.5">Blum Blumotion yumuşak kapanır entegre hidrolik frenler</td>
+                  <td class="p-3.5">LGA / TÜV Güvenlik Onaylı</td>
+                  <td class="p-3.5">Kapaklar hızla çarpsa dahi yavaşlar; parmak sıkışması riskini tamamen önler</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Köşe ve Kenar İşçiliği</td>
+                  <td class="p-3.5">CNC ile R5/R10 radüslü yuvarlatılmış masif hatlar</td>
+                  <td class="p-3.5">Sıfır Keskin Kenar Prensibi</td>
+                  <td class="p-3.5">Düşme veya çarpma anında sert yaralanma ve kesilme riskini ortadan kaldırır</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
+            <p>
+              Gelişme çağındaki abla ve ağabeyler için <a href="/genc-odasi-modelleri/" class="text-[#006039] font-semibold underline underline-offset-4">ergonomik genç odası modellerimizi</a>, tüm ev ahşap dekorasyonu için <a href="/tasarimlar/" class="text-[#006039] font-semibold underline underline-offset-4">özel imalat tasarımlarımızı</a> inceleyebilirsiniz.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

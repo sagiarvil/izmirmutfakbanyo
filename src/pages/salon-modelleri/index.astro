@@ -3,14 +3,14 @@ import Layout from "../../layouts/Layout.astro";
 import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
-  title: "Salon Modelleri | Özel İmalat Yaşam Alanı & TV Üniteleri",
-  description: "Yeşilay Mutfak modern salon ve TV ünitesi koleksiyonları. Modüler duvar sistemleri, kütüphaneler, asma konsollar ve zarafet dolu yaşam alanları.",
+  title: "Özel Ölçü Salon & TV Ünitesi Modelleri | Yeşilay Mutfak",
+  description: "Moderna, Aura ve Elegance serisi özel ölçü TV üniteleri, duvar kütüphaneleri ve asma konsollar. İzmir Buca atölyemizden ücretsiz 3D keşif randevusu alın.",
   canonical: "https://yesilaymutfak.com/salon-modelleri/",
   serviceName: "Salon Modelleri",
   breadcrumbs: [
     { name: "Ana Sayfa", url: "/" },
-    { name: "Mobilya", url: "/tasarimlar/" },
-    { name: "Salon", url: "/salon-modelleri/" }
+    { name: "Tasarımlar", url: "/tasarimlar/" },
+    { name: "Salon & TV Ünitesi Modelleri", url: "/salon-modelleri/" }
   ]
 };
 
@@ -31,42 +31,119 @@ const arcadiaImages = ["/images/models/salon/arcadia/01.webp", "/images/models/s
   <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
       
-      <!-- BREADCRUMB (Locus Birebir) -->
+      <!-- BREADCRUMB -->
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
-        <span class="text-[#15231C] font-semibold">Salon</span>
+        <a href="/tasarimlar/" class="hover:text-[#15231C] transition">Tasarımlar</a>
+        <span>/</span>
+        <span class="text-[#15231C] font-semibold">Salon & TV Ünitesi</span>
       </nav>
 
-      <!-- H1 BAŞLIK (Locus Birebir: Roboto, 48px/36px, Bold) -->
+      <!-- H1 BAŞLIK -->
       <div class="pt-2">
-        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
-          Salon
+        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+          Özel Ölçü Salon ve TV Ünitesi Modelleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir özel ölçü salon ve TV ünitesi imalatı; akustik ahşap çıta paneller, gizli kablo geçiş kanalları, füme camlı LED aydınlatmalı vitrinler ve kitaplık kombinasyonlarıyla salonunuzun mimari dengesini kurar. Yeşilay Mutfak, Buca atölyesinde E1 sınıfı dayanıklı malzemelerle 10 yıl garantili üretir.</p>
+        <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
+          İzmir Buca Adatepe imalat atölyemizde salon duvarınızın net ölçüsüne göre üretilen 68 mimari TV ünitesi, kütüphane ve asma konsol tasarımı. Akustik ahşap paneller, gizli kablo kanalları ve şömine entegrasyonu.
+        </p>
       </div>
 
-      <!-- KOLEKSİYON SLIDERLARI (Özgün Koleksiyonlar: Moderna, Aura, Elegance) -->
+      <!-- KOLEKSİYON SLIDERLARI -->
       <div class="space-y-16 sm:space-y-24">
         <ModelSlider 
-          name="Moderna"
+          name="Moderna Modüler Salon ve TV Ünitesi Koleksiyonu"
           desc="Yeşilay Mutfak'ın çağdaş Moderna koleksiyonu, modern yaşam alanlarına zarafet, düzen ve işlev kazandırır. Modüler yapısı sayesinde esnek çözümler sunarken, rafine malzeme seçenekleri ve sade çizgileriyle zamansız bir estetik yaratır."
           images={golfImages}
+          categoryLabel="Salon & TV Ünitesi"
+          priorityFirst={true}
         />
 
         <ModelSlider 
-          name="Aura"
+          name="Aura Asma Konsol ve Duvar Sistemi Koleksiyonu"
           desc="Her yaşam alanı, kişisel bir dokunuşu hak eder. Aura, sadece mobilya değil, yaşam tarzınızı yansıtan bir kompozisyon sunar. Her detayında estetik, işlevsellik ve mimari zarafet barındıran Aura koleksiyonu; bulunduğu her mekana hafiflik ve ferahlık katar."
           images={voloImages}
+          categoryLabel="Asma Duvar Ünitesi"
         />
 
         <ModelSlider 
-          name="Elegance"
+          name="Elegance Kütüphaneli Yaşam Ünitesi Koleksiyonu"
           desc="Modern çizgiler, rafine bir zevk ve zarif bir yaşam alanı… Elegance, salonunuzda estetikle konforu kusursuz bir dengede buluşturur. Göz alıcı sadeliği ve detaylara verilen özen ile her mekanda sofistike bir atmosfer yaratır."
           images={arcadiaImages}
+          categoryLabel="Kütüphaneli TV Konsolu"
         />
       </div>
 
-      <!-- DİĞER KOLEKSİYONLAR (Locus Birebir) -->
+      <!-- TEKNİK MİMARİ TABLO VE DONANIM BİLGİSİ -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+              SALON ERGONOMİSİ & MİMARİ STANDARTLAR
+            </span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
+              Özel Ölçü TV Ünitesi ve Duvar Paneli Teknik Seçim Tablosu
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
+              Televizyon inç boyutu, oturma mesafesi ve ses sistemi amfi yerleşimine göre salon ünitelerinde uyguladığımız modüler ölçü ve malzeme standartları:
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-[#15231C] text-white">
+                  <th class="p-3.5 font-semibold">Tasarım Konsepti</th>
+                  <th class="p-3.5 font-semibold">İdeal TV Boyutu</th>
+                  <th class="p-3.5 font-semibold">Duvar Genişliği</th>
+                  <th class="p-3.5 font-semibold">Kablo & Tesisat Kanalı</th>
+                  <th class="p-3.5 font-semibold">Öne Çıkan Malzeme Kombinasyonu</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-200 text-stone-700">
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Asma Konsol & Akustik Çıta</td>
+                  <td class="p-3.5">55″ – 65″ TV</td>
+                  <td class="p-3.5">240 – 300 cm</td>
+                  <td class="p-3.5">Gizli fırçalı priz tüneli, sıfır kablo görünümü</td>
+                  <td class="p-3.5">Doğal meşe çıta arkası antrasit akustik keçe ve mat lake konsol</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Mermer / Porselen Panelli TV Duvarı</td>
+                  <td class="p-3.5">65″ – 85″ TV</td>
+                  <td class="p-3.5">300 – 420 cm</td>
+                  <td class="p-3.5">Çift bölmeli amfi ve oyun konsolu hava kanalı</td>
+                  <td class="p-3.5">12 mm Statuario porselen plaka, bronz alüminyum profil ve LED kanal</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Biyoetanol Şömineli Konsol</td>
+                  <td class="p-3.5">65″ – 75″ TV</td>
+                  <td class="p-3.5">280 – 380 cm</td>
+                  <td class="p-3.5">Isı kalkanlı yalıtım kutusu ve alt menfez</td>
+                  <td class="p-3.5">Isıya dayanıklı seramik cephe, Blum bas-aç çekmeceler</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Kütüphaneli Tam Boy Salon Sistemi</td>
+                  <td class="p-3.5">55″ – 75″ TV</td>
+                  <td class="p-3.5">320 – 500 cm (Tavan boyu)</td>
+                  <td class="p-3.5">Entegre sensörlü LED spot ve kitaplık kanalları</td>
+                  <td class="p-3.5">18 mm E1 fırın lake gövde, füme cam vitrin ve pirinç kulp</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
+            <p>
+              Salon ünitenizi açık plan mutfakla birlikte tasarlatmak istiyorsanız <a href="/yasam-alanlari-mutfak-modelleri/" class="text-[#006039] font-semibold underline underline-offset-4">açık mutfak ve yaşam alanları modellerimizi</a> inceleyebilir veya tüm evi yenilemek için <a href="/izmir-komple-daire-tadilati/" class="text-[#006039] font-semibold underline underline-offset-4">İzmir komple daire tadilatı</a> hizmetimizden faydalanabilirsiniz.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DİĞER KOLEKSİYONLAR -->
       <div class="pt-12 sm:pt-16 border-t border-[#E5E2DA]">
         <h2 class="text-xl sm:text-2xl font-bold text-[#15231C] tracking-tight mb-6" style="font-family: 'Roboto', sans-serif;">
           Diğer Koleksiyonlar

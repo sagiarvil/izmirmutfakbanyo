@@ -3,9 +3,11 @@ export interface Props {
   name: string;
   desc: string;
   images: string[];
+  categoryLabel?: string;
+  priorityFirst?: boolean;
 }
 
-const { name, desc, images } = Astro.props;
+const { name, desc, images, categoryLabel = "Özel Ölçü", priorityFirst = false } = Astro.props;
 ---
 
 <section class="space-y-4 sm:space-y-6">
@@ -48,21 +50,26 @@ const { name, desc, images } = Astro.props;
       class="flex flex-row items-center gap-4 sm:gap-6 overflow-x-auto scroll-smooth py-1 select-none"
       style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;"
     >
-      {images.map((imgSrc, idx) => (
-        <div 
-          class="shrink-0 w-[300px] sm:w-[520px] lg:w-[780px] h-[220px] sm:h-[380px] lg:h-[540px] bg-[#ECEAE5] overflow-hidden shadow-2xs"
-          style="scroll-snap-align: start;"
-        >
-          <img 
-            src={imgSrc} 
-            alt={`${name} Görsel ${idx + 1}`}
-            class="w-full h-full object-cover brightness-100 contrast-100"
-            loading="lazy"
-            width="820"
-            height="540"
-          />
-        </div>
-      ))}
+      {images.map((imgSrc, idx) => {
+        const isPriority = priorityFirst && idx === 0;
+        return (
+          <div 
+            class="shrink-0 w-[300px] sm:w-[520px] lg:w-[780px] h-[220px] sm:h-[380px] lg:h-[540px] bg-[#ECEAE5] overflow-hidden shadow-2xs"
+            style="scroll-snap-align: start;"
+          >
+            <img 
+              src={imgSrc} 
+              alt={`Yeşilay Mutfak ${categoryLabel} ${name} Koleksiyonu Özel Ölçü Tasarım – Görsel ${idx + 1}`}
+              class="w-full h-full object-cover brightness-100 contrast-100"
+              loading={isPriority ? "eager" : "lazy"}
+              fetchpriority={isPriority ? "high" : "auto"}
+              decoding={isPriority ? "sync" : "async"}
+              width="820"
+              height="540"
+            />
+          </div>
+        );
+      })}
     </div>
 
     <!-- Sağ Ok Butonu -->

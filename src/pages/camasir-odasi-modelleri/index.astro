@@ -3,14 +3,28 @@ import Layout from "../../layouts/Layout.astro";
 import ModelSlider from "../../components/ModelSlider.astro";
 
 const seo = {
-  title: "Çamaşır Odası & Kiler Modelleri | Fonksiyonel Dolap Çözümleri",
-  description: "Yeşilay Mutfak çamaşır odası ve kiler dolabı koleksiyonları. Çamaşır ve kurutma makinesi modülleri, gizli deterjanlıklar ve maksimum alan verimliliği.",
+  title: "Çamaşır Odası & Kiler Dolabı Modelleri | Yeşilay Mutfak",
+  description: "Çamaşır ve kurutma makinesi kule kabinleri, gizli kirli sepeti ve neme dayanıklı boy kiler dolapları. İzmir geneli ücretsiz ölçü ve imalat teklifi alın.",
   canonical: "https://yesilaymutfak.com/camasir-odasi-modelleri/",
   serviceName: "Çamaşır Odası Modelleri",
   breadcrumbs: [
     { name: "Ana Sayfa", url: "/" },
-    { name: "Mobilya", url: "/tasarimlar/" },
-    { name: "Çamaşır", url: "/camasir-odasi-modelleri/" }
+    { name: "Tasarımlar", url: "/tasarimlar/" },
+    { name: "Çamaşır Odası & Kiler Modelleri", url: "/camasir-odasi-modelleri/" }
+  ],
+  faqList: [
+    {
+      question: "Çamaşır odası dolaplarında çamaşır ve kurutma makinesi titreşimi dolaba zarar verir mi?",
+      answer: "Kesinlikle zarar vermez. Buca atölyemizde ürettiğimiz kule kabinlerde gövde arkalığı 18mm masif MDF ile güçlendirilir ve makinelerin temas ettiği yan yüzeylere 8 mm titreşim emici elastomer conta yerleştirilir."
+    },
+    {
+      question: "Banyoda veya balkonda çamaşır alanı oluştururken neme karşı hangi malzeme kullanılır?",
+      answer: "Buhar ve neme doğrudan maruz kalan alanlarda %100 suya mukavim çift yüzlü yeşil marin MDF gövde ve fırın poliüretan lake kapaklar kullanılır. Asla yonga levha veya standart sunta kullanılmaz."
+    },
+    {
+      question: "Gizli kirli sepeti ve katlanır ütü masası entegrasyonu yapılabilir mi?",
+      answer: "Evet. Dolap kapağının içine katlanan gizli ütü masası, priz yuvası, havalandırma delikli çift bölmeli kirli çamaşır torbası ve deterjan frenli çekmeceleri mekanınıza özel ölçüyle entegre edilir."
+    }
   ]
 };
 
@@ -33,23 +47,146 @@ const camasirImages = ["/images/models/camasir/ana/01.webp", "/images/models/cam
       <nav class="flex items-center space-x-2 text-[13px] text-[#756E65] font-normal" aria-label="Breadcrumb">
         <a href="/" class="hover:text-[#15231C] transition">Ana Sayfa</a>
         <span>/</span>
-        <span class="text-[#15231C] font-semibold">Çamaşır</span>
+        <a href="/tasarimlar/" class="hover:text-[#15231C] transition">Tasarımlar</a>
+        <span>/</span>
+        <span class="text-[#15231C] font-semibold">Çamaşır Odası & Kiler</span>
       </nav>
 
       <!-- H1 BAŞLIK -->
       <div class="pt-2">
-        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-none" style="font-family: 'Roboto', sans-serif;">
-          Çamaşır
+        <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
+          Fonksiyonel Çamaşır Odası ve Kiler Dolabı Modelleri
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir'de çamaşır odası ve kiler dolabı imalatı; kurutma ve çamaşır makinelerini gizleyen neme dayanıklı E1 marin MDF gövde, boy kiler mekanizmaları ve ütü masası entegrasyonuyla kişiye özel tasarlanır. Yeşilay Mutfak Buca atölyesinde milimetrik ölçüyle üretilip montajı yapılır.</p>
+        <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
+          İzmir Buca Adatepe imalat atölyemizde üretilen fonksiyonel çamaşır odası, kule dolap ve yardımcı kiler sistemleri. Çamaşır ve kurutma makinelerini titreşimsiz kavrayan güçlendirilmiş gövde, gizli kirli sepetleri ve deterjan rayları.
+        </p>
       </div>
 
-      <!-- KOLEKSİYON SLIDERI (Özgün Koleksiyon: CleanLine & Spazio) -->
+      <!-- KOLEKSİYON SLIDERI -->
       <div class="space-y-16 sm:space-y-24">
         <ModelSlider 
-          name="CleanLine & Spazio Çözümleri"
+          name="Pratik Çamaşır ve Kurutma Makinesi Kule Dolap Sistemi"
           desc="Kompakt ve geniş mekanlar için çamaşır makinesi, kurutucu, entegre kirli sepetleri ve deterjan bölmeli akıllı dolap sistemleri. Maksimum ergonomi, hijyen ve şık depolama alanları."
           images={camasirImages}
+          categoryLabel="Çamaşır Odası Dolabı"
+          priorityFirst={true}
         />
+      </div>
+
+      <!-- YERLEŞİM VE TİTREŞİM MUKAVEMETİ TABLOSU -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+              YARDIMCI ALAN PLANLAMASI & MUKAVEMET
+            </span>
+            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
+              Çamaşır Odası Dolaplarında Standart Ölçüler ve Tesisat Gereksinimleri
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
+              Çamaşır ve kurutma makineleri santrifüj sıkma sırasında yüksek titreşim ve nem üretir. Standart suntalam dolapların aksine, Buca atölyemizde makinelerin hava almasını sağlayan özel havalandırmalı ve neme dayanıklı MDF karkas inşa ediyoruz:
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-[#15231C] text-white">
+                  <th class="p-3.5 font-semibold">Modül Fonksiyonu</th>
+                  <th class="p-3.5 font-semibold">Net İç Genişlik</th>
+                  <th class="p-3.5 font-semibold">Net İç Derinlik</th>
+                  <th class="p-3.5 font-semibold">Yükseklik</th>
+                  <th class="p-3.5 font-semibold">Tesisat & Titreşim Standardı</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-200 text-stone-700">
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Alt Alta / Yan Yana Makine Kabini</td>
+                  <td class="p-3.5">65 – 70 cm (Tekli) / 135 cm (İkili)</td>
+                  <td class="p-3.5">68 – 72 cm</td>
+                  <td class="p-3.5">88 – 92 cm</td>
+                  <td class="p-3.5">Titreşim emici silikon ayak pabucu, arka hortum boşluğu (8 cm)</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Kule Tipi Üst Üste Makine Kulesi</td>
+                  <td class="p-3.5">68 cm</td>
+                  <td class="p-3.5">70 cm</td>
+                  <td class="p-3.5">220 – 260 cm (Tavan boyu)</td>
+                  <td class="p-3.5">Ağır yük taşıyıcı 25 mm çelik takviyeli ara raf ve devrilme emniyeti</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-[#15231C]">Gizli Çift Gözlü Kirli Çamaşır Sepeti</td>
+                  <td class="p-3.5">45 – 60 cm</td>
+                  <td class="p-3.5">50 cm</td>
+                  <td class="p-3.5">60 – 75 cm</td>
+                  <td class="p-3.5">Renkli/Beyaz ayrımı sağlayan hava geçiren kumaş torbalı raylı çekmece</td>
+                </tr>
+                <tr class="bg-stone-50/70">
+                  <td class="p-3.5 font-bold text-[#15231C]">Ütü Masalı Boy Kiler Dolabı</td>
+                  <td class="p-3.5">40 – 60 cm</td>
+                  <td class="p-3.5">55 – 60 cm</td>
+                  <td class="p-3.5">Tam Boy</td>
+                  <td class="p-3.5">Kapağa katlanır gömme ütü masası, süpürge şarj prizi ve deterjan rafları</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100">
+            <p>
+              Banyo içerisinde çamaşır alanı oluşturmak için <a href="/izmir-banyo-yenileme-seramik/" class="text-[#006039] font-semibold underline underline-offset-4">İzmir banyo yenileme çözümlerimizi</a> inceleyebilir, mutfak kiler çözümleri için <a href="/izmir-mutfak-dolabi-imalati/" class="text-[#006039] font-semibold underline underline-offset-4">özel ölçü mutfak dolabı modellerimizi</a> görebilirsiniz.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÇAMAŞIR ODASI İMALAT VE MÜHENDİSLİK STANDARTLARI -->
+      <div class="pt-8 border-t border-[#E5E2DA]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border border-stone-200 rounded-xl space-y-2">
+            <span class="text-2xl">🌀</span>
+            <h3 class="text-sm font-bold text-[#15231C]">Titreşim Yalıtımlı Karkas</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              1400 devir sıkma anında sarsıntıyı emen 25 mm çift takviyeli taşıyıcı ara tabla ve yan gövde elastomer fitil montajı.
+            </p>
+          </div>
+          <div class="p-6 bg-white border border-stone-200 rounded-xl space-y-2">
+            <span class="text-2xl">💧</span>
+            <h3 class="text-sm font-bold text-[#15231C]">Neme Mukavim Yeşil Gövde</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Buhar tahliyesi ve deterjan sızıntılarına karşı %100 suya dayanımlı E1 normunda fırın lake kapaklar ve marin taban.
+            </p>
+          </div>
+          <div class="p-6 bg-white border border-stone-200 rounded-xl space-y-2">
+            <span class="text-2xl">🧺</span>
+            <h3 class="text-base font-bold text-[#15231C]">Gizli Entegre Çözümler</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Raylı çift gözlü kirli çamaşır sepetleri, gömme katlanır ütü masası ve deterjan dökülmelerine karşı yıkanabilir paspas tepsisi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SSS BÖLÜMÜ -->
+      <div class="pt-12 sm:pt-16 border-t border-[#E5E2DA]">
+        <div class="space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#006039]">MERAK EDİLENLER</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-[#15231C] tracking-tight mt-1" style="font-family: 'Roboto', sans-serif;">
+              Çamaşır Odası ve Kiler Dolapları Hakkında Sıkça Sorulan Sorular
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            {seo.faqList.map((faq) => (
+              <div class="bg-white border border-stone-200 p-5 rounded-xl space-y-1.5 shadow-2xs">
+                <h3 class="text-sm font-bold text-stone-900">{faq.question}</h3>
+                <p class="text-xs text-stone-600 font-light leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <!-- DİĞER KOLEKSİYONLAR -->

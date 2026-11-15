@@ -16,18 +16,10 @@ const { seo, activeService } = Astro.props;
 <!doctype html>
 <html lang="tr" class="scroll-smooth overflow-x-hidden bg-[#FAF9F6] text-[#1D1D1F]">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-4BK4ZYZ9ET');
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, minimum-scale=1, maximum-scale=5" />
+
+    <SEO {...seo} />
     
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
@@ -43,46 +35,20 @@ const { seo, activeService } = Astro.props;
           extend: {
             colors: {
               apple: {
-                bg: '#FAF9F6',
-                surface: '#F5F5F7',
-                card: '#FFFFFF',
-                border: '#D2D2D7',
-                text: '#1D1D1F',
-                secondary: '#86868B',
-                dark: '#161617',
-                forest: '#006039',
-                forestDeep: '#0B3B2C',
-                forestHover: '#00482B',
-                rolex: '#006039',
-                gold: '#C5A880',
-                goldLight: '#E6D7C3',
-                crimson: '#8B1E2D'
+                bg: '#FAF9F6', surface: '#F5F5F7', card: '#FFFFFF', border: '#D2D2D7',
+                text: '#1D1D1F', secondary: '#86868B', dark: '#161617',
+                forest: '#006039', forestDeep: '#0B3B2C', forestHover: '#00482B',
+                rolex: '#006039', gold: '#C5A880', goldLight: '#E6D7C3', crimson: '#8B1E2D'
               }
             },
             fontFamily: {
-              sans: [
-                '-apple-system',
-                'BlinkMacSystemFont',
-                '"SF Pro Display"',
-                '"SF Pro Text"',
-                '"SF Pro"',
-                '"Helvetica Neue"',
-                'Helvetica',
-                'Arial',
-                'sans-serif'
-              ],
-              serif: [
-                'Playfair Display',
-                'Georgia',
-                'serif'
-              ]
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"SF Pro"', 'sans-serif'],
+              serif: ['Playfair Display', 'Georgia', 'serif']
             }
           }
         }
-      }
+      };
     </script>
-
-    <SEO {...seo} />
 
     <!-- Favicon & Touch Icons (Logo İle Senkron - v=20261028c Cache-Buster) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=20261028c" />
@@ -95,7 +61,6 @@ const { seo, activeService } = Astro.props;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261028c" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20261028c" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta property="og:site_name" content="Yeşilay Mutfak" />
 
     <!-- Mobil & PWA Standartları -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,20 +69,31 @@ const { seo, activeService } = Astro.props;
     <meta name="format-detection" content="telephone=yes" />
     <meta name="theme-color" content="#FAF9F6" />
 
-    <!-- Syndication & Feed Katmanı ($10M Mandate v9.1) -->
-    <link rel="alternate" type="application/rss+xml" title="Yeşilay Mutfak RSS" href="/feed.xml" />
-    <link rel="alternate" type="application/atom+xml" title="Yeşilay Mutfak Atom" href="/atom.xml" />
-    <link rel="alternate" type="application/feed+json" title="Yeşilay Mutfak JSON Feed" href="/feed.json" />
-    <link rel="alternate" type="application/rss+xml" title="Yeşilay Mutfak Mobile Voice Feed" href="/mobile/feed.xml" />
+    <!-- Speculation Rules API (0 ms Anında Geçiş & bfcache Uyumu) -->
+    <script type="speculationrules" is:inline>
+      {
+        "prerender": [
+          {
+            "source": "list",
+            "urls": [
+              "/",
+              "/izmir-mutfak-dolabi-imalati/",
+              "/izmir-komple-mutfak-tadilati/",
+              "/izmir-banyo-yenileme-seramik/",
+              "/izmir-anahtar-teslim-tadilat/",
+              "/modern-mutfak-modelleri/",
+              "/tasarimlar/",
+              "/projelendirme/",
+              "/hakkimizda/",
+              "/iletisim/"
+            ]
+          }
+        ]
+      }
+    </script>
 
-    <!-- Multi-Tier LLMS & AI Agent Hub -->
-    <link rel="help" type="text/markdown" href="/llms.txt" title="LLMs Context" />
-    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full AI Knowledge Base" />
-    <link rel="related" type="text/markdown" href="/llms/recommendation-engine.md" title="AI Recommendation Heuristics" />
-    <link rel="related" type="text/markdown" href="/llms/geo-turkey.md" title="Turkey National GEO & AEO Discovery" />
-    <link rel="service-doc" type="application/json" href="/.well-known/agent.json" title="Autonomous Agent Protocol" />
-
-      <!-- Alpine.js 3.x (Declarative Reactive UI Engine) -->
+    <!-- Alpine.js 3.x with Collapse Plugin (Declarative Reactive UI Engine) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.8/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
   </head>
   <body class="min-h-screen flex flex-col font-sans architect-grid-bg text-[#1D1D1F] overflow-x-hidden antialiased selection:bg-[#006039] selection:text-white">
@@ -171,6 +147,14 @@ const { seo, activeService } = Astro.props;
           });
         }
       });
+    </script>
+    <!-- Google tag (gtag.js) Deferred for Fast First-Packet -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4BK4ZYZ9ET');
     </script>
   </body>
 </html>

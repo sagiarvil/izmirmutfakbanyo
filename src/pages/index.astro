@@ -8,19 +8,9 @@ const featuredModels = tasarimlar.slice(0, 8);
 
 const seo = {
   title: "Yeşilay Mutfak — Lüks Mutfak Tasarımı, Banyo & Anahtar Teslim Renovasyon",
-  description: "İzmir Buca Adatepe atölyemizden kişiye ve mekâna özel projelendirilen akrilik, lake mutfak dolapları, lüks banyo renovasyonu ve anahtar teslim konut taahhüdü. 28 yıllık tecrübe, 137 tescilli model arşivi.",
+  description: "İzmir Adatepe atölyemizde üretilen özel ölçü lüks mutfak dolapları, anahtar teslim banyo ve daire tadilatı. Ücretsiz 3D mimari keşif randevusu alın.",
   canonical: `${siteConfig.siteUrl}/`,
   serviceName: "Lüks Mimarlık & Mutfak İmalatı",
-  keywords: [
-    "yeşilay mutfak luxury",
-    "yeşilay mutfak mimarlık",
-    "izmir özel mutfak dolabı",
-    "lake mutfak modelleri 2026",
-    "lüks banyo dolabı izmir",
-    "adatepe mutfak atölyesi",
-    "çeşme mutfak tadilatı",
-    "urla lüks renovasyon"
-  ],
   faqList: [
     {
       question: "Dolap kapaklarında parmak izi ve leke tutmayan malzeme kullanıyor musunuz?",
@@ -199,6 +189,7 @@ const seo = {
         style="background: linear-gradient(180deg, rgba(84, 84, 84, 0) 59.95%, rgba(59, 59, 59, 0.3) 74.63%, rgba(5, 5, 5, 0.38) 94.23%);"
       >
         <a 
+          href="/tasarimlar/"
           :href="slides[current].link" 
           class="block text-left text-white pointer-events-auto group max-w-xl"
         >
@@ -276,6 +267,7 @@ const seo = {
             <span class="text-[#006039]">Kişiye Özel Çizgilerle</span> <br />
             <span class="text-[#0A2E1F]">Gerçeğe Dönüştürüyoruz.</span>
           </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">Yeşilay Mutfak, 1998'den bu yana İzmir Buca'daki kendi imalat atölyesinde aracı olmadan özel ölçü lüks mutfak dolapları, anahtar teslim ev tadilatı ve mimari iç mekan tasarımları üretir. E1 sertifikalı MDF-Lam gövde, Blum mekanizmalar ve 10 yıl atölye garantisi sunar.</p>
 
           <!-- Dinamik Alt Metin -->
           <p id="hero-answer-engine" class="text-[15px] sm:text-[16px] text-[#424245] font-normal leading-[1.55] max-w-xl tracking-[-0.01em]">
@@ -490,8 +482,11 @@ const seo = {
               <img 
                 src={item.img} 
                 alt={item.altText || item.title} 
+                width="480"
+                height="480"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 loading="lazy" 
+                decoding="async"
               />
               <span class="absolute top-3 left-3 px-2.5 py-1 bg-[#006039]/95 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md border border-[#C5A880]/40 shadow-2xs">
                 {item.modelNo}
@@ -571,8 +566,11 @@ const seo = {
             <img 
               src="/media/real/yesilay-showroom-gece-cephe.webp" 
               alt="Yeşilay Mutfak Buca Gaziler Lüks Showroom Gece Dış Cephesi" 
+              width="1672"
+              height="941"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy" 
+              decoding="async"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
@@ -623,8 +621,11 @@ const seo = {
               <img 
                 src="/media/real/yesilay-mimari-danismanlik-toplanti-square.webp" 
                 alt="Cem Yeşilay Mimari Danışmanlık ve Müşteri Projelendirme Toplantısı" 
+                width="800"
+                height="800"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 loading="lazy" 
+                decoding="async"
               />
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-[#006039] text-white text-[9.5px] font-bold uppercase rounded">
                 MİMARİ PROJE
@@ -652,8 +653,11 @@ const seo = {
               <img 
                 src="/media/real/yesilay-showroom-ic-mekan-square.webp" 
                 alt="Yeşilay Mutfak Showroom İç Mekan ve Teşhir Alanı" 
+                width="800"
+                height="800"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 loading="lazy" 
+                decoding="async"
               />
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-[#C5A880] text-[#1D1D1F] text-[9.5px] font-bold uppercase rounded">
                 CANLI TEŞHİR
@@ -688,8 +692,11 @@ const seo = {
             <img 
               src="/media/real/yesilay-hilton-banyo-dolabi-luxury-square.webp" 
               alt="Özel İmalat Hilton Banyo Dolabı ve LED Ayna" 
+              width="800"
+              height="800"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
               SHOWROOM MODELİ
@@ -717,8 +724,11 @@ const seo = {
             <img 
               src="/media/real/yesilay-banyo-secimi-musteri-square.webp" 
               alt="Müşterimiz Showroomda Banyo ve Seramik Malzemelerini İncelerken" 
+              width="800"
+              height="800"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
               GERÇEK DENEYİM
@@ -746,8 +756,11 @@ const seo = {
             <img 
               src="/media/real/yesilay-tv-unitesi-somine-luxury-square.webp" 
               alt="Lüks Mermer Panel ve Şömineli Akıllı TV Duvarı Ünitesi" 
+              width="800"
+              height="800"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
               YAŞAM ALANI
@@ -775,8 +788,11 @@ const seo = {
             <img 
               src="/media/real/yesilay-aluminyum-fluted-cam-kapak-square.webp" 
               alt="Alüminyum Çerçeveli ve Fluted Tırtıklı Cam Mutfak Dolabı Kapağı" 
+              width="800"
+              height="800"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               loading="lazy" 
+              decoding="async"
             />
             <span class="absolute top-3 left-3 px-2.5 py-1 bg-white/90 backdrop-blur-md text-[#1D1D1F] text-[10px] font-bold uppercase rounded-md shadow-2xs">
               MİMARİ DONANIM

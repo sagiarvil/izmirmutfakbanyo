@@ -2,18 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import kahveKosesiList from '../../data/kahveKosesiData.json';
 
-const seoData = {
-  title: 'İzmir Kahve Köşesi Modelleri & Özel İmalat | Yeşilay Mutfak',
-  description: 'İzmir Buca atölyemizde kişiye özel ölçüyle imal edilen modern, rustik ve kilerli kahve köşesi dolapları. Blum mekanizmalı, kahve makinelerine tam uyumlu terzi usulü barista üniteleri.',
-  canonical: 'https://yesilaymutfak.com/kahve-kosesi-modelleri/',
-  openGraph: {
-    title: 'İzmir Kahve Köşesi Modelleri & Özel İmalat | Yeşilay Mutfak',
-    description: 'Buca Adatepe imalat atölyemizde evinizin nişine ve kahve ekipmanlarınıza tam uyumlu özel barista kahve köşesi dolapları üretiyoruz.',
-    type: 'website',
-    image: 'https://yesilaymutfak.com/media/real/yesilay-aluminyum-fluted-cam-kapak.webp'
-  }
-};
-
 const faqItems = [
   {
     q: 'Kahve köşesi dolapları hazır ölçü mü yoksa özel ölçü mü üretiliyor?',
@@ -33,79 +21,19 @@ const faqItems = [
   }
 ];
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Product',
-      '@id': 'https://yesilaymutfak.com/kahve-kosesi-modelleri/#product',
-      name: 'Özel Ölçü Barista Kahve Köşesi ve İstasyonu İmalatı',
-      description: 'İzmir Buca imalat atölyesinde kişiye özel ölçüde tasarlanan LED aydınlatmalı, fincan askılıklı ve kiler bölmeli modern kahve dolapları.',
-      brand: {
-        '@type': 'Brand',
-        name: 'Yeşilay Mutfak'
-      },
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'TRY',
-        price: '0',
-        priceValidUntil: '2027-12-31',
-        offerCount: '22',
-        availability: 'https://schema.org/InStock',
-        description: 'Kişiye özel mekan ve ekipman ölçüsüne göre ücretsiz 3D mimari çizim ve atölye keşif teklifi sunulmaktadır.'
-      }
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://yesilaymutfak.com/kahve-kosesi-modelleri/#faq',
-      mainEntity: faqItems.map(item => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.a
-        }
-      }))
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://yesilaymutfak.com/kahve-kosesi-modelleri/#breadcrumb',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Ana Sayfa',
-          item: 'https://yesilaymutfak.com/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Tasarımlar',
-          item: 'https://yesilaymutfak.com/tasarimlar/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Kahve Köşesi Modelleri',
-          item: 'https://yesilaymutfak.com/kahve-kosesi-modelleri/'
-        }
-      ]
-    }
-  ]
+const seoData = {
+  canonical: 'https://yesilaymutfak.com/kahve-kosesi-modelleri/',
+  faqList: faqItems.map((item) => ({ question: item.q, answer: item.a }))
 };
 ---
 
-<Layout seo={seoData} activeService=kahve-kosesi>
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-
+<Layout seo={seoData} activeService="kahve-kosesi">
   <!-- HERO SECTION -->
   <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#15231C] text-white overflow-hidden">
-    <!-- Soft Decorative Glow -->
     <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#B58A57]/15 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <!-- Breadcrumb -->
       <nav class="flex items-center space-x-2 text-xs text-stone-300/80 mb-6" aria-label="Breadcrumb">
         <a href="/" class="hover:text-white transition">Ana Sayfa</a>
         <span>/</span>
@@ -123,12 +51,12 @@ const structuredData = {
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
           İzmir Özel Ölçü <span class="text-[#B58A57]">Kahve Köşesi</span> Dolabı & Barista İstasyonu
         </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir özel ölçü kahve köşesi ve barista ünitesi modelleri; espresso makineleri için entegre elektrik prizleri, kupa askılıkları, bardak içi LED aydınlatmalar ve şık şaraplık bölmeleriyle mutfak veya salonunuza özel üretilir. Yeşilay Mutfak, Buca atölyesinde kişiye özel mimari detaylarla üretir.</p>
 
         <p id="hero-answer-engine" class="text-stone-300 text-base sm:text-lg leading-relaxed mb-8 speakable-content">
           Evinizin atıl nişlerini, salon veya mutfak duvarlarını profesyonel bir kahve barına dönüştürüyoruz. Standart hazır mobilyaların aksine; espresso makinenizin boyuna, fincan koleksiyonunuza ve su tesisatınıza göre Buca Adatepe imalat atölyemizde milimetrik üretiyoruz.
         </p>
 
-        <!-- CTAs -->
         <div class="flex flex-wrap items-center gap-4">
           <a
             href="https://wa.me/905324261788?text=Merhaba%20Ye%C5%9Filay%20Mutfak%2C%20%C3%B6zel%20%C3%B6l%C3%A7%C3%BC%20kahve%20k%C3%B6%C5%9Fesi%20imalat%C4%B1%20ve%203D%20ke%C5%9Fif%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
@@ -158,28 +86,28 @@ const structuredData = {
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-[#006039]/10 text-[#006039] flex items-center justify-center font-bold text-lg">01</div>
           <div>
-            <h4 class="font-bold text-sm text-[#15231C]">%100 Terzi Usulü</h4>
+            <h2 class="font-bold text-sm text-[#15231C]">%100 Terzi Usulü</h2>
             <p class="text-xs text-stone-600">Standart değil, milimetrik ölçü</p>
           </div>
         </div>
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-[#006039]/10 text-[#006039] flex items-center justify-center font-bold text-lg">02</div>
           <div>
-            <h4 class="font-bold text-sm text-[#15231C]">E1 18mm MDF Gövde</h4>
+            <h2 class="font-bold text-sm text-[#15231C]">E1 18mm MDF Gövde</h2>
             <p class="text-xs text-stone-600">Asla suntalam kullanılmaz</p>
           </div>
         </div>
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-[#006039]/10 text-[#006039] flex items-center justify-center font-bold text-lg">03</div>
           <div>
-            <h4 class="font-bold text-sm text-[#15231C]">Blum Frenli Donanım</h4>
+            <h2 class="font-bold text-sm text-[#15231C]">Blum Frenli Donanım</h2>
             <p class="text-xs text-stone-600">Sessiz, dayanıklı ray & menteşe</p>
           </div>
         </div>
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-[#006039]/10 text-[#006039] flex items-center justify-center font-bold text-lg">04</div>
           <div>
-            <h4 class="font-bold text-sm text-[#15231C]">Buca Atölye Fiyatı</h4>
+            <h2 class="font-bold text-sm text-[#15231C]">Buca Atölye Fiyatı</h2>
             <p class="text-xs text-stone-600">Aracısız doğrudan birinci el</p>
           </div>
         </div>
@@ -188,9 +116,8 @@ const structuredData = {
   </section>
 
   <!-- GALLERY & MODELS SECTION -->
-  <section class="py-16 sm:py-24 bg-[#FAF9F6]">
+  <section id="modeller" class="py-16 sm:py-24 bg-[#FAF9F6]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- GHOST WATERMARK TYPOGRAPHY HEADER (Soft Neutral & Controlled Dynamic Bounds) -->
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3 mb-12 sm:mb-16">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 680 140" class="w-full h-auto max-h-[75px] sm:max-h-[105px] md:max-h-[125px]" preserveAspectRatio="xMidYMid meet">
@@ -202,26 +129,27 @@ const structuredData = {
             ATÖLYE KOLEKSİYONU
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold text-[#15231C] tracking-tight leading-tight">
-            22 Farklı Mimari Kahve Köşesi ve Barista Ünitesi
+            {kahveKosesiList.length} Farklı Mimari Kahve Köşesi ve Barista Ünitesi
           </h2>
         </div>
-        <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+        <p class="text-sm sm:text-base text-stone-600 leading-relaxed max-w-2xl">
           İster modern füme cam kapaklı LED aydınlatmalı modeller, ister rustik masif tablalı kiler dolapları. Tüm modellerimiz evinizin genişliğine göre yeniden boyutlandırılır.
         </p>
       </div>
 
-      <!-- Models Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {kahveKosesiList.map((item, idx) => (
           <article class="group bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
             <div class="relative aspect-[4/3] bg-stone-100 overflow-hidden">
               <img
                 src={item.main_image}
-                alt={}
+                alt={`${item.title} – İzmir Özel Ölçü Kahve Köşesi Dolabı İmalatı`}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading={idx < 3 ? 'eager' : 'lazy'}
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                fetchpriority={idx === 0 ? 'high' : 'auto'}
+                decoding={idx === 0 ? 'sync' : 'async'}
                 width="480"
-                height="360"
+                height="320"
               />
               <div class="absolute top-3 left-3 bg-[#15231C]/85 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-xs font-mono font-medium">
                 #{item.id.replace('kahve-kosesi-', 'KK-').toUpperCase()}
@@ -251,7 +179,7 @@ const structuredData = {
 
               <div class="pt-4 border-t border-stone-100 flex items-center justify-between gap-3">
                 <a
-                  href={}
+                  href={`https://wa.me/905324261788?text=${encodeURIComponent('Merhaba Yeşilay Mutfak, ' + item.title + ' kahve köşesi modeli için özel ölçü fiyat teklifi almak istiyorum.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-[#006039] hover:bg-[#004e2e] text-white text-xs font-bold rounded-xl transition gap-1.5 shadow-sm"
@@ -278,27 +206,27 @@ const structuredData = {
             Neden Hazır Mobilya Değil, Terzi Usulü Kahve İstasyonu?
           </h2>
           <p class="text-stone-700 text-sm sm:text-base leading-relaxed mb-6">
-            Hazır internet satışı olan kahve dolapları standart suntalam levhadan üretilir, neme ve kahve buharına dayanıksızdır. Ayrıca su haznesi yüksek bir espresso makinesi koyduğunuzda raf aralığı dar kalır veya elektrik kabloları ortalıkta çirkin bir görüntü oluşturur.
+            Hazır internet satışı olan kahve dolapları standart suntalam levhadan üretilir, neme ve kahve buharına dayanıksızdır. Ayrıca su haznesi yüksek bir espresso makinesi koyduğunuzda raf aralığı dar kalır veya elektrik kabloları ortalıkta dağınık bir görüntü oluşturur. Ana <a href="/izmir-mutfak-dolabi-imalati/" class="text-[#006039] font-semibold underline underline-offset-4">özel ölçü mutfak dolabı imalatı</a> standartlarımızla her kahve barını cihazlarınıza göre projelendiriyoruz.
           </p>
           <div class="space-y-4">
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-stone-200/70 shadow-sm">
               <div class="text-[#006039] font-bold text-lg">⚡</div>
               <div>
-                <h4 class="font-bold text-sm text-[#15231C]">Entegre Gizli Elektrik ve Priz Kanalları</h4>
+                <h3 class="font-bold text-sm text-[#15231C]">Entegre Gizli Elektrik ve Priz Kanalları</h3>
                 <p class="text-xs text-stone-600 mt-0.5">Makinelerinizin priz kabloları arkada gizlenir, tezgah üzerinde sıfır kablo kalabalığı sağlanır.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-stone-200/70 shadow-sm">
               <div class="text-[#006039] font-bold text-lg">💧</div>
               <div>
-                <h4 class="font-bold text-sm text-[#15231C]">Suya ve Buhara Karşı %100 Dayanıklı Malzeme</h4>
+                <h3 class="font-bold text-sm text-[#15231C]">Suya ve Buhara Karşı %100 Dayanıklı Malzeme</h3>
                 <p class="text-xs text-stone-600 mt-0.5">Sıcak buhar ve su sıçramalarına karşı kabarma yapmayan 18mm MDF gövde ve suya dayanıklı porselen/ahşap tablalar.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-stone-200/70 shadow-sm">
               <div class="text-[#006039] font-bold text-lg">☕</div>
               <div>
-                <h4 class="font-bold text-sm text-[#15231C]">Özel Kapsül ve Barista Aksesuar Çekmeceleri</h4>
+                <h3 class="font-bold text-sm text-[#15231C]">Özel Kapsül ve Barista Aksesuar Çekmeceleri</h3>
                 <p class="text-xs text-stone-600 mt-0.5">Nespresso/Dolce Gusto kapsül çekmeceleri, tamper ve pitcher bölmeleri iç mimarlarımızca optimize edilir.</p>
               </div>
             </div>
@@ -308,16 +236,72 @@ const structuredData = {
         <div class="relative">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
             <img
-              src="/media/real/yesilay-aluminyum-fluted-cam-kapak.webp"
-              alt="İzmir Cam Kapaklı ve LED Aydınlatmalı Lüks Barista Dolabı İmalatı"
+              src="/media/real/yesilay-aluminyum-fluted-cam-kapak-square.webp"
+              alt="İzmir Alüminyum Fluted Cam Kapaklı ve LED Aydınlatmalı Barista Dolabı İmalatı"
               class="w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
+              width="800"
+              height="800"
             />
           </div>
           <div class="absolute -bottom-6 -left-6 bg-[#15231C] text-white p-6 rounded-2xl shadow-xl max-w-xs border border-white/10 hidden sm:block">
             <div class="text-2xl font-black text-[#B58A57] mb-1">28 Yıllık</div>
             <div class="text-xs text-stone-300">İzmir Buca Adatepe Atölye Zanaatı & Garantili Üretim Sicili</div>
           </div>
+        </div>
+      </div>
+
+      <!-- ERGONOMİ & ÖLÇÜ TABLOSU -->
+      <div class="mt-16 bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-[#15231C] mb-3">
+          Kahve Köşesi Modül ve Cihaz Ergonomi Ölçü Rehberi
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mb-6">
+          Barista ünitenizin uzun yıllar konforlu kullanılması için espresso makinesi su haznesi, buhar çubuğu ve mini buzdolabı havalandırma paylarını aşağıdaki mimari standartlara göre planlıyoruz. Güncel modül maliyet detaylarını <a href="/2026-mutfak-dolabi-fiyatlari/" class="text-[#006039] font-semibold underline underline-offset-4">2026 İzmir mutfak dolabı fiyatları rehberimizde</a> inceleyebilirsiniz.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-[#15231C] text-white">
+                <th class="p-3.5 font-semibold">Ünite Tipi</th>
+                <th class="p-3.5 font-semibold">Önerilen Genişlik</th>
+                <th class="p-3.5 font-semibold">Tezgah Derinliği</th>
+                <th class="p-3.5 font-semibold">Niş Yüksekliği</th>
+                <th class="p-3.5 font-semibold">Teknik Donanım Standardı</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 text-stone-700">
+              <tr>
+                <td class="p-3.5 font-bold text-[#15231C]">Kompakt Niş Kahve Barı</td>
+                <td class="p-3.5">80 – 110 cm</td>
+                <td class="p-3.5">45 – 52 cm</td>
+                <td class="p-3.5">52 – 58 cm</td>
+                <td class="p-3.5">18 mm E1 MDF, kapsül çekmecesi, gizli 2'li topraklı priz</td>
+              </tr>
+              <tr class="bg-stone-50/70">
+                <td class="p-3.5 font-bold text-[#15231C]">Çift Makineli Barista Ünitesi</td>
+                <td class="p-3.5">120 – 160 cm</td>
+                <td class="p-3.5">55 – 60 cm</td>
+                <td class="p-3.5">58 – 65 cm</td>
+                <td class="p-3.5">Kuvars/porselen tabla, buhar korumalı LED kanal, Blum Tandembox</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-[#15231C]">Mini Buzdolaplı & Kilerli İstasyon</td>
+                <td class="p-3.5">160 – 240 cm</td>
+                <td class="p-3.5">60 – 65 cm</td>
+                <td class="p-3.5">60 – 68 cm</td>
+                <td class="p-3.5">Alt havalandırma menfezi, fluted cam vitrin, arıtma hattı geçişi</td>
+              </tr>
+              <tr class="bg-stone-50/70">
+                <td class="p-3.5 font-bold text-[#15231C]">Gizli Cep Kapaklı (Pocket Door) Dolap</td>
+                <td class="p-3.5">120 – 180 cm</td>
+                <td class="p-3.5">65 – 70 cm</td>
+                <td class="p-3.5">Tam Boy (220–260 cm)</td>
+                <td class="p-3.5">İçe kayar mekanizma, sensörlü iç aydınlatma, İtalyan mat lake cephe</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -358,7 +342,7 @@ const structuredData = {
         Kendi Kahve Barınızı Birlikte Çizelim
       </h2>
       <p class="text-stone-300 text-sm sm:text-base mb-8 max-w-xl mx-auto">
-        Evinizdeki boş duvarın ölçüsünü ve aklınızdaki kahve makinesi modellerini bize iletin, 24 saat içinde 3D render ve atölye fiyat teklifinizi hazırlayalım.
+        Evinizdeki boş duvarın ölçüsünü ve aklınızdaki kahve makinesi modellerini bize iletin, 24 saat içinde 3D render ve atölye fiyat teklifinizi hazırlayalım. Diğer tüm ahşap çözümlerimiz için <a href="/tasarimlar/" class="text-[#B58A57] underline underline-offset-4">tasarımlar kataloğumuzu</a> inceleyebilirsiniz.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

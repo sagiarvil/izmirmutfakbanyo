@@ -76,11 +76,12 @@ const waCtaUrl = `https://wa.me/905324261788?text=${encodeURIComponent(dynamicWa
     <a href="/" class="flex items-center group shrink-0 py-1 select-none" aria-label="Yeşilay Mutfak Anasayfa" data-track="nav_click" data-category="brand" data-label="logo">
       <img 
         src="/yesilay-mutfak-logo.png" 
-        alt="Yeşilay Mutfak" 
+        alt="Yeşilay Mutfak İzmir Özel Ölçü Mutfak ve İç Mimarlık Logosu" 
         class="h-9 sm:h-10 lg:h-[46px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
         width="132" 
         height="46" 
         loading="eager" 
+        fetchpriority="high"
       />
     </a>
 
@@ -126,7 +127,7 @@ const waCtaUrl = `https://wa.me/905324261788?text=${encodeURIComponent(dynamicWa
         >
           <div class="bg-white rounded-lg shadow-[0_12px_36px_rgba(21,35,28,0.12)] border border-[#E5E2DA] py-2 divide-y divide-[#F3EFEA]">
             <!-- Mutfak -->
-            <a href="/mutfak-dolabi/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="mutfak">
+            <a href="/izmir-komple-mutfak-tadilati/" class="block px-4 py-2.5 text-xs text-[#15231C] hover:bg-[#FAF9F6] hover:text-[#006039] font-medium transition tracking-normal" role="menuitem" data-track="nav_click" data-category="hizmetlerimiz" data-label="mutfak">
               <div class="font-bold text-[#15231C]">Mutfak</div>
               <div class="text-[11px] text-[#756E65]">Özel Ölçü Mutfak Dolabı & Komple Mutfak Tadilatı</div>
             </a>
@@ -350,7 +351,7 @@ const waCtaUrl = `https://wa.me/905324261788?text=${encodeURIComponent(dynamicWa
           </svg>
         </button>
         <div x-show="accHizmetlerimiz" class="pl-4 pr-2 py-1.5 space-y-1.5 text-xs text-[#4A443D] border-l-2 border-[#C5A880] ml-3 mt-1" style="display: none;">
-          <a href="/mutfak-dolabi/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
+          <a href="/izmir-komple-mutfak-tadilati/" class="block py-2 px-2 hover:bg-[#F3EFEA] rounded hover:text-[#006039] font-medium" @click="mobileOpen = false">
             <span class="font-bold block text-[#15231C]">Mutfak</span>
             <span class="text-[11px] text-[#756E65]">Özel Ölçü Mutfak Dolabı & Tadilat</span>
           </a>

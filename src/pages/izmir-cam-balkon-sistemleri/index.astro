@@ -1,18 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const seoData = {
-  title: 'İzmir Cam Balkon Sistemleri & Isıcamlı İmalat | Yeşilay Mutfak',
-  description: 'İzmir genelinde katlanır, sürgülü ve motorlu giyotin ısıcamlı cam balkon sistemleri. Buca imalat güvencesi, su tahliye kanallı elektrostatik alüminyum profil ve temperli cam.',
-  canonical: 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/',
-  openGraph: {
-    title: 'İzmir Cam Balkon Sistemleri & Isıcamlı İmalat | Yeşilay Mutfak',
-    description: 'Balkonunuzu 4 mevsim oturma alanına çevirin. Şişecam patentli ısıcamlı katlanır ve sürme cam balkon sistemleri Buca atölye fiyatıyla.',
-    type: 'website',
-    image: 'https://yesilaymutfak.com/media/cam-balkon/izmir-cambalkon.webp'
-  }
-};
-
 const systems = [
   {
     title: 'Isıcamlı Katlanır Cam Balkon',
@@ -77,81 +65,19 @@ const faqItems = [
   }
 ];
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      '@id': 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/#service',
-      name: 'İzmir Isıcamlı & Katlanır Cam Balkon Sistemleri İmalatı',
-      serviceType: 'Cam Balkon Montaj ve İmalat Hizmeti',
-      provider: {
-        '@type': 'HomeAndConstructionBusiness',
-        name: 'Yeşilay Mutfak & Mimarlık',
-        telephone: '+902324411060',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Gaziler Mah. 1084/2 Sok. No: 1/A',
-          addressLocality: 'Buca',
-          addressRegion: 'İzmir',
-          addressCountry: 'TR'
-        }
-      },
-      areaServed: {
-        '@type': 'City',
-        name: 'İzmir'
-      }
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/#faq',
-      mainEntity: faqItems.map(item => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.a
-        }
-      }))
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/#breadcrumb',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Ana Sayfa',
-          item: 'https://yesilaymutfak.com/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Anahtar Teslim Tadilat',
-          item: 'https://yesilaymutfak.com/izmir-anahtar-teslim-tadilat/'
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Cam Balkon Sistemleri',
-          item: 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/'
-        }
-      ]
-    }
-  ]
+const seoData = {
+  canonical: 'https://yesilaymutfak.com/izmir-cam-balkon-sistemleri/',
+  faqList: faqItems.map((item) => ({ question: item.q, answer: item.a }))
 };
 ---
 
 <Layout seo={seoData} activeService="cam-balkon">
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-
   <!-- HERO SECTION -->
   <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#15231C] text-white overflow-hidden">
     <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <!-- Breadcrumb -->
       <nav class="flex items-center space-x-2 text-xs text-stone-300/80 mb-6" aria-label="Breadcrumb">
         <a href="/" class="hover:text-white transition">Ana Sayfa</a>
         <span>/</span>
@@ -170,6 +96,7 @@ const structuredData = {
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
             İzmir <span class="text-cyan-400">Cam Balkon</span> & Isıcamlı Katlanır Sistemler
           </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir ısıcamlı ve katlanır cam balkon sistemleri; çift cam arası argon gazı yalıtımı, paslanmaz rulman tekerlekler, elektrostatik boyalı dayanıklı alüminyum profiller ve su tahliye kanallarıyla balkonunuzu dört mevsim yaşanabilir odaya dönüştürür. Yeşilay Mutfak, milimetrik montaj ve 5 yıl sistem garantisi verir.</p>
 
           <p id="hero-answer-engine" class="text-stone-300 text-base sm:text-lg leading-relaxed mb-8 speakable-content">
             Balkonunuzu İzmirin sert rüzgarına ve tozuna karşı kapatarak evinizin en keyifli 4 mevsim yaşam odasına dönüştürün. Paslanmaz çelik rulmanlar, çift fitilli sızdırmazlık mimarisi ve Buca atölyemizden doğrudan üretici fiyatı güvencesiyle.
@@ -197,19 +124,19 @@ const structuredData = {
 
         <div class="lg:col-span-5">
           <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/15 shadow-2xl">
-            <h3 class="text-lg font-bold text-white mb-2">Cam Balkon Hızlı Fiyat & Keşif Formu</h3>
+            <h2 class="text-lg font-bold text-white mb-2">Cam Balkon Hızlı Fiyat & Keşif Formu</h2>
             <p class="text-xs text-stone-300 mb-6">Ölçülerinizi girin, mimarımız 15 dakikada geri dönüş sağlasın.</p>
-            <form id="cbFormDirect" class="space-y-4" onsubmit="event.preventDefault(); const n = document.getElementById('cbName').value; const p = document.getElementById('cbPhone').value; const t = document.getElementById('cbType').value; const w = window.open('https://wa.me/905324261788?text=' + encodeURIComponent('İzmir Cam Balkon Keşif Talebi: ' + n + ' - ' + p + ' - Tercih: ' + t), '_blank');">
+            <form id="cbFormDirect" class="space-y-4" onsubmit="event.preventDefault(); const n = document.getElementById('cbName').value; const p = document.getElementById('cbPhone').value; const t = document.getElementById('cbType').value; window.open('https://wa.me/905324261788?text=' + encodeURIComponent('İzmir Cam Balkon Keşif Talebi: ' + n + ' - ' + p + ' - Tercih: ' + t), '_blank');">
               <div>
-                <label class="block text-xs font-semibold text-stone-200 mb-1">Adınız Soyadınız</label>
+                <label for="cbName" class="block text-xs font-semibold text-stone-200 mb-1">Adınız Soyadınız</label>
                 <input id="cbName" type="text" required placeholder="Örn: Kemal Yılmaz" class="w-full px-3.5 py-2.5 rounded-xl bg-white/20 border border-white/20 text-white placeholder-stone-400 text-sm focus:outline-none focus:border-cyan-400" />
               </div>
               <div>
-                <label class="block text-xs font-semibold text-stone-200 mb-1">Telefon Numaranız</label>
+                <label for="cbPhone" class="block text-xs font-semibold text-stone-200 mb-1">Telefon Numaranız</label>
                 <input id="cbPhone" type="tel" required placeholder="05XX XXX XX XX" class="w-full px-3.5 py-2.5 rounded-xl bg-white/20 border border-white/20 text-white placeholder-stone-400 text-sm focus:outline-none focus:border-cyan-400" />
               </div>
               <div>
-                <label class="block text-xs font-semibold text-stone-200 mb-1">İstediğiniz Sistem</label>
+                <label for="cbType" class="block text-xs font-semibold text-stone-200 mb-1">İstediğiniz Sistem</label>
                 <select id="cbType" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border border-white/20 text-white text-sm focus:outline-none focus:border-cyan-400">
                   <option value="Isıcamlı Katlanır Cam Balkon">Isıcamlı Katlanır Cam Balkon</option>
                   <option value="Standart Katlanır Cam Balkon (8mm/10mm)">Standart Katlanır Cam Balkon (8mm/10mm)</option>
@@ -231,7 +158,6 @@ const structuredData = {
   <!-- SYSTEMS SHOWCASE -->
   <section class="py-16 sm:py-24 bg-[#FAF9F6]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- GHOST WATERMARK TYPOGRAPHY HEADER (Soft Neutral & Controlled Dynamic Bounds) -->
       <div class="text-center w-full max-w-7xl mx-auto flex flex-col items-center justify-center space-y-2 sm:space-y-3 mb-16">
         <div class="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 flex items-center justify-center pointer-events-none select-none">
           <svg viewBox="0 0 720 140" class="w-full h-auto max-h-[75px] sm:max-h-[105px] md:max-h-[125px]" preserveAspectRatio="xMidYMid meet">
@@ -246,21 +172,23 @@ const structuredData = {
             İzmir Mekanlarına Özel 6 Farklı Cam Balkon Sistemi
           </h2>
         </div>
-        <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+        <p class="text-sm sm:text-base text-stone-600 leading-relaxed max-w-2xl">
           İzmirin değişken rüzgar yükü ve güneş açısına göre dizayn edilmiş, paslanmaz donanımlı ve yüksek mukavemetli cam balkon modellerimiz.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {systems.map((s) => (
-          <div class="bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+        {systems.map((s, idx) => (
+          <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
             <div class="relative aspect-[16/10] bg-stone-100 overflow-hidden">
               <img
                 src={s.img}
-                alt={}
+                alt={`${s.title} – İzmir Şişecam Temperli ve Isıcamlı Cam Balkon Uygulaması`}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                width="480"
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                fetchpriority={idx === 0 ? 'high' : 'auto'}
+                decoding={idx === 0 ? 'sync' : 'async'}
+                width="500"
                 height="300"
               />
               <div class="absolute top-3 left-3 bg-[#15231C]/85 backdrop-blur-sm text-cyan-300 px-2.5 py-1 rounded-lg text-xs font-semibold">
@@ -283,7 +211,7 @@ const structuredData = {
               </div>
 
               <a
-                href={}
+                href={`https://wa.me/905324261788?text=${encodeURIComponent('Merhaba Yeşilay Mutfak, ' + s.title + ' sistemi için lazerli keşif ve fiyat teklifi almak istiyorum.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-[#006039] hover:bg-[#004e2e] text-white text-xs font-bold rounded-xl transition gap-1.5 shadow-sm"
@@ -293,6 +221,59 @@ const structuredData = {
             </div>
           </div>
         ))}
+      </div>
+
+      <!-- TEKNİK KARŞILAŞTIRMA TABLOSU -->
+      <div class="mt-16 bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-[#15231C] mb-3">
+          Cam Balkon Sistemleri Teknik Karşılaştırma Tablosu
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mb-6">
+          Balkonunuzu mutfağa dahil edecekseniz veya <a href="/izmir-komple-daire-tadilati/" class="text-[#006039] font-semibold underline underline-offset-4">komple daire tadilatı</a> kapsamında kış odasına dönüştürecekseniz cam kalınlığı, profil et kalınlığı ve yalıtım değerlerini cephe yönünüze göre seçiyoruz.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-[#15231C] text-white">
+                <th class="p-3.5 font-semibold">Sistem Modeli</th>
+                <th class="p-3.5 font-semibold">Cam Kombinasyonu</th>
+                <th class="p-3.5 font-semibold">Alüminyum Et Kalınlığı</th>
+                <th class="p-3.5 font-semibold">Isı / Ses Yalıtımı</th>
+                <th class="p-3.5 font-semibold">İdeal Uygulama Alanı</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 text-stone-700">
+              <tr>
+                <td class="p-3.5 font-bold text-[#15231C]">Isıcamlı Katlanır Sistem</td>
+                <td class="p-3.5">4+16+4 mm Şişecam Konfor Temperli</td>
+                <td class="p-3.5">3.0 – 3.5 mm T6063</td>
+                <td class="p-3.5">%80 Isı / 34 dB Akustik</td>
+                <td class="p-3.5">Mutfakla birleşen balkonlar, çalışma odaları, lodos cepheler</td>
+              </tr>
+              <tr class="bg-stone-50/70">
+                <td class="p-3.5 font-bold text-[#15231C]">Standart Katlanır Sistem</td>
+                <td class="p-3.5">8 mm veya 10 mm Tek Temperli</td>
+                <td class="p-3.5">2.5 – 3.0 mm T6063</td>
+                <td class="p-3.5">Rüzgar / Yağmur / Toz Tam Koruma</td>
+                <td class="p-3.5">Yazlık balkonlar, ara kat cepheler, çamaşır/dinlenme balkonları</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-[#15231C]">Eşiksiz Sürgülü (Sürme)</td>
+                <td class="p-3.5">8 mm / 10 mm veya Isıcamlı Sürme</td>
+                <td class="p-3.5">2.8 mm Çok Raylı Kasa</td>
+                <td class="p-3.5">Kıl + EPDM Çift Fitil Sızdırmazlık</td>
+                <td class="p-3.5">Dar balkonlar, teras geçişleri, masa/koltuk yerleşimli alanlar</td>
+              </tr>
+              <tr class="bg-stone-50/70">
+                <td class="p-3.5 font-bold text-[#15231C]">Motorlu Giyotin Sistem</td>
+                <td class="p-3.5">4+12+4 mm Isıcamlı Dikey Kayar</td>
+                <td class="p-3.5">3.2 mm Ağır Hizmet</td>
+                <td class="p-3.5">%85 Isı + Tam Otomatik Kilit</td>
+                <td class="p-3.5">Villa verandaları, kış bahçeleri, ticari kafe-restoran cepheleri</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -309,27 +290,27 @@ const structuredData = {
             Neden Yeşilay Mutfak Cam Balkon Sistemleri?
           </h2>
           <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
-            Piyasadaki ucuz cam balkonların en büyük sorunu 1 yıl sonra tekerleklerin paslanması, kanatların sarkması ve cam arasından içeri rüzgar/ıslık sesi almasıdır. Yeşilay Mimarlık standartları bu sorunları kökten engeller:
+            Piyasadaki ucuz cam balkonların en büyük sorunu 1 yıl sonra tekerleklerin paslanması, kanatların sarkması ve cam arasından içeri rüzgar/ıslık sesi almasıdır. <a href="/izmir-komple-mutfak-tadilati/" class="text-cyan-300 underline underline-offset-4">İzmir komple mutfak tadilatı</a> ve cephe projelerimizde uyguladığımız mühendislik standartları bu sorunları kökten engeller:
           </p>
           <div class="space-y-4">
             <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
               <div class="text-cyan-400 font-bold text-lg">🛡️</div>
               <div>
-                <h4 class="font-bold text-sm text-white">Paslanmaz Çelik Gövdeli Rulmanlar</h4>
+                <h3 class="font-bold text-sm text-white">Paslanmaz Çelik Gövdeli Rulmanlar</h3>
                 <p class="text-xs text-stone-300 mt-0.5">Plastik veya sarı rulman değil; deniz tuzu ve neme karşı %100 paslanmaz rulmanlar kullanıyoruz.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
               <div class="text-cyan-400 font-bold text-lg">🌊</div>
               <div>
-                <h4 class="font-bold text-sm text-white">Eğimli Su Tahliye Havuzcukları</h4>
+                <h3 class="font-bold text-sm text-white">Eğimli Su Tahliye Havuzcukları</h3>
                 <p class="text-xs text-stone-300 mt-0.5">Balkon tavanından veya camdan süzülen yağmur suyu gizli tahliye deliklerinden dışarı aktarılır.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
               <div class="text-cyan-400 font-bold text-lg">🔇</div>
               <div>
-                <h4 class="font-bold text-sm text-white">Çift Sıra EPDM Conta & Manyetik Fitil</h4>
+                <h3 class="font-bold text-sm text-white">Çift Sıra EPDM Conta & Manyetik Fitil</h3>
                 <p class="text-xs text-stone-300 mt-0.5">Zamanla sararan ve kırılan şeffaf plastik fitiller yerine alüminyum ve manyetik fitil uygulanır.</p>
               </div>
             </div>
@@ -340,9 +321,12 @@ const structuredData = {
           <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-stone-800">
             <img
               src="/media/cam-balkon/izmir-cambalkon.webp"
-              alt="İzmir Lüks Konut Cam Balkon Uygulaması"
+              alt="İzmir Isıcamlı Katlanır Lüks Konut Cam Balkon Uygulaması"
               class="w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
+              width="600"
+              height="450"
             />
           </div>
         </div>
@@ -385,7 +369,7 @@ const structuredData = {
         Balkonunuz İçin Ücretsiz Lazerli Keşif Alın
       </h2>
       <p class="text-stone-300 text-sm sm:text-base mb-8 max-w-xl mx-auto">
-        İzmir genelinde tüm ilçelere aynı gün randevu veriyoruz. Mimarımız gelsin, net ölçünüzü alsın ve en uygun sistem fiyatını sunsun.
+        İzmir genelinde tüm ilçelere aynı gün randevu veriyoruz. Mimarımız gelsin, net ölçünüzü alsın ve en uygun sistem fiyatını sunsun. Buca Gaziler showroom adresimiz için <a href="/iletisim/" class="text-cyan-300 underline underline-offset-4">iletişim sayfamızı</a> ziyaret edebilirsiniz.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

@@ -10,28 +10,27 @@ export interface ServiceItem {
 }
 
 export const siteConfig = {
-  name: "Yeşilay Mutfak & Özel İmalat",
+  name: "Yeşilay Mutfak",
   brandShort: "Yeşilay Mutfak",
-  legalName: "Yeşilay Mutfak, Lüks Mutfak Banyo & Anahtar Teslim Renovasyon",
+  legalName: "Yeşilay Mutfak & İç Mekân Tasarımı İmalat Atölyesi",
   foundingYear: 1998,
   experienceYears: 28,
   customerCount: "2.850+",
-  ratingValue: "4.96",
   domain: "yesilaymutfak.com",
   siteUrl: "https://yesilaymutfak.com",
   phoneRaw: "902324411060",
+  phoneE164: "+902324411060",
   phoneFormatted: "0232 441 10 60",
+  email: "yesilaymutfak@gmail.com",
   whatsappUrl: "https://wa.me/905324261788",
   googleMapsUrl: "https://share.google/C0WRDJ4gisVAQIAzr",
-  googleKgmid: "/g/11jfdn7h1h",
-  googleKgmidUrl: "https://www.google.com/search?kgmid=%2Fg%2F11jfdn7h1h",
   isWomenOwned: true,
   address: {
     streetAddress: "Gaziler Mahallesi 1084/2 Sokak No: 1/A (Gazi Osman Paşa Cd. Köşesi)",
     addressLocality: "Buca",
     addressRegion: "İzmir",
     addressCountry: "TR",
-    postalCode: "35000"
+    postalCode: "35380"
   },
   geo: {
     latitude: "38.392083",
@@ -45,7 +44,7 @@ export const siteConfig = {
   districts: [
     "Buca", "Karşıyaka", "Bostanlı", "Mavişehir", "Alsancak", "Bornova",
     "Çeşme", "Urla", "Güzelbahçe", "Narlıdere", "Balçova", "Bayraklı",
-    "Konak", "Gaziemir", "Çiğli", "Seferihisar", "Foça", "Karabağlar", "Bodrum", "Kuşadası", "Manisa", "Ayvalık", "Tüm Türkiye Villa & Daire Projeleri"
+    "Konak", "Gaziemir", "Çiğli", "Seferihisar", "Foça", "Karabağlar", "Bodrum", "Kuşadası", "Manisa", "Ayvalık"
   ],
   services: [
     {
@@ -55,7 +54,7 @@ export const siteConfig = {
       navTitle: "Mutfak Dolabı",
       description: "Doğrudan Adatepe atölyemizde kişiye ve mekâna özel projelendirilen akrilik, ipek mat fırın lake ve doğal meşe kaplamalı mutfak dolapları. Blum ve Häfele frenli gizli mekanizmalar.",
       shortDesc: "Özel üretim lake, akrilik ve masif ahşap mutfak dolap sistemleri.",
-      keywords: ["yeşilay mutfak mutfak", "buca mutfak dolabı imalatı", "lake mutfak dolabı izmir", "akrilik mutfak", "modern mutfak tasarımı"],
+      keywords: ["yeşilay mutfak", "buca mutfak dolabı imalatı", "lake mutfak dolabı izmir", "akrilik mutfak", "modern mutfak tasarımı"],
       features: ["%100 E1 Sertifikalı Neme Dayanımlı MDF-Lam Gövde", "Blum Entegre Sessiz Frenli Menteşe ve Ray Sistemleri", "Fotogerçekçi 3D İç Mimari Rölöve ve Modelleme", "10 Yıl Bütünleşik Atölye İmalat Garantisi"]
     },
     {
@@ -83,7 +82,7 @@ export const siteConfig = {
       slug: "izmir-anahtar-teslim-tadilat",
       title: "Anahtar Teslim Mimari Taahhüt & Villa Renovasyonu",
       navTitle: "Anahtar Teslim",
-      description: "Buca, Çeşme, Urla ve İzmir genelinde villa ve lüks konutlar için sürpriz bütçe çıkarmayan, noter tasdikli sözleşmeli anahtar teslim mimari renovasyon.",
+      description: "Buca, Çeşme, Urla ve İzmir genelinde villa ve lüks konutlar için sürpriz bütçe çıkarmayan, sözleşmeli anahtar teslim mimari renovasyon.",
       shortDesc: "Zaman ve bütçe garantili anahtar teslim prestijli mimari uygulama.",
       keywords: ["anahtar teslim tadilat izmir", "çeşme villa tadilatı", "urla taş ev renovasyonu", "lüks mimari taahhüt"],
       features: ["Sabit Maliyet & Fiyat Artış Muafiyeti Garantisi", "Gecikme Cezalı Hukuki Sözleşme", "Özel Detay İmalat & Şantiye Şefliği", "10 Yıl Bütünleşik Garanti"]

@@ -3,25 +3,26 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig } from "../../data/siteConfig";
 
 const seo = {
-  title: "İzmir Mutfak Dolabı Mimari Projelendirme | Siz Hayal Edin Biz Çizelim",
-  description: "2026 güncel İzmir mutfak dolabı modelleri ve mimari tasarımları, malzeme bazlı (Lake, Akrilik, MDF-Lam, Masif) metretül cetveli, kırım-montaj işçilik rayiçleri ve Buca imalat atölyesinden şeffaf maliyet hesaplama tablosu.",
+  title: "2026 İzmir Mutfak Dolabı Fiyatları Rehberi | Yeşilay Mutfak",
+  description: "2026 İzmir mutfak dolabı metretül hesaplama cetveli; akrilik, ipek mat lake ve porselen tezgah karşılaştırması. Atölyeden şeffaf keşif ve 3D teklif alın.",
   canonical: "https://yesilaymutfak.com/2026-mutfak-dolabi-fiyatlari/",
   serviceName: "Mutfak Dolabı 3D Mimari Tasarım & Keşif Rehberi",
   breadcrumbs: [
-    { name: "2026 Mimari Projelendirme", url: "/2026-mutfak-dolabi-fiyatlari/" }
+    { name: "Ana Sayfa", url: "/" },
+    { name: "2026 Mutfak Dolabı Fiyatları Rehberi", url: "/2026-mutfak-dolabi-fiyatlari/" }
   ],
   faqList: [
     {
-      question: "2026 yılında İzmir'de ortalama bir mutfak dolabı nasıl projelendirilir ve malzeme seçimi nasıl yapılır?",
-      answer: "2026 yılında İzmir'de mutfak dolabı imalatı mekanınızın ölçülerine göre özel olarak metretül ve mekan rölövesine göre özel olarak projelendirilir. Standart MDF-Lam ekonomik segmentten başlarken, İtalyan akrilik kapak orta-üst segmentte, çift yüz ipek mat lake boya ise premium grupta yer alır. Buca atölyemizden aracısız fabrika tasarımı sunuyoruz."
+      question: "2026 yılında İzmir'de ortalama bir mutfak dolabı metretül maliyeti nasıl hesaplanır?",
+      answer: "2026 yılında İzmir'de mutfak dolabı maliyeti alt dolap ve üst dolabın 1 metre tül toplamı üzerinden hesaplanır. E1 MDF-Lam ekonomik segmenti oluştururken; UV çizilmez akrilik orta-üst segmentte, sararmaz çift yüz ipek mat fırın lake ise lüks mimari gruptadır. Buca atölyemizde aracı olmadan doğrudan imalatçı fiyatı sunulur."
     },
     {
-      question: "Mimari keşif ve 3D çizim hizmeti ücrete tabi midir?",
-      answer: "Tekliflerimizde nakliye, montaj ve kulp aksamları dahildir. Tezgah tercihi (Porselen, Belenco, Çimstone veya Masif Ahşap) müşteri seçimine göre net maliyetiyle ayrı kalem olarak belirtilir."
+      question: "Tezgah, kulp ve montaj masrafları metretül fiyatına dahil midir?",
+      answer: "Atölye tekliflerimizde nakliye, profesyonel montaj ve standart kulp aksamları dahildir. Porselen (Laminam/Neolith), kuvars (Çimstone/Belenco) veya masif ahşap tezgahlar mekanın köşe ve evye detaylarına göre bağımsız metre hesabı olarak net şekilde belirtilir."
     },
     {
-      question: "Siz hayal edin, biz ortaya çıkaralım mottosu nasıl uygulanıyor?",
-      answer: "Hayır. Kadrolu mimarımızın evinize gelerek lazerli rölöve alması ve 3D sanal canlandırma simülasyonunu hazırlaması tamamen ücretsizdir."
+      question: "Mimari keşif, lazerli rölöve ve 3D çizim hizmeti ücrete tabi midir?",
+      answer: "Hayır. Kadrolu iç mimarımızın İzmir'in tüm ilçelerinde evinize gelerek lazerli hassas rölöve alması ve fotogerçekçi 3D mimari simülasyon hazırlaması tamamen ücretsizdir."
     }
   ]
 };
@@ -38,64 +39,111 @@ const seo = {
       <nav class="flex items-center gap-2 text-xs font-semibold text-stone-400 uppercase tracking-widest" aria-label="Breadcrumb">
         <a href="/" class="hover:text-white transition">Ana Sayfa</a>
         <span>/</span>
-        <span class="text-emerald-400">2026 Mimari Projelendirme Rehberi</span>
+        <span class="text-emerald-400">2026 Mutfak Dolabı Fiyatları Rehberi</span>
       </nav>
 
       <span class="inline-block px-3.5 py-1.5 bg-emerald-950/80 border border-emerald-400/40 text-emerald-300 text-[11px] font-black tracking-[0.2em] uppercase shadow-lg">
-        1998'DEN BUGÜNE 28 YILLIK TECRÜBE • SİZ HAYAL EDİN BİZ ORTAYA ÇIKARALIM
+        1998'DEN BUGÜNE 28 YILLIK TECRÜBE • ŞEFFAF ATÖLYE HESAPLAMA STANDARDI
       </span>
 
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
-        Siz Hayal Edin, Mimarımız Çizsin: <br /><span class="font-normal">Evinize Özel 3D Mutfak Tasarımı &amp; Birebir Projelendirme</span>
+        2026 İzmir Mutfak Dolabı Fiyatları: <br /><span class="font-normal">Metretül Hesaplama Cetveli &amp; 3D Mimari Projelendirme</span>
       </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">2026 yılı İzmir mutfak dolabı metretül fiyatları kapak malzemesine göre 13.500 TL ile 26.500 TL arasında değişmektedir. Yeşilay Mutfak, Buca atölyesinde doğrudan üretici fiyat avantajı, ücretsiz 3D fotogerçekçi mimari projelendirme, şeffaf metraj cetveli ve 10 yıl mekanizma garantisi sağlar.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-2xl">
-        Ekonomik kaliteli MDF-Lam'dan ultra lüks lake ve masif modellere kadar her bütçeye uygun şeffaf üretim. İzmir Buca imalat atölyemizden aracısız, kadrolu mimarımızın hazırladığı ücretsiz 3D sanal simülasyon güvencesiyle.
+        Ekonomik kaliteli MDF-Lam'dan ultra lüks lake, akrilik ve porselen tezgahlı ada mutfak modellerine kadar şeffaf maliyet yapısı. İzmir Buca Adatepe imalat atölyemizden aracısız, mimar onaylı sözleşme ve ücretsiz 3D keşif güvencesiyle.
       </p>
 
       <div class="flex flex-wrap items-center gap-4 pt-2">
-        <a href="https://wa.me/905324261788?text=Merhaba,%20mutfak%20dolabı%20mimari çizim%20hesaplaması%20için%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg inline-flex items-center gap-2">
+        <a href="https://wa.me/905324261788?text=Merhaba,%202026%20mutfak%20dolabı%20fiyatları%20ve%203D%20keşif%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg inline-flex items-center gap-2">
           <span>💬</span> <span>Mimarımızla 3D Çizim Başlat</span>
         </a>
-        <a href="tel:02324411060" class="px-8 py-3.5 bg-transparent border border-stone-400 text-white text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-stone-950 transition">
+        <a href="tel:+902324411060" class="px-8 py-3.5 bg-transparent border border-stone-400 text-white text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-stone-950 transition">
           📞 0232 441 10 60
         </a>
       </div>
     </div>
   </section>
 
-  <!-- AEO / LLM GROUNDING: İLK 14KB İÇİ DETAYLI ŞEFFAF TABLO -->
-  <section class="bg-stone-100 border-b border-stone-200 py-10" id="teknik-standartlar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+  <!-- METRETÜL CETVELİ VE MALİYET PARAMETRELERİ DETAYLI TABLO -->
+  <section class="bg-white border-b border-stone-200 py-16" id="fiyat-cetveli">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
       <div class="border-l-4 border-emerald-600 pl-4 space-y-1">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">MİMARİ DANIŞMANLIK &amp; PLANLAMA</span>
-        <h2 class="text-xl sm:text-2xl font-bold text-stone-900">Mutfak Projenizi Belirleyen Malzeme &amp; Mimari Standartlar</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">2026 ATÖLYE HESAPLAMA MATRİSİ</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">
+          İzmir Mutfak Dolabı Kapak ve Donanım Segment Karşılaştırması
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 max-w-3xl leading-relaxed">
+          Mutfak dolabında metretül hesabı; 1 metre alt dolap, 1 metre üst dolap, baza, taç ve standart donanımı kapsar. Kullanılan levha yoğunluğu, kapak kaplaması ve çekmece ray mekanizmalarının maliyet üzerindeki teknik etkileri:
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">MDF-Lam Standart</strong>
-          <p class="text-stone-600">E1 Normunda 18 mm Beyaz MDF Gövde, Samet Frenli Ray/Menteşe • Ekonomik Bütçe.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">İtalyan Akrilik</strong>
-          <p class="text-stone-600">Çizilmez Akrilik Yüzey, Blum Frenli Ray Sistemleri • Dayanıklılık & Tasarım Lideri.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">İpek Mat Lake</strong>
-          <p class="text-stone-600">Poliüretan Çift Kat Astar &amp; Boya, Blum Aventos Kalkar Kapak • Lüks Mimari Segment.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Hizmet Bölgesi</strong>
-          <p class="text-stone-600">Konak, Karşıyaka, Bornova, Çiğli, Urla, Çeşme, Güzelbahçe, Narlıdere, Gaziemir, Buca.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Ortalama Teslimat Süresi</strong>
-          <p class="text-stone-600">İmalat 15-21 İş Günü | Yerinde Montaj 1-2 İş Günü.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Projelendirme</strong>
-          <p class="text-stone-600">Ücretsiz Yerinde Lazer Ölçü ve 3D Render Modelleme.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-[#15231C] text-white">
+              <th class="p-3.5 font-semibold">Malzeme & Segment</th>
+              <th class="p-3.5 font-semibold">Gövde & Kapak Yapısı</th>
+              <th class="p-3.5 font-semibold">Standart Mekanizma</th>
+              <th class="p-3.5 font-semibold">Dayanıklılık & Bakım</th>
+              <th class="p-3.5 font-semibold">Bütçe Seviyesi & Tavsiye</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3.5 font-bold text-[#15231C]">E1 MDF-Lam Standart</td>
+              <td class="p-3.5">18 mm neme dayanıklı yeşil MDF gövde, desenli melamin kapak</td>
+              <td class="p-3.5">Samet frenli ray ve 110° menteşe</td>
+              <td class="p-3.5">Günlük kullanım, kolay temizlik, çizilmeye dirençli</td>
+              <td class="p-3.5">Ekonomik Segment • Kiralık ev ve yazlık konutlar</td>
+            </tr>
+            <tr class="bg-stone-50/70">
+              <td class="p-3.5 font-bold text-[#15231C]">UV Çizilmez Akrilik</td>
+              <td class="p-3.5">18 mm E1 MDF üzeri 1.2 mm ithal akrilik levha, lazer kenar bant</td>
+              <td class="p-3.5">Blum Tandembox tam açılım frenli çekmece</td>
+              <td class="p-3.5">Yüksek parlaklık/derin matlık, parmak izi tutmaz, sararmaz</td>
+              <td class="p-3.5">Orta-Üst Segment • Çocuklu aileler, yoğun mutfaklar</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-[#15231C]">İpek Mat Fırın Lake</td>
+              <td class="p-3.5">Ham MDF üzeri çift kat astar + çift kat poliüretan fırın lake</td>
+              <td class="p-3.5">Blum Aventos HK/HF kalkar kapak + Blumotion menteşe</td>
+              <td class="p-3.5">Eksiz yekpare yüzey, istenen tüm RAL renk kodlarında boyanabilir</td>
+              <td class="p-3.5">Premium Mimari • Özel villa, rezidans ve neo-klasik mutfaklar</td>
+            </tr>
+            <tr class="bg-stone-50/70">
+              <td class="p-3.5 font-bold text-[#15231C]">Doğal Masif Meşe & Marin</td>
+              <td class="p-3.5">Suya tam dayanıklı marin kontra gövde, doğal meşe/ceviz kaplama</td>
+              <td class="p-3.5">Blum Legrabox / Tip-On elektrikli dokunmatik destek</td>
+              <td class="p-3.5">Doğal damar dokusu, zımparalanıp yenilenebilir ömürlük yapı</td>
+              <td class="p-3.5">Lüks Tasarım • Çeşme, Urla taş evleri ve lüks açık ada alanları</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TEZGAH MALZEME SEÇENEKLERİ EK TABLOSU -->
+      <div class="mt-8 bg-stone-50 rounded-2xl border border-stone-200 p-6 sm:p-8">
+        <h3 class="text-base sm:text-lg font-bold text-[#15231C] mb-2">
+          Tezgah Malzemesi Seçim Rehberi (Kuvars vs Porselen vs Granit)
+        </h3>
+        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+          Mutfak bütçesini kapaklar kadar tezgah seçimi de belirler. Sıcak tencere teması, leke tutmama ve limon asidine direnç kriterlerine göre öne çıkan tezgah tipleri:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 bg-white rounded-xl border border-stone-200">
+            <h4 class="font-bold text-[#15231C] mb-1">Porselen Plaka (Laminam / Neolith)</h4>
+            <p class="text-stone-600">12 mm kalınlık, 1200°C ısıya tam direnç, bıçakla çizilmez, sıfır gözenekli hijyen. Lüks ada mutfakların vazgeçilmezidir.</p>
+          </div>
+          <div class="p-4 bg-white rounded-xl border border-stone-200">
+            <h4 class="font-bold text-[#15231C] mb-1">Kuvars Esaslı Taş (Çimstone / Belenco)</h4>
+            <p class="text-stone-600">%93 doğal kuvars minerali. Darbelere karşı yüksek mukavemet, leke tutmaz pürüzsüz yüzey ve geniş renk kartelası.</p>
+          </div>
+          <div class="p-4 bg-white rounded-xl border border-stone-200">
+            <h4 class="font-bold text-[#15231C] mb-1">Doğal Masif Ahşap Tabla</h4>
+            <p class="text-stone-600">Fırınlanmış meşe ve iroko. Country ve rustik mutfaklarda sıcak atmosfer sağlar; periyodik organik yağ bakımı gerektirir.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -146,14 +194,14 @@ const seo = {
           Komple Mutfak Renovasyonunda Gerçek Atölye Güvencesi
         </h2>
         <p class="text-sm text-stone-600 font-light leading-relaxed">
-          Kırım ve tesisattan lake dolap imalatına, porselen tezgahtan montaja kadar tek muhatap garantisi.
+          Kırım ve tesisattan lake dolap imalatına, porselen tezgahtan montaja kadar tek muhatap garantisi. Detaylar için <a href="/izmir-komple-mutfak-tadilati/" class="text-[#006039] font-semibold underline underline-offset-4">komple mutfak tadilatı</a> sayfamızı inceleyebilirsiniz.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-showroom-gece-cephe.webp" alt="Yeşilay Mutfak Showroom Dış Cephesi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-showroom-gece-cephe.webp" alt="Yeşilay Mutfak Showroom Dış Cephesi Buca İzmir" width="1672" height="941" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-wider rounded">AMİRAL SHOWROOM</span>
           </div>
           <div class="p-6 space-y-2">
@@ -164,7 +212,7 @@ const seo = {
 
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-aluminyum-fluted-cam-kapak.webp" alt="Alüminyum Profil ve Fluted Cam Kapak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-aluminyum-fluted-cam-kapak-square.webp" alt="Alüminyum Profil ve Fluted Cam Kapak İmalatı" width="800" height="800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-stone-900 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider rounded">İTALYAN DONANIM</span>
           </div>
           <div class="p-6 space-y-2">
@@ -175,12 +223,12 @@ const seo = {
 
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp" alt="Mimari Danışmanlık ve Bütçe Planlama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp" alt="Mimari Danışmanlık ve Mutfak Bütçe Planlama Toplantısı" width="1200" height="675" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider rounded">BİREBİR REHBERLİK</span>
           </div>
           <div class="p-6 space-y-2">
             <h3 class="text-base font-bold text-stone-900 group-hover:text-emerald-700 transition">3D Projelendirme & Sabit Fiyat</h3>
-            <p class="text-xs text-stone-600 leading-relaxed">Lazer rölöve sonrası noter onaylı sözleşmeyle sürpriz masrafsız teslim.</p>
+            <p class="text-xs text-stone-600 leading-relaxed">Lazer rölöve sonrası sözleşmeyle sürpriz masrafsız net teslimat.</p>
           </div>
         </div>
       </div>
@@ -192,7 +240,7 @@ const seo = {
     <div class="max-w-4xl mx-auto px-4 sm:px-8 space-y-8">
       <div class="text-center space-y-2">
         <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 block">MERAK EDİLENLER</span>
-        <h2 class="text-2xl sm:text-3xl font-light text-stone-950 font-editorial">Mimari Tasarım ve Projelendirme Hakkında Sorularınız</h2>
+        <h2 class="text-2xl sm:text-3xl font-light text-stone-950 font-editorial">Mutfak Dolabı Maliyeti ve Tasarım Hakkında Sorularınız</h2>
       </div>
 
       <div class="space-y-4">
@@ -211,10 +259,10 @@ const seo = {
     <div class="max-w-3xl mx-auto px-4 space-y-6">
       <h2 class="text-2xl sm:text-3xl font-light font-editorial">Siz Hayal Edin, Birlikte Ortaya Çıkaralım: 3D Çizim Randevusu Alın</h2>
       <p class="text-xs sm:text-sm text-stone-300 font-light">
-        Ölçülerinizi WhatsApp'tan gönderin veya ücretsiz keşif isteyin; 3D çizim ve kalem kalem dökümlü 3D sanal çizim ve mimari projenizi hazırlayalım.
+        Ölçülerinizi WhatsApp'tan gönderin veya ücretsiz keşif isteyin; 3D çizim ve kalem kalem dökümlü mimari projenizi 24 saatte hazırlayalım. Hazır mutfak seçenekleri için <a href="/hazir-mutfak-modelleri-izmir/" class="text-emerald-400 underline underline-offset-4">hazır mutfak modelleri</a> sayfamızı da inceleyebilirsiniz.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <a href="https://wa.me/905324261788?text=Merhaba,%20mutfak%20dolabı%20mimari çizim%20hesaplaması%20için%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg">
+        <a href="https://wa.me/905324261788?text=Merhaba,%20mutfak%20dolabı%20fiyatları%20ve%203D%20keşif%20için%20görüşmek%20istiyorum." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg">
           💬 Mimarımızla Görüşün & 3D Çizim Alın (0232 441 10 60)
         </a>
       </div>

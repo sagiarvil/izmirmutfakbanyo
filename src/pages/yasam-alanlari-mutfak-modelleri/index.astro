@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 
 const seo = {
   title: "İzmir Yaşam Alanları & Açık Mutfak Modelleri | Ada Bar & Entegre Yaşam",
-  description: "İzmir'de salonla bütünleşik açık plan ada mutfak ve yaşam alanları mimarisi. Ada barlar, entegre TV ve kütüphane üniteleri, gizlenebilir cepli kapılar ve ücretsiz 3D sanal simülasyon.",
+  description: "İzmir'de salonla bütünleşik açık plan ada mutfak ve yaşam alanları. Entegre TV üniteleri, ada barlar ve ücretsiz 3D mimari simülasyon randevusu alın.",
   canonical: "https://yesilaymutfak.com/yasam-alanlari-mutfak-modelleri/",
   serviceName: "Yaşam Alanları ve Açık Mutfak Modelleri",
   breadcrumbs: [
@@ -111,6 +111,7 @@ const models = [
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
         İzmir Yaşam Alanları &amp; Açık Mutfak: <br /><span class="font-normal text-blue-300">Ada Barlar &amp; Bütünleşik Salon Mimarisi</span>
       </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir açık plan yaşam alanı ve ada mutfak tasarımları; salonla mutfağı kusursuz birleştiren bar tezgahları, entegre gizli yemek masaları, tavan tipi sessiz ada davlumbazları ve dekoratif raf üniteleriyle salon konforu sağlar. Yeşilay Mutfak, Buca atölyesinde 10 yıl garantili imalat yapar.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-2xl">
         Mutfak artık 4 duvar arasına hapsolmuş bir servis odası değil; ailenin buluştuğu, dostların ağırlandığı ve evin enerjisini belirleyen yaşam alanı. Ada tipi oturma barları, salon mobilyalarıyla entegre ahşap geçişler ve akıllı mekan kurgusuyla evinizi baştan yaratıyoruz.
@@ -198,14 +199,15 @@ const models = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {models.map((m) => (
+        {models.map((m, idx) => (
           <div class="bg-stone-50 border border-stone-200 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
             <div class="relative h-64 sm:h-72 overflow-hidden bg-stone-900">
               <img 
                 src={m.img} 
                 alt={`${m.title} - İzmir Açık Mutfak ve Ada Bar`} 
                 class="w-full h-full object-cover transition duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchpriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
                 width="600"
                 height="400"
@@ -347,8 +349,11 @@ const models = [
             <img 
               src="/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp" 
               alt="Lüks Mermer Şömineli TV Duvarı ve Yaşam Ünitesi" 
+              width="1200"
+              height="675"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy" 
+              decoding="async"
             />
           </div>
           <div class="absolute bottom-4 left-4 right-4 p-4 bg-stone-950/80 backdrop-blur-md border border-white/10 rounded-xl">
@@ -435,6 +440,47 @@ const models = [
             <p class="text-xs text-stone-400 line-clamp-1">Zarif çıta işçiliği, ipek mat lake dokular ve masif ahşap sıcaklığı.</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Açık Plan & Ada Mutfak Yerleşim Ölçü Tablosu (G17 NavBoost) -->
+  <section class="py-12 bg-white border-b border-stone-200" data-seo-interactive="true">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-6 text-center font-editorial">Açık Plan Yaşam Alanı ve Ada Mutfak Ergonomi Standartları</h2>
+      <div class="overflow-x-auto rounded-xl border border-stone-200">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-800 font-semibold border-b border-stone-200">
+              <th class="p-3 sm:p-4">Yerleşim Ölçütü</th>
+              <th class="p-3 sm:p-4">İdeal Mimari Ölçü</th>
+              <th class="p-3 sm:p-4">Sağladığı Konfor &amp; Fonksiyon</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Ada &amp; Tezgah Geçiş Mesafesi</td>
+              <td class="p-3 sm:p-4 font-mono font-medium text-emerald-800">100 cm – 120 cm</td>
+              <td class="p-3 sm:p-4">Çift kişinin rahat hareket edebilmesi ve kapakların tam açılması</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Ada Bar Tezgahı Yüksekliği</td>
+              <td class="p-3 sm:p-4 font-mono font-medium text-emerald-800">90 cm (standart) / 105 cm (bar)</td>
+              <td class="p-3 sm:p-4">Bar taburesi ile otururken omurga ergonomisini koruma</td>
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Davlumbaz Çekiş Mesafesi</td>
+              <td class="p-3 sm:p-4 font-mono font-medium text-emerald-800">65 cm (indüksiyon) / 75 cm (gazlı)</td>
+              <td class="p-3 sm:p-4">Açık salona koku yayılmasını engelleyen maksimum hava sirkülasyonu</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Tezgah Üstü Sarkıt Aydınlatma</td>
+              <td class="p-3 sm:p-4 font-mono font-medium text-emerald-800">Tezgahtan 75 – 85 cm yukarıda</td>
+              <td class="p-3 sm:p-4">Gözü almayan, ada yüzeyine homojen odaklanan çalışma ışığı</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

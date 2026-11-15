@@ -3,11 +3,12 @@ import Layout from "../../layouts/Layout.astro";
 import { siteConfig } from "../../data/siteConfig";
 
 const seo = {
-  title: "İzmir Komple Ev Tadilatı | Mimari Proje & Uygulama",
-  description: "İzmir komple daire ve ev tadilatı. Elektrik, su tesisatı, parke, boya, alçı tavan, lake kapı, mutfak ve banyo yenileme. Kadrolu mimarımızla 3D sanal simülasyon ve anahtar teslim güvence.",
+  title: "İzmir Komple Daire & Ev Tadilatı Hizmeti | Yeşilay Mutfak",
+  description: "Elektrik-su tesisatı, şap, parke, alçı-boya, lake iç kapı, mutfak ve banyo dahil sözleşmeli komple daire tadilatı. Mimarımızdan ücretsiz 3D keşif alın.",
   canonical: "https://yesilaymutfak.com/izmir-komple-daire-tadilati/",
   serviceName: "Komple Daire ve Ev Tadilatı",
   breadcrumbs: [
+    { name: "Ana Sayfa", url: "/" },
     { name: "Komple Daire Tadilatı", url: "/izmir-komple-daire-tadilati/" }
   ],
   faqList: [
@@ -48,9 +49,10 @@ const seo = {
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
         İzmir Komple Daire ve Ev Tadilatı: <br /><span class="font-normal">Elektrik-Su Tesisatı, Parke, Boya ve Alçı Çözümleri</span>
       </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir komple daire tadilatı; eskiyen su ve elektrik hatlarının yenilenmesi, alçıpan ve aydınlatma, lüks lake kapılar, laminat parke döşeme ve mutfak-banyo imalatını birleştirir. Yeşilay Mutfak, tek sözleşmeyle tüm şantiye koordinasyonunu üstlenip taahhüt edilen tarihte eksiksiz teslimat sağlar.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-2xl">
-        1998'den bu yana İzmir Buca merkez atölyeumuz ve imalat atölyemizle daireleri A'dan Z'ye yeniliyoruz. Kadrolu mimar ve iç mimarlarımızla 3D sanal canlandırma simülasyonu sunuyor, resmi sözleşmeli mimar onaylı sözleşme garantisiyle teslim ediyoruz.
+        1998'den bu yana İzmir Buca merkez showroomumuz ve imalat atölyemizle daireleri A'dan Z'ye yeniliyoruz. Kadrolu mimar ve iç mimarlarımızla 3D sanal canlandırma simülasyonu sunuyor, resmi sözleşmeli mimar onaylı sözleşme garantisiyle teslim ediyoruz.
       </p>
 
       <div class="flex flex-wrap items-center gap-4 pt-2">
@@ -64,38 +66,76 @@ const seo = {
     </div>
   </section>
 
-  <!-- AEO / LLM GROUNDING -->
-  <section class="bg-stone-100 border-b border-stone-200 py-10" id="teknik-standartlar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+  <!-- TEKNİK İŞ ADIMLARI VE STANDARTLAR TABLOSU -->
+  <section class="bg-white border-b border-stone-200 py-16" id="teknik-standartlar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
       <div class="border-l-4 border-emerald-600 pl-4 space-y-1">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">AEO &amp; MÜHENDİSLİK SPESİFİKASYONU</span>
-        <h2 class="text-xl sm:text-2xl font-bold text-stone-900">Komple Ev Tadilatı Teknik Özellikler ve Standartlar Tablosu</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-800">ŞANTİYE VE MİMARİ YÖNETİM</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">
+          İzmir Komple Daire Tadilatı Aşamaları ve Teknik Malzeme Cetveli
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 max-w-3xl leading-relaxed">
+          Tadilat sürecinde birden fazla usta ile muhatap olma derdini bitiriyoruz. Tek sözleşme ve tek mimari şantiye şefi yönetiminde yürüttüğümüz komple ev renovasyonu adımları:
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Tesisat &amp; Elektrik</strong>
-          <p class="text-stone-600">Siemens/Schneider Sigortalar, Yanmaz Kablo, Kompozit Boru Altyapısı.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-[#15231C] text-white">
+              <th class="p-3.5 font-semibold">Tadilat Aşaması</th>
+              <th class="p-3.5 font-semibold">Uygulama Kapsamı</th>
+              <th class="p-3.5 font-semibold">Kullanılan Malzeme Standartları</th>
+              <th class="p-3.5 font-semibold">Tahmini Süre</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3.5 font-bold text-[#15231C]">1. Kırım & Moloz Hafriyatı</td>
+              <td class="p-3.5">Eski fayans, seramik, mutfak dolapları ve kapıların sökümü</td>
+              <td class="p-3.5">Belediye onaylı çuvallı döküm sahası nakliyesi, asansör koruma</td>
+              <td class="p-3.5">2 – 3 İş Günü</td>
+            </tr>
+            <tr class="bg-stone-50/70">
+              <td class="p-3.5 font-bold text-[#15231C]">2. Elektrik & Sıhhi Tesisat</td>
+              <td class="p-3.5">Priz yuvaları, sigorta panosu, temiz ve pis su hatlarının sıfırdan çekimi</td>
+              <td class="p-3.5">Siemens/Schneider kaçak akım rölesi, Fırat kompozit boru</td>
+              <td class="p-3.5">4 – 6 İş Günü</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-[#15231C]">3. Şap, Alçı & Asma Tavan</td>
+              <td class="p-3.5">Zemin tesviye şapı, gizli LED ışık havuzları, 3 kat saten alçı</td>
+              <td class="p-3.5">Knauf nem dayanımlı yeşil alçıpan, Jotun / Filli Boya astar</td>
+              <td class="p-3.5">5 – 7 İş Günü</td>
+            </tr>
+            <tr class="bg-stone-50/70">
+              <td class="p-3.5 font-bold text-[#15231C]">4. Zemin, Seramik & Parke</td>
+              <td class="p-3.5">Antre/mutfak 60x120 granit, odalarda 32. sınıf derzli parke</td>
+              <td class="p-3.5">Vitra porselen seramik + AGT / Çamsan kapron altı parke</td>
+              <td class="p-3.5">3 – 5 İş Günü</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-[#15231C]">5. Özel Ahşap İmalat & Montaj</td>
+              <td class="p-3.5">Lake iç oda kapıları, mutfak ve banyo dolapları, portmanto</td>
+              <td class="p-3.5">Buca Adatepe atölyemizden 18 mm E1 MDF ve Blum donanım</td>
+              <td class="p-3.5">4 – 6 İş Günü</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-xs">
+        <div class="bg-[#FAF9F6] p-4 border border-stone-200 shadow-2xs space-y-1">
+          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Tek Muhatap Şantiye</strong>
+          <p class="text-stone-600">Ustaların koordinasyonunu kadrolu mimarımız sağlar; gecikme veya işçilik uyuşmazlığı yaşanmaz.</p>
         </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Zemin &amp; Duvar</strong>
-          <p class="text-stone-600">60x120 Granit Seramik, AGT / Çamsan Derzli Parke, Jotun / Filli Boya Alçı Uygulaması.</p>
+        <div class="bg-[#FAF9F6] p-4 border border-stone-200 shadow-2xs space-y-1">
+          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Gecikme Cezalı Sözleşme</strong>
+          <p class="text-stone-600">İş teslim tarihi resmi sözleşmeyle belirlenir; olası gecikmelerde günlük tazminat garanti edilir.</p>
         </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Mobilya &amp; Kapı</strong>
-          <p class="text-stone-600">Özel İmalat Lake İç Kapılar, MDF-Lam Mutfak/Banyo Dolapları, Blum Frenli Raylar.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Hizmet Bölgesi</strong>
-          <p class="text-stone-600">Konak, Karşıyaka, Bornova, Çiğli, Urla, Çeşme, Güzelbahçe, Narlıdere, Gaziemir, Buca.</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Ortalama Teslimat Süresi</strong>
-          <p class="text-stone-600">Komple Daire Tadilatı 20-30 İş Günü (Taahhütlü ve Gecikme Cezalı Sözleşme).</p>
-        </div>
-        <div class="bg-white p-4 border border-stone-200 shadow-2xs space-y-1">
-          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Projelendirme</strong>
-          <p class="text-stone-600">Ücretsiz Yerinde Lazer Ölçü ve 3D Render Modelleme.</p>
+        <div class="bg-[#FAF9F6] p-4 border border-stone-200 shadow-2xs space-y-1">
+          <strong class="text-stone-900 block text-xs uppercase tracking-wider text-emerald-700">Detaylı Bütçe Koruma</strong>
+          <p class="text-stone-600">Keşifte listelenen malzeme kalemleri sabittir; süreç ortasında ekstra masraf çıkarılmaz.</p>
         </div>
       </div>
     </div>
@@ -146,14 +186,14 @@ const seo = {
           Komple Daire Renovasyonunda Canlı İmalat Güvencesi
         </h2>
         <p class="text-sm text-stone-600 font-light leading-relaxed">
-          Mutfak, banyo, şömineli TV duvarı, iç kapılar ve zemin parke dahil dairenizin tüm mimari dönüşümü tek sözleşmeyle.
+          Mutfak, banyo, şömineli TV duvarı, iç kapılar ve zemin parke dahil dairenizin tüm mimari dönüşümü tek sözleşmeyle. Mutfak detayları için <a href="/izmir-mutfak-dolabi-imalati/" class="text-[#006039] font-semibold underline underline-offset-4">mutfak dolabı modellerimizi</a>, banyo detayları için <a href="/izmir-banyo-yenileme-seramik/" class="text-[#006039] font-semibold underline underline-offset-4">banyo yenileme sayfamızı</a> inceleyin.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp" alt="Şömineli Mermer TV Duvarı Ünitesi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp" alt="Şömineli Mermer TV Duvarı Ünitesi Özel İmalat" width="1200" height="675" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-wider rounded">YAŞAM ALANI</span>
           </div>
           <div class="p-6 space-y-2">
@@ -164,7 +204,7 @@ const seo = {
 
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-hilton-banyo-dolabi-luxury.webp" alt="Özel İmalat Hilton Banyo Dolabı" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-hilton-banyo-dolabi-luxury.webp" alt="Özel İmalat Hilton Banyo Dolabı ve LED Ayna" width="1920" height="1080" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-stone-900 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider rounded">ISLAK HACİM</span>
           </div>
           <div class="p-6 space-y-2">
@@ -175,7 +215,7 @@ const seo = {
 
         <div class="group bg-[#FAF9F6] border border-stone-200 overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
           <div class="aspect-[4/3] overflow-hidden bg-stone-900 relative">
-            <img src="/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp" alt="Mimari Danışmanlık ve Bütçe Planlama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/media/real/yesilay-mimari-danismanlik-toplanti-wide.webp" alt="Mimari Danışmanlık ve Bütçe Planlama Toplantısı" width="1200" height="675" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             <span class="absolute top-3 left-3 px-3 py-1 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider rounded">BİREBİR REHBERLİK</span>
           </div>
           <div class="p-6 space-y-2">
@@ -211,7 +251,7 @@ const seo = {
     <div class="max-w-3xl mx-auto px-4 space-y-6">
       <h2 class="text-2xl sm:text-3xl font-light font-editorial">Evinizi Yenilemek İçin Ücretsiz Keşif Randevusu Alın</h2>
       <p class="text-xs sm:text-sm text-stone-300 font-light">
-        İletişime geçin veya WhatsApp üzerinden iletişime geçin; mimarımız adresinizde keşif randevusu oluştursun.
+        İletişime geçin veya WhatsApp üzerinden randevu alın; mimarımız adresinizde lazer rölöve ve 3D tasarım keşfini hazırlasın. Referans işlerimiz için <a href="/yapilan-isler/" class="text-emerald-400 underline underline-offset-4">tamamlanan projeler sayfamızı</a> inceleyebilirsiniz.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
         <a href="https://wa.me/905324261788?text=Merhaba,%20komple%20daire%20tadilatı%20için%20ücretsiz%20keşif%20istiyorum." target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-emerald-500 text-stone-950 text-xs font-bold uppercase tracking-widest hover:bg-emerald-400 transition shadow-lg">

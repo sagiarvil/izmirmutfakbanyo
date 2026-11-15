@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 
 const seo = {
   title: "İzmir Klasik & Country Mutfak Modelleri | Çıtalı Lake & Masif İmalat",
-  description: "İzmir'de el işçiliği CNC çıtalı lake ve country mutfak dolabı imalatı. Sararmayan 4 kat ipek mat lake, porselen ve pirinç kulplar, masif detaylar ve Buca atölyesinden ücretsiz 3D çizim.",
+  description: "İzmir'de CNC çıtalı country ve klasik lake mutfak dolabı imalatı. Sararmayan fırın lake, porselen kulplar ve Buca atölyemizden ücretsiz 3D keşif.",
   canonical: "https://yesilaymutfak.com/klasik-country-mutfak-modelleri/",
   serviceName: "Klasik ve Country Mutfak Modelleri İmalatı",
   breadcrumbs: [
@@ -111,6 +111,7 @@ const models = [
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
         İzmir Klasik &amp; Country Mutfak: <br /><span class="font-normal text-amber-200">Zarif Çıta İşçiliği &amp; İpek Mat Lake Zarafeti</span>
       </h1>
+          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir klasik ve country mutfak dolapları; zarif CNC çıta işlemeli ipek mat fırın lake kapaklar, masif meşe detaylar, porselen veya pirinç eskitme kulplar ve vitrinli cam bölmelerle geçmişin asaletini modern ergonomiyle buluşturur. Yeşilay Mutfak atölyesinde 10 yıl garantili üretilir.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-2xl">
         Modası asla geçmeyen zamansız bir estetik: Kusursuz 45 derece köşe birleşimli CNC çıtalar, asla sararmayan 4 kat ipek mat fırın boyası, antik pirinç ve porselen aksesuarlar. 1998'den bu yana İzmir Buca atölyemizde ahşaba ruh katıyoruz.
@@ -198,14 +199,15 @@ const models = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {models.map((m) => (
+        {models.map((m, idx) => (
           <div class="bg-stone-50 border border-stone-200 overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300">
             <div class="relative h-64 sm:h-72 overflow-hidden bg-stone-900">
               <img 
                 src={m.img} 
                 alt={`${m.title} - İzmir Klasik ve Country Mutfak`} 
                 class="w-full h-full object-cover transition duration-700 group-hover:scale-105" 
-                loading="lazy" 
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchpriority={idx === 0 ? "high" : "auto"}
                 decoding="async"
                 width="600"
                 height="400"
@@ -385,6 +387,47 @@ const models = [
             <p class="text-xs text-stone-400 line-clamp-1">Ada tipi oturma barları, entegre salon mobilyaları ve açık plan ferahlığı.</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Klasik & Country Mutfak Malzeme ve İşçilik Tablosu (G17 NavBoost) -->
+  <section class="py-12 bg-white border-b border-stone-200" data-seo-interactive="true">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-6 text-center font-editorial">Klasik ve Country Mutfak Dolapları İmalat Detayları</h2>
+      <div class="overflow-x-auto rounded-xl border border-stone-200">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-stone-100 text-stone-800 font-semibold border-b border-stone-200">
+              <th class="p-3 sm:p-4">Bileşen</th>
+              <th class="p-3 sm:p-4">Country Koleksiyonu</th>
+              <th class="p-3 sm:p-4">Klasik Neoklasik Seri</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 text-stone-700">
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Kapak Detayı</td>
+              <td class="p-3 sm:p-4">Derin CNC göbek oyması, fırın mat lake boya</td>
+              <td class="p-3 sm:p-4">Kabartma çıta profilli, sedef veya fildişi lake</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Vitrin Camları</td>
+              <td class="p-3 sm:p-4">Buzlu veya karolajlı şeffaf temperli cam</td>
+              <td class="p-3 sm:p-4">Füme / bronz bizoteli kristal cam paneller</td>
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Kulp Tercihi</td>
+              <td class="p-3 sm:p-4">Antik pirinç, porselen çiçek desenli düğmeler</td>
+              <td class="p-3 sm:p-4">Mat altın veya fırçalanmış pirinç döküm kulp</td>
+            </tr>
+            <tr class="bg-stone-50/50">
+              <td class="p-3 sm:p-4 font-semibold text-stone-900">Taç &amp; Işıklık</td>
+              <td class="p-3 sm:p-4">Geniş masif taç pervazı ve alt ışıklık çıtası</td>
+              <td class="p-3 sm:p-4">Oymalı gösterişli klasik taç ve sütun başlıkları</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

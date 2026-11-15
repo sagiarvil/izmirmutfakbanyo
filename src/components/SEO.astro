@@ -2,6 +2,7 @@
 import { siteConfig } from "../data/siteConfig";
 import { SEO_REGISTRY, DOMAIN } from "../seo/registry";
 import { buildCompleteJsonLdGraph } from "../seo/schema-builder";
+import type { CatalogItemInput, FaqInput } from "../seo/registry.types";
 
 export interface Props {
   title: string;
@@ -9,8 +10,10 @@ export interface Props {
   canonical?: string;
   image?: string;
   type?: "website" | "article";
+  noindex?: boolean;
   breadcrumbs?: Array<{ name: string; url: string }>;
   faqList?: Array<{ question: string; answer: string }>;
+  catalogItems?: CatalogItemInput[];
   serviceName?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -20,113 +23,86 @@ const {
   title,
   description,
   canonical,
-  image = "/android-chrome-512x512.png",
-  type = "website",
+  image,
+  type,
+  noindex = false,
   breadcrumbs = [],
   faqList = [],
+  catalogItems = [],
   serviceName,
   publishedTime = "2024-01-15T09:00:00+03:00",
-  modifiedTime = "2026-10-17T23:40:00+03:00"
+  modifiedTime = "2026-11-14T12:00:00+03:00"
 } = Astro.props;
 
 const siteUrl = siteConfig.siteUrl.replace(/\/$/, "");
-const currentPath = Astro.url.pathname.replace(/\/$/, "");
-const normalizedRoute = currentPath === "" ? "/" : `${currentPath}/`;
-const canonicalUrl = canonical || `${siteUrl}${normalizedRoute}`;
-const imageUrl = image.startsWith("http") ? image : `${siteUrl}${image.startsWith("/") ? image : "/" + image}`;
+const rawPathname = Astro.url.pathname;
+const isHtmlFile = rawPathname.endsWith(".html");
+const currentPath = rawPathname.replace(/\/$/, "");
+const normalizedRoute = isHtmlFile
+  ? rawPathname
+  : currentPath === ""
+    ? "/"
+    : `${currentPath}/`;
 
-const fullTitle = title.includes("|") ? title : `${title} | Yeşilay Mutfak`;
-
-// SSOT Registry kontrolü
 const registeredPage = SEO_REGISTRY[normalizedRoute];
 
+const resolvedTitle = registeredPage
+  ? registeredPage.title
+  : title.includes("|")
+    ? title
+    : `${title} | Yeşilay Mutfak`;
+
+const resolvedDescription = registeredPage ? registeredPage.metaDescription : description;
+const resolvedImageRel = image || registeredPage?.image || "/media/real/yesilay-showroom-gece-cephe.webp";
+const imageUrl = resolvedImageRel.startsWith("http")
+  ? resolvedImageRel
+  : `${siteUrl}${resolvedImageRel.startsWith("/") ? resolvedImageRel : "/" + resolvedImageRel}`;
+
+const canonicalUrl = canonical || `${siteUrl}${normalizedRoute}`;
+const ogType = type || (registeredPage?.role === "article" ? "article" : "website");
+const robotsContent = noindex
+  ? "noindex,follow"
+  : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
 let jsonLd = "";
-if (registeredPage) {
-  jsonLd = buildCompleteJsonLdGraph(registeredPage, DOMAIN);
-} else {
-  // Dinamik oluşturucu
-  const dynamicRecord = {
+if (!noindex) {
+  const effectiveRecord = registeredPage || {
     route: normalizedRoute,
-    locale: "tr-TR",
     role: "service" as const,
-    indexDirective: "index, follow" as const,
-    canonicalRoute: normalizedRoute,
-    title: fullTitle,
-    metaDescription: description,
-    h1: title,
-    primaryIntent: title,
-    primaryEntity: {
-      id: `${siteUrl}/#organization`,
-      name: siteConfig.name,
-      type: "HomeAndConstructionBusiness" as const,
-      sameAs: [siteConfig.whatsappUrl, "https://www.instagram.com/yesilaymutfak"]
-    },
-    semanticTriples: [
-      { subject: "Yeşilay Mutfak", predicate: "providesService", object: title }
-    ],
-    heroAnswerEngine: description,
+    title: resolvedTitle,
+    metaDescription: resolvedDescription,
+    image: resolvedImageRel,
+    serviceType: serviceName || resolvedTitle.split("|")[0].trim(),
     publishedAt: publishedTime,
     modifiedAt: modifiedTime,
-    llmSubGraphRoute: `/llms/pages/${currentPath || "home"}.md`,
-    mobileSubGraphRoute: `/llms/mobile/${currentPath || "home"}.md`,
-    breadcrumbs: breadcrumbs.map(b => ({ name: b.name, item: b.url })),
-    mobile: {
-      viewport: "width=device-width, initial-scale=1, viewport-fit=cover, minimum-scale=1, maximum-scale=5",
-      primaryAction: "call" as const,
-      bottomNavEnabled: true,
-      thumbZonePosition: "bottom-center" as const,
-      touchTargetsValidated: true,
-      horizontalScrollFree: true,
-      thumbSafeHeroAnswer: true,
-      voiceQueryPatterns: [],
-      speakableSelectors: ["#hero-answer-engine", "h1"],
-      pwaInstallable: true
-    },
-    mobileCwvBudget: {
-      lcpMs: 1600,
-      inpMs: 80,
-      cls: 0.02,
-      ttfbMs: 140,
-      htmlKb: 45
-    }
+    breadcrumbs: breadcrumbs.length > 0
+      ? breadcrumbs.map(b => ({ name: b.name, item: b.url }))
+      : [
+          { name: "Ana Sayfa", item: "/" },
+          { name: resolvedTitle.split("|")[0].trim(), item: normalizedRoute }
+        ],
+    catalogItems
   };
-  jsonLd = buildCompleteJsonLdGraph(dynamicRecord, DOMAIN);
-}
 
-// Eğer FAQ verisi varsa şemaya ekle
-if (faqList.length > 0) {
-  try {
-    const parsed = JSON.parse(jsonLd);
-    parsed["@graph"].push({
-      "@type": "FAQPage",
-      "@id": `${canonicalUrl}#faq`,
-      "mainEntity": faqList.map(item => ({
-        "@type": "Question",
-        "name": item.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.answer
-        }
-      }))
-    });
-    jsonLd = JSON.stringify(parsed);
-  } catch (e) {
-    // pass
-  }
+  jsonLd = buildCompleteJsonLdGraph(effectiveRecord, DOMAIN, {
+    faqList: faqList as FaqInput[],
+    catalogItemsOverride: catalogItems.length > 0 ? catalogItems : undefined
+  });
 }
 ---
 
-<!-- Title & Temel SEO Meta -->
-<title>{fullTitle}</title>
-<meta name="description" content={description} />
+<title>{resolvedTitle}</title>
+<meta name="description" content={resolvedDescription} />
 <link rel="canonical" href={canonicalUrl} />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="robots" content={robotsContent} />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content={type} />
+{jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
 <meta property="og:url" content={canonicalUrl} />
-<meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={resolvedTitle} />
+<meta property="og:description" content={resolvedDescription} />
 <meta property="og:image" content={imageUrl} />
 <meta property="og:locale" content="tr_TR" />
 <meta property="og:site_name" content="Yeşilay Mutfak" />
@@ -134,22 +110,15 @@ if (faqList.length > 0) {
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={canonicalUrl} />
-<meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
+<meta name="twitter:title" content={resolvedTitle} />
+<meta name="twitter:description" content={resolvedDescription} />
 <meta name="twitter:image" content={imageUrl} />
 
-<!-- Geo Etiketleri -->
+<!-- Yerel Konum Sinyalleri -->
 <meta name="geo.region" content="TR-35" />
-<meta name="geo.placename" content="İzmir" />
+<meta name="geo.placename" content="Buca, İzmir" />
 <meta name="geo.position" content={`${siteConfig.geo.latitude};${siteConfig.geo.longitude}`} />
 <meta name="ICBM" content={`${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`} />
 
-<!-- LLMs & Autonomous AI Agent Discovery -->
-<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt Manifest" />
-<link rel="alternate" type="text/markdown" href="/llm.txt" title="LLM.txt Manifest" />
-<link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLMs Full Knowledge Base" />
-<link rel="agent" type="application/json" href="/.well-known/agent.json" />
-<link rel="alternate" type="application/json" href="/.well-known/agent.json" title="Autonomous Agent Manifest" />
-
-<!-- Schema.org 14KB First-Packet JSON-LD -->
-<script type="application/ld+json" set:html={jsonLd} />
+<!-- AI Arama Dizini -->
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Yeşilay Mutfak LLMs Dizini" />
