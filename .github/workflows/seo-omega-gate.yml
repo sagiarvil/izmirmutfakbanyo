@@ -5,9 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install Dependencies & Build Astro Site
+        run: npm install && npm run build && python3 seo_enforcer.py --build-ai-pack "./dist"
       - name: Install Playwright Chromium
         run: pip install playwright && playwright install --with-deps chromium
       - name: Run 100-Gate 100/100 SEO ABSOLUTE Audit
