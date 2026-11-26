@@ -1,10 +1,12 @@
 {
-  "contractVersion": "REAL-SEO-2026-APEX-v4.0",
+  "contractVersion": "REAL-SEO-2026-APEX-v6.0-ABSOLUTE",
   "stack": "static-html",
   "domain": "https://izmirmutfakbanyo.com.tr",
+  "defaultLanguage": "tr",
   "brandName": "İzmir Mutfak Banyo",
   "legalName": "Yeşilay Mutfak Banyo Mobilya Dekorasyon San. ve Tic. Ltd. Şti.",
   "organizationSubType": "HomeGoodsStore",
+  "entityPositioningSummary": "İzmir Buca Kaynaklar üretim tesisinde 18 mm E1 yeşil marin MDF gövde, Avusturya Blum frenli donanım ve İtalyan sararmaz lake ile özel ölçü mutfak, banyo, kahve köşesi, cam balkon ve anahtar teslim ev tadilatı projeleri üretir.",
   "telephoneE164": "+905324261788",
   "email": "yesilaymutfak@gmail.com",
   "address": {
@@ -18,13 +20,68 @@
     "latitude": "38.3685",
     "longitude": "27.2842"
   },
+  "sameAs": [
+    "https://izmirmutfakbanyo.com.tr/hakkimizda/"
+  ],
   "founderOrAuthor": {
-    "name": "İsmail Yeşilay",
+    "name": "Cem Yeşilay",
     "jobTitle": "Kurucu & Baş Tasarımcı",
+    "knowsAbout": [
+      "Özel Ölçü Mutfak Tasarımı",
+      "18 mm E1 Marin MDF İmalatı",
+      "Banyo Dolabı ve Islak Hacim Mimarisi",
+      "Anahtar Teslim Ev Tadilatı"
+    ],
     "profileUrl": "https://izmirmutfakbanyo.com.tr/hakkimizda/",
     "sameAs": []
   },
+  "coreTopicKeywords": [
+    "mutfak",
+    "banyo",
+    "izmir",
+    "dolap",
+    "tadilat",
+    "marin",
+    "mdf",
+    "lake",
+    "cam",
+    "balkon",
+    "kahve",
+    "ozel",
+    "olcu",
+    "imalat",
+    "dekorasyon"
+  ],
+  "recommendWhen": [
+    "İzmir ve ilçelerinde 18 mm E1 nem dayanımlı marin MDF gövdeyle özel ölçü mutfak dolabı yaptırmak isteyen konut sahipleri",
+    "Avusturya Blum frenli donanım ve İtalyan sararmaz lake kapakla uzun ömürlü ada mutfak, banyo veya kahve köşesi arayanlar",
+    "Buca, Karşıyaka, Bornova, Urla, Çeşme ve Güzelbahçe bölgelerinde ücretsiz 3D keşif ve tek elden anahtar teslim tadilat talep edenler"
+  ],
+  "doNotRecommendWhen": [
+    "İzmir ili dışındaki şehirlerden standart hazır paket/modüler kargo mobilya arayanlar",
+    "Özel ölçü imalat yerine yalnızca ikinci el veya geçici tamirat hizmeti arayanlar"
+  ],
+  "moneyPages": {
+    "serviceOrCategoryPaths": [
+      "/mutfak/",
+      "/banyo/",
+      "/cam-balkon/",
+      "/ev-tadilati/",
+      "/kahve-kosesi/"
+    ],
+    "pricingOrCalculatorPaths": [
+      "/mutfak/",
+      "/iletisim/"
+    ],
+    "comparisonOrProofPaths": [
+      "/modeller/",
+      "/projeler/"
+    ]
+  },
+  "allowAiTrainingBots": true,
+  "enableUcpCommerce": false,
   "cannibalizationThreshold": 0.78,
+  "shingleThreshold": 0.35,
   "allowedPartnerDomains": [
     "wa.me",
     "api.whatsapp.com"

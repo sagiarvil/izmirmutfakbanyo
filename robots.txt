@@ -1,11 +1,11 @@
-# İzmir Mutfak Banyo — Arama Motoru ve Yapay Zeka Keşif Politikası
+# REAL-SEO-2026 APEX v6.0 ABSOLUTE — Arama ve Yapay Zeka Atıf Botları Politikası
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
+# Canlı Arama ve Yapay Zeka Yanıt/Atıf Motorları
 User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
@@ -17,16 +17,32 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: GPTBot
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+# Vakıf Model Eğitim Kazıyıcıları
+User-agent: GPTBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Applebot
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://izmirmutfakbanyo.com.tr/sitemap.xml
