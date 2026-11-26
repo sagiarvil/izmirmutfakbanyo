@@ -123,7 +123,7 @@ const kitchenModels = [
 ---
 
 <Layout seo={seo} activeService="Mutfak Dolabı İmalatı">
-  <main class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
+  <div class="w-full bg-[#FAF9F6] text-[#15231C] min-h-screen py-8 sm:py-12">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
       
       <!-- BREADCRUMB -->
@@ -138,7 +138,6 @@ const kitchenModels = [
         <h1 class="text-3xl sm:text-5xl font-bold text-[#15231C] tracking-tight leading-tight" style="font-family: 'Roboto', sans-serif;">
           Özel Ölçü Mutfak Dolabı Modelleri
         </h1>
-          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir özel ölçü mutfak dolabı imalatı; E1 formaldehit normunda neme dayanıklı MDF-Lam gövde, Blum frenli menteşe ve tandembox çekmece mekanizmaları, akrilik, lake veya ahşap kapak çeşitleriyle doğrudan Yeşilay Mutfak Buca atölyesinde üretilir. Aracı komisyonu olmadan 10 yıl imalat garantilidir.</p>
         <p class="mt-3 text-xs sm:text-sm text-[#756E65] max-w-2xl leading-relaxed">
           İzmir Buca Adatepe imalat atölyemizde kişiye özel üretilen 15 tescilli mutfak modeli. İpek mat fırın lake, çizilmez akrilik ve doğal ahşap kapaklar ile Blum frenli mekanizmalar.
         </p>
@@ -190,82 +189,6 @@ const kitchenModels = [
             </a>
           );
         })}
-      </div>
-
-      <!-- TEKNİK KARŞILAŞTIRMA VE MALZEME STANDARTLARI TABLOSU -->
-      <div class="pt-12 sm:pt-16 border-t border-[#E5E2DA]">
-        <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-[#006039] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-              ATÖLYE TEKNİK ŞARTNAMESİ
-            </span>
-            <h2 class="text-xl sm:text-3xl font-extrabold text-[#15231C] mt-3">
-              Mutfak Dolabı Kapak Malzemesi ve Gövde Mukavemet Karşılaştırması
-            </h2>
-            <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-3xl">
-              İzmir'in nemli ikliminde mutfak dolaplarının en büyük yıpranma sebebi kalitesiz suntalam gövde ve kabaran kenar bantlarıdır. Yeşilay Mutfak olarak gövdede standart olarak neme dayanıklı 18 mm E1 yeşil MDF-Lam kullanıyoruz. Kapak tipine göre teknik parametreler:
-            </p>
-          </div>
-
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse text-xs sm:text-sm">
-              <thead>
-                <tr class="bg-[#15231C] text-white">
-                  <th class="p-3.5 font-semibold">Kapak Malzemesi</th>
-                  <th class="p-3.5 font-semibold">Gövde Standardı</th>
-                  <th class="p-3.5 font-semibold">Mekanizma Donanımı</th>
-                  <th class="p-3.5 font-semibold">Çizilme & Buhar Direnci</th>
-                  <th class="p-3.5 font-semibold">Önerilen Kullanım Alanı</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-stone-200 text-stone-700">
-                <tr>
-                  <td class="p-3.5 font-bold text-[#15231C]">İpek Mat Fırın Lake</td>
-                  <td class="p-3.5">18 mm E1 Neme Dayanıklı MDF</td>
-                  <td class="p-3.5">Blum Blumotion Entegre Frenli</td>
-                  <td class="p-3.5">Poliüretan Çift Kat Astar (Sararmaz)</td>
-                  <td class="p-3.5">Modern ve neo-klasik ada mutfaklar, çıtalı kapaklar</td>
-                </tr>
-                <tr class="bg-stone-50/70">
-                  <td class="p-3.5 font-bold text-[#15231C]">Çizilmez UV Akrilik</td>
-                  <td class="p-3.5">18 mm E1 Yüksek Yoğunluklu MDF</td>
-                  <td class="p-3.5">Blum Tandembox / Antaro Çekmece</td>
-                  <td class="p-3.5">PUR Tutkallı Sıfır Ek Yeri (Lazer Kenar)</td>
-                  <td class="p-3.5">Yoğun kullanılan aile mutfakları, minimalist kulpsuz dolaplar</td>
-                </tr>
-                <tr>
-                  <td class="p-3.5 font-bold text-[#15231C]">Doğal Ahşap Meşe Kaplama</td>
-                  <td class="p-3.5">18 mm Marin Neme Mukavim MDF</td>
-                  <td class="p-3.5">Blum Tip-On Dokunmatik Açılım</td>
-                  <td class="p-3.5">Mat Su Bazlı Koruyucu Vernik</td>
-                  <td class="p-3.5">Sıcak modern, country ve İskandinav açık mutfak kurguları</td>
-                </tr>
-                <tr class="bg-stone-50/70">
-                  <td class="p-3.5 font-bold text-[#15231C]">Fluted Alüminyum Çerçeve Cam</td>
-                  <td class="p-3.5">Eloksallı Siyah / Bronz Profil</td>
-                  <td class="p-3.5">Gizli Pivot / Gazlı Amortisör</td>
-                  <td class="p-3.5">4 mm Temperli Füme / Çizgili Cam</td>
-                  <td class="p-3.5">Üst dolap vitrinleri, kahve köşesi ve kiler boy dolapları</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-xs text-stone-600">
-            <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80">
-              <h3 class="font-bold text-[#15231C] mb-1">📐 Standart Modül Ölçüleri</h3>
-              <p>Alt dolap yüksekliği 86-90 cm, derinliği 60 cm; üst dolap yüksekliği 72-96 cm, derinliği 35 cm olarak ergonomik eksende üretilir.</p>
-            </div>
-            <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80">
-              <h3 class="font-bold text-[#15231C] mb-1">🛠️ Yerinde Lazer Rölöve</h3>
-              <p>Duvar gönyeleri, kolon kaçıklıkları ve tesisat çıkışları dijital lazer metreyle taranır; montajda sıfır boşluk garanti edilir.</p>
-            </div>
-            <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80">
-              <h3 class="font-bold text-[#15231C] mb-1">💰 Şeffaf Metretül Fiyatı</h3>
-              <p>Aracı komisyonu olmadan doğrudan Buca Adatepe imalat atölyesi maliyetleriyle sözleşmeli ve garantili teslimat yapılır.</p>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- İÇ MİMARİ VE TAMAMLAYICI ÇÖZÜMLER -->
@@ -358,5 +281,5 @@ const kitchenModels = [
       </div>
 
     </div>
-  </main>
+  </div>
 </Layout>

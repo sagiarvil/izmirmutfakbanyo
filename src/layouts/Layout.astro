@@ -4,7 +4,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import WhatsAppFloating from "../components/WhatsAppFloating.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
-import SeoTrustTools from "../components/SeoTrustTools.astro";
 
 export interface Props {
   seo: SEOProps;
@@ -12,14 +11,6 @@ export interface Props {
 }
 
 const { seo, activeService } = Astro.props;
-const rawPathname = Astro.url.pathname;
-const cleanPath = rawPathname.replace(/\/$/, "");
-const normalizedRoute = rawPathname.endsWith(".html")
-  ? rawPathname
-  : cleanPath === ""
-    ? "/"
-    : `${cleanPath}/`;
-const resolvedCanonicalUrl = seo.canonical || `https://yesilaymutfak.com${normalizedRoute}`;
 ---
 
 <!doctype html>
@@ -76,7 +67,6 @@ const resolvedCanonicalUrl = seo.canonical || `https://yesilaymutfak.com${normal
     <Header activeService={activeService} />
     <main id="main-content" class="flex-1 w-full overflow-hidden">
       <slot />
-      {!seo.noindex && <SeoTrustTools pageTitle={seo.title} canonicalUrl={resolvedCanonicalUrl} />}
     </main>
     <Footer />
     <WhatsAppFloating service={activeService} />
@@ -84,41 +74,54 @@ const resolvedCanonicalUrl = seo.canonical || `https://yesilaymutfak.com${normal
   
     <script is:inline>
       document.addEventListener("DOMContentLoaded", () => {
-        const initReveal = () => {
-          const targetSelectors = [
-            "section > div > div.grid > div",
-            ".apple-card",
-            "details",
-            "table",
-            "section h2",
-            "section .space-y-3"
-          ];
-          const elements = document.querySelectorAll(targetSelectors.join(", "));
-          elements.forEach((el, index) => {
-            if (!el.classList.contains("reveal-on-scroll") && !el.closest("#siteHeader") && !el.closest("footer")) {
-              el.classList.add("reveal-on-scroll");
-              const stagger = (index % 4) * 80;
-              if (stagger > 0) el.style.transitionDelay = stagger + "ms";
-            }
-          });
-          if ("IntersectionObserver" in window) {
-            const revealObserver = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-revealed");
-                  revealObserver.unobserve(entry.target);
-                }
-              });
-            }, { threshold: 0.05, rootMargin: "0px 0px -30px 0px" });
-            document.querySelectorAll(".reveal-on-scroll").forEach(el => revealObserver.observe(el));
-          } else {
-            document.querySelectorAll(".reveal-on-scroll").forEach(el => el.classList.add("is-revealed"));
+        const targetSelectors = [
+          "section > div > div.grid > div",
+          ".apple-card",
+          "details",
+          "table",
+          "section h2"
+        ];
+        const vh = window.innerHeight || 900;
+        const elements = document.querySelectorAll(targetSelectors.join(", "));
+        const pending = [];
+        elements.forEach((el, index) => {
+          if (el.closest("#siteHeader") || el.closest("footer")) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.top < vh + 120) return;
+          if (!el.classList.contains("reveal-on-scroll")) {
+            el.classList.add("reveal-on-scroll");
+            const stagger = (index % 4) * 80;
+            if (stagger > 0) el.style.transitionDelay = stagger + "ms";
+            pending.push(el);
           }
+        });
+        if (!pending.length) return;
+        const revealEl = (el) => {
+          el.classList.add("is-revealed");
         };
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(initReveal, { timeout: 300 });
+        if ("IntersectionObserver" in window) {
+          const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight + 160) {
+                revealEl(entry.target);
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.01, rootMargin: "160px 0px 160px 0px" });
+          pending.forEach(el => revealObserver.observe(el));
+          const revealAboveFold = () => {
+            const limit = (window.innerHeight || 900) + 160;
+            pending.forEach(el => {
+              if (!el.classList.contains("is-revealed") && el.getBoundingClientRect().top <= limit) {
+                revealEl(el);
+                revealObserver.unobserve(el);
+              }
+            });
+          };
+          window.addEventListener("scroll", revealAboveFold, { passive: true });
+          window.addEventListener("hashchange", () => setTimeout(revealAboveFold, 50), { passive: true });
         } else {
-          setTimeout(initReveal, 16);
+          pending.forEach(revealEl);
         }
       });
     </script>
@@ -231,6 +234,48 @@ const resolvedCanonicalUrl = seo.canonical || `https://yesilaymutfak.com${normal
       linear-gradient(to bottom, rgba(197, 168, 128, 0.08) 1px, transparent 1px);
     background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
     background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+
+  /* Missing Tailwind utility parity rules */
+  .aspect-4\/3 { aspect-ratio: 4 / 3; }
+  .rounded-xs { border-radius: 0.125rem; }
+  .shadow-2xs { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03); }
+  .shadow-xs, .hover\:shadow-xs:hover { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+  .backdrop-blur-xs { -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+  .bg-\[\#006039\]\/8 { background-color: rgba(0, 96, 57, 0.08); }
+  .bg-\[\#006039\]\/92 { background-color: rgba(0, 96, 57, 0.92); }
+  .bottom-20 { bottom: 5rem; }
+  .bottom-22 { bottom: 5.5rem; }
+  .bottom-36 { bottom: 9rem; }
+  @media (min-width: 1280px) {
+    .xl\:bottom-6 { bottom: 1.5rem; }
+    .xl\:bottom-24 { bottom: 6rem; }
+  }
+  .duration-7000 { transition-duration: 7000ms; }
+  .group:hover .group-hover\:scale-103 { transform: scale(1.03); }
+  .group:hover .group-hover\:scale-106 { transform: scale(1.06); }
+  .w-3\/8 { width: 37.5%; }
+  .py-0\.2 { padding-top: 0.0625rem; padding-bottom: 0.0625rem; }
+  .h-\[54svh\] { height: 54svh; }
+  .min-h-\[380px\] { min-height: 380px; }
+  .h-\[calc\(100svh-72px\)\] { height: calc(100svh - 72px); }
+  .min-h-\[500px\] { min-height: 500px; }
+  @media (min-width: 640px) {
+    .sm\:h-\[62svh\] { height: 62svh; }
+    .sm\:min-h-\[440px\] { min-height: 440px; }
+    .sm\:h-\[calc\(100svh-80px\)\] { height: calc(100svh - 80px); }
+  }
+  @media (min-width: 1024px) {
+    .lg\:h-\[68svh\] { height: 68svh; }
+    .lg\:h-\[calc\(100svh-88px\)\] { height: calc(100svh - 88px); }
+  }
+
+  @media (prefers-reduced-motion: reduce), print {
+    .reveal-on-scroll {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
   }
 
 </style>

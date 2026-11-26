@@ -933,10 +933,10 @@ const projects = [
   <!-- HERO BÖLÜMÜ -->
   <section class="relative bg-[#0E2017] text-white py-20 sm:py-28 overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-85" style="background-image: url('/media/real/yesilay-showroom-ic-mekan.webp');"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0A1A12]/85 via-[#0A1A12]/40 to-transparent"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10, 26, 18, 0.90), rgba(10, 26, 18, 0.50), rgba(10, 26, 18, 0.65));"></div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
-      <nav class="flex items-center gap-2 text-xs font-semibold text-stone-400 uppercase tracking-widest" aria-label="Breadcrumb">
+      <nav class="flex flex-wrap items-center gap-2 text-xs font-semibold text-stone-300 uppercase tracking-widest" aria-label="Breadcrumb">
         <a href="/" class="hover:text-white transition">Ana Sayfa</a>
         <span>/</span>
         <span class="text-emerald-400">Yapılan İşler &amp; Referanslar</span>
@@ -955,7 +955,6 @@ const projects = [
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.15]" style="font-family: 'Playfair Display', Georgia, serif;">
         İzmir'de Hayata Geçen <br /><span class="font-normal text-emerald-400">72+ Seçkin Mimari Projemiz &amp; Gerçek Dönüşümler</span>
       </h1>
-          <p data-answer-capsule="true" class="answer-capsule mt-4 text-stone-300 sm:text-stone-600 text-sm sm:text-base font-normal leading-relaxed max-w-2xl">İzmir genelinde Buca, Karşıyaka, Bornova, Çeşme ve Urla'da başarıyla tamamlanan 72'den fazla gerçek mutfak tadilatı, lüks banyo yenilemesi ve anahtar teslim villa projemizi inceleyin. Yeşilay Mutfak, taahhüt ettiği malzeme kalitesi ve sözleşmeli gün garantisiyle müşteri memnuniyetini kanıtlar.</p>
 
       <p class="text-sm sm:text-base text-stone-300 font-light leading-relaxed max-w-3xl">
         Karşıyaka, Bornova, Konak, Buca, Urla, Çeşme ve İzmir'in tüm ilçelerinde kadrolu mimar ve iç mimarlarımızın projelendirdiği, Buca atölyemizde imal edilen gerçek evler ve gerçek ev sahiplerinin samimi deneyimleri.
@@ -1125,14 +1124,6 @@ const projects = [
   </section>
 
   <!-- MİMARİ ÇAĞRI BÖLÜMÜ -->
-  <section class="py-12 bg-[#FAF9F6] border-t border-stone-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-8 space-y-4">
-      <h2 id="buca-adatepe-atolye-sureci" class="text-2xl sm:text-3xl font-bold text-stone-900">Buca Adatepe Atölyesi Üretim ve Montaj Süreci</h2>
-      <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
-        Her proje İzmir Buca Adatepe imalat atölyemizde %100 E1 sertifikalı 18 mm MDF-Lam gövde, Blum frenli mekanizmalar ve lazerli rölöve ölçümüyle 21 iş gününde üretilerek 10 yıl garantiyle teslim edilir.
-      </p>
-    </div>
-  </section>
   <section class="py-20 bg-[#0E2017] text-white border-t border-stone-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-6">
       <span class="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400 block">SİZİN EVİNİZ DE BU LİSTEYE EKLENSİN</span>
@@ -1153,59 +1144,6 @@ const projects = [
     </div>
   </section>
 
-
-<style>
-  .project-card {
-    content-visibility: auto;
-    contain-intrinsic-size: 480px;
-  }
-</style>
-
-
-  <!-- Teslim Edilen Referans Proje Türleri Tablosu (G17 NavBoost) -->
-  <section class="py-12 bg-white border-b border-stone-200" data-seo-interactive="true">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h2 id="teslim-edilen-proje-ozeti" class="text-xl sm:text-2xl font-bold text-stone-900 mb-6 text-center font-editorial">İzmir'de Teslim Edilen Proje Türleri ve İmalat Özeti</h2>
-      <div class="overflow-x-auto rounded-xl border border-stone-200">
-        <table class="w-full text-left border-collapse text-xs sm:text-sm">
-          <thead>
-            <tr class="bg-stone-100 text-stone-800 font-semibold border-b border-stone-200">
-              <th class="p-3 sm:p-4">Proje Kategorisi</th>
-              <th class="p-3 sm:p-4">Tamamlanan Adet</th>
-              <th class="p-3 sm:p-4">Uygulama Bölgeleri</th>
-              <th class="p-3 sm:p-4">Temel İmalat Kalemleri</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-stone-200 text-stone-700">
-            <tr>
-              <td class="p-3 sm:p-4 font-semibold text-stone-900">Lüks Mutfak Dolabı</td>
-              <td class="p-3 sm:p-4 font-mono font-bold text-emerald-800">1.400+ Proje</td>
-              <td class="p-3 sm:p-4">Buca, Karşıyaka, Bornova, Alsancak</td>
-              <td class="p-3 sm:p-4">Lake ve akrilik dolaplar, porselen/kuvars tezgah</td>
-            </tr>
-            <tr class="bg-stone-50/50">
-              <td class="p-3 sm:p-4 font-semibold text-stone-900">Komple Daire Tadilatı</td>
-              <td class="p-3 sm:p-4 font-mono font-bold text-emerald-800">650+ Daire</td>
-              <td class="p-3 sm:p-4">Göztepe, Hatay, Bayraklı, Mavişehir</td>
-              <td class="p-3 sm:p-4">Tesisat, banyo, seramik, asma tavan ve parke</td>
-            </tr>
-            <tr>
-              <td class="p-3 sm:p-4 font-semibold text-stone-900">Müstakil Villa Renovasyonu</td>
-              <td class="p-3 sm:p-4 font-mono font-bold text-emerald-800">320+ Villa</td>
-              <td class="p-3 sm:p-4">Çeşme, Urla, Güzelbahçe, Seferihisar</td>
-              <td class="p-3 sm:p-4">Marin dolaplar, şömine çevresi, ada tezgahlar</td>
-            </tr>
-            <tr class="bg-stone-50/50">
-              <td class="p-3 sm:p-4 font-semibold text-stone-900">Ticari Mekan &amp; Fit-Out</td>
-              <td class="p-3 sm:p-4 font-mono font-bold text-emerald-800">180+ İş Yeri</td>
-              <td class="p-3 sm:p-4">İzmir genelinde AVM ve cadde mağazaları</td>
-              <td class="p-3 sm:p-4">Karşılama bankosu, teşhir stantları, akustik panel</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
 </Layout>
 

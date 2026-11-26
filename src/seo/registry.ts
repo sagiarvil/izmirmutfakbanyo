@@ -243,7 +243,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     catalogItems: [
       { name: 'Dinamik Ergonomik Çalışma Üniteli Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/golf/golf-01.webp' },
       { name: 'Nova Modüler Kitaplıklı Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/volo/volo-01.webp' },
-      { name: 'KlasikZamansız Lake Genç Odası Serisi', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/arcadia/arcadia-01.webp' }
+      { name: 'Klasik Zamansız Lake Genç Odası Serisi', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/arcadia/arcadia-01.webp' }
     ]
   },
   '/cocuk-odasi-modelleri/': {
