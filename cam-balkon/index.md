@@ -22,15 +22,6 @@ Balkonlarınızı tamamen açılabilir hale getiren katlanır cam balkon sisteml
 ### Cam Balkon Sistemleri Teknik Karşılaştırma Tablosu (`#cam-balkon-sistemleri-teknik-karsilastirma-ta`)
 Balkonunuzun cephe yönü, rüzgar yükü ve ısı yalıtım beklentisine göre en doğru cam balkon sistemini aşağıdaki mühendislik tablosundan karşılaştırabilirsiniz.
 
-### Cam Balkon Sistemleri Teknik Karşılaştırma Tablosu (`#cam-balkon-sistemleri-teknik-karsilastirma-ta-2`)
-Balkonunuzun cephe yönü, rüzgar yükü ve ısı yalıtım beklentisine göre en doğru cam balkon sistemini aşağıdaki mühendislik tablosundan karşılaştırabilirsiniz.
-
-### Cam Balkon Sistemleri Teknik Karşılaştırma Tablosu (`#cam-balkon-sistemleri-teknik-karsilastirma-ta-3`)
-Balkonunuzun cephe yönü, rüzgar yükü ve ısı yalıtım beklentisine göre en doğru cam balkon sistemini aşağıdaki mühendislik tablosundan karşılaştırabilirsiniz.
-
-### Cam Balkon Sistemleri Teknik Karşılaştırma Tablosu (`#cam-balkon-sistemleri-teknik-karsilastirma-ta-4`)
-Balkonunuzun cephe yönü, rüzgar yükü ve ısı yalıtım beklentisine göre en doğru cam balkon sistemini aşağıdaki mühendislik tablosundan karşılaştırabilirsiniz.
-
 ### İzmir’de Modern Perde ve Sineklik Çözümleri (`#izmir-de-modern-perde-ve-sineklik-cozumleri`)
 İzmir'de plise perde ve sineklik ihtiyaçlarınızda kalitenin adresi! Mekanlarınıza özel ölçülerle hazırladığımız plise perde, akordiyon (plise) sineklik ve sabit sineklik çözümlerimizle estetiği konforla birleştiriyoruz. Kaliteli malzeme, titiz montaj ve uzun ömürlü kullanım garantisiyle İzmir genelinde hizmetinizdeyiz.
 
@@ -42,30 +33,6 @@ Mekânınıza milimetrik dokunuşlar! Yerinde keşifle tam uyumlu, size özel ku
 
 ### Cam Balkon Hakkında Sıkça Sorulan Sorular (`#cam-balkon-hakkinda-sikca-sorulan-sorular`)
 İzmir Mutfak Banyo; Buca Kaynaklar'daki CNC mobilya ve İtalyan fırın lake üretim fabrikasıyla 18 mm E1 yeşil marin MDF gövdeli özel ölçü ada mutfak, Hilton banyo, kahve köşesi, cam balkon ve anahtar teslim konut/ticari fit-out projeleri üreten mimarlık ve imalat kuruluşudur.
-
-| Sistem Tipi | Cam Kalınlığı & Yalıtım | Profil & Rulman Yapısı | Önerilen Kullanım Alanı |
-| --- | --- | --- | --- |
-| 8 mm Temperli Katlanır Cam Balkon | 8 mm veya 10 mm Şişecam temperli tek cam | 2,5–3 mm et kalınlıklı alüminyum, çift sıra paslanmaz çelik rulman | Rüzgar, yağmur, toz ve gürültü kontrolü istenen standart daire balkonları |
-| 4+16+4 Isıcamlı Katlanır Sistem | 24 mm Argon gazlı Konfor/Sinerji çift temperli Isıcam | Isı bariyerli geniş kasa profil, EPDM ve alüminyum mıknatıslı fitil | Kışın oda sıcaklığında dört mevsim yaşam alanına katılan salon balkonları |
-| Eşiksiz Sürme Cam Balkon | 8 mm veya 10 mm temperli cam, fırça contalı kanat birleşimi | Zeminde çıkıntı yapmayan hemzemin ray, sessiz çelik tekerlek | Dar balkonlar, teras geçişleri, çocuklu evler ve kafe/restoran vitrinleri |
-| Eşikli Isıcamlı Sürme Sistem | 4+12+4 veya 4+16+4 temperli çift cam | Su tahliye kanallı yüksek eşikli alüminyum ray sistemi | Şiddetli lodos alan sahil cepheleri (Urla, Çeşme, Karşıyaka, Güzelbahçe) |
-| Motorlu Giyotin (Hareketli Küpeşte) | 8 mm temperli veya 4+12+4 Isıcam, uzaktan kumandalı | Somfy / Becker tüp motor, çelik zincir veya kayış aktarım, emniyet sensörü | Müstakil villa verandaları, kış bahçeleri ve ticari restoran cepheleri |
-
-| Sistem Tipi | Cam Kalınlığı & Yalıtım | Profil & Rulman Yapısı | Önerilen Kullanım Alanı |
-| --- | --- | --- | --- |
-| 8 mm Temperli Katlanır Cam Balkon | 8 mm veya 10 mm Şişecam temperli tek cam | 2,5–3 mm et kalınlıklı alüminyum, çift sıra paslanmaz çelik rulman | Rüzgar, yağmur, toz ve gürültü kontrolü istenen standart daire balkonları |
-| 4+16+4 Isıcamlı Katlanır Sistem | 24 mm Argon gazlı Konfor/Sinerji çift temperli Isıcam | Isı bariyerli geniş kasa profil, EPDM ve alüminyum mıknatıslı fitil | Kışın oda sıcaklığında dört mevsim yaşam alanına katılan salon balkonları |
-| Eşiksiz Sürme Cam Balkon | 8 mm veya 10 mm temperli cam, fırça contalı kanat birleşimi | Zeminde çıkıntı yapmayan hemzemin ray, sessiz çelik tekerlek | Dar balkonlar, teras geçişleri, çocuklu evler ve kafe/restoran vitrinleri |
-| Eşikli Isıcamlı Sürme Sistem | 4+12+4 veya 4+16+4 temperli çift cam | Su tahliye kanallı yüksek eşikli alüminyum ray sistemi | Şiddetli lodos alan sahil cepheleri (Urla, Çeşme, Karşıyaka, Güzelbahçe) |
-| Motorlu Giyotin (Hareketli Küpeşte) | 8 mm temperli veya 4+12+4 Isıcam, uzaktan kumandalı | Somfy / Becker tüp motor, çelik zincir veya kayış aktarım, emniyet sensörü | Müstakil villa verandaları, kış bahçeleri ve ticari restoran cepheleri |
-
-| Sistem Tipi | Cam Kalınlığı & Yalıtım | Profil & Rulman Yapısı | Önerilen Kullanım Alanı |
-| --- | --- | --- | --- |
-| 8 mm Temperli Katlanır Cam Balkon | 8 mm veya 10 mm Şişecam temperli tek cam | 2,5–3 mm et kalınlıklı alüminyum, çift sıra paslanmaz çelik rulman | Rüzgar, yağmur, toz ve gürültü kontrolü istenen standart daire balkonları |
-| 4+16+4 Isıcamlı Katlanır Sistem | 24 mm Argon gazlı Konfor/Sinerji çift temperli Isıcam | Isı bariyerli geniş kasa profil, EPDM ve alüminyum mıknatıslı fitil | Kışın oda sıcaklığında dört mevsim yaşam alanına katılan salon balkonları |
-| Eşiksiz Sürme Cam Balkon | 8 mm veya 10 mm temperli cam, fırça contalı kanat birleşimi | Zeminde çıkıntı yapmayan hemzemin ray, sessiz çelik tekerlek | Dar balkonlar, teras geçişleri, çocuklu evler ve kafe/restoran vitrinleri |
-| Eşikli Isıcamlı Sürme Sistem | 4+12+4 veya 4+16+4 temperli çift cam | Su tahliye kanallı yüksek eşikli alüminyum ray sistemi | Şiddetli lodos alan sahil cepheleri (Urla, Çeşme, Karşıyaka, Güzelbahçe) |
-| Motorlu Giyotin (Hareketli Küpeşte) | 8 mm temperli veya 4+12+4 Isıcam, uzaktan kumandalı | Somfy / Becker tüp motor, çelik zincir veya kayış aktarım, emniyet sensörü | Müstakil villa verandaları, kış bahçeleri ve ticari restoran cepheleri |
 
 | Sistem Tipi | Cam Kalınlığı & Yalıtım | Profil & Rulman Yapısı | Önerilen Kullanım Alanı |
 | --- | --- | --- | --- |

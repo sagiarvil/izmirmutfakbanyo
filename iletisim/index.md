@@ -13,11 +13,8 @@ entity: "İzmir Mutfak Banyo"
 ### FABRİKA ADRESİ VE ÜCRETSİZ KEŞİF İLETİŞİM KANALLARI (`#fabrika-adresi-ve-ucretsiz-kesif-iletisim-kan`)
 Buca Kaynaklar üretim tesisimiz ve mimari ofisimiz üzerinden ücretsiz 3D keşif randevusu oluşturabilirsiniz.
 
-### FABRİKA ADRESİ VE ÜCRETSİZ KEŞİF İLETİŞİM KANALLARI (`#fabrika-adresi-ve-ucretsiz-kesif-iletisim-kan-2`)
-Buca Kaynaklar üretim tesisimiz ve mimari ofisimiz üzerinden ücretsiz 3D keşif randevusu oluşturabilirsiniz.
-
-### FABRİKA ADRESİ VE ÜCRETSİZ KEŞİF İLETİŞİM KANALLARI (`#fabrika-adresi-ve-ucretsiz-kesif-iletisim-kan-3`)
-Buca Kaynaklar üretim tesisimiz ve mimari ofisimiz üzerinden ücretsiz 3D keşif randevusu oluşturabilirsiniz.
+### MİMARİ KEŞİF & TEKLİF FORMU (`#mimari-kesif-ve-teklif-formu`)
+Hayalinizdeki mutfak, banyo veya villa projesi için aşağıdaki formu doldurun; uzman mimarlarımız 24 saat içinde sizinle iletişime geçsin.
 
 ### İzmir Ücretsiz 3D Keşif ve Ölçüm Kapsamı (`#izmir-ucretsiz-3d-kesif-ve-olcum-kapsami`)
 Buca Kaynaklar fabrikamızdan İzmir merkez ve yarımada ilçelerine aynı hafta içinde ücretsiz lazer ölçüm ekibi yönlendirilir.

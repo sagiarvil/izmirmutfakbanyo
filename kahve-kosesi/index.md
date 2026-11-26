@@ -13,44 +13,18 @@ entity: "İzmir Mutfak Banyo"
 ### 60 Farklı Özel Ölçü Kahve Köşesi ve Barista Dolabı Kataloğu (`#60-farkli-ozel-olcu-kahve-kosesi-ve-barista-d`)
 İzmir Mutfak Banyo olarak, evinizin ölçülerine tam oturan, kahve makinelerinizin elektrik tesisatından fincan askılıklarına kadar her detayını özenle projelendirdiğimiz özel barista köşeleri üretiyoruz.
 
-### 60 Farklı Özel Ölçü Kahve Köşesi ve Barista Dolabı Kataloğu (`#60-farkli-ozel-olcu-kahve-kosesi-ve-barista-d-2`)
-Ev tipi espresso makinesi, öğütücü, su arıtma bağlantısı ve kapsül çekmecelerinin kusursuz yerleşimi için Buca Kaynaklar fabrikamızda uyguladığımız ideal mimari ölçüler.
-
 ### Kişiye ve Mekana Özel Kahve İstasyonları (`#kisiye-ve-mekana-ozel-kahve-istasyonlari`)
 Ev tipi espresso makinesi, öğütücü, su arıtma bağlantısı ve kapsül çekmecelerinin kusursuz yerleşimi için Buca Kaynaklar fabrikamızda uyguladığımız ideal mimari ölçüler.
 
 ### Kahve Köşesi Standart Ölçüleri ve Malzeme Şartnamesi (`#kahve-kosesi-standart-olculeri-ve-malzeme-sar`)
-Ev tipi espresso makinesi, öğütücü, su arıtma bağlantısı ve kapsül çekmecelerinin kusursuz yerleşimi için Buca Kaynaklar fabrikamızda uyguladığımız ideal mimari ölçüler.
-
-### Özel Ölçü Kahve Köşesi Hakkında Sıkça Sorulan Sorular (`#ozel-olcu-kahve-kosesi-hakkinda-sikca-sorulan`)
 Evinizin ölçülerine ve zevkinize özel ahşap, lake veya cam kapaklı kahve köşesi modelleri için formu doldurun; mimarlarımız en geç 24 saat içinde detaylı teklif ve 3D tasarım detaylarıyla size dönsün.
 
-### Kahve Köşesi Standart Ölçüleri ve Malzeme Şartnamesi (`#kahve-kosesi-standart-olculeri-ve-malzeme-sar-2`)
+### Özel Ölçü Kahve Köşesi Hakkında Sıkça Sorulan Sorular (`#ozel-olcu-kahve-kosesi-hakkinda-sikca-sorulan`)
 Evinizin ölçülerine özel 3D mimari çizim ve ücretsiz keşif için uzman ekibimizle hemen iletişime geçin.
-
-### Özel Ölçü Kahve Köşesi Hakkında Sıkça Sorulan Sorular (`#ozel-olcu-kahve-kosesi-hakkinda-sikca-sorulan-2`)
-
-### Kahve Köşesi Standart Ölçüleri ve Malzeme Şartnamesi (`#kahve-kosesi-standart-olculeri-ve-malzeme-sar-3`)
-
-### Özel Ölçü Kahve Köşesi Hakkında Sıkça Sorulan Sorular (`#ozel-olcu-kahve-kosesi-hakkinda-sikca-sorulan-3`)
 
 ### KAHVE KÖŞESİ FİYAT TEKLİFİ ALIN (`#kahve-kosesi-fiyat-teklifi-alin`)
 
 ### HAYALİNİZDEKİ KAHVE KÖŞESİNİ BİRLİKTE PROJELENDİRELİM (`#hayalinizdeki-kahve-kosesini-birlikte-projele`)
-
-| Modül / Bölge | İdeal Ölçü Aralığı | Gövde & Kapak Malzemesi | Donanım & Elektrik Detayı |
-| --- | --- | --- | --- |
-| Kompakt Antre / Mutfak Nişi | 70–95 cm Genişlik × 45–52 cm Derinlik | 18 mm E1 Yeşil Marin MDF + İpek Mat Lake | 2 adet topraklı gizli priz, frenli kapsül çekmecesi |
-| Standart Barista Konsolu | 110–150 cm Genişlik × 55–60 cm Derinlik | E1 Marin MDF + Doğal Meşe / Ceviz Kaplama | 3000K dokunmatik sensörlü LED, bardak/fincan askılığı |
-| Tam Boy Kiler & Kahve İstasyonu | 160–240 cm Genişlik × 210–240 cm Yükseklik | E1 Marin MDF + Reflektif Füme Temperli Cam Vitrin | Blum Tandembox tam açılım ray, mini buzdolabı havalandırma menfezi |
-| Tezgah & Üst Dolap Arası Boşluk | 48–58 cm Net Çalışma Yüksekliği | Porselen / Kuvars (Çimstone, Belenco) veya Masif Tabla | Üstten su hazneli espresso makineleri için buhar dirençli alın paneli |
-
-| Modül / Bölge | İdeal Ölçü Aralığı | Gövde & Kapak Malzemesi | Donanım & Elektrik Detayı |
-| --- | --- | --- | --- |
-| Kompakt Antre / Mutfak Nişi | 70–95 cm Genişlik × 45–52 cm Derinlik | 18 mm E1 Yeşil Marin MDF + İpek Mat Lake | 2 adet topraklı gizli priz, frenli kapsül çekmecesi |
-| Standart Barista Konsolu | 110–150 cm Genişlik × 55–60 cm Derinlik | E1 Marin MDF + Doğal Meşe / Ceviz Kaplama | 3000K dokunmatik sensörlü LED, bardak/fincan askılığı |
-| Tam Boy Kiler & Kahve İstasyonu | 160–240 cm Genişlik × 210–240 cm Yükseklik | E1 Marin MDF + Reflektif Füme Temperli Cam Vitrin | Blum Tandembox tam açılım ray, mini buzdolabı havalandırma menfezi |
-| Tezgah & Üst Dolap Arası Boşluk | 48–58 cm Net Çalışma Yüksekliği | Porselen / Kuvars (Çimstone, Belenco) veya Masif Tabla | Üstten su hazneli espresso makineleri için buhar dirençli alın paneli |
 
 | Modül / Bölge | İdeal Ölçü Aralığı | Gövde & Kapak Malzemesi | Donanım & Elektrik Detayı |
 | --- | --- | --- | --- |

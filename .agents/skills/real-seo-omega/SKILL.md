@@ -175,13 +175,24 @@ Bu beceri dosyası, `AGENTS.md` içindeki **100 Atomik Kapının (`G001`–`G100
        fetchpriority="high" decoding="sync"
        alt="[Görselin neyi gösterdiğini anlatan 10-125 karakterlik doğal açıklama]" />
 
-  <!-- G054-G055: SERP Sitelinks ve AI Derin Pasaj Çapaları için İçindekiler -->
-  <nav aria-label="İçindekiler" data-toc="true">
-    <strong>Bu Sayfada:</strong>
-    <a href="#teknik-kapasite">Teknik Kapasite</a> ·
-    <a href="#maliyet-karsilastirmasi">Maliyet ve Standart Karşılaştırması</a> ·
-    <a href="#uygulama-sureci">Uygulama ve Teslim Süreci</a>
-  </nav>
+  <!-- G046: Alt Sayfa Breadcrumb — Her zaman sayfanın .container / max-width sarıcısı içinde konumlandırılır -->
+  <div class="container">
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <a href="/">Ana Sayfa</a> › <span>[Sayfa Başlığı]</span>
+    </nav>
+  </div>
+
+  <!-- G054-G055: SERP Sitelinks ve AI Derin Pasaj Çapaları için İçindekiler
+       KURALLAR: Kaba #f8fafc beyaz kutu veya [:42] kelime ortası kırpma YASAKTIR!
+       Sayfa tasarımına uyumlu ince hap/pill veya yatay bağlantı şeridi olarak .container içinde yer alır. -->
+  <div class="container">
+    <nav aria-label="İçindekiler" data-toc="true" class="inline-pill-toc">
+      <strong>Bu Sayfada:</strong>
+      <a href="#teknik-kapasite">Teknik Kapasite</a> ·
+      <a href="#maliyet-karsilastirmasi">Maliyet ve Standart Karşılaştırması</a> ·
+      <a href="#uygulama-sureci">Uygulama ve Teslim Süreci</a>
+    </nav>
+  </div>
 
   <!-- G053-G059: En az 3 adet id'li H2 + Atomik Pasaj + Sayısal Kanıt + Tablo + Otorite Referansı -->
   <section>
