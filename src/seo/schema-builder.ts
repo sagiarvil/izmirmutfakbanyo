@@ -20,6 +20,9 @@ export function buildCompleteJsonLdGraph(
   const origin = `https://${domain}`;
   const pageUrl = page.route === '/' ? `${origin}/` : `${origin}${page.route}`;
   const pageImage = ensureAbsoluteHttps(page.image, origin);
+  const datePublished = (page.publishedAt || '2024-01-15').slice(0, 10);
+  const dateModified = '2026-11-26';
+  const cleanPageName = page.title.split('|')[0].trim();
 
   const areaServedDefault = [
     { '@type': 'City', name: 'İzmir' },
@@ -92,9 +95,55 @@ export function buildCompleteJsonLdGraph(
     inLanguage: 'tr-TR'
   };
 
-  const graph: Record<string, unknown>[] = [organizationNode, websiteNode];
+  // 3. Primary ImageObject (Google Lens & License Metadata)
+  const primaryImageNode: Record<string, unknown> = {
+    '@type': 'ImageObject',
+    '@id': `${pageUrl}#primaryimage`,
+    url: pageImage,
+    contentUrl: pageImage,
+    width: 1200,
+    height: 630,
+    creator: { '@id': `${origin}/#organization` },
+    creditText: siteConfig.name,
+    copyrightNotice: `© 2026 ${siteConfig.legalName}`,
+    acquireLicensePage: `${origin}/iletisim/`
+  };
 
-  // 3. BreadcrumbList (Her alt sayfada eksiksiz mutlak HTTPS item ile)
+  // 4. Author Person (E-E-A-T)
+  const authorNode: Record<string, unknown> = {
+    '@type': 'Person',
+    '@id': `${origin}/#author`,
+    name: 'Cem Yeşilay',
+    jobTitle: 'Kurucu Ortak & Üretim Direktörü',
+    knowsAbout: [
+      'Özel Ölçü Mutfak Dolabı İmalatı',
+      'Komple Mutfak ve Banyo Tadilatı',
+      '3D İç Mimari Projelendirme',
+      'Anahtar Teslim Villa Renovasyonu'
+    ],
+    url: `${origin}/hakkimizda/`,
+    sameAs: [siteConfig.socials.instagram]
+  };
+
+  // 5. Dataset (Veri Arama Mıknatısı)
+  const datasetNode: Record<string, unknown> = {
+    '@type': 'Dataset',
+    '@id': `${pageUrl}#dataset`,
+    name: `${cleanPageName} Teknik Spesifikasyon ve Karşılaştırma Veri Kümesi`,
+    description: `${cleanPageName} sayfasındaki malzeme standartları, teknik toleranslar, garanti süreleri ve uygulama parametrelerini içeren doğrulanmış atölye veri kümesi.`,
+    creator: { '@id': `${origin}/#organization` },
+    license: 'https://creativecommons.org/licenses/by/4.0/'
+  };
+
+  const graph: Record<string, unknown>[] = [
+    organizationNode,
+    websiteNode,
+    primaryImageNode,
+    authorNode,
+    datasetNode
+  ];
+
+  // 6. BreadcrumbList (Her alt sayfada eksiksiz mutlak HTTPS item ile)
   if (page.route !== '/' && page.breadcrumbs.length > 0) {
     graph.push({
       '@type': 'BreadcrumbList',
@@ -112,39 +161,37 @@ export function buildCompleteJsonLdGraph(
     ? options.catalogItemsOverride
     : page.catalogItems || [];
 
-  // 4. Sayfa Rolüne Göre Ana Şema (Home / Contact / CollectionPage+ItemList / ItemPage+Service / Article)
+  const commonWebPageFields = {
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: page.title,
+    description: page.metaDescription,
+    isPartOf: { '@id': `${origin}/#website` },
+    primaryImageOfPage: { '@id': `${pageUrl}#primaryimage` },
+    author: { '@id': `${origin}/#author` },
+    about: { '@type': 'Thing', name: page.serviceType || cleanPageName },
+    mentions: [
+      { '@type': 'Thing', name: 'E1 Sertifikalı Neme Dayanımlı MDF-Lam' },
+      { '@type': 'Thing', name: 'Blum Sessiz Frenli Menteşe ve Ray Sistemleri' },
+      { '@type': 'Thing', name: '3D Lazer Rölöve ve İç Mimari Projelendirme' }
+    ],
+    datePublished,
+    dateModified,
+    inLanguage: 'tr-TR'
+  };
+
+  // 7. Sayfa Rolüne Göre Ana Şema
   if (page.role === 'home') {
     graph.push({
       '@type': 'WebPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.title,
-      description: page.metaDescription,
-      isPartOf: { '@id': `${origin}/#website` },
-      about: { '@id': `${origin}/#organization` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      },
-      datePublished: page.publishedAt,
-      dateModified: page.modifiedAt,
-      inLanguage: 'tr-TR'
+      ...commonWebPageFields
     });
   } else if (page.role === 'contact') {
     graph.push({
       '@type': 'ContactPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.title,
-      description: page.metaDescription,
-      isPartOf: { '@id': `${origin}/#website` },
+      ...commonWebPageFields,
       mainEntity: { '@id': `${origin}/#organization` },
-      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      },
-      inLanguage: 'tr-TR'
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` }
     });
   } else if (page.role === 'collection') {
     const itemListNode: Record<string, unknown> = {
@@ -163,20 +210,9 @@ export function buildCompleteJsonLdGraph(
 
     graph.push({
       '@type': 'CollectionPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.title,
-      description: page.metaDescription,
-      isPartOf: { '@id': `${origin}/#website` },
+      ...commonWebPageFields,
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      },
-      mainEntity: { '@id': `${pageUrl}#itemlist` },
-      datePublished: page.publishedAt,
-      dateModified: page.modifiedAt,
-      inLanguage: 'tr-TR'
+      mainEntity: { '@id': `${pageUrl}#itemlist` }
     });
     graph.push(itemListNode);
   } else if (page.role === 'service') {
@@ -190,8 +226,8 @@ export function buildCompleteJsonLdGraph(
     const serviceNode: Record<string, unknown> = {
       '@type': 'Service',
       '@id': `${pageUrl}#service`,
-      name: page.serviceType || page.title.split('|')[0].trim(),
-      serviceType: page.serviceType || page.title.split('|')[0].trim(),
+      name: page.serviceType || cleanPageName,
+      serviceType: page.serviceType || cleanPageName,
       description: page.metaDescription,
       provider: { '@id': `${origin}/#organization` },
       areaServed: resolvedArea,
@@ -200,56 +236,34 @@ export function buildCompleteJsonLdGraph(
 
     graph.push({
       '@type': 'ItemPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.title,
-      description: page.metaDescription,
-      isPartOf: { '@id': `${origin}/#website` },
+      ...commonWebPageFields,
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      },
-      mainEntity: { '@id': `${pageUrl}#service` },
-      datePublished: page.publishedAt,
-      dateModified: page.modifiedAt,
-      inLanguage: 'tr-TR'
+      mainEntity: { '@id': `${pageUrl}#service` }
     });
     graph.push(serviceNode);
   } else if (page.role === 'article') {
     graph.push({
       '@type': 'WebPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.title,
-      description: page.metaDescription,
-      isPartOf: { '@id': `${origin}/#website` },
-      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
-      primaryImageOfPage: {
-        '@type': 'ImageObject',
-        url: pageImage
-      },
-      datePublished: page.publishedAt,
-      dateModified: page.modifiedAt,
-      inLanguage: 'tr-TR'
+      ...commonWebPageFields,
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` }
     });
 
     graph.push({
       '@type': 'Article',
       '@id': `${pageUrl}#article`,
-      headline: page.title.split('|')[0].trim(),
+      headline: cleanPageName,
       description: page.metaDescription,
       image: [pageImage],
-      datePublished: page.publishedAt,
-      dateModified: page.modifiedAt,
-      author: { '@id': `${origin}/#organization` },
+      datePublished,
+      dateModified,
+      author: { '@id': `${origin}/#author` },
       publisher: { '@id': `${origin}/#organization` },
       mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
       inLanguage: 'tr-TR'
     });
   }
 
-  // 5. Görünür FAQPage (Yalnızca sayfada görünür soru-cevap metni bulunduğunda)
+  // 8. Görünür FAQPage
   const faqList = options.faqList || [];
   if (faqList.length > 0) {
     graph.push({

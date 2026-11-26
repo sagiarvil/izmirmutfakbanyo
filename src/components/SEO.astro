@@ -17,6 +17,7 @@ export interface Props {
   serviceName?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  heroPreload?: string;
 }
 
 const {
@@ -31,7 +32,8 @@ const {
   catalogItems = [],
   serviceName,
   publishedTime = "2024-01-15T09:00:00+03:00",
-  modifiedTime = "2026-11-14T12:00:00+03:00"
+  modifiedTime = "2026-11-26T12:00:00+03:00",
+  heroPreload
 } = Astro.props;
 
 const siteUrl = siteConfig.siteUrl.replace(/\/$/, "");
@@ -89,12 +91,17 @@ if (!noindex) {
     catalogItemsOverride: catalogItems.length > 0 ? catalogItems : undefined
   });
 }
+const mdAlternateUrl = `${siteUrl}${normalizedRoute === "/" ? "/index.md" : `${normalizedRoute}index.md`}`;
+const preloadHref = heroPreload || resolvedImageRel;
 ---
 
 <title>{resolvedTitle}</title>
 <meta name="description" content={resolvedDescription} />
 <link rel="canonical" href={canonicalUrl} />
 <meta name="robots" content={robotsContent} />
+{!noindex && <link rel="alternate" type="text/markdown" href={mdAlternateUrl} />}
+{!noindex && <link rel="alternate" type="application/atom+xml" title="Yeşilay Mutfak Güncellemeler" href={`${siteUrl}/feed.xml`} />}
+{!noindex && preloadHref && <link rel="preload" as="image" href={preloadHref} fetchpriority="high" />}
 
 {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
 
@@ -119,6 +126,3 @@ if (!noindex) {
 <meta name="geo.placename" content="Buca, İzmir" />
 <meta name="geo.position" content={`${siteConfig.geo.latitude};${siteConfig.geo.longitude}`} />
 <meta name="ICBM" content={`${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`} />
-
-<!-- AI Arama Dizini -->
-<link rel="alternate" type="text/markdown" href="/llms.txt" title="Yeşilay Mutfak LLMs Dizini" />

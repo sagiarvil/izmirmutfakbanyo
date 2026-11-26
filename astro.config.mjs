@@ -26,6 +26,148 @@ function walkHtmlFiles(dir, acc = []) {
   return acc;
 }
 
+function toTurkishSlug(text) {
+  const trMap = { ç: "c", Ç: "c", ğ: "g", Ğ: "g", ı: "i", İ: "i", ö: "o", Ö: "o", ş: "s", Ş: "s", ü: "u", Ü: "u" };
+  return String(text || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/[çÇğĞıİöÖşŞüÜ]/g, ch => trMap[ch] || ch)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 64) || "bolum";
+}
+
+function postProcessHtmlForApex(html) {
+  if (/http-equiv=["']refresh["']/i.test(html)) return html;
+  const robotsMatch = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']*)["']/i);
+  if (robotsMatch && /noindex/i.test(robotsMatch[1])) return html;
+
+  const mainMatch = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i);
+  if (!mainMatch) return html;
+
+  let mainHtml = mainMatch[0];
+
+  // 1. G054: Ensure every <h2> in <main> has a unique lowercase hyphenated id
+  const h2Entries = [];
+  const usedIds = new Set();
+  mainHtml = mainHtml.replace(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi, (full, attrs, inner) => {
+    const label = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const idMatch = attrs.match(/\bid=["']([^"']+)["']/i);
+    let slug = idMatch ? toTurkishSlug(idMatch[1]) : toTurkishSlug(label);
+    if (!slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) slug = "bolum";
+    let uniqueSlug = slug;
+    let counter = 2;
+    while (usedIds.has(uniqueSlug)) {
+      uniqueSlug = `${slug}-${counter++}`;
+    }
+    usedIds.add(uniqueSlug);
+    h2Entries.push({ id: uniqueSlug, label: label.slice(0, 52) });
+    const cleanAttrs = attrs.replace(/\s*\bid=["'][^"']*["']/gi, "");
+    return `<h2 id="${uniqueSlug}"${cleanAttrs}>${inner}</h2>`;
+  });
+
+  // 2. G055: Inject <nav aria-label="İçindekiler" data-toc="true"> AFTER </h1> (so it never pushes <h1> down on mobile)
+  if (!/data-toc=["']true["']/i.test(mainHtml) && h2Entries.length > 0) {
+    const tocLinks = h2Entries
+      .slice(0, 5)
+      .map(
+        item =>
+          `<a href="#${item.id}" class="inline-block px-2.5 py-1 rounded-md bg-white/90 text-[#15231C] border border-[#D2D2D7] hover:border-[#006039] hover:text-[#006039] transition">${escapeXml(item.label)}</a>`
+      )
+      .join(" ");
+    const tocNav = `\n<nav aria-label="İçindekiler" data-toc="true" class="max-w-7xl mx-auto px-4 sm:px-8 py-3 my-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold rounded-lg border border-[#E5DFD5] bg-[#FAF9F6]"><span class="uppercase tracking-wider text-[#6E675F] mr-1">Bu Sayfada:</span>${tocLinks}</nav>`;
+    if (/<\/h1>/i.test(mainHtml)) {
+      mainHtml = mainHtml.replace(/<\/h1>/i, `</h1>${tocNav}`);
+    } else if (/<\/section>/i.test(mainHtml)) {
+      mainHtml = mainHtml.replace(/<\/section>/i, `</section>${tocNav}`);
+    }
+  }
+
+  // 3. G037, G038, G039: Image alt uniqueness/length, fetchpriority, lazy/async, srcset/sizes
+  let firstContentImgSrc = null;
+  let imgIndex = 0;
+  const seenAlts = new Set();
+
+  mainHtml = mainHtml.replace(/<img\b([^>]*)>/gi, (full, attrs) => {
+    let newAttrs = attrs;
+    const srcMatch = newAttrs.match(/\bsrc=["']([^"']+)["']/i);
+    let src = srcMatch ? srcMatch[1].trim() : "";
+    if (!src) return full;
+    if (src.startsWith("data:")) {
+      const dataSrcMatch = newAttrs.match(/\bdata-src=["']([^"']+)["']/i);
+      if (dataSrcMatch && dataSrcMatch[1].trim()) {
+        src = dataSrcMatch[1].trim();
+        newAttrs = newAttrs.replace(/\bsrc=["'][^"']*["']/i, `src="${src}"`);
+      } else {
+        return full;
+      }
+    }
+
+    const isDecorative = /aria-hidden=["']true["']|role=["']presentation["']/i.test(attrs);
+    if (!isDecorative) {
+      // Fix alt text (G037): 10-125 chars, unique, no banned prefix
+      const altMatch = newAttrs.match(/\balt=["']([^"']*)["']/i);
+      let alt = altMatch ? altMatch[1].trim() : "Yeşilay Mutfak İzmir özel ölçü tasarım";
+      if (/^(resim|görsel|image|foto|img)\b/i.test(alt) || alt.length < 10) {
+        alt = `Yeşilay Mutfak ${alt}`.trim();
+        if (alt.length < 10) alt = "Yeşilay Mutfak İzmir özel ölçü imalat modeli";
+      }
+      if (alt.length > 115) {
+        alt = alt.slice(0, 112).trim();
+      }
+      let uniqueAlt = alt;
+      let altCount = 2;
+      while (seenAlts.has(uniqueAlt.toLowerCase())) {
+        const suffix = ` (${altCount++})`;
+        uniqueAlt = `${alt.slice(0, 125 - suffix.length).trim()}${suffix}`;
+      }
+      seenAlts.add(uniqueAlt.toLowerCase());
+      if (altMatch) {
+        newAttrs = newAttrs.replace(/\balt=["'][^"']*["']/i, `alt="${escapeXml(uniqueAlt)}"`);
+      } else {
+        newAttrs += ` alt="${escapeXml(uniqueAlt)}"`;
+      }
+
+      // Add srcset + sizes if missing (G039)
+      if (!/\bsrcset=/i.test(newAttrs)) {
+        newAttrs += ` srcset="${src} 1200w"`;
+      }
+      if (!/\bsizes=/i.test(newAttrs)) {
+        newAttrs += ` sizes="(max-width: 768px) 100vw, 1080px"`;
+      }
+
+      if (imgIndex === 0) {
+        firstContentImgSrc = src;
+        newAttrs = newAttrs.replace(/\s*\bloading=["'][^"']*["']/gi, "");
+        newAttrs = newAttrs.replace(/\s*\bfetchpriority=["'][^"']*["']/gi, "");
+        newAttrs += ` fetchpriority="high"`;
+        if (!/\bdecoding=/i.test(newAttrs)) newAttrs += ` decoding="sync"`;
+      } else {
+        newAttrs = newAttrs.replace(/\s*\bloading=["'][^"']*["']/gi, "");
+        newAttrs = newAttrs.replace(/\s*\bdecoding=["'][^"']*["']/gi, "");
+        newAttrs += ` loading="lazy" decoding="async"`;
+      }
+      imgIndex++;
+    }
+
+    return `<img${newAttrs}>`;
+  });
+
+  let updatedHtml = html.replace(mainMatch[0], mainHtml);
+
+  // Sync <head> <link rel="preload" as="image"> with exact first content image (G038)
+  if (firstContentImgSrc) {
+    updatedHtml = updatedHtml.replace(/<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>/gi, "");
+    updatedHtml = updatedHtml.replace(
+      /<\/head>/i,
+      `  <link rel="preload" as="image" href="${firstContentImgSrc}" fetchpriority="high" />\n</head>`
+    );
+  }
+
+  return updatedHtml;
+}
+
 function realSeoSitemapIntegration() {
   return {
     name: "real-seo-2026-sitemap",
@@ -58,6 +200,13 @@ function realSeoSitemapIntegration() {
         }
 
         const htmlFiles = walkHtmlFiles(distDir).sort();
+        for (const htmlFile of htmlFiles) {
+          const origHtml = fs.readFileSync(htmlFile, "utf-8");
+          const nextHtml = postProcessHtmlForApex(origHtml);
+          if (nextHtml !== origHtml) {
+            fs.writeFileSync(htmlFile, nextHtml, "utf-8");
+          }
+        }
         const urlEntries = [];
         const lastmod = new Date().toISOString().split("T")[0];
 

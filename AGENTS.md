@@ -1,94 +1,75 @@
-# AGENTS.md — REAL-SEO-2026 (APEX v4.0) BAĞLAYICI OTONOM KURULUM, GERÇEK TARAYICI DENETİMİ, YAMYAMLAŞMA ÖNLEME VE GSC GERİ BESLEME SÖZLEŞMESİ
+# AGENTS.md — REAL-SEO-2026 (APEX v6.0 ABSOLUTE) 100 KAPILI (`100/100`) OTONOM YAZILIM MİMARİSİ, GELİR (BOFU), PASİF BACKLİNK, MULTİMODAL GÖRSEL VE YAPAY ZEKA TAVSİYE SÖZLEŞMESİ
 
-* **Belge Statüsü:** Bağlayıcı Teknik Şartname ve Otonom Yürütme Sözleşmesi (`Binding Engineering Contract — v4.0`)
-* **Hedef Konum:** Proje Kök Dizini (`/AGENTS.md` — [Cursor Kural Sistemi](https://cursor.com/docs/rules), [Claude Code Bellek Mimarisi](https://docs.anthropic.com/en/docs/claude-code/memory), GitHub Copilot, Codex ve lokal LLM ajanları tarafından oturum başlangıcında otomatik yüklenir)
-* **Eşlik Eden Denetim Motoru:** `/seo_enforcer.py` (25 kapılı 100/100 deterministik puanlama, Headless Chromium gerçek CLS/INP/taşma ölçümü, TF-IDF yamyamlaşma analizi, [Google Search Console API](https://developers.google.com/webmaster-tools/v1/searchanalytics/query) optimizasyon reçetesi ve Googlebot sunucu log denetçisi)
-* **Zorunlu Kabul Eşiği (SLA):** **`SKOR = 100 / 100` (`25 / 25 Kapı Geçişi — 0 İhlal`)**
+* **Belge Statüsü:** Kesin Bağlayıcı Üst Düzey Yazılım ve Büyüme Mühendisliği Sözleşmesi (`Binding Principal Engineering Mandate — v6.0 ABSOLUTE`)
+* **Otonom Ajan Uyumluluğu:** [Google Antigravity ("Gravity" IDE / App / `agy` CLI)](https://antigravity.google/docs/rules/) (`AGENTS.md`, `GEMINI.md`, `.agents/rules/`, `.agents/skills/`), [Cursor](https://cursor.com/docs/rules), [Claude Code](https://docs.anthropic.com/en/docs/claude-code/memory) ve GitHub Copilot tarafından oturum açılışında otomatik okunur.
+* **Denetim ve Üretim Motoru:** `/seo_enforcer.py` (**100 Atomik Kapı × 1 Puan = `100 / 100`**, sıfır dış paket bağımlılığı, her ihlalde doğrudan kod düzeyinde `[GRAVITY OTONOM ONARIM REÇETESİ]` çıktısı, otomatik `.md` ikizi + `/llms.txt` + `/llms-full.txt` + `/feed.xml` + `/sitemap.xml` + `/robots.txt` + `/404.html` + `security.txt` üretimi ve gerçek Headless Chromium render testi)
+* **Zorunlu Kabul Eşiği (SLA):** **`SKOR = 100 / 100` (`100 / 100 Atomik Kapı Geçişi — 0 İhlal`) — `99 / 100` DAHİ KESİNLİKLE REDDEDİLİR (`EXIT CODE 1`)**
 
-## MADDE 1 — SÖZLEŞMENİN KONUSU VE KESİN BAĞLAYICILIK (HARD-STOP KURALI)
+## BÖLÜM 1 — GRAVITY (ANTIGRAVITY) VE KODLAMA AJANLARI İÇİN KESİN YÜRÜTME PROTOKOLÜ
 
-1. Bu dosya proje kök dizininde bulunduğu andan itibaren projede çalışan tüm yapay zeka kodlama ajanları ve geliştiriciler için **tavsiye değil, uyulması zorunlu mühendislik sözleşmesidir**.
-2. Yeni sayfa üretimi, mevcut arayüz/kod yenilemesi (refactoring), bileşen eklenmesi veya yayına hazırlık işlemlerinin tamamında bu şartnamedeki hükümler doğrudan kaynak kodlara entegre edilir.
-3. **Teslim Yasağı:** `python3 seo_enforcer.py --audit` komutu gerçek tarayıcı (Headless Chromium) denetimi dahil olmak üzere **`SKOR: 100/100 — SÖZLEŞME KABUL EDİLDİ`** çıktısı üretmeden ve çıkış kodu `0` dönmeden hiçbir görev "tamamlandı" olarak raporlanamaz. Skor 100'ün altındaysa ajan, kullanıcıdan ek komut beklemeden hataları kaynak kodda düzeltip denetimi tekrar çalıştırmakla yükümlüdür.
+Bu depoda çalışan yapay zeka ajanı (başta **Google Antigravity / Gravity** olmak üzere tüm otonom ajanlar) aşağıdaki emir komuta zincirine harfiyen uyar:
 
-## MADDE 2 — SIFIR HALÜSİNASYON VE TEK GERÇEK VERİ KAYNAĞI (`seo.config.json`)
-
-1. [Google Web Araması Spam Politikaları](https://developers.google.com/search/docs/essentials/spam-policies) ve [İnceleme Snippet'i Kuralları](https://developers.google.com/search/docs/appearance/structured-data/review-snippet) uyarınca kodlama ajanı; resmi ticaret unvanı, MERSİS/vergi numarası, fiziksel adres, `+90` E.164 telefon numarası, coğrafi koordinat, ürün fiyatı, stok durumu, kurucu özgeçmişi, müşteri yorumu (`Review`), yıldız puanı (`aggregateRating`) veya Wikidata QID verisini **kesinlikle uyduramaz**.
-2. Proje kökünde `seo.config.json` bulunmuyorsa ajan ilk işlem olarak `python3 seo_enforcer.py --init` komutunu çalıştırır ve mevcut kod tabanında doğrulanmış şirket/iletişim verilerini `seo.config.json` içine işler.
-3. Kod tabanında karşılığı bulunmayan ve `REQUIRED_REAL_VALUE` olarak kalan zorunlu ticari alanlar varsa ajan tahminde bulunmaz; eksik alanları tek bir net listede kullanıcıdan talep eder.
-
-## MADDE 3 — MİMARİ OTOMATİK KEŞİF VE MERKEZİ KOD ENTEGRASYON HARİTASI
-
-Ajan, proje kök dizinini tarayarak aşağıdaki üç mimariden hangisinin kullanıldığını otomatik tespit eder ve kuralları sayfalara yama yapmak yerine **merkezi şablon mimarisine** kurar:
-
-| Tespit Edilen Mimari | Dosya İmzası | Zorunlu Kod Entegrasyon Noktaları |
-| :--- | :--- | :--- |
-| **Statik HTML5 / CSS3 / Vanilla JS** | Kök dizinde `index.html`, alt dizinlerde `*/index.html` | Tüm indekslenebilir `.html` dosyalarının `<head>`, `@graph` JSON-LD, ilk ekran (hero), Cevap Kapsülü, mikro-araç, bağlamsal CTA ve `speculationrules` blokları doğrudan güncellenir; kök dizinde `/robots.txt`, `/sitemap.xml`, `/llms.txt` ve `/_headers` oluşturulur. |
-| **Astro SSG** | `astro.config.mjs` veya `astro.config.ts` | `src/components/SeoHead.astro` ve `src/utils/schemaGraph.ts` oluşturulur; `BaseLayout.astro` tüm sayfalardan tip güvenli `title`, `description`, `canonicalPath`, `ogImage`, `pageType`, `schemaEntity` ve `faqItems` prop'larını zorunlu alır. Build çıktısı (`./dist`) üzerinden denetlenir. |
-| **Next.js (App Router)** | `next.config.js` / `next.config.mjs` + `app/` veya `src/app/` | `src/lib/seoContract.ts` üzerinden merkezi `buildMetadata()` (`max-image-preview: large`, `max-snippet: -1`, self-canonical, raster OG), `SchemaGraph.tsx` JSON-LD bileşeni, `app/robots.ts`, `app/sitemap.ts`, `public/llms.txt` ve güvenlik/önbellek başlıkları kurulur. |
-
-## MADDE 4 — KESİN YASAKLAR (CEZA VE FİLTRE KALKANI)
-
-1. **Çapraz Domain Footer Link Ağı (PBN Yasağı):** Farklı sektörlerdeki kardeş sitelere `<footer>`, `<aside>` veya site geneli şablonlardan dofollow bağlantı verilemez (`G20`). Zorunlu holding/iş ortaklığı bağlantıları yalnızca ilgili tekil sayfada `rel="noopener"` veya ticari sponsorluksa `rel="sponsored noopener"` taşır.
-2. **Fiyatsız `@type: "Product"` Yasağı:** Sayfada gerçek sayısal satış fiyatı (`offers.price` veya `offers.lowPrice` + `priceCurrency`) görünür değilse `@type: "Product"` basılamaz (`G12`, [Google Ürün Yapısal Verisi](https://developers.google.com/search/docs/appearance/structured-data/product)). Teklif usulü B2B ve özel üretim sayfalarda `ItemPage` + `mainEntity: Service` kullanılır.
-3. **Kendine Hizmet Eden Yıldız Puanı ve Gizli SSS Yasağı:** `Organization` veya `LocalBusiness` düğümlerine kendi sitenizde derlenmiş `aggregateRating` eklenemez (`G12`). Sayfa gövdesinde kullanıcının gözle göremediği hiçbir soru-cevap `FAQPage` şemasına yazılamaz (`G13`).
-4. **SVG Sosyal/Şema Görseli Yasağı:** `og:image`, `twitter:image`, `sitemap.xml` görsel düğümleri ve JSON-LD `image`/`logo` alanlarında `.svg` uzantılı dosya kullanılamaz (`G09`, `G18`); tamamı gerçek raster (`.webp`, `.jpg`, `.png`, `.avif`) olmak zorundadır.
-5. **Sığ Kopya Sayfa ve Anlamsal Yamyamlaşma Yasağı:** İki farklı alt sayfa aynı arama niyetini hedefleyerek birbirinin sırasını baltalayamaz (`G21` — başlık, H1, URL ve Cevap Kapsülü ağırlıklı TF-IDF kosinüs benzerliği `0.78` altında kalmalıdır).
-
-## MADDE 5 — `<head>`, ARAMA NİYETİ VE SERP ÖNİZLEME SÖZLEŞMESİ
-
-İndekslenen (`index, follow`) her sayfa aşağıdaki kuralları %100 sağlar:
-
-1. **`<title>` Mühendisliği (`G04`, 30–70 Karakter):** Asla iç stok/model koduyla (`MOD-04`, `SKU-12`) başlamaz; müşterinin aradığı ana ticari terimle başlar ve tüm sitede benzersizdir.
-2. **Tekil `<h1>` Zorunluluğu (`G05`):** Her sayfada arama niyetini doğrudan yanıtlayan **tam 1 adet** dolu ve benzersiz `<h1>` etiketi bulunur.
-3. **Tıklama Odaklı `meta description` (`G06`, 85–160 Karakter):** Cümlesi üç noktayla (`...` veya `…`) kesilmeyen, somut teknik/ticari fark ve eylem çağrısı içeren benzersiz açıklama yazılır.
-4. **Tam Genişlikli SERP ve AI Önizleme Direktifi (`G07`):** [Google Robots Meta Etiketi Spesifikasyonu](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) gereği her indekslenen sayfada şu etiket zorunludur:
-   ```html
-   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+1. **Önce Şablonu ve Beceriyi Yükle:** Kodu değiştirmeye başlamadan önce kök dizindeki `seo.config.json` dosyasını ve `.agents/skills/real-seo-omega/SKILL.md` içindeki hazır bileşen şablonlarını incele. `seo.config.json` yoksa ilk komut olarak `python3 seo_enforcer.py --init --domain https://hedefdomain.com` çalıştır.
+2. **Sıfır Halüsinasyon Yasası (`G003`–`G005`):** [Google Spam Politikaları](https://developers.google.com/search/docs/essentials/spam-policies) uyarınca resmi ticaret unvanı, vergi/MERSİS numarası, açık adres, `+90` E.164 telefon, coğrafi koordinat, gerçek satış fiyatı, stok, müşteri yorumu (`Review`), yıldız puanı (`aggregateRating`) veya uzman özgeçmişi **kesinlikle uydurulamaz**. Proje dosyalarında kanıtı varsa `seo.config.json` içine işle; yoksa uydurma yapmadan eksik ticari verileri tek bir net listede kullanıcıdan iste.
+3. **Yama Değil Merkezi Mimari Kur:** Tek tek sayfalara elle yama yapmak yasaktır. Projenin mimarisini tespit et ve aşağıdaki merkezi katmanları kur:
+   * **Statik HTML5 / Vanilla:** Ortak yapı taşlarını tüm indekslenebilir `.html` sayfalarına deterministik olarak uygula.
+   * **Astro SSG / SSR (`astro.config.*`):** `src/layouts/BaseLayout.astro`, `src/components/SeoHead.astro`, `src/utils/schemaGraph.ts`, `src/components/TocAndCapsule.astro`, `src/components/InteractiveMagnet.astro` bileşenlerini kur; derleme sonrası `./dist` dizinini denetle.
+   * **Next.js App Router (`next.config.*`):** `src/lib/seoContract.ts` (`generateMetadata`), `src/components/SchemaGraph.tsx`, Server Component içerik mimarisi (`>= %85` SSR metin paritesi — `G070`), `next.config` Edge başlıkları ve derleme sonrası `--build-ai-pack` boru hattını kur.
+4. **Teslim Yasağı (`HARD-STOP`):** Her geliştirme sonunda sırasıyla:
+   ```bash
+   python3 seo_enforcer.py --build-ai-pack <build_dizini>
+   python3 seo_enforcer.py --audit <build_dizini> <https://domain.com>
    ```
-5. **Kanonik URL ve Raster Open Graph (`G08`, `G09`):** Her sayfa kendi nihai HTTPS adresine (`https://domain.com/slug/`) tam eşleşen `<link rel="canonical">` ve `1200x630` raster `og:image` + `twitter:image` tanımlar. Çok dilli ihracat sitelerinde çift yönlü `hreflang` + `x-default` zorunludur.
+   komutlarını çalıştır. Çıktıda **`SKOR: 100/100 — ABSOLUTE SÖZLEŞMESİ KABUL EDİLDİ (100/100 KAPI)`** görülmeden ve çıkış kodu `0` dönmeden iş kesinlikle teslim edilemez (`99/100` dahi başarısızdır). Başarısız olan her kapının altındaki `[ÇÖZÜM]` satırını uygula ve tekrar `--audit` çalıştır.
 
-## MADDE 6 — BAĞLANTILI VARLIK GRAFI (`@graph` + `@id` JSON-LD SÖZLEŞMESİ)
+## BÖLÜM 2 — 10 MODÜL × 10 ATOMİK KAPI = `100 / 100` MÜHENDİSLİK ŞARTNAMESİ
 
-Sayfadaki tüm yapısal veriler tek bir `<script type="application/ld+json">` içinde `@graph` dizisi olarak kurgulanır (`G10`) ve kalıcı `@id` URI'leriyle birbirine bağlanır:
+### MODÜL 1 (`G001`–`G010`) — Kod Hijyeni, Sıfır Halüsinasyon ve Semantik DOM İskeleti
+* **`G001`–`G002`:** Üretim dizininde `.bak`, `.old`, `.tmp`, `test.html`, `copy.html` bulunamaz; tüm dosyalar BOM'suz saf `UTF-8` ile kodlanır.
+* **`G003`–`G005`:** `seo.config.json` geçerli JSON olmalı, içinde `REQUIRED_REAL_VALUE` kalmamalı, E.164 telefon (`+90...`), e-posta, adres ve `coreTopicKeywords` dolu olmalıdır.
+* **`G006`–`G009`:** Her sayfada `<!DOCTYPE html>`, hedef dille eşleşen `<html lang="tr">`, `<meta charset="utf-8">`, zoom kilidi (`user-scalable=no` / `maximum-scale=1`) içermeyen `<meta name="viewport" content="width=device-width, initial-scale=1">` ve semantik `<header>`/`<nav>`, `<main>`, `<footer>` ayrımı zorunludur.
+* **`G010` (`404.html` Gelir Kurtarma Kalkanı):** Kök dizinde `noindex, follow` direktifli, kırık dış linklerden gelen ziyaretçiyi ana BOFU para sayfalarına ve hızlı teklif hattına yönlendiren özel `/404.html` bulunur (`--build-ai-pack` eksikse temel şablonu üretir).
 
-1. **Zorunlu Çekirdek Düğümler:** `#organization` (sektörel `LocalBusiness` alt tipi), `#website`, `#webpage` ve alt sayfalarda her `ListItem` öğesinde mutlak `https://` `"item"` URL'si dolu `#breadcrumb` (`G11`).
-2. **Sayfa Tipine Göre Zorunlu Ana Varlık:** Fiyatlı e-ticarette [Merchant Listing](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing) + [ProductGroup](https://developers.google.com/search/docs/appearance/structured-data/product-variants) + [MerchantReturnPolicy](https://developers.google.com/search/docs/appearance/structured-data/return-policy) + [ShippingService](https://developers.google.com/search/docs/appearance/structured-data/shipping-policy); teklif usulü B2B'de `ItemPage` + `Service`; hesaplama araçlarında `WebApplication` / `SoftwareApplication`; uzmanlık içeriklerinde [E-E-A-T](https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t) uyumlu `Article` + `ProfilePage` bağlantılı `Person` + editoryal incelemelerde görünür metinle eşleşen [positiveNotes / negativeNotes](https://developers.google.com/search/docs/appearance/structured-data/product-snippet).
+### MODÜL 2 (`G011`–`G020`) — URL Mimarisi, İç Link Lazeri (`onsiteProminence`) ve `SpamRank` Kalkanı
+* **`G011`–`G013`:** Tüm URL yolları küçük harf ASCII (`a-z`, `0-9`) ve tire (`-`) kullanır; Türkçe karakter, büyük harf, alt çizgi (`_`), `?` parametresi ve `3` seviyeyi aşan klasör derinliği yasaktır.
+* **`G014`–`G016` (Sıfır İç 301 Kaybı):** Hiçbir dahili `<a href>` veya statik kaynak (`img`, `css`, `js`, `source`) kırık olamaz. [Google API sızıntısındaki `onsiteProminence` ("Lazer Olarak Linkler")](https://wise-relations.com/seo/google-api-leak/) gücünü %100 korumak için dahili klasör linkleri kanonik son eğik çizgiyle (`/hizmet/` — `/hizmet` değil) birebir eşleşmek zorundadır (`G016`).
+* **`G017`–`G020`:** Yetim sayfa sayısı `0`, ana sayfadan maksimum tıklama derinliği `<= 3` olur; "tıklayın / detaylar / devamı" gibi jenerik çapa metinleri yasaktır. `<footer>`/`<aside>` içindeki izinsiz dış linklerde `rel="nofollow"` veya `rel="sponsored"` zorunludur (`rel="noopener"` tek başına **geçersizdir** — [Google Dış Link Niteleme](https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links)).
 
-## MADDE 7 — NAVBOOST ETKİLEŞİM MÜHENDİSLİĞİ (`lastLongestClicks`) VE CRO KÖPRÜSÜ
+### MODÜL 3 (`G021`–`G030`) — SERP CTR Psikolojisi, `<head>` Meta ve Sosyal Kanıt Kartları
+* **`G021`–`G024` (`<title>` Mühendisliği):** `30–65` karakter ve tahmini SERP genişliği `<= 580px` aralığında, ana ticari terimi ilk 3 kelimede geçiren (*Front-Loaded*), asla stok/ERP koduyla (`SKU-`, `MOD-`) veya düz "Ana Sayfa" ile başlamayan %100 benzersiz `<title>` yazılır.
+* **`G025`–`G026` (`<h1>` Mühendisliği):** Her sayfada tam `1` adet benzersiz `<h1>` bulunur; anlamsal kapsama alanını büyütmek için `<title>` ile birebir aynı karakter dizisi olamaz.
+* **`G027`–`G030`:** `90–158` karakterlik kesintisiz (`...` içermeyen) benzersiz `meta description`; `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1` robots etiketi; birebir HTTPS self-canonical (`hreflang` varsa `x-default` dahil); tam Open Graph (`og:title`, `og:description`, `og:url`, `og:type`, `og:locale`, HTTPS raster `og:image`) ve `twitter:card="summary_large_image"` + raster `twitter:image` zorunludur.
 
-[Google Content Warehouse API sızıntısıyla](https://www.hobo-web.co.uk/the-google-content-warehouse-leak-2024/) doğrulanan 13 aylık [goodClicks ve lastLongestClicks](https://blckalpaca.at/en/knowledge-base/seo-geo/on-page-seo/user-engagement-signals-navboost-as-confirmed-ranking-factor) sıralama sinyallerini maksimize etmek için:
+### MODÜL 4 (`G031`–`G040`) — Görsel Dosya İsmi (Slug), Lens Multimodal, Duyarlı `srcset` ve LCP Preload
+* **`G031` (Görsel İsimlendirme Yasası):** Tüm görsel dosya adları en az iki kelimelik küçük harf ASCII ve tireli anahtar kelimelerden oluşur (`cnc-fiber-lazer-kesim-6kw.webp`). `IMG_`, `DSC_`, `Screenshot`, `whatsapp`, `image1`, `foto`, büyük harf ve alt çizgi (`_`) kesinlikle yasaktır.
+* **`G032`–`G037`:** Her `<main>` gövdesinde en az 1 özgün `.avif` veya `.webp` içerik görseli bulunur; dosya boyutu ilk ekran (hero) görselinde `<= 250 KB`, alt görsellerde `<= 180 KB` sınırını aşamaz; tüm görsellerde sayısal `width`/`height` ve sayfa içinde tekrarsız, varlık odaklı `10–125` karakterlik `alt` metni zorunludur ([GSC Multimodal / Google Lens](https://web60.ie/blog/google-lens-search-business-website)).
+* **`G038`–`G040` (Saha CrUX LCP İvmesi):** `<header>` logosu dışındaki ilk içerik (LCP Hero) görseli `fetchpriority="high"` alır (`loading="lazy"` yasaktır) **VE** `<head>` içinde `<link rel="preload" as="image" href="...">` ile tarayıcıya erken bildirilir ([web.dev LCP Optimizasyonu](https://web.dev/articles/optimize-lcp)). Ekran altı görseller `loading="lazy" decoding="async"` alır; içerik görsellerinde mobil veri tasarrufu için `srcset` + `sizes` (veya `<picture><source>`) tanımlanır; birincil görsel `sitemap.xml` içinde `<image:image>` ile indekslenir.
 
-1. **İlk Ekran Niyet Kilidi ve İnteraktif Mikro-Araç (`G17`):** Ticari kategori, hizmet ve hesaplama sayfalarında kullanıcının sayfada kalıp etkileşime girmesini sağlayan sıfır bağımlılıklı bir hesaplayıcı, ölçü/maliyet seçici veya karşılaştırma tablosu (`data-seo-interactive="true"`) bulunur.
-2. **Bağlamsal Dönüşüm (CRO) Linkleri:** WhatsApp ve teklif butonları incelenen sayfanın başlığını, URL yolunu ve seçilen teknik parametreyi dinamik olarak mesaja işler.
+### MODÜL 5 (`G041`–`G050`) — Bağlantılı Varlık Grafı (`@graph` JSON-LD), Knowledge Graph ve `Dataset` Mıknatısı
+* **`G041`–`G045`:** Tek bir `<script type="application/ld+json">` bloğunda `@graph` dizisi kullanılır; kalıcı `#organization` (spesifik alt tip + `sameAs` + `GeoCoordinates` + E.164 telefon), `#website`, `#webpage` (`about` + `mentions` varlık çivilemesi — [iPullRank Entity Recognition](https://ipullrank.com/ai-search-entity-recognition)) ve `#primaryimage` ([Görsel Lisans Şeması](https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata): `contentUrl`, `creditText`, `copyrightNotice`, `acquireLicensePage`, `creator`) düğümleri eksiksiz bağlanır.
+* **`G046`–`G049`:** Alt sayfalarda görünür `<nav aria-label="Breadcrumb">` ile eşleşen HTTPS `BreadcrumbList`; fiyatsız `@type: Product` ve self-serving `aggregateRating` yasağı ([Google Ürün Şeması](https://developers.google.com/search/docs/appearance/structured-data/product)); görünür metinle birebir eşleşen `FAQPage`; gerçek uzman `Person` (`#author` — `name`, `jobTitle`, `knowsAbout`, `url`) ve görünür `<time datetime="YYYY-MM-DD">` ile JSON-LD `dateModified` uyumu zorunludur.
+* **`G050` (`@type: Dataset` Veri Arama Mıknatısı):** Fiyat, teknik spesifikasyon ve karşılaştırma tabloları barındıran sayfaların `@graph` yapısında [Google Veri Kümesi (`Dataset`) şeması](https://developers.google.com/search/docs/appearance/structured-data/dataset) (`name`, `50+` karakter `description`, `creator`, `license`) tanımlanarak tabloların Google Dataset Search ve yapay zeka veri boru hatlarına girmesi sağlanır.
 
-## MADDE 8 — GERÇEK TARAYICI RENDER DENETİMİ: LCP, INP, CLS, TAŞMA VE SPECULATION RULES
+### MODÜL 6 (`G051`–`G060`) — Query Fan-Out, Princeton GEO, `#id` Sitelinks Çapaları ve 4-Gram Özgünlük
+* **`G051`–`G052` (Semantik Üçlü Cevap Kapsülü):** `<h1>` altında `25–80` kelimelik `<p data-answer-capsule="true">` yer alır; "Bu / Firmamız / Hizmetimiz" gibi zamirlerle başlayamaz, doğrudan `Marka/Hizmet + Hedef Müşteri/Problem + Ölçülebilir Sonuç` kurgusuyla yazılır.
+* **`G053`–`G056` (Query Fan-Out + `#id` SERP Alt Bağlantıları):** [Google AI Mode Query Fan-Out](https://ipullrank.com/ai-mode-webinar-recap) ve [Google Sitelinks](https://developers.google.com/search/docs/appearance/sitelinks) için her sayfada en az `3` adet benzersiz `id="alt-baslik-slug"` öznitelikli `<h2>` bulunur; sayfa başında bu `id` çapalarına link veren `<nav aria-label="İçindekiler" data-toc="true">` yer alır; her `<h2>` sonrasında atomik cevap paragrafı gelir ve hiçbir paragraf `180` kelimeyi aşmaz.
+* **`G057`–`G059` (Princeton GEO Atıf Kaldıraçları):** [Princeton GEO araştırması](https://llmpulse.ai/blog/geo-guide/) uyarınca her sayfada en az `3` somut sayısal birim/veri, `<thead>`/`<th>` başlıklı yapılandırılmış `<table>` matrisi ve doğrulanabilir resmi standart/mevzuat/sertifika referansı zorunludur.
+* **`G060` (Programatik SEO 4-Gram Shingle Kalkanı):** Çoklu bölge/sektör sayfaları üretildiğinde şablon kopyası cezasına ([Google Ölçeklendirilmiş İçerik Politikası](https://developers.google.com/search/docs/essentials/spam-policies)) yakalanmamak için tüm sayfaların `<main>` gövde metinleri arasındaki 4-gram cümle (shingle) Jaccard benzerliği `< 0.35` olmak zorundadır (`>= %65` benzersiz gövde içeriği).
 
-[Core Web Vitals](https://web.dev/articles/top-cwv) ve [web.dev INP standartları](https://web.dev/articles/inp) yalnızca kaynak kod metniyle değil, Headless Chromium içinde gerçek DOM render edilerek ölçülür:
+### MODÜL 7 (`G061`–`G070`) — AI Tavsiye Motoru (`llms.txt` + `llms-full.txt` + `.md` İkizi + WebMCP + SSR)
+* **`G061`–`G063`:** `/robots.txt` içinde `Sitemap:` bildirimi yapılır; `Googlebot`, `Bingbot`, `OAI-SearchBot`, `ChatGPT-User`, `Claude-SearchBot`, `Claude-User`, `PerplexityBot` arama/atıf botlarına açık erişim verilir ([Druid Learning AI Bot Rehberi](https://www.druidlearning.com/articles/ai-crawlers-and-robots-txt)); eğitim botları (`GPTBot`, `ClaudeBot`, `Google-Extended`, `CCBot`) ayrı grupta yönetilir.
+* **`G064`–`G068`:** `--build-ai-pack` ile üretilen `/llms.txt` ([llmstxt.org v2](https://llmstxt.org/)) kurumsal kimlik, **"Ne Zaman Önerilmeli"** tavsiye matrisi, **"Kapsam Sınırları"** dürüst güven kalibrasyonu ve her sayfanın `.md` ikiz linklerini içerir; `/llms-full.txt` tam bilgi korpusunu sunar; her sayfa için `/slug/index.md` ikizi ve `<head>` içinde `<link rel="alternate" type="text/markdown" href="...">` bulunur ([Cloudflare Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/)).
+* **`G069`–`G070`:** Etkileşimli formlar [Chrome WebMCP](https://developer.chrome.com/docs/ai/webmcp/declarative-api) `toolname` ve `tooldescription` özniteliklerini taşır (e-ticaret aktifse [Google UCP `/.well-known/ucp`](https://developers.google.com/merchant/ucp/guides/overview/ucp-profile) üretilir); ham SSR HTML kelime sayısı ile Headless Chromium DOM kelime sayısı paritesi `>= %85` olur.
 
-1. **Statik Görsel ve LCP Kuralları (`G14`, `G15`):** İndekslenen her sayfanın ilk ekran (hero) `<img>` etiketinde `fetchpriority="high"` bulunur (`loading="lazy"` yasaktır). Tüm `<img>` etiketlerinde sayısal `width`, `height` ve anlamlı Türkçe `alt` metni zorunludur.
-2. **0 ms Sayfa Geçişi ve bfcache (`G16`):** Her sayfada [Speculation Rules API](https://web.dev/case-studies/rayban-speculation-rules) (`<script type="speculationrules">`) bulunur; `Cache-Control: no-store` ve `unload` dinleyicileri yasaktır.
-3. **Headless Chromium Gerçek Ekran ve Performans Kapıları (`G22`, `G23`, `G24`):**
-   * **Sıfır Yatay Taşma (`G22`):** Mobil (`390×844`) ve masaüstü (`1440×900`) çözünürlüklerde `document.documentElement.scrollWidth <= window.innerWidth` şartı sağlanır (`overflow-x = 0`).
-   * **Gerçek CLS Denetimi (`G23`):** `PerformanceObserver('layout-shift')` ile ölçülen gerçek kümülatif düzen kayması `0.10` altında (hedef `0.00`) kalır.
-   * **Main-Thread Long Task / INP ve Konsol Hijyeni (`G24`):** Sayfa açılışında ve `[data-seo-interactive="true"]` etkileşiminde `200 ms` üstü tekil ana iş parçacığı bloklaması, yakalanmamış JS hatası (`pageerror`) ve `404` ağ isteği bulunamaz.
+### MODÜL 8 (`G071`–`G080`) — Para Kazandıran BOFU Hunisi, Pasif Backlink Mıknatısı ve `siteRadius`
+* **`G071`–`G072`:** [BOFU / Pain-Point SEO](https://www.mintcopywritingstudios.com/blog/why-fintech-content-marketing-agency) gereği `seo.config.json -> moneyPages` içinde tanımlı doğrudan hizmet/kategori sayfası ile fiyat/hesaplama ve karşılaştırma/kanıt sayfaları eksiksiz kurulur.
+* **`G073`–`G074` (NavBoost + Pasif Backlink Mıknatısı):** Her ticari sayfada sıfır bağımlılıklı interaktif hesaplayıcı/seçici (`data-seo-interactive="true"`) **VE** altında gazeteci/blog yazarlarının tek tıkla sitenize kanonik kaynak linki (`<a href="https://domain.com/slug/">`) vererek paylaşmasını sağlayan "Kaynak Göster / Kodu Kopyala" bileşeni (`data-backlink-magnet="true"` — `PageRank_NS` kaldıracı, [Hobo Web Q*](https://www.hobo-web.co.uk/the-q-metric-google-quality-score/)) yer alır.
+* **`G075`–`G080`:** Bağlamsal teklif/WhatsApp CTA'sı (`data-cro-cta="true"`), mobil tek tıkla arama (`href="tel:+90..."`), hangi sayfanın satış ürettiğini ölçen dönüşüm izleme kancası (`data-conversion-event="..."`), TF-IDF `< 0.78` yamyamlaşma kalkanı, `coreTopicKeywords` tabanlı `siteRadius` topikal odak kalkanı ve alt sayfalardan Hub/Ana sayfaya geri besleme linki zorunludur.
 
-## MADDE 9 — AEO CEVAP KAPSÜLÜ, YAMYAMLAŞMA ÖNLEME, GSC API VE SUNUCU LOG DÖNGÜSÜ
+### MODÜL 9 (`G081`–`G090`) — Edge Hız, Font/Script Disiplini ve Gerçek Headless Chromium Render
+* **`G081`–`G086`:** `<script type="speculationrules">`, `bfcache` koruması (`no-store` ve `unload` yasağı), `_headers` güvenlik ve `Content-Signal` + `Vary: Accept` başlıkları, `<head>` içinde senkron bloklayıcı harici script ve ağır senkron sohbet widget'ı yasağı, ve web fontlarında `font-display: swap`/`optional` (veya sistem fontu) zorunludur.
+* **`G087`–`G090` (Gerçek Tarayıcı Render Testi):** Headless Chromium içinde mobil (`390×844`) ve masaüstü (`1440×900`) sıfır yatay taşma (`G087`), mobil ilk `600px` içinde görünür `<h1>` ve birincil CTA (`G088`), gerçek render `CLS <= 0.05` (`G089`) ve etkileşim dahil `INP / Long-Task <= 150 ms` + `0` JS/ağ hatası (`G090`) doğrulanır ([Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals)).
 
-1. **AEO / RAG Cevap Kapsülü (`G17`):** [Google AI Arama](https://developers.google.com/search/blog/2025/05/succeeding-in-ai-search) ve [Yararlı İçerik Sistemi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) gereği her sayfada `<h1>` sonrasında konuyu dolgusuz özetleyen 25–80 kelimelik `<p data-answer-capsule="true">` paragrafı ve [görsel telif meta verileri](https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata) bulunur; yetim sayfa sayısı `0` olmalıdır.
-2. **Keşif Dosyaları (`G18`, `G19`):** Kök dizinde `/robots.txt`, görsel destekli `/sitemap.xml`, [llms.txt v2](https://llmstxt.org/) ve [IndexNow](https://www.indexnow.org/documentation) doğrulama dosyası eksiksiz yer alır.
-3. **Anlamsal Yamyamlaşma Kalkanı (`G21`):** `seo_enforcer.py`, tüm indekslenebilir sayfaların başlık, `<h1>`, URL ve Cevap Kapsülü vektörlerini karşılaştırır. Kosinüs benzerliği `>= 0.78` olan rakip iç sayfalar tespit edilirse ajan sayfaları birleştirmek veya arama niyetlerini ayrıştırmak zorundadır.
-4. **Canlı Google Search Console ve Log Geri Beslemesi (`G25`, `--gsc-sync`, `--log-audit`):**
-   * Canlı sitelerde [Search Console Search Analytics API](https://developers.google.com/webmaster-tools/v1/searchanalytics/query) veya dışa aktarılan performans CSV dosyası `python3 seo_enforcer.py --gsc-file gsc.csv` (veya `--gsc-api`) ile işlenerek `seo_actions.json` ve `GSC_OPTIMIZATION_PLAN.md` üretilir.
-   * Üretilen rapordaki **1)** Gerçek Sorgu Yamyamlaşması (aynı kelimede bölünen URL'ler), **2)** Düşük CTR'li İlk Sayfa Başlıkları ve **3)** Vuruş Mesafesi (`Pozisyon 8–20`) İç Link Takviyesi görevleri kodda kapatılmadan `G25` kapısı geçilmez.
-   * Sunucu erişim logları mevcutsa `python3 seo_enforcer.py --log-audit access.log ./dist` komutuyla Googlebot'un taramadığı yetim/sığ sayfalar tespit edilip ana kategori (Hub) sayfalarından doğrudan iç link verilir.
-
-## MADDE 10 — OTONOM 7 AŞAMALI YÜRÜTME DÖNGÜSÜ (AJAN ALGORİTMASI)
-
-1. **Kurulum (`--init`):** `python3 seo_enforcer.py --init --domain https://domain.com` çalıştırarak `.cursor/rules/00-real-seo-contract.mdc`, `CLAUDE.md`, `.git/hooks/pre-commit`, `seo.config.json` ve `_headers` kilitlerini kur.
-2. **Veri Doğrulaması:** `seo.config.json` içindeki `REQUIRED_REAL_VALUE` alanlarını gerçek proje kayıtlarıyla doldur; eksik ticari bilgi varsa uydurmadan kullanıcıya sor.
-3. **GSC / Log Analizi (Canlı Sitede Güncelleme Yapılıyorsa):** Mevcut GSC verisi veya erişim logu varsa `--gsc-file` / `--gsc-api` ve `--log-audit` çalıştırarak `seo_actions.json` aksiyon planını oluştur.
-4. **Merkezi Kod Enjeksiyonu:** Şablonlara `<head>`, `@graph` JSON-LD, Cevap Kapsülü, mikro-araç, bağlamsal CTA, görsel boyut/`fetchpriority` ve `speculationrules` bileşenlerini entegre et; `seo_actions.json` içindeki başlık ve iç link görevlerini uygula.
-5. **Keşif Üretimi:** `/sitemap.xml`, `/robots.txt`, `/llms.txt` ve `{indexNowKey}.txt` dosyalarını üret.
-6. **25 Kapılı Tam Denetim (`--audit`):** Projeyi derle ve `python3 seo_enforcer.py --audit <build_dizini> <https://domain.com>` komutunu çalıştır (statik + TF-IDF yamyamlaşma + Headless Chromium render denetimi).
-7. **100/100 Öz-Onarım Döngüsü:** Skor `100/100` olana kadar her `[G01]–[G25]` ihlalini onarıp yeniden denetle; yalnızca `SKOR: 100/100` çıktısı alındığında görevi teslim et.
+### MODÜL 10 (`G091`–`G100`) — Anında İndeksleme (`Atom Feed` + `IndexNow`), GSC 3-Vektör ve Ajan Kilitleri
+* **`G091`–`G095`:** Tam senkron `/sitemap.xml` (`<lastmod>`), anlık güncelleme taraması için [Google'ın önerdiği Atom 1.0 `/feed.xml` beslemesi](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=tr) + `<link rel="alternate" type="application/atom+xml">`, [IndexNow](https://www.indexnow.org/documentation) anahtar dosyası (`{indexNowKey}.txt`) ve kurumsal güven dosyası `/.well-known/security.txt` eksiksiz yer alır.
+* **`G096`–`G100`:** Antigravity/Cursor/Claude/Copilot kural dosyalarının (`AGENTS.md`, `GEMINI.md`, `.agents/rules/00-real-seo-contract.md`, `.cursor/rules/00-real-seo-contract.mdc`, `CLAUDE.md`) bütünlüğü korunur; `seo_actions.json` (Yamyamlaşma + Düşük CTR + Pozisyon 8–20 İç Link) ve `crawl_budget_report.json` içindeki açık aksiyonların tamamı kapatılmadan `100/100` onayı verilmez.

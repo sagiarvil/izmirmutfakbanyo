@@ -48,7 +48,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     role: 'collection',
     title: 'İzmir Özel Ölçü Mutfak Dolabı Modelleri | Yeşilay Mutfak',
     metaDescription: 'Buca Adatepe atölyemizde üretilen ipek mat lake, çizilmez akrilik ve masif meşe özel ölçü mutfak dolabı modelleri. Ücretsiz 3D mimari çizim teklifi alın.',
-    image: '/images/models/mutfak/sakura.jpg',
+    image: '/images/models/mutfak/mutfak-sakura.webp',
     publishedAt: PUBLISHED_AT,
     modifiedAt: MODIFIED_AT,
     breadcrumbs: [
@@ -56,21 +56,21 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Mutfak Dolabı Modelleri', item: '/izmir-mutfak-dolabi-imalati/' }
     ],
     catalogItems: [
-      { name: 'Lumina İpek Mat Lake Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/sakura.jpg' },
-      { name: 'Statuario Porselen Tezgahlı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/iconica.jpg' },
-      { name: 'Solyma Akrilik ve Doğal Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/convivio.jpg' },
-      { name: 'Linea Minimalist Mutfak Koleksiyonu', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/start-time.jpg' },
-      { name: 'Portofino Poliüretan Mat Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/milano.jpg' },
-      { name: 'Belvedere Açık Plan Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/lounge.jpg' },
-      { name: 'Serena Neo-Klasik Çıtalı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/armonia.jpg' },
-      { name: 'Vetro Reflekte Cam Vitrinli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/ri-flex.jpg' },
-      { name: 'Plana Entegre J-Kulp Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/tablet.jpg' },
-      { name: 'Natura Masif Meşe ve Akrilik Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/like.jpg' },
-      { name: 'Nostalgia Country Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/memory.jpg' },
-      { name: 'Onyx Antrasit İpek Mat Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/oyster.jpg' },
-      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/pavese.jpg' },
-      { name: 'Spazio Tavan Boyu Kilerli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/ethica.jpg' },
-      { name: 'Canaletto Yivli Fluted Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/extra.jpg' }
+      { name: 'Lumina İpek Mat Lake Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-sakura.webp' },
+      { name: 'Statuario Porselen Tezgahlı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-iconica.webp' },
+      { name: 'Solyma Akrilik ve Doğal Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-convivio.webp' },
+      { name: 'Linea Minimalist Mutfak Koleksiyonu', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/start-time.webp' },
+      { name: 'Portofino Poliüretan Mat Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-milano.webp' },
+      { name: 'Belvedere Açık Plan Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-lounge.webp' },
+      { name: 'Serena Neo-Klasik Çıtalı Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-armonia.webp' },
+      { name: 'Vetro Reflekte Cam Vitrinli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/ri-flex.webp' },
+      { name: 'Plana Entegre J-Kulp Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-tablet.webp' },
+      { name: 'Natura Masif Meşe ve Akrilik Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-like.webp' },
+      { name: 'Nostalgia Country Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-memory.webp' },
+      { name: 'Onyx Antrasit İpek Mat Ada Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-oyster.webp' },
+      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-pavese.webp' },
+      { name: 'Spazio Tavan Boyu Kilerli Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-ethica.webp' },
+      { name: 'Canaletto Yivli Fluted Ahşap Mutfak', url: '/izmir-mutfak-dolabi-imalati/#bilgi-al', image: '/images/models/mutfak/mutfak-extra.webp' }
     ]
   },
   '/tasarimlar/': {
@@ -87,8 +87,8 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     ],
     catalogItems: [
       { name: 'Özel Ölçü Mutfak Dolabı Modelleri', url: '/izmir-mutfak-dolabi-imalati/', image: '/media/tasarimlar/model-1-3.webp' },
-      { name: 'Modern Kulpsuz Mutfak Modelleri', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern_mutfak.webp' },
-      { name: 'Klasik ve Country Lake Mutfak Modelleri', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik_mutfak.webp' },
+      { name: 'Modern Kulpsuz Mutfak Modelleri', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern-mutfak.webp' },
+      { name: 'Klasik ve Country Lake Mutfak Modelleri', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik-mutfak.webp' },
       { name: 'Lüks Banyo Dolabı ve Yenileme', url: '/izmir-banyo-yenileme-seramik/', image: '/media/real/yesilay-hilton-banyo-dolabi-luxury.webp' },
       { name: 'Yatak Odası ve Gardırop Modelleri', url: '/yatak-odasi-modelleri/', image: '/images/models/koleksiyonlar/yatak-golf.webp' },
       { name: 'Kahve Köşesi ve Barista Üniteleri', url: '/kahve-kosesi-modelleri/', image: '/media/real/yesilay-aluminyum-fluted-cam-kapak.webp' }
@@ -99,7 +99,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     role: 'collection',
     title: 'İzmir Modern & Kulpsuz Mutfak Modelleri | Yeşilay Mutfak',
     metaDescription: 'Kulpsuz Gola profil, parmak izi bırakmayan ipek mat lake ve UV akrilik modern mutfak dolabı imalatı. İzmir geneli ücretsiz lazer ölçü ve 3D çizim alın.',
-    image: '/media/cinematic/modern_mutfak.webp',
+    image: '/media/cinematic/modern-mutfak.webp',
     publishedAt: PUBLISHED_AT,
     modifiedAt: MODIFIED_AT,
     breadcrumbs: [
@@ -108,9 +108,9 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Modern Mutfak Modelleri', item: '/modern-mutfak-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Kulpsuz Gola Profil İpek Mat Lake Mutfak', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern_mutfak.webp' },
+      { name: 'Kulpsuz Gola Profil İpek Mat Lake Mutfak', url: '/modern-mutfak-modelleri/', image: '/media/cinematic/modern-mutfak.webp' },
       { name: 'Alüminyum Fluted Cam Vitrinli Modern Mutfak', url: '/modern-mutfak-modelleri/', image: '/media/real/yesilay-aluminyum-fluted-cam-kapak.webp' },
-      { name: 'Porselen Ada Tezgahlı Antrasit Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/oyster.jpg' }
+      { name: 'Porselen Ada Tezgahlı Antrasit Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/mutfak-oyster.webp' }
     ]
   },
   '/klasik-country-mutfak-modelleri/': {
@@ -118,7 +118,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     role: 'collection',
     title: 'İzmir Klasik & Country Mutfak Modelleri | Yeşilay Mutfak',
     metaDescription: 'CNC çıtalı kapaklar, sararmayan poliüretan fırın lake ve masif ahşap detaylarla klasik country mutfak imalatı. Buca atölyemizden ücretsiz 3D keşif alın.',
-    image: '/media/cinematic/klasik_mutfak.webp',
+    image: '/media/cinematic/klasik-mutfak.webp',
     publishedAt: PUBLISHED_AT,
     modifiedAt: MODIFIED_AT,
     breadcrumbs: [
@@ -127,9 +127,9 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Klasik & Country Mutfak Modelleri', item: '/klasik-country-mutfak-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Çıtalı İpek Mat Fırın Lake Country Mutfak', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik_mutfak.webp' },
-      { name: 'Serena Neo-Klasik Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/armonia.jpg' },
-      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/pavese.jpg' }
+      { name: 'Çıtalı İpek Mat Fırın Lake Country Mutfak', url: '/klasik-country-mutfak-modelleri/', image: '/media/cinematic/klasik-mutfak.webp' },
+      { name: 'Serena Neo-Klasik Çerçeveli Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/mutfak-armonia.webp' },
+      { name: 'Toscana İtalyan Çıtalı Lake Mutfak', url: '/izmir-mutfak-dolabi-imalati/', image: '/images/models/mutfak/mutfak-pavese.webp' }
     ]
   },
   '/yasam-alanlari-mutfak-modelleri/': {
@@ -146,7 +146,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Açık Mutfak & Yaşam Alanları', item: '/yasam-alanlari-mutfak-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Salonla Bütünleşik Ada Bar Mutfak Tasarımı', url: '/yasam-alanlari-mutfak-modelleri/', image: '/media/cinematic/life_alanlar.webp' },
+      { name: 'Salonla Bütünleşik Ada Bar Mutfak Tasarımı', url: '/yasam-alanlari-mutfak-modelleri/', image: '/media/cinematic/life-alanlar.webp' },
       { name: 'Şömineli Mermer TV Ünitesi ve Açık Mutfak', url: '/yasam-alanlari-mutfak-modelleri/', image: '/media/real/yesilay-tv-unitesi-somine-luxury-wide.webp' },
       { name: 'Moderna Salon ve Yaşam Alanı Koleksiyonu', url: '/salon-modelleri/', image: '/images/models/koleksiyonlar/salon-golf.webp' }
     ]
@@ -203,9 +203,9 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Salon & TV Ünitesi Modelleri', item: '/salon-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Moderna Modüler Salon ve TV Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/golf/01.webp' },
-      { name: 'Aura Asma Konsol ve Duvar Sistemi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/volo/01.webp' },
-      { name: 'Elegance Kütüphaneli Yaşam Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/arcadia/01.webp' }
+      { name: 'Moderna Modüler Salon ve TV Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/golf/golf-01.webp' },
+      { name: 'Aura Asma Konsol ve Duvar Sistemi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/volo/volo-01.webp' },
+      { name: 'Elegance Kütüphaneli Yaşam Ünitesi Koleksiyonu', url: '/salon-modelleri/#bilgi-al', image: '/images/models/salon/arcadia/arcadia-01.webp' }
     ]
   },
   '/yatak-odasi-modelleri/': {
@@ -222,9 +222,9 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Yatak Odası & Gardırop Modelleri', item: '/yatak-odasi-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Zenith Özel Ölçü Gardırop ve Yatak Odası Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/golf/01.webp' },
-      { name: 'Sera Giyinme Odası ve Raylı Dolap Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/volo/01.webp' },
-      { name: 'Palazzo Klasik ve Lake Gardırop Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/arcadia/01.webp' }
+      { name: 'Zenith Özel Ölçü Gardırop ve Yatak Odası Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/golf/golf-01.webp' },
+      { name: 'Sera Giyinme Odası ve Raylı Dolap Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/volo/volo-01.webp' },
+      { name: 'Palazzo Klasik ve Lake Gardırop Serisi', url: '/yatak-odasi-modelleri/#bilgi-al', image: '/images/models/yatak-odasi/arcadia/arcadia-01.webp' }
     ]
   },
   '/genc-odasi-modelleri/': {
@@ -241,9 +241,9 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Genç Odası Modelleri', item: '/genc-odasi-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Dinamik Ergonomik Çalışma Üniteli Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/golf/01.webp' },
-      { name: 'Nova Modüler Kitaplıklı Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/volo/01.webp' },
-      { name: 'KlasikZamansız Lake Genç Odası Serisi', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/arcadia/01.webp' }
+      { name: 'Dinamik Ergonomik Çalışma Üniteli Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/golf/golf-01.webp' },
+      { name: 'Nova Modüler Kitaplıklı Genç Odası', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/volo/volo-01.webp' },
+      { name: 'KlasikZamansız Lake Genç Odası Serisi', url: '/genc-odasi-modelleri/#bilgi-al', image: '/images/models/genc-odasi/arcadia/arcadia-01.webp' }
     ]
   },
   '/cocuk-odasi-modelleri/': {
@@ -260,8 +260,8 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Çocuk Odası Modelleri', item: '/cocuk-odasi-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Neşe Montessori Uyumlu Çocuk Odası Koleksiyonu', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/golf/01.webp' },
-      { name: 'Masal Anti-Alerjik Su Bazlı Lake Çocuk Odası', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/volo/01.webp' }
+      { name: 'Neşe Montessori Uyumlu Çocuk Odası Koleksiyonu', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/golf/golf-01.webp' },
+      { name: 'Masal Anti-Alerjik Su Bazlı Lake Çocuk Odası', url: '/cocuk-odasi-modelleri/#bilgi-al', image: '/images/models/cocuk-odasi/volo/volo-01.webp' }
     ]
   },
   '/camasir-odasi-modelleri/': {
@@ -278,8 +278,8 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
       { name: 'Çamaşır Odası & Kiler Modelleri', item: '/camasir-odasi-modelleri/' }
     ],
     catalogItems: [
-      { name: 'Pratik Çamaşır ve Kurutma Makinesi Kule Dolap Sistemi', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/01.webp' },
-      { name: 'Gizli Deterjanlıklı ve Ütü Masalı Yardımcı Alan Dolabı', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/02.webp' }
+      { name: 'Pratik Çamaşır ve Kurutma Makinesi Kule Dolap Sistemi', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/ana-01.webp' },
+      { name: 'Gizli Deterjanlıklı ve Ütü Masalı Yardımcı Alan Dolabı', url: '/camasir-odasi-modelleri/#bilgi-al', image: '/images/models/camasir/ana/ana-02.webp' }
     ]
   },
   '/yapilan-isler/': {
@@ -377,7 +377,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     serviceType: 'Ticari Mekân Mimari Projelendirme ve Anahtar Teslim Fit-Out',
     title: 'İzmir Ticari Mekân Projelendirme Fit-Out | Yeşilay Mutfak',
     metaDescription: 'Ofis, klinik, mağaza ve kafe-restoranlar için 3D mimari tasarım, özel ahşap imalat ve anahtar teslim fit-out taahhüt. Kurumsal keşif görüşmesi talep edin.',
-    image: '/images/projelendirme/hero/hero_01.webp',
+    image: '/images/projelendirme/hero/hero-01.webp',
     publishedAt: PUBLISHED_AT,
     modifiedAt: MODIFIED_AT,
     breadcrumbs: [
@@ -465,7 +465,7 @@ export const SEO_REGISTRY: Record<string, SeoPageRecord> = {
     areaServed: 'Urla, İzmir',
     title: 'Urla Taş Ev & Villa Mutfak Tadilatı | Yeşilay Mutfak',
     metaDescription: 'Urla, Kekliktepe ve İskele bağ villaları ile taş evlere özel doğal meşe kaplama, country lake mutfak dolabı ve anahtar teslim tadilat için keşif alın.',
-    image: '/media/cinematic/klasik_mutfak.webp',
+    image: '/media/cinematic/klasik-mutfak.webp',
     publishedAt: PUBLISHED_AT,
     modifiedAt: MODIFIED_AT,
     breadcrumbs: [

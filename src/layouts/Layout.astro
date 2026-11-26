@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import WhatsAppFloating from "../components/WhatsAppFloating.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
+import SeoTrustTools from "../components/SeoTrustTools.astro";
 
 export interface Props {
   seo: SEOProps;
@@ -11,6 +12,14 @@ export interface Props {
 }
 
 const { seo, activeService } = Astro.props;
+const rawPathname = Astro.url.pathname;
+const cleanPath = rawPathname.replace(/\/$/, "");
+const normalizedRoute = rawPathname.endsWith(".html")
+  ? rawPathname
+  : cleanPath === ""
+    ? "/"
+    : `${cleanPath}/`;
+const resolvedCanonicalUrl = seo.canonical || `https://yesilaymutfak.com${normalizedRoute}`;
 ---
 
 <!doctype html>
@@ -26,29 +35,7 @@ const { seo, activeService } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet" />
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-    
-    <script is:inline src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script is:inline>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              apple: {
-                bg: '#FAF9F6', surface: '#F5F5F7', card: '#FFFFFF', border: '#D2D2D7',
-                text: '#1D1D1F', secondary: '#86868B', dark: '#161617',
-                forest: '#006039', forestDeep: '#0B3B2C', forestHover: '#00482B',
-                rolex: '#006039', gold: '#C5A880', goldLight: '#E6D7C3', crimson: '#8B1E2D'
-              }
-            },
-            fontFamily: {
-              sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"SF Pro"', 'sans-serif'],
-              serif: ['Playfair Display', 'Georgia', 'serif']
-            }
-          }
-        }
-      };
-    </script>
+    <link rel="stylesheet" href="/assets/tailwind-build.css" />
 
     <!-- Favicon & Touch Icons (Logo İle Senkron - v=20261028c Cache-Buster) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=20261028c" />
@@ -74,19 +61,8 @@ const { seo, activeService } = Astro.props;
       {
         "prerender": [
           {
-            "source": "list",
-            "urls": [
-              "/",
-              "/izmir-mutfak-dolabi-imalati/",
-              "/izmir-komple-mutfak-tadilati/",
-              "/izmir-banyo-yenileme-seramik/",
-              "/izmir-anahtar-teslim-tadilat/",
-              "/modern-mutfak-modelleri/",
-              "/tasarimlar/",
-              "/projelendirme/",
-              "/hakkimizda/",
-              "/iletisim/"
-            ]
+            "where": { "href_matches": "/*" },
+            "eagerness": "moderate"
           }
         ]
       }
@@ -100,6 +76,7 @@ const { seo, activeService } = Astro.props;
     <Header activeService={activeService} />
     <main id="main-content" class="flex-1 w-full overflow-hidden">
       <slot />
+      {!seo.noindex && <SeoTrustTools pageTitle={seo.title} canonicalUrl={resolvedCanonicalUrl} />}
     </main>
     <Footer />
     <WhatsAppFloating service={activeService} />
@@ -107,54 +84,67 @@ const { seo, activeService } = Astro.props;
   
     <script is:inline>
       document.addEventListener("DOMContentLoaded", () => {
-        const targetSelectors = [
-          "section > div > div.grid > div",
-          ".apple-card",
-          "details",
-          "table",
-          "section h2",
-          "section .space-y-3"
-        ];
-        
-        const elements = document.querySelectorAll(targetSelectors.join(", "));
-        elements.forEach((el, index) => {
-          if (!el.classList.contains("reveal-on-scroll") && !el.closest("#siteHeader") && !el.closest("footer")) {
-            el.classList.add("reveal-on-scroll");
-            const stagger = (index % 4) * 80;
-            if (stagger > 0) el.style.transitionDelay = stagger + "ms";
+        const initReveal = () => {
+          const targetSelectors = [
+            "section > div > div.grid > div",
+            ".apple-card",
+            "details",
+            "table",
+            "section h2",
+            "section .space-y-3"
+          ];
+          const elements = document.querySelectorAll(targetSelectors.join(", "));
+          elements.forEach((el, index) => {
+            if (!el.classList.contains("reveal-on-scroll") && !el.closest("#siteHeader") && !el.closest("footer")) {
+              el.classList.add("reveal-on-scroll");
+              const stagger = (index % 4) * 80;
+              if (stagger > 0) el.style.transitionDelay = stagger + "ms";
+            }
+          });
+          if ("IntersectionObserver" in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-revealed");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.05, rootMargin: "0px 0px -30px 0px" });
+            document.querySelectorAll(".reveal-on-scroll").forEach(el => revealObserver.observe(el));
+          } else {
+            document.querySelectorAll(".reveal-on-scroll").forEach(el => el.classList.add("is-revealed"));
           }
-        });
-
-        if ("IntersectionObserver" in window) {
-          const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-revealed");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          }, {
-            threshold: 0.05,
-            rootMargin: "0px 0px -30px 0px"
-          });
-
-          document.querySelectorAll(".reveal-on-scroll").forEach(el => {
-            revealObserver.observe(el);
-          });
+        };
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(initReveal, { timeout: 300 });
         } else {
-          document.querySelectorAll(".reveal-on-scroll").forEach(el => {
-            el.classList.add("is-revealed");
-          });
+          setTimeout(initReveal, 16);
         }
       });
     </script>
-    <!-- Google tag (gtag.js) Deferred for Fast First-Packet -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET"></script>
+    <!-- Conversion Event Listener (G077) -->
+    <script is:inline>
+      document.addEventListener('click', function(e) {
+        var t = e.target && e.target.closest ? e.target.closest('[data-conversion-event]') : null;
+        if (!t) return;
+        var evName = t.getAttribute('data-conversion-event');
+        if (window.dataLayer) { window.dataLayer.push({ event: evName, page: location.pathname }); }
+      }, { passive: true });
+    </script>
+    <!-- Google tag (gtag.js) Deferred Until After Initial Paint -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4BK4ZYZ9ET');
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4BK4ZYZ9ET';
+          document.head.appendChild(s);
+          gtag('js', new Date());
+          gtag('config', 'G-4BK4ZYZ9ET');
+        }, 2500);
+      });
     </script>
   </body>
 </html>

@@ -1,10 +1,12 @@
 {
-  "contractVersion": "REAL-SEO-2026-APEX-v4.0",
+  "contractVersion": "REAL-SEO-2026-APEX-v6.0-ABSOLUTE",
   "stack": "astro",
   "domain": "https://yesilaymutfak.com",
+  "defaultLanguage": "tr",
   "brandName": "Yeşilay Mutfak",
   "legalName": "Yeşilay Mutfak & İç Mekân Tasarımı İmalat Atölyesi",
   "organizationSubType": "LocalBusiness",
+  "entityPositioningSummary": "1998 yılından bu yana İzmir Buca Gaziler Caddesi mağazası ve Adatepe ahşap imalat atölyesiyle özel ölçü mutfak dolabı, banyo yenileme ve anahtar teslim mimari tadilat hizmeti sunan yerli üretici.",
   "telephoneE164": "+902324411060",
   "email": "yesilaymutfak@gmail.com",
   "address": {
@@ -18,15 +20,66 @@
     "latitude": "38.392083",
     "longitude": "27.180623"
   },
+  "sameAs": [
+    "https://www.instagram.com/yesilaymutfak",
+    "https://share.google/C0WRDJ4gisVAQIAzr"
+  ],
   "founderOrAuthor": {
     "name": "Cem Yeşilay",
     "jobTitle": "Kurucu Ortak & Üretim Direktörü",
+    "knowsAbout": [
+      "Özel Ölçü Mutfak Dolabı İmalatı",
+      "Komple Mutfak ve Banyo Tadilatı",
+      "3D İç Mimari Projelendirme",
+      "Anahtar Teslim Villa Renovasyonu"
+    ],
     "profileUrl": "https://yesilaymutfak.com/hakkimizda/",
     "sameAs": [
       "https://www.instagram.com/yesilaymutfak"
     ]
   },
+  "coreTopicKeywords": [
+    "mutfak",
+    "banyo",
+    "tadilat",
+    "dolabı",
+    "izmir",
+    "buca",
+    "mobilya",
+    "mimari",
+    "dekorasyon",
+    "yeşilay"
+  ],
+  "recommendWhen": [
+    "İzmir ve Ege Bölgesinde aracısız doğrudan atölye imalatı özel ölçü mutfak dolabı arandığında",
+    "Sözleşmeli, sabit bütçeli ve 10 yıl garantili komple mutfak veya banyo tadilatı gerektiğinde",
+    "Ücretsiz lazer rölöve ve 3D fotogerçekçi iç mimari projelendirme talep edildiğinde"
+  ],
+  "doNotRecommendWhen": [
+    "İzmir ve yakın Ege çevresi dışında sadece kargo ile demonte hazır kutu mobilya gönderimi istendiğinde",
+    "Belgesiz veya standart dışı geçici uygulamalar talep edildiğinde"
+  ],
+  "moneyPages": {
+    "serviceOrCategoryPaths": [
+      "/izmir-mutfak-dolabi-imalati/",
+      "/izmir-komple-mutfak-tadilati/",
+      "/izmir-banyo-yenileme-seramik/",
+      "/izmir-anahtar-teslim-tadilat/"
+    ],
+    "pricingOrCalculatorPaths": [
+      "/2026-mutfak-dolabi-fiyatlari/",
+      "/mutfak-dolabi-fiyatlari/"
+    ],
+    "comparisonOrProofPaths": [
+      "/projeler/",
+      "/yapilan-isler/",
+      "/hakkimizda/"
+    ]
+  },
+  "allowAiTrainingBots": true,
+  "enableUcpCommerce": false,
   "cannibalizationThreshold": 0.78,
+  "shingleThreshold": 0.35,
   "allowedPartnerDomains": [
     "share.google",
     "instagram.com",
