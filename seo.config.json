@@ -79,7 +79,7 @@
   "allowAiTrainingBots": true,
   "enableUcpCommerce": false,
   "cannibalizationThreshold": 0.78,
-  "shingleThreshold": 0.35,
+  "shingleThreshold": 0.48,
   "allowedPartnerDomains": [
     "share.google",
     "instagram.com",

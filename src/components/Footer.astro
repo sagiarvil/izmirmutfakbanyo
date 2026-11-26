@@ -2,6 +2,9 @@
 import { siteConfig } from "../data/siteConfig";
 
 const currentYear = new Date().getFullYear();
+const rawPath = Astro.url.pathname;
+const normalizedPath = rawPath === "/" ? "/" : `${rawPath.replace(/\/$/, "")}/`;
+const canonicalPageUrl = `${siteConfig.siteUrl.replace(/\/$/, "")}${normalizedPath}`;
 ---
 
 <!-- BÖLÜM: KURUMSAL ŞEFFAFLIK & DOĞRULAMA (FOOTER ÜSTÜ) -->
@@ -157,6 +160,11 @@ const currentYear = new Date().getFullYear();
         <a href="/kvkk-aydinlatma-metni/" class="hover:text-[#006039] transition">KVKK</a>
       </div>
     </div>
+
+    <aside data-backlink-magnet="true" class="pt-4 border-t border-[#E5DFD5]/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10.5px] text-[#756E65]">
+      <span>Son doğrulama: <time datetime="2026-11-26">26 Kasım 2026</time> · İzmir Buca Adatepe İmalat Atölyesi</span>
+      <span>Kaynak linki: <a href={canonicalPageUrl} class="hover:text-[#006039] underline underline-offset-2">{canonicalPageUrl}</a></span>
+    </aside>
 
   </div>
 </footer>

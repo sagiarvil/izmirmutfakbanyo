@@ -143,7 +143,7 @@ const seo = {
     }" x-init="startAuto()" @mouseenter="stopAuto()" @mouseleave="startAuto()">
 
       <!-- Slide Görselleri (Her Ekranda %100 Görünür, Taşmayan Dinamik Viewport) -->
-      <div class="relative w-full h-[calc(100svh-72px)] sm:h-[calc(100svh-80px)] lg:h-[calc(100svh-88px)] min-h-[500px] max-h-[900px] overflow-hidden">
+      <div class="relative w-full h-[36svh] sm:h-[60svh] lg:h-[calc(100svh-88px)] min-h-[250px] sm:min-h-[420px] max-h-[900px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
@@ -261,8 +261,8 @@ const seo = {
     </section>
 
     <!-- BÖLÜM 2: OSO MİMARLIK BİREBİR MANİFESTO VE ANA BAŞLIK -->
-    <section class="py-20 md:py-24 border-b border-slate-200/80">
-      <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+    <section class="py-5 md:py-24 border-b border-slate-200/80">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-3 md:space-y-6">
         <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-widest" aria-label="Breadcrumb">
           <a href="/" class="hover:text-slate-900 transition">Ana Sayfa</a>
           <span>/</span>

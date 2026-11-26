@@ -1,3 +1,5 @@
+import { postProcessHtmlForApex } from "./scripts/apex-postprocess.mjs";
+
 import { defineConfig } from "astro/config";
 import fs from "node:fs";
 import path from "node:path";
@@ -36,119 +38,6 @@ function toTurkishSlug(text) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 64) || "bolum";
-}
-
-function postProcessHtmlForApex(html) {
-  if (/http-equiv=["']refresh["']/i.test(html)) return html;
-  const robotsMatch = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']*)["']/i);
-  if (robotsMatch && /noindex/i.test(robotsMatch[1])) return html;
-
-  const mainMatch = html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i);
-  if (!mainMatch) return html;
-
-  let mainHtml = mainMatch[0];
-
-  // 1. G054: Ensure every <h2> in <main> has a unique lowercase hyphenated id
-  const h2Entries = [];
-  const usedIds = new Set();
-  mainHtml = mainHtml.replace(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi, (full, attrs, inner) => {
-    const label = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-    const idMatch = attrs.match(/\bid=["']([^"']+)["']/i);
-    let slug = idMatch ? toTurkishSlug(idMatch[1]) : toTurkishSlug(label);
-    if (!slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) slug = "bolum";
-    let uniqueSlug = slug;
-    let counter = 2;
-    while (usedIds.has(uniqueSlug)) {
-      uniqueSlug = `${slug}-${counter++}`;
-    }
-    usedIds.add(uniqueSlug);
-    h2Entries.push({ id: uniqueSlug, label: label.slice(0, 52) });
-    const cleanAttrs = attrs.replace(/\s*\bid=["'][^"']*["']/gi, "");
-    return `<h2 id="${uniqueSlug}"${cleanAttrs}>${inner}</h2>`;
-  });
-
-  // 2. G037, G038, G039: Image alt uniqueness/length, fetchpriority, lazy/async, srcset/sizes
-  let firstContentImgSrc = null;
-  let imgIndex = 0;
-  const seenAlts = new Set();
-
-  mainHtml = mainHtml.replace(/<img\b([^>]*)>/gi, (full, attrs) => {
-    let newAttrs = attrs;
-    const srcMatch = newAttrs.match(/\bsrc=["']([^"']+)["']/i);
-    let src = srcMatch ? srcMatch[1].trim() : "";
-    if (!src) return full;
-    if (src.startsWith("data:")) {
-      const dataSrcMatch = newAttrs.match(/\bdata-src=["']([^"']+)["']/i);
-      if (dataSrcMatch && dataSrcMatch[1].trim()) {
-        src = dataSrcMatch[1].trim();
-        newAttrs = newAttrs.replace(/\bsrc=["'][^"']*["']/i, `src="${src}"`);
-      } else {
-        return full;
-      }
-    }
-
-    const isDecorative = /aria-hidden=["']true["']|role=["']presentation["']/i.test(attrs);
-    if (!isDecorative) {
-      // Fix alt text (G037): 10-125 chars, unique, no banned prefix
-      const altMatch = newAttrs.match(/\balt=["']([^"']*)["']/i);
-      let alt = altMatch ? altMatch[1].trim() : "Yeşilay Mutfak İzmir özel ölçü tasarım";
-      if (/^(resim|görsel|image|foto|img)\b/i.test(alt) || alt.length < 10) {
-        alt = `Yeşilay Mutfak ${alt}`.trim();
-        if (alt.length < 10) alt = "Yeşilay Mutfak İzmir özel ölçü imalat modeli";
-      }
-      if (alt.length > 115) {
-        alt = alt.slice(0, 112).trim();
-      }
-      let uniqueAlt = alt;
-      let altCount = 2;
-      while (seenAlts.has(uniqueAlt.toLowerCase())) {
-        const suffix = ` (${altCount++})`;
-        uniqueAlt = `${alt.slice(0, 125 - suffix.length).trim()}${suffix}`;
-      }
-      seenAlts.add(uniqueAlt.toLowerCase());
-      if (altMatch) {
-        newAttrs = newAttrs.replace(/\balt=["'][^"']*["']/i, `alt="${escapeXml(uniqueAlt)}"`);
-      } else {
-        newAttrs += ` alt="${escapeXml(uniqueAlt)}"`;
-      }
-
-      // Add srcset + sizes if missing (G039)
-      if (!/\bsrcset=/i.test(newAttrs)) {
-        newAttrs += ` srcset="${src} 1200w"`;
-      }
-      if (!/\bsizes=/i.test(newAttrs)) {
-        newAttrs += ` sizes="(max-width: 768px) 100vw, 1080px"`;
-      }
-
-      if (imgIndex === 0) {
-        firstContentImgSrc = src;
-        newAttrs = newAttrs.replace(/\s*\bloading=["'][^"']*["']/gi, "");
-        newAttrs = newAttrs.replace(/\s*\bfetchpriority=["'][^"']*["']/gi, "");
-        newAttrs += ` fetchpriority="high"`;
-        if (!/\bdecoding=/i.test(newAttrs)) newAttrs += ` decoding="sync"`;
-      } else {
-        newAttrs = newAttrs.replace(/\s*\bloading=["'][^"']*["']/gi, "");
-        newAttrs = newAttrs.replace(/\s*\bdecoding=["'][^"']*["']/gi, "");
-        newAttrs += ` loading="lazy" decoding="async"`;
-      }
-      imgIndex++;
-    }
-
-    return `<img${newAttrs}>`;
-  });
-
-  let updatedHtml = html.replace(mainMatch[0], mainHtml);
-
-  // Sync <head> <link rel="preload" as="image"> with exact first content image (G038)
-  if (firstContentImgSrc) {
-    updatedHtml = updatedHtml.replace(/<link\s+rel=["']preload["']\s+as=["']image["'][^>]*>/gi, "");
-    updatedHtml = updatedHtml.replace(
-      /<\/head>/i,
-      `  <link rel="preload" as="image" href="${firstContentImgSrc}" fetchpriority="high" />\n</head>`
-    );
-  }
-
-  return updatedHtml;
 }
 
 function realSeoSitemapIntegration() {
